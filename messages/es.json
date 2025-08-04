@@ -1,0 +1,294 @@
+{
+  "navigation": {
+    "features": "Características",
+    "screenshots": "Capturas",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "download": "Descargar"
+  },
+  "hero": {
+    "title": "Control de Horas",
+    "titleAccent": "Inteligente",
+    "description": "Auto-Timer GPS que detecta automáticamente cuando llegas al trabajo. Calendario visual, reportes PDF y chatbot IA para analizar horarios.",
+    "subtitle": "Tu asistente definitivo para la gestión laboral.",
+    "downloadButton": "Descargar App",
+    "demoButton": "Ver Demo",
+    "features": {
+      "autoTimer": "Auto-Timer GPS",
+      "aiChatbot": "Chatbot IA",
+      "pdfReports": "Reportes PDF",
+      "platforms": "iOS & Android"
+    }
+  },
+  "features": {
+    "title": "Más que un simple",
+    "titleAccent": "control horario",
+    "description": "Un ecosistema completo para freelancers y profesionales: desde detección GPS hasta facturación automática, todo en una app con almacenamiento 100% local y privacidad total.",
+    "items": {
+      "autoTimer": {
+        "title": "Auto-Timer GPS",
+        "description": "Detecta automáticamente cuando llegas o sales del trabajo. Configura radio de geofencing de 50m a 500m y retrasos de 2-10 minutos. Sin tocar la app."
+      },
+      "jobs": {
+        "title": "Trabajos Ilimitados (Premium)",
+        "description": "Gestiona múltiples trabajos con horarios flexibles, turnos divididos (mañana/tarde), tarifas personalizadas y colores identificativos."
+      },
+      "calendar": {
+        "title": "Calendario Visual Completo",
+        "description": "Marca días trabajados, libres, vacaciones y enfermedad. Sincroniza con calendario nativo iOS/Android. Exportación ICS."
+      },
+      "reports": {
+        "title": "Reportes y Exportación",
+        "description": "Estadísticas detalladas por trabajo y período. Exportación PDF solo en Premium. Sistema de facturación profesional incluido."
+      },
+      "ai": {
+        "title": "Analyze-Bot IA (Gemini)",
+        "description": "Chatbot con Gemini 1.5 Pro que analiza imágenes y PDFs de horarios laborales. Extrae días, turnos y exporta al calendario automáticamente."
+      },
+      "notifications": {
+        "title": "Sistema Avanzado de Notificaciones",
+        "description": "2 canales Android especializados: Auto-timer y recordatorios. Notificaciones programadas, permisos inteligentes y configuración granular."
+      }
+    },
+    "badges": {
+      "localStorage": "100% Almacenamiento Local",
+      "languages": "5 Idiomas (ES, EN, DE, FR, IT)",
+      "tech": "React Native + Expo SDK 52",
+      "subscriptions": "RevenueCat - Suscripciones"
+    }
+  },
+  "screenshots": {
+    "title": "Descubre cada",
+    "titleAccent": "pantalla",
+    "description": "Interfaz intuitiva diseñada para que controles tu tiempo sin esfuerzo",
+    "items": {
+      "dashboard": {
+        "title": "Dashboard Principal",
+        "description": "Vista general con trabajos activos, calendario y accesos rápidos"
+      },
+      "reports": {
+        "title": "Reportes Detallados",
+        "description": "Estadísticas completas con gráficos y distribución por trabajo"
+      },
+      "aiBot": {
+        "title": "Chatbot IA Inteligente",
+        "description": "Analiza documentos laborales y extrae información automáticamente"
+      },
+      "settings": {
+        "title": "Configuración Flexible",
+        "description": "Personaliza cada aspecto de la app según tus necesidades"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Modelo",
+    "titleAccent": "Freemium",
+    "titleEnd": "honesto",
+    "description": "Prueba todas las funciones básicas gratis. Actualiza a Premium para desbloquear Auto-Timer GPS, IA y trabajos ilimitados.",
+    "descriptionBold": "Sin permanencia, cancela cuando quieras.",
+    "free": {
+      "name": "Gratis",
+      "price": "0",
+      "description": "Perfecto para empezar",
+      "cta": "Empezar Gratis",
+      "features": {
+        "oneJob": "Un trabajo configurado",
+        "basicTimer": "Timer manual básico",
+        "basicReports": "Reportes mensuales simples",
+        "basicCalendar": "Calendario básico"
+      }
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "3.99",
+      "duration": "3 meses",
+      "description": "Todo el poder de WorkTrack - 3 meses",
+      "cta": "Probar 7 días gratis",
+      "popular": "Más Popular",
+      "features": {
+        "unlimitedJobs": "Trabajos ilimitados con horarios flexibles",
+        "autoTimer": "Auto-Timer GPS (radio 50m-500m)",
+        "aiBot": "Analyze-Bot IA con Gemini 1.5 Pro",
+        "geofencing": "Geofencing personalizable por trabajo",
+        "pdfExport": "Exportación PDF",
+        "calendarSync": "Sincronización calendario iOS/Android",
+        "billing": "Sistema completo de facturación",
+        "notifications": "2 canales de notificaciones avanzadas",
+        "backups": "Respaldos automáticos programables",
+        "support": "Soporte prioritario y actualizaciones"
+      }
+    },
+    "footer": "Sin compromisos. Cancela cuando quieras. Todos los precios incluyen impuestos."
+  },
+  "faq": {
+    "title": "Preguntas",
+    "titleAccent": "Frecuentes",
+    "description": "Encuentra respuestas a las dudas más comunes sobre WorkTrack",
+    "search": "Buscar en las preguntas frecuentes...",
+    "categories": {
+      "general": "General",
+      "time": "Tiempo",
+      "billing": "Facturación",
+      "technical": "Técnico"
+    },
+    "noResults": "No se encontraron preguntas que coincidan con tu búsqueda.",
+    "contactCta": {
+      "title": "¿No encuentras tu respuesta?",
+      "description": "Nuestro equipo de soporte está aquí para ayudarte",
+      "button": "Contactar Soporte"
+    },
+    "questions": {
+      "1": {
+        "question": "¿Cómo empiezo a usar la app?",
+        "answer": "Para comenzar, ve a Configuración > Mis Trabajos y agrega tu primer trabajo. Define los horarios, ubicación y tarifas. Luego podrás comenzar a registrar tiempo desde la pantalla principal."
+      },
+      "2": {
+        "question": "¿Cómo registro mi tiempo de trabajo?",
+        "answer": "Desde la pantalla principal, selecciona tu trabajo y presiona el botón de iniciar. La app comenzará a rastrear automáticamente tu tiempo. Presiona finalizar cuando termines."
+      },
+      "3": {
+        "question": "¿Puedo editar mis registros de tiempo?",
+        "answer": "Sí, ve al calendario y selecciona cualquier día para ver tus registros. Puedes editar la hora de entrada, salida y agregar notas."
+      },
+      "4": {
+        "question": "¿Cómo funciona la geolocalización?",
+        "answer": "La app usa tu ubicación para verificar que estés en tu lugar de trabajo. Puedes configurar un radio de tolerancia en la configuración de cada trabajo."
+      },
+      "5": {
+        "question": "¿Cómo configuro la facturación?",
+        "answer": "En cada trabajo, ve a la pestaña \"Facturación\" y define tu tarifa por hora. La app calculará automáticamente tus ingresos basados en el tiempo trabajado."
+      },
+      "6": {
+        "question": "¿Los datos están seguros?",
+        "answer": "Todos tus datos se almacenan localmente en tu dispositivo. No enviamos información personal a servidores externos."
+      },
+      "7": {
+        "question": "¿Puedo exportar mis datos?",
+        "answer": "Sí, puedes exportar tus datos desde la pantalla de Reportes. Puedes elegir entre formato PDF o Excel para tus registros de tiempo."
+      },
+      "8": {
+        "question": "¿Por qué no funciona la ubicación?",
+        "answer": "Verifica que has dado permisos de ubicación a la app. Ve a Configuración del dispositivo > Privacidad > Ubicación y habilita los permisos."
+      },
+      "9": {
+        "question": "¿Puedo crear notificaciones para que me avise cuando debo ir al trabajo?",
+        "answer": "Sí, en la pantalla de calendario, al añadir un horario verás un botón para crear una notificación que te avisará cuando debas ir al trabajo."
+      },
+      "10": {
+        "question": "¿Puedo exportar los días de trabajo al calendario nativo del teléfono?",
+        "answer": "Sí, desde la pantalla de calendario puedes sincronizar con tu calendario nativo usando el botón de sincronización."
+      },
+      "11": {
+        "question": "¿El chatbot funciona con inteligencia artificial?",
+        "answer": "Sí, funciona con Gemini 1.5 Pro y puede analizar imágenes de horarios laborales. Puede cometer errores si el plan de trabajo no está bien definido."
+      },
+      "12": {
+        "question": "¿Funciona la app sin conexión a internet?",
+        "answer": "Sí, funciona perfectamente sin conexión a internet. Todo está almacenado localmente, solo la función de chatbot para analizar imágenes requiere conexión."
+      },
+      "13": {
+        "question": "¿Necesito suscripción para todas las funciones?",
+        "answer": "Para disfrutar 100% de todas las funciones necesitas suscripción premium. La versión gratuita incluye un trabajo y funciones básicas."
+      },
+      "14": {
+        "question": "¿Cómo funciona el Auto-Timer GPS?",
+        "answer": "El Auto-Timer detecta automáticamente cuando llegas o sales de tu trabajo usando GPS. Puedes configurar el radio de detección y los retrasos para inicio/parada."
+      },
+      "15": {
+        "question": "¿Puedo generar facturas profesionales?",
+        "answer": "Sí, la versión premium incluye un sistema completo de facturación con datos de empresa, cálculo de impuestos y exportación PDF profesional."
+      }
+    }
+  },
+  "cta": {
+    "title": "Comienza a controlar tu tiempo",
+    "titleAccent": "hoy mismo",
+    "description": "Únete a miles de profesionales que ya confían en WorkTrack para gestionar su tiempo laboral de forma inteligente.",
+    "rating": "4.8/5 en App Store",
+    "downloadButton": "Descargar Gratis",
+    "demoButton": "Ver en acción",
+    "footer": "Sin tarjeta de crédito • 7 días de prueba premium gratis"
+  },
+  "footer": {
+    "description": "La app definitiva para el control inteligente de tu tiempo laboral.",
+    "product": "Producto",
+    "company": "Empresa",
+    "support": "Soporte",
+    "links": {
+      "features": "Características",
+      "pricing": "Precios",
+      "updates": "Actualizaciones",
+      "roadmap": "Roadmap",
+      "about": "Sobre nosotros",
+      "blog": "Blog",
+      "contact": "Contacto",
+      "helpCenter": "Centro de ayuda",
+      "documentation": "Documentación",
+      "guides": "Guías",
+      "api": "API"
+    },
+    "legal": {
+      "terms": "Términos",
+      "privacy": "Privacidad",
+      "cookies": "Cookies"
+    },
+    "badges": {
+      "secure": "100% Seguro",
+      "languages": "Disponible en 5 idiomas"
+    },
+    "copyright": "Todos los derechos reservados.",
+    "cookieNotice": {
+      "text": "Esta web utiliza cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestro uso de cookies.",
+      "accept": "Aceptar",
+      "learnMore": "Más información"
+    }
+  },
+  "contact": {
+    "title": "¿Necesitas",
+    "titleAccent": "ayuda",
+    "titleEnd": "?",
+    "description": "Estamos aquí para ayudarte con WorkTrack. Envíanos un mensaje y te responderemos lo antes posible.",
+    "form": {
+      "title": "Envíanos un mensaje",
+      "name": "Nombre completo",
+      "email": "Email",
+      "reason": "Motivo del contacto",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado correctamente! Te responderemos pronto.",
+      "reasons": {
+        "support": "Soporte Técnico",
+        "bug": "Reportar Error",
+        "feature": "Sugerir Función",
+        "business": "Consulta Empresarial",
+        "feedback": "Feedback General"
+      },
+      "placeholders": {
+        "name": "Tu nombre",
+        "email": "tu@email.com",
+        "reason": "Selecciona un motivo",
+        "subject": "Describe brevemente tu consulta",
+        "message": "Describe tu consulta o problema en detalle..."
+      }
+    },
+    "channels": {
+      "title": "Otros canales",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    },
+    "responseTime": {
+      "title": "Tiempo de respuesta",
+      "description": "Respondemos en menos de 24 horas durante días laborables.",
+      "schedule": "Lun - Vie: 9:00 - 18:00 CET",
+      "weekend": "Fines de semana: Respuesta limitada"
+    },
+    "faqLink": {
+      "title": "¿Respuesta rápida?",
+      "description": "Revisa nuestras preguntas frecuentes. Muchas dudas ya tienen respuesta.",
+      "button": "Ver FAQ"
+    }
+  }
+}
