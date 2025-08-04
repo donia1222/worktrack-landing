@@ -1,92 +1,92 @@
 # WorkTrack Landing Page
 
-🕰️ **Landing page para WorkTrack** - La app definitiva para el control inteligente de tiempo laboral con geolocalización GPS.
+🕰️ **Landing page for WorkTrack** - The ultimate app for intelligent work time control with GPS geolocation.
 
-## 🌟 Características
+## 🌟 Features
 
-- ⚡ **Next.js 15** con App Router y TypeScript
-- 🎨 **Tailwind CSS** para diseño responsive
-- 🌍 **Trilingüe**: Español, Inglés, Alemán
-- 🎭 **Framer Motion** para animaciones suaves
-- 📱 **Mobile-first** design optimizado
-- 🍪 **GDPR compliant** con aviso de cookies
-- ♿ **Accesible** y SEO optimizado
+- ⚡ **Next.js 15** with App Router and TypeScript
+- 🎨 **Tailwind CSS** for responsive design
+- 🌍 **Trilingual**: Spanish, English, German
+- 🎭 **Framer Motion** for smooth animations
+- 📱 **Mobile-first** optimized design
+- 🍪 **GDPR compliant** with cookie notice
+- ♿ **Accessible** and SEO optimized
 
-## 🚀 Inicio Rápido
+## 🚀 Quick Start
 
 ```bash
-# Clonar repositorio
+# Clone repository
 git clone https://github.com/donia1222/worktrack-landing.git
 cd worktrack-landing
 
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Ejecutar en desarrollo
+# Run in development
 npm run dev
 
-# Abrir http://localhost:3000
+# Open http://localhost:3000
 ```
 
-## 🌍 Idiomas Soportados
+## 🌍 Supported Languages
 
-- 🇪🇸 **Español** (por defecto)
-- 🇬🇧 **Inglés** 
-- 🇩🇪 **Alemán**
+- 🇪🇸 **Spanish** (default)
+- 🇬🇧 **English** 
+- 🇩🇪 **German**
 
-El idioma se detecta automáticamente del navegador con selector manual disponible.
+Language is automatically detected from browser with manual selector available.
 
-## 📱 Sobre WorkTrack
+## 📱 About WorkTrack
 
-WorkTrack es una app móvil que automatiza el control de horas laborales mediante:
+WorkTrack is a mobile app that automates work time tracking through:
 
-- **Auto-Timer GPS**: Detección automática de llegada/salida
-- **IA Gemini 1.5 Pro**: Análisis inteligente de horarios
-- **Facturación Completa**: Cálculo automático de ingresos  
-- **100% Privacidad**: Almacenamiento local sin servidores
+- **GPS Auto-Timer**: Automatic arrival/departure detection
+- **Gemini 1.5 Pro AI**: Intelligent schedule analysis
+- **Complete Billing**: Automatic income calculation  
+- **100% Privacy**: Local storage without servers
 
-### 💰 Precios
-- **Gratuito**: 1 trabajo, funciones básicas
-- **Premium**: €3.99/3 meses - Características completas
+### 💰 Pricing
+- **Free**: 1 job, basic features
+- **Premium**: €3.99/3 months - Full features
 
-## 🛠️ Scripts Disponibles
+## 🛠️ Available Scripts
 
 ```bash
-npm run dev        # Servidor desarrollo
-npm run build      # Build producción  
-npm run start      # Servidor producción
-npm run type-check # Verificación TypeScript
+npm run dev        # Development server
+npm run build      # Production build  
+npm run start      # Production server
+npm run type-check # TypeScript verification
 ```
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
-├── app/                 # App Router de Next.js
-│   ├── contact/        # Página de contacto
-│   ├── privacy/        # Política de privacidad  
-│   └── terms/          # Términos y condiciones
-├── components/         # Componentes React
-├── messages/           # Traducciones (es/en/de)
-├── lib/               # Utilidades y hooks
-└── public/            # Assets estáticos
+├── app/                 # Next.js App Router
+│   ├── contact/        # Contact page
+│   ├── privacy/        # Privacy policy  
+│   └── terms/          # Terms and conditions
+├── components/         # React components
+├── messages/           # Translations (es/en/de)
+├── lib/               # Utilities and hooks
+└── public/            # Static assets
 ```
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-1. Fork del proyecto
-2. Crear rama feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit cambios (`git commit -m 'Añadir nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abrir Pull Request
+1. Fork the project
+2. Create feature branch (`git checkout -b feature/new-feature`)
+3. Commit changes (`git commit -m 'Add new feature'`)
+4. Push to branch (`git push origin feature/new-feature`)
+5. Open Pull Request
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la Licencia MIT.
+This project is under the MIT License.
 
-## 📞 Contacto
+## 📞 Contact
 
-Para más información sobre WorkTrack o esta landing page, visita el repositorio o crea un issue.
+For more information about WorkTrack or this landing page, visit the repository or create an issue.
 
 ---
 
-**🚀 Hecho con Next.js y ❤️ para la comunidad de trabajadores independientes**
+**🚀 Built with Next.js and ❤️ for the freelance community**
