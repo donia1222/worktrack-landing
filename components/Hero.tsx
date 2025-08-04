@@ -48,13 +48,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center">
-                <Clock className="w-6 h-6 text-white" />
-              </div>
-              <h1 className="text-2xl font-bold gradient-text">WorkTrack</h1>
-            </div>
-            
+
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {t('hero.title')}{' '}
               <span className="gradient-text">{t('hero.titleAccent')}</span>
@@ -73,15 +67,7 @@ export default function Hero() {
               >
                 {t('hero.downloadButton')}
               </motion.button>
-              <motion.button
-                className="px-8 py-4 bg-white text-gray-800 font-semibold rounded-full border-2 border-gray-200 hover:border-gray-300 transition-colors flex items-center gap-2"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsDemoOpen(true)}
-              >
-                <Play className="w-5 h-5" />
-                {t('hero.demoButton')}
-              </motion.button>
+
             </div>
             
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">

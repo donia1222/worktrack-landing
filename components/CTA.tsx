@@ -47,13 +47,6 @@ export default function CTA() {
               <ArrowRight className="w-5 h-5" />
             </motion.button>
             
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-transparent text-white font-semibold rounded-full border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              {t('cta.demoButton')}
-            </motion.button>
           </motion.div>
 
           <p className="mt-6 text-sm text-blue-200">
