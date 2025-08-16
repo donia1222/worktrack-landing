@@ -16,10 +16,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                 <Clock className="w-5 h-5 text-white" />
               </div>
-              <h3 className="text-xl font-bold">WorkTrack</h3>
+              <h3 className="text-xl font-bold flex">
+                <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
+                <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
+                <span className="text-[#34C759]" style={{ fontWeight: '800' }}>App</span>
+              </h3>
             </div>
             <p className="text-gray-400 text-sm mb-4">
               {t('footer.description')}
@@ -68,7 +72,7 @@ export default function Footer() {
           </div>
           
           <div className="mt-6 text-center text-sm text-gray-400">
-            <p>© {currentYear} WorkTrack. {t('footer.copyright')}</p>
+            <p>© {currentYear} VixTimeApp. {t('footer.copyright')}</p>
           </div>
         </div>
       </div>

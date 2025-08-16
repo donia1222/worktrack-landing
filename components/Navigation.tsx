@@ -63,12 +63,14 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('#hero')}
           >
-            <div className={`w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center`}>
+            <div className={`w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center`}>
               <Clock className={`w-5 h-5 text-white`} />
             </div>
-            <span className={`text-xl font-bold text-gray-900`}>
-              WorkTrack
-            </span>
+            <div className={`text-xl font-bold flex`}>
+              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
+              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
+              <span className="text-[#34C759]" style={{ fontWeight: '800' }}>App</span>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}

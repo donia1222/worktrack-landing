@@ -103,7 +103,7 @@
       "name": "Premium",
       "price": "3.99",
       "duration": "3 Monate",
-      "description": "Die volle Power von WorkTrack - 3 Monate",
+      "description": "Die volle Power von VixTimeApp - 3 Monate",
       "cta": "7 Tage kostenlos testen",
       "popular": "Am Beliebtesten",
       "features": {
@@ -124,7 +124,7 @@
   "faq": {
     "title": "Häufig gestellte",
     "titleAccent": "Fragen",
-    "description": "Finden Sie Antworten auf die häufigsten Fragen zu WorkTrack",
+    "description": "Finden Sie Antworten auf die häufigsten Fragen zu VixTimeApp",
     "search": "In häufig gestellten Fragen suchen...",
     "categories": {
       "general": "Allgemein",
@@ -204,11 +204,43 @@
   "cta": {
     "title": "Beginnen Sie heute mit der Kontrolle Ihrer Zeit",
     "titleAccent": "",
-    "description": "Schließen Sie sich Tausenden von Fachleuten an, die bereits auf WorkTrack vertrauen, um ihre Arbeitszeit intelligent zu verwalten.",
+    "description": "Schließen Sie sich Tausenden von Fachleuten an, die bereits auf VixTimeApp vertrauen, um ihre Arbeitszeit intelligent zu verwalten.",
     "rating": "4.8/5 im App Store",
     "downloadButton": "Kostenlos Herunterladen",
     "demoButton": "In Aktion sehen",
     "footer": "Keine Kreditkarte erforderlich • 7 Tage kostenlose Premium-Testversion"
+  },
+  "stats": {
+    "title": "Zahlen die",
+    "titleAccent": "Sprechen",
+    "description": "Treten Sie einer wachsenden Gemeinschaft von Fachleuten bei, die ihre Zeit schätzen",
+    "items": {
+      "users": "Aktive Nutzer",
+      "timeSaved": "Monatliche Ersparnis",
+      "accuracy": "GPS-Genauigkeit",
+      "rating": "App Store"
+    }
+  },
+  "testimonials": {
+    "title": "Geliebt von",
+    "titleAccent": "Profis",
+    "description": "Erfahren Sie, warum Tausende VixTimeApp für ihr Zeitmanagement wählen",
+    "roles": {
+      "freelancer": "Freiberuflicher Autor",
+      "consultant": "Unternehmensberater",
+      "contractor": "IT-Auftragnehmer",
+      "developer": "Software-Entwickler",
+      "designer": "UX-Designer",
+      "manager": "Projektmanager"
+    },
+    "reviews": {
+      "1": "VixTimeApp hat komplett verändert, wie ich meine Zeit verwalte. Der GPS Auto-Timer ist wie Magie - ich vergesse nie mehr, Stunden zu erfassen!",
+      "2": "Als jemand, der mehrere Kunden jongliert, ist die Multi-Job-Funktion ein Lebensretter. Berichte sind professionell und Kunden lieben sie.",
+      "3": "Der KI-Assistent analysierte meinen Papierplan und importierte alles perfekt. Hat mir Stunden manueller Eingabe erspart!",
+      "4": "Endlich ein Zeiterfasser, der die Privatsphäre respektiert. Alles bleibt auf meinem Gerät, und automatische Backups geben mir Sicherheit.",
+      "5": "Allein die Rechnungserstellung ist das Premium wert. Ich werde schneller bezahlt und verbringe keine Zeit mit Papierkram.",
+      "6": "Mein Team liebt die Genauigkeit der GPS-Verfolgung. Keine Streitigkeiten mehr über geleistete Stunden - alles ist automatisch und transparent."
+    }
   },
   "footer": {
     "description": "Die ultimative App für intelligente Arbeitszeitkontrolle.",
@@ -248,7 +280,7 @@
     "title": "Brauchen Sie",
     "titleAccent": "Hilfe",
     "titleEnd": "?",
-    "description": "Wir sind hier, um Ihnen mit WorkTrack zu helfen. Senden Sie uns eine Nachricht und wir melden uns so schnell wie möglich bei Ihnen.",
+    "description": "Wir sind hier, um Ihnen mit VixTimeApp zu helfen. Senden Sie uns eine Nachricht und wir melden uns so schnell wie möglich bei Ihnen.",
     "form": {
       "title": "Senden Sie uns eine Nachricht",
       "name": "Vollständiger Name",

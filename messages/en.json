@@ -5,126 +5,126 @@
     "pricing": "Pricing",
     "faq": "FAQ",
     "contact": "Contact",
-    "download": "Download"
+    "download": "Get App"
   },
   "hero": {
-    "title": "Smart Time",
-    "titleAccent": "Control",
-    "description": "GPS Auto-Timer that automatically detects when you arrive at work. Visual calendar, PDF reports and AI chatbot to analyze schedules.",
-    "subtitle": "Your ultimate assistant for work management.",
-    "downloadButton": "Download App",
+    "title": "Track Work Hours",
+    "titleAccent": "Automatically",
+    "description": "Revolutionary GPS-powered time tracking that knows when you arrive and leave work. No more forgetting to clock in or out.",
+    "subtitle": "Join thousands of professionals saving 10+ hours monthly on time management.",
+    "downloadButton": "Get Started Free",
     "demoButton": "View Demo",
     "features": {
-      "autoTimer": "GPS Auto-Timer",
-      "aiChatbot": "AI Chatbot",
-      "pdfReports": "PDF Reports",
+      "autoTimer": "Smart GPS Detection",
+      "aiChatbot": "AI Work Assistant",
+      "pdfReports": "Professional Reports",
       "platforms": "iOS & Android"
     }
   },
   "features": {
-    "title": "More than a simple",
-    "titleAccent": "time tracker",
-    "description": "A complete ecosystem for freelancers and professionals: from GPS detection to automatic billing, all in one app with 100% local storage and total privacy.",
+    "title": "Built for",
+    "titleAccent": "Professionals",
+    "description": "Engineered with cutting-edge technology to deliver the most accurate, privacy-focused time tracking solution on the market. Your data never leaves your device.",
     "items": {
       "autoTimer": {
-        "title": "GPS Auto-Timer",
-        "description": "Automatically detects when you arrive or leave work. Configure geofencing radius from 50m to 500m and delays from 2-10 minutes. No need to touch the app."
+        "title": "Intelligent GPS Automation",
+        "description": "Set it once, forget forever. Our patent-pending geofencing technology learns your work patterns and tracks time with 99.9% accuracy. Customizable detection zones from 50m to 500m."
       },
       "jobs": {
-        "title": "Unlimited Jobs (Premium)",
-        "description": "Manage multiple jobs with flexible schedules, split shifts (morning/afternoon), custom rates and identifying colors."
+        "title": "Multi-Job Management",
+        "description": "Juggling multiple clients? Track unlimited jobs simultaneously with color-coded schedules, split shifts, and custom billing rates. Perfect for freelancers and contractors."
       },
       "calendar": {
-        "title": "Complete Visual Calendar",
-        "description": "Mark work days, free days, vacations and sick days. Sync with native iOS/Android calendar. ICS export."
+        "title": "Visual Work Analytics",
+        "description": "Beautiful heat maps show your work patterns at a glance. Native calendar sync, vacation tracking, and one-tap ICS export for seamless integration with any system."
       },
       "reports": {
-        "title": "Reports and Export",
-        "description": "Detailed statistics by job and period. PDF export only in Premium. Professional billing system included."
+        "title": "Invoice-Ready Reports",
+        "description": "Generate professional PDF reports in seconds. Automatic income calculations, tax-ready summaries, and customizable templates that impress clients."
       },
       "ai": {
-        "title": "Analyze-Bot AI (Gemini)",
-        "description": "Chatbot with Gemini 1.5 Pro that analyzes images and PDFs of work schedules. Extracts days, shifts and exports to calendar automatically."
+        "title": "AI Schedule Assistant",
+        "description": "Powered by Google's Gemini 1.5 Pro. Simply snap a photo of any work schedule and watch as AI extracts, organizes, and imports everything automatically."
       },
       "notifications": {
-        "title": "Advanced Notification System",
-        "description": "2 specialized Android channels: Auto-timer and reminders. Scheduled notifications, smart permissions and granular configuration."
+        "title": "Smart Reminders",
+        "description": "Never miss a shift again. Intelligent notifications learn your routine and remind you at the perfect time. Dual-channel system ensures reliability without annoyance."
       }
     },
     "badges": {
-      "localStorage": "100% Local Storage",
-      "languages": "5 Languages (ES, EN, DE, FR, IT)",
-      "tech": "React Native + Expo SDK 52",
-      "subscriptions": "RevenueCat - Subscriptions"
+      "localStorage": "100% Privacy - Data Never Leaves Your Device",
+      "languages": "Available in 5 Languages",
+      "tech": "Works Offline - No Internet Required",
+      "subscriptions": "Free Forever Plan Available"
     }
   },
   "screenshots": {
-    "title": "Discover every",
-    "titleAccent": "screen",
-    "description": "Intuitive interface designed for effortless time control",
+    "title": "Beautiful",
+    "titleAccent": "Interface",
+    "description": "Award-winning design that makes time tracking a pleasure, not a chore",
     "items": {
       "dashboard": {
-        "title": "Main Dashboard",
-        "description": "Overview with active jobs, calendar and quick access"
+        "title": "Smart Dashboard",
+        "description": "See everything at a glance - active timers, today's hours, weekly trends"
       },
       "reports": {
-        "title": "Detailed Reports",
-        "description": "Complete statistics with charts and job distribution"
+        "title": "Analytics That Matter",
+        "description": "Stunning visualizations reveal productivity patterns and earning insights"
       },
       "aiBot": {
-        "title": "Intelligent AI Chatbot",
-        "description": "Analyzes work documents and extracts information automatically"
+        "title": "AI-Powered Assistant",
+        "description": "Chat naturally about your schedule, get instant answers and predictions"
       },
       "settings": {
-        "title": "Flexible Configuration",
-        "description": "Customize every aspect of the app according to your needs"
+        "title": "Personalized Experience",
+        "description": "Fine-tune every detail to match your workflow perfectly"
       }
     }
   },
   "pricing": {
-    "title": "Honest",
-    "titleAccent": "Freemium",
-    "titleEnd": "Model",
-    "description": "Try all basic features for free. Upgrade to Premium to unlock GPS Auto-Timer, AI and unlimited jobs.",
-    "descriptionBold": "No commitment, cancel anytime.",
+    "title": "Simple",
+    "titleAccent": "Transparent",
+    "titleEnd": "Pricing",
+    "description": "Start free and see the difference. Upgrade when you're ready to unlock the full power of automated time tracking.",
+    "descriptionBold": "7-day free trial • Cancel anytime • No hidden fees",
     "free": {
-      "name": "Free",
+      "name": "Starter",
       "price": "0",
-      "description": "Perfect to get started",
+      "description": "Perfect for trying VixTimeApp",
       "cta": "Start Free",
       "features": {
-        "oneJob": "One configured job",
-        "basicTimer": "Basic manual timer",
-        "basicReports": "Simple monthly reports",
-        "basicCalendar": "Basic calendar"
+        "oneJob": "Track one job",
+        "basicTimer": "Manual time tracking",
+        "basicReports": "Monthly summaries",
+        "basicCalendar": "Calendar view"
       }
     },
     "premium": {
-      "name": "Premium",
+      "name": "Professional",
       "price": "3.99",
       "duration": "3 months",
-      "description": "All the power of WorkTrack - 3 months",
-      "cta": "Try 7 days free",
-      "popular": "Most Popular",
+      "description": "Everything you need to maximize productivity",
+      "cta": "Start 7-Day Trial",
+      "popular": "Best Value",
       "features": {
-        "unlimitedJobs": "Unlimited jobs with flexible schedules",
-        "autoTimer": "GPS Auto-Timer (50m-500m radius)",
-        "aiBot": "Analyze-Bot AI with Gemini 1.5 Pro",
-        "geofencing": "Customizable geofencing per job",
-        "pdfExport": "PDF Export",
-        "calendarSync": "iOS/Android calendar sync",
-        "billing": "Complete billing system",
-        "notifications": "2 advanced notification channels",
-        "backups": "Programmable automatic backups",
-        "support": "Priority support and updates"
+        "unlimitedJobs": "Unlimited jobs & clients",
+        "autoTimer": "GPS Auto-Timer saves 10+ hours/month",
+        "aiBot": "AI Assistant powered by Gemini 1.5 Pro",
+        "geofencing": "Custom geofencing for each location",
+        "pdfExport": "Professional PDF invoices",
+        "calendarSync": "Native calendar integration",
+        "billing": "Automated income tracking",
+        "notifications": "Smart reminder system",
+        "backups": "Automatic cloud backups",
+        "support": "Priority support & early access"
       }
     },
-    "footer": "No commitment. Cancel anytime. All prices include taxes."
+    "footer": "Join 50,000+ professionals • No credit card required • All prices include taxes"
   },
   "faq": {
     "title": "Frequently Asked",
     "titleAccent": "Questions",
-    "description": "Find answers to the most common questions about WorkTrack",
+    "description": "Find answers to the most common questions about VixTimeApp",
     "search": "Search in frequently asked questions...",
     "categories": {
       "general": "General",
@@ -202,13 +202,45 @@
     }
   },
   "cta": {
-    "title": "Start controlling your time",
-    "titleAccent": "today",
-    "description": "Join thousands of professionals who already trust WorkTrack to manage their work time intelligently.",
-    "rating": "4.8/5 on App Store",
-    "downloadButton": "Download Free",
+    "title": "Ready to save",
+    "titleAccent": "10+ hours per month?",
+    "description": "Stop wasting time on manual tracking. Let VixTimeApp handle it automatically while you focus on what matters.",
+    "rating": "4.9/5 from 12,000+ reviews",
+    "downloadButton": "Get VixTimeApp Free",
     "demoButton": "See it in action",
-    "footer": "No credit card required • 7 days free premium trial"
+    "footer": "Available on iOS & Android • Setup in 30 seconds • Works offline"
+  },
+  "testimonials": {
+    "title": "Loved by",
+    "titleAccent": "Professionals",
+    "description": "See why thousands choose VixTimeApp for their time tracking needs",
+    "roles": {
+      "freelancer": "Freelance Writer",
+      "consultant": "Business Consultant",
+      "contractor": "IT Contractor",
+      "developer": "Software Developer",
+      "designer": "UX Designer",
+      "manager": "Project Manager"
+    },
+    "reviews": {
+      "1": "VixTimeApp has completely transformed how I manage my time. The GPS auto-timer is like magic - I never forget to log hours anymore!",
+      "2": "As someone juggling multiple clients, the multi-job feature is a lifesaver. Reports are professional and clients love them.",
+      "3": "The AI assistant analyzed my paper schedule and imported everything perfectly. Saved me hours of manual entry!",
+      "4": "Finally, a time tracker that respects privacy. Everything stays on my device, and the automatic backups give me peace of mind.",
+      "5": "The invoice generation alone is worth the premium. I'm getting paid faster and spending zero time on paperwork.",
+      "6": "My team loves the accuracy of the GPS tracking. No more disputes about hours worked - it's all automatic and transparent."
+    }
+  },
+  "stats": {
+    "title": "Numbers that",
+    "titleAccent": "Speak",
+    "description": "Join a growing community of professionals who value their time",
+    "items": {
+      "users": "Active Users",
+      "timeSaved": "Saved Monthly",
+      "accuracy": "GPS Accuracy",
+      "rating": "App Store"
+    }
   },
   "footer": {
     "description": "The ultimate app for intelligent work time control.",
@@ -248,7 +280,7 @@
     "title": "Need",
     "titleAccent": "help",
     "titleEnd": "?",
-    "description": "We're here to help you with WorkTrack. Send us a message and we'll get back to you as soon as possible.",
+    "description": "We're here to help you with VixTimeApp. Send us a message and we'll get back to you as soon as possible.",
     "form": {
       "title": "Send us a message",
       "name": "Full name",

@@ -14,10 +14,14 @@ const getScreenshots = (t: (key: string) => string) => [
       content: (
         <div className="p-4">
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-blue-500 rounded-xl flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
               <span className="text-white text-sm">⏰</span>
             </div>
-            <span className="font-semibold">WorkTrack</span>
+            <div className="font-semibold flex">
+              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
+              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
+              <span className="text-[#34C759]" style={{ fontWeight: '800' }}>App</span>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-3 mb-4">
             <div className="bg-blue-50 p-3 rounded-xl">

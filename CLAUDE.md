@@ -1,8 +1,8 @@
-# WorkTrack Landing Page - Claude Assistant Guide
+# VixTimeApp Landing Page - Claude Assistant Guide
 
 ## 📋 Información del Proyecto
 
-**WorkTrack** es una aplicación móvil para el control inteligente de horas de trabajo con geolocalización GPS. Esta landing page promociona la app y está construida con Next.js, TypeScript y Tailwind CSS.
+**VixTimeApp** es una aplicación móvil para el control inteligente de horas de trabajo con geolocalización GPS. Esta landing page promociona la app y está construida con Next.js, TypeScript y Tailwind CSS.
 
 ### 🎯 Características Principales de la App
 - **Auto-Timer GPS**: Detecta automáticamente cuando llegas/sales del trabajo

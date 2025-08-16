@@ -143,7 +143,7 @@ const demoSteps: DemoStep[] = [
             <div>Analiza mi horario de agosto</div>
           </div>
           <div className="bg-blue-50 rounded-lg p-3 text-sm">
-            <div className="text-xs text-blue-600 mb-1">WorkTrack IA:</div>
+            <div className="text-xs text-blue-600 mb-1">VixTimeApp IA:</div>
             <div>He detectado:</div>
             <ul className="mt-2 space-y-1 text-xs">
               <li>• 20 días laborables</li>
@@ -201,7 +201,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b">
               <h2 className="text-2xl font-bold text-gray-900">
-                Demo Interactiva de WorkTrack
+                Demo Interactiva de VixTimeApp
               </h2>
               <button
                 onClick={onClose}
@@ -328,7 +328,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                   whileTap={{ scale: 0.95 }}
                   className="px-6 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors"
                 >
-                  Descargar WorkTrack
+                  Descargar VixTimeApp
                 </motion.button>
               </div>
             </div>
