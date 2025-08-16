@@ -145,6 +145,10 @@ export default function Navigation() {
                 </button>
               ))}
               
+              <div className="border-t my-4 pt-4">
+                <LanguageSelector variant="mobile" />
+              </div>
+              
               <button className="w-full mt-4 px-6 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
                 <Download className="w-4 h-4" />
                 {t('navigation.download')}

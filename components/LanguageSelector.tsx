@@ -6,7 +6,7 @@ import { ChevronDown, Globe } from 'lucide-react'
 import { useLanguage, languages, Language } from '@/lib/language'
 
 interface LanguageSelectorProps {
-  variant?: 'header' | 'footer'
+  variant?: 'header' | 'footer' | 'mobile'
 }
 
 export default function LanguageSelector({ variant = 'header' }: LanguageSelectorProps) {
@@ -16,6 +16,33 @@ export default function LanguageSelector({ variant = 'header' }: LanguageSelecto
   const handleLanguageChange = (lang: Language) => {
     setLanguage(lang)
     setIsOpen(false)
+  }
+
+  // Mobile variant - horizontal button group
+  if (variant === 'mobile') {
+    return (
+      <div className="w-full">
+        <p className="text-xs text-gray-500 uppercase tracking-wider mb-3 px-4">
+          {language === 'es' ? 'Idioma' : language === 'en' ? 'Language' : 'Sprache'}
+        </p>
+        <div className="flex gap-2 px-4">
+          {Object.entries(languages).map(([code, name]) => (
+            <button
+              key={code}
+              onClick={() => handleLanguageChange(code as Language)}
+              className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2 ${
+                language === code 
+                  ? 'bg-blue-500 text-white' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              <span>{code === 'es' ? '🇪🇸' : code === 'en' ? '🇺🇸' : '🇩🇪'}</span>
+              <span>{name}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    )
   }
 
   if (variant === 'footer') {
