@@ -16,6 +16,7 @@
     "demoButton": "Demo Ansehen",
     "features": {
       "autoTimer": "GPS Auto-Timer",
+      "widgets": "iOS Widgets",
       "aiChatbot": "KI-Chatbot",
       "pdfReports": "PDF-Berichte",
       "platforms": "iOS & Android"
@@ -29,6 +30,10 @@
       "autoTimer": {
         "title": "GPS Auto-Timer",
         "description": "Erkennt automatisch, wann Sie zur Arbeit kommen oder gehen. Konfigurieren Sie Geofencing-Radius von 50m bis 500m und Verzögerungen von 2-10 Minuten. Keine Berührung der App erforderlich."
+      },
+      "widgets": {
+        "title": "iOS Widgets & Live Activities",
+        "description": "Startbildschirm-Widgets in 3 Größen. Live Activities auf Dynamic Island und Sperrbildschirm. 7-Tage-Kalenderansicht und Echtzeit-Timer direkt auf Ihrem Bildschirm."
       },
       "jobs": {
         "title": "Unbegrenzte Jobs (Premium)",
@@ -47,8 +52,8 @@
         "description": "Chatbot mit Gemini 1.5 Pro, der Bilder und PDFs von Arbeitsplänen analysiert. Extrahiert Tage, Schichten und exportiert automatisch in den Kalender."
       },
       "notifications": {
-        "title": "Erweiterte Benachrichtigungen",
-        "description": "2 spezialisierte Android-Kanäle: Auto-Timer und Erinnerungen. Geplante Benachrichtigungen, intelligente Berechtigungen und granulare Konfiguration."
+        "title": "Intelligente Benachrichtigungen",
+        "description": "3 spezialisierte Android-Kanäle. Kontextuelle Benachrichtigungen vor automatischen Aktionen. Anpassbare Arbeitserinnerungen und intelligente Berechtigungen."
       }
     },
     "badges": {
@@ -277,26 +282,48 @@
     }
   },
   "contact": {
+    "backButton": "Zurück zu VixTimeApp",
     "title": "Brauchen Sie",
     "titleAccent": "Hilfe",
     "titleEnd": "?",
     "description": "Wir sind hier, um Ihnen mit VixTimeApp zu helfen. Senden Sie uns eine Nachricht und wir melden uns so schnell wie möglich bei Ihnen.",
+    "hero": {
+      "title": "Lassen Sie uns sprechen",
+      "description": "Wir sind hier um zu helfen. Senden Sie uns Ihre Anfrage und wir antworten so schnell wie möglich."
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": {
+        "title": "E-Mail",
+        "description": "Antwort innerhalb von 24h"
+      },
+      "response": {
+        "title": "Antwortzeit",
+        "description": "Wir antworten innerhalb von 24 Stunden",
+        "schedule": "Mo - Fr: 9:00 - 18:00 CET",
+        "weekend": "Wochenenden: Begrenzte Antwort"
+      },
+      "location": {
+        "title": "Standort",
+        "description": "Verteiltes Team in Europa"
+      }
+    },
     "form": {
       "title": "Senden Sie uns eine Nachricht",
-      "name": "Vollständiger Name",
-      "email": "E-Mail",
-      "reason": "Kontaktgrund",
-      "subject": "Betreff",
-      "message": "Nachricht",
-      "submit": "Nachricht senden",
-      "submitting": "Wird gesendet...",
-      "success": "Nachricht erfolgreich gesendet! Wir antworten bald.",
-      "reasons": {
-        "support": "Technischer Support",
-        "bug": "Fehler melden",
-        "feature": "Funktion vorschlagen",
-        "business": "Geschäftsanfrage",
-        "feedback": "Allgemeines Feedback"
+      "fields": {
+        "name": "Vollständiger Name",
+        "email": "E-Mail",
+        "reason": "Kontaktgrund",
+        "subject": "Betreff",
+        "message": "Nachricht"
+      },
+      "required": "Pflichtfelder",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": {
+        "title": "Nachricht gesendet!",
+        "description": "Wir antworten so schnell wie möglich.",
+        "button": "Weitere Nachricht senden"
       },
       "placeholders": {
         "name": "Ihr Name",
@@ -306,21 +333,167 @@
         "message": "Beschreiben Sie Ihre Anfrage oder Ihr Problem im Detail..."
       }
     },
-    "channels": {
-      "title": "Andere Kanäle",
-      "email": "E-Mail",
-      "whatsapp": "WhatsApp"
-    },
-    "responseTime": {
-      "title": "Antwortzeit",
-      "description": "Wir antworten innerhalb von 24 Stunden an Werktagen.",
-      "schedule": "Mo - Fr: 9:00 - 18:00 CET",
-      "weekend": "Wochenenden: Begrenzte Antwort"
+    "reasons": {
+      "support": "Technischer Support",
+      "bug": "Fehler melden",
+      "feature": "Funktion vorschlagen",
+      "business": "Geschäftsanfrage",
+      "feedback": "Allgemeines Feedback"
     },
     "faqLink": {
       "title": "Schnelle Antwort?",
       "description": "Schauen Sie sich unsere häufig gestellten Fragen an. Viele Fragen haben bereits Antworten.",
       "button": "FAQ Ansehen"
     }
+  },
+  "privacy": {
+    "backButton": "Zurück zu VixTimeApp",
+    "title": "Datenschutzrichtlinie",
+    "lastUpdated": "Letzte Aktualisierung: Januar 2025",
+    "priority": {
+      "title": "Ihre Privatsphäre ist unsere Priorität",
+      "description": "Bei VixTimeApp nehmen wir Ihre Privatsphäre ernst. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unsere Arbeitszeiterfassungs-App nutzen."
+    },
+    "storage": {
+      "title": "Datenspeicherung",
+      "local": {
+        "title": "100% Lokale Speicherung",
+        "description": "Alle Ihre Arbeitsdaten, einschließlich Job-Informationen, Zeitaufzeichnungen, Zeitpläne und Einstellungen werden ausschließlich auf Ihrem Gerät gespeichert. Wir haben keinen Zugriff auf diese Informationen."
+      },
+      "cloud": {
+        "title": "Keine Cloud-Server",
+        "description": "Wir haben keine Datenbanken oder Cloud-Server, die Ihre persönlichen Informationen speichern. Ihre Daten verlassen niemals Ihr Gerät, es sei denn, Sie exportieren oder teilen sie explizit."
+      },
+      "accounts": {
+        "title": "Keine Benutzerkonten",
+        "description": "Die App funktioniert ohne Benutzerkonten zu erstellen, was bedeutet, dass wir keine persönlichen Identifikationsinformationen wie Namen, E-Mail-Adressen oder Telefonnummern sammeln oder speichern."
+      }
+    },
+    "backup": {
+      "title": "Datensicherung",
+      "description": "Da alle Daten lokal auf Ihrem Gerät gespeichert werden, sind Sie für die Erstellung regelmäßiger Backups verantwortlich. Die App bietet Exportfunktionen, um Ihnen zu helfen, Ihre Daten sicher zu speichern."
+    },
+    "ai": {
+      "title": "KI-Chat-Funktionen",
+      "anonymous": {
+        "title": "Anonyme Verarbeitung",
+        "description": "An den KI-Chatbot gesendete Nachrichten werden anonym über die Gemini-API von Google verarbeitet. Keine persönlichen Informationen werden in diese Anfragen einbezogen."
+      },
+      "chat": {
+        "title": "Keine Chat-Speicherung",
+        "description": "Wir speichern keinen Chat-Verlauf oder Konversationen auf unseren Servern. Alle Chat-Daten verbleiben auf Ihrem Gerät."
+      },
+      "images": {
+        "title": "Bildanalyse",
+        "description": "Von der KI analysierte Bilder werden temporär verarbeitet und nicht auf externen Servern gespeichert."
+      }
+    },
+    "subscriptions": {
+      "title": "Abonnements",
+      "description": "Wenn Sie ein Premium-Abonnement kaufen, werden die Zahlungsinformationen vom Apple App Store oder Google Play Store gemäß ihren jeweiligen Datenschutzrichtlinien verarbeitet. Wir haben keinen Zugriff auf Ihre Zahlungsdetails."
+    },
+    "location": {
+      "title": "Standortdaten",
+      "description": "Standortdaten werden ausschließlich für die automatische Timer-Funktion verwendet und lokal auf Ihrem Gerät gespeichert. Standortinformationen werden niemals an unsere Server übertragen."
+    },
+    "thirdParty": {
+      "title": "Drittanbieter-Dienste",
+      "description": "Wir verwenden nur essentielle Drittanbieter-Dienste:",
+      "gemini": "Google Gemini API für KI-Chat-Funktionalität (anonym)",
+      "revenueCat": "RevenueCat für Abonnement-Verwaltung",
+      "stores": "App Stores für Vertrieb und Zahlungen"
+    },
+    "security": {
+      "title": "Datensicherheit",
+      "description": "Da alle Daten lokal auf Ihrem Gerät gespeichert werden, hängt die Datensicherheit von den Sicherheitsmaßnahmen Ihres Geräts ab. Wir empfehlen die Verwendung von Geräteverschlüsselung und sicheren Sperrbildschirmen."
+    },
+    "children": {
+      "title": "Privatsphäre von Kindern",
+      "description": "Unsere App ist nicht für Kinder unter 13 Jahren konzipiert. Wir sammeln wissentlich keine persönlichen Informationen von Minderjährigen."
+    },
+    "changes": {
+      "title": "Änderungen dieser Richtlinie",
+      "description": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden in der App veröffentlicht und treten sofort nach der Veröffentlichung in Kraft."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns unter"
+    },
+    "footer": "Diese Richtlinie gilt ab Januar 2025 und gilt für alle Versionen von VixTimeApp."
+  },
+  "terms": {
+    "backButton": "Zurück zu VixTimeApp",
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: Januar 2025",
+    "acceptance": {
+      "title": "Annahme der Bedingungen",
+      "description": "Durch das Herunterladen, Installieren oder Verwenden von VixTimeApp erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie die App bitte nicht."
+    },
+    "license": {
+      "title": "Nutzungslizenz",
+      "description": "Wir gewähren Ihnen eine begrenzte, nicht exklusive, nicht übertragbare und widerrufliche Lizenz zur Nutzung von VixTimeApp für Ihre persönliche und kommerzielle Nutzung auf von Ihnen kontrollierten Geräten.",
+      "restrictions": "Sie dürfen nicht: die App kopieren, modifizieren oder verteilen; Reverse Engineering betreiben; die App für illegale Zwecke verwenden; oder geistige Eigentumsrechte verletzen."
+    },
+    "subscriptions": {
+      "title": "Premium-Abonnements",
+      "premium": {
+        "title": "Premium-Funktionen:",
+        "description": "Das Premium-Abonnement schaltet unbegrenzte Jobs, GPS-Auto-Timer, vollständigen KI-Chatbot, wasserzeichenfreien PDF-Export und erweiterte Abrechnungsfunktionen frei."
+      },
+      "billing": {
+        "title": "Abrechnung:",
+        "description": "Abonnements werden in 3-Monats-Perioden über Ihren App Store abgerechnet. Die Zahlung wird bei Kaufbestätigung belastet."
+      },
+      "cancellation": {
+        "title": "Kündigung:",
+        "description": "Sie können Ihr Abonnement jederzeit in Ihren App Store-Einstellungen kündigen. Die Kündigung wird am Ende der aktuellen Periode wirksam."
+      }
+    },
+    "ai": {
+      "title": "KI-Dienste",
+      "description": "Der KI-Chatbot verwendet die Gemini-API von Google. Durch die Nutzung dieser Funktion verstehen Sie, dass KI-Antworten automatisch generiert werden und nicht immer genau sein können. Wir sind nicht verantwortlich für Entscheidungen, die auf KI-Antworten basieren."
+    },
+    "responsibilities": {
+      "title": "Benutzerverantwortlichkeiten",
+      "description": "Sie sind verantwortlich für:",
+      "item1": "Die Wahrung der Vertraulichkeit Ihres Geräts",
+      "item2": "Alle Aktivitäten, die auf Ihrem Gerät stattfinden",
+      "item3": "Regelmäßige Sicherung Ihrer Daten",
+      "item4": "Die Nutzung der App in Übereinstimmung mit allen geltenden Gesetzen"
+    },
+    "prohibited": {
+      "title": "Verbotene Nutzungen",
+      "description": "Sie dürfen nicht:",
+      "item1": "Die App für illegale oder betrügerische Aktivitäten verwenden",
+      "item2": "Versuchen, die Sicherheit der App zu hacken oder zu kompromittieren",
+      "item3": "Die App verwenden, um andere Personen ohne deren Zustimmung zu verfolgen",
+      "item4": "Datenschutz- oder Datenschutzgesetze verletzen"
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "warranty": "DIE APP WIRD \"WIE BESEHEN\" OHNE GEWÄHRLEISTUNGEN BEREITGESTELLT",
+      "description": "Wir garantieren nicht, dass die App ununterbrochen, fehlerfrei oder vollständig sicher sein wird. Sie verwenden die App auf eigenes Risiko."
+    },
+    "liability": {
+      "title": "Haftungsbeschränkung",
+      "description": "In keinem Fall haften wir für indirekte, zufällige, besondere oder Folgeschäden, die aus Ihrer Nutzung oder Unfähigkeit zur Nutzung der App entstehen, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden."
+    },
+    "indemnification": {
+      "title": "Schadloshaltung",
+      "description": "Sie erklären sich damit einverstanden, VixTimeApp und seine verbundenen Unternehmen von allen Ansprüchen, Schäden oder Ausgaben freizustellen, die aus Ihrer Nutzung der App oder Verletzung dieser Bedingungen entstehen."
+    },
+    "governing": {
+      "title": "Anwendbares Recht",
+      "description": "Diese Bedingungen unterliegen den Gesetzen der Europäischen Union und werden in Übereinstimmung mit diesen ausgelegt, ohne Berücksichtigung von Kollisionsnormen."
+    },
+    "changes": {
+      "title": "Änderungen der Bedingungen",
+      "description": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Änderungen werden sofort nach der Veröffentlichung in der App wirksam."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns unter"
+    },
+    "footer": "Durch die Nutzung von VixTimeApp bestätigen Sie, dass Sie diese Nutzungsbedingungen gelesen, verstanden und akzeptiert haben."
   }
 }

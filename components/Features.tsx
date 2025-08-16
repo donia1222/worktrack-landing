@@ -13,7 +13,8 @@ import {
   FileText,
   Globe,
   Smartphone,
-  Zap
+  Zap,
+  Layout
 } from 'lucide-react'
 import { useLanguage } from '@/lib/language'
 
@@ -26,6 +27,13 @@ const getFeatures = (t: (key: string) => string) => [
     lightColor: 'bg-blue-50',
   },
   {
+    icon: Layout,
+    title: t('features.items.widgets.title'),
+    description: t('features.items.widgets.description'),
+    color: 'bg-cyan-500',
+    lightColor: 'bg-cyan-50',
+  },
+  {
     icon: Briefcase,
     title: t('features.items.jobs.title'),
     description: t('features.items.jobs.description'),
@@ -33,11 +41,11 @@ const getFeatures = (t: (key: string) => string) => [
     lightColor: 'bg-green-50',
   },
   {
-    icon: Calendar,
-    title: t('features.items.calendar.title'),
-    description: t('features.items.calendar.description'),
-    color: 'bg-purple-500',
-    lightColor: 'bg-purple-50',
+    icon: MessageSquare,
+    title: t('features.items.ai.title'),
+    description: t('features.items.ai.description'),
+    color: 'bg-pink-500',
+    lightColor: 'bg-pink-50',
   },
   {
     icon: BarChart3,
@@ -45,13 +53,6 @@ const getFeatures = (t: (key: string) => string) => [
     description: t('features.items.reports.description'),
     color: 'bg-orange-500',
     lightColor: 'bg-orange-50',
-  },
-  {
-    icon: MessageSquare,
-    title: t('features.items.ai.title'),
-    description: t('features.items.ai.description'),
-    color: 'bg-pink-500',
-    lightColor: 'bg-pink-50',
   },
   {
     icon: Bell,

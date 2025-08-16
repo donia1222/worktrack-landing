@@ -17,18 +17,34 @@ const getNavItems = (t: (key: string) => string) => [
 export default function Navigation() {
   const { t } = useLanguage()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   
   const navItems = getNavItems(t)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      const currentScrollY = window.scrollY
+      
+      // Determinar si el header está scrolled (para cambiar estilos)
+      setIsScrolled(currentScrollY > 20)
+      
+      // Mostrar/ocultar header basado en dirección del scroll
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & passed 100px threshold
+        setIsVisible(false)
+      } else {
+        // Scrolling up
+        setIsVisible(true)
+      }
+      
+      setLastScrollY(currentScrollY)
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [lastScrollY])
 
   const scrollToSection = (href: string) => {
     if (href.startsWith('/')) {
@@ -46,10 +62,10 @@ export default function Navigation() {
   }
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      } ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg' 
           : 'bg-white/90 backdrop-blur-sm'
@@ -137,6 +153,6 @@ export default function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   )
 }

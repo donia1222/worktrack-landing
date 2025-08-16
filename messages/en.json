@@ -16,6 +16,7 @@
     "demoButton": "View Demo",
     "features": {
       "autoTimer": "Smart GPS Detection",
+      "widgets": "iOS Widgets",
       "aiChatbot": "AI Work Assistant",
       "pdfReports": "Professional Reports",
       "platforms": "iOS & Android"
@@ -29,6 +30,10 @@
       "autoTimer": {
         "title": "Intelligent GPS Automation",
         "description": "Set it once, forget forever. Our patent-pending geofencing technology learns your work patterns and tracks time with 99.9% accuracy. Customizable detection zones from 50m to 500m."
+      },
+      "widgets": {
+        "title": "iOS Widgets & Live Activities",
+        "description": "Home screen widgets in 3 sizes. Live Activities on Dynamic Island and Lock Screen. 7-day calendar view and real-time timer display without opening the app."
       },
       "jobs": {
         "title": "Multi-Job Management",
@@ -47,8 +52,8 @@
         "description": "Powered by Google's Gemini 1.5 Pro. Simply snap a photo of any work schedule and watch as AI extracts, organizes, and imports everything automatically."
       },
       "notifications": {
-        "title": "Smart Reminders",
-        "description": "Never miss a shift again. Intelligent notifications learn your routine and remind you at the perfect time. Dual-channel system ensures reliability without annoyance."
+        "title": "Intelligent Notifications",
+        "description": "3 specialized Android channels. Contextual alerts before automatic actions. Customizable work reminders and smart permission handling. Never miss important updates."
       }
     },
     "badges": {
@@ -277,26 +282,48 @@
     }
   },
   "contact": {
+    "backButton": "Back to VixTimeApp",
     "title": "Need",
     "titleAccent": "help",
     "titleEnd": "?",
     "description": "We're here to help you with VixTimeApp. Send us a message and we'll get back to you as soon as possible.",
+    "hero": {
+      "title": "Let's Talk",
+      "description": "We're here to help. Send us your query and we'll respond as soon as possible."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": {
+        "title": "Email",
+        "description": "Response within 24h"
+      },
+      "response": {
+        "title": "Response time",
+        "description": "We respond within 24 hours",
+        "schedule": "Mon - Fri: 9:00 - 18:00 CET",
+        "weekend": "Weekends: Limited response"
+      },
+      "location": {
+        "title": "Location",
+        "description": "Distributed team in Europe"
+      }
+    },
     "form": {
       "title": "Send us a message",
-      "name": "Full name",
-      "email": "Email",
-      "reason": "Contact reason",
-      "subject": "Subject",
-      "message": "Message",
-      "submit": "Send message",
-      "submitting": "Sending...",
-      "success": "Message sent successfully! We'll respond soon.",
-      "reasons": {
-        "support": "Technical Support",
-        "bug": "Report Bug",
-        "feature": "Suggest Feature",
-        "business": "Business Inquiry",
-        "feedback": "General Feedback"
+      "fields": {
+        "name": "Full name",
+        "email": "Email",
+        "reason": "Contact reason",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "required": "Required fields",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message sent!",
+        "description": "We'll respond as soon as possible.",
+        "button": "Send another message"
       },
       "placeholders": {
         "name": "Your name",
@@ -306,21 +333,167 @@
         "message": "Describe your inquiry or problem in detail..."
       }
     },
-    "channels": {
-      "title": "Other channels",
-      "email": "Email",
-      "whatsapp": "WhatsApp"
-    },
-    "responseTime": {
-      "title": "Response time",
-      "description": "We respond within 24 hours during business days.",
-      "schedule": "Mon - Fri: 9:00 - 18:00 CET",
-      "weekend": "Weekends: Limited response"
+    "reasons": {
+      "support": "Technical Support",
+      "bug": "Report Bug",
+      "feature": "Suggest Feature",
+      "business": "Business Inquiry",
+      "feedback": "General Feedback"
     },
     "faqLink": {
       "title": "Quick answer?",
       "description": "Check our frequently asked questions. Many questions already have answers.",
       "button": "View FAQ"
     }
+  },
+  "privacy": {
+    "backButton": "Back to VixTimeApp",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: January 2025",
+    "priority": {
+      "title": "Your Privacy is Our Priority",
+      "description": "At VixTimeApp, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your information when you use our work time tracking application."
+    },
+    "storage": {
+      "title": "Data Storage",
+      "local": {
+        "title": "100% Local Storage",
+        "description": "All your work data, including job information, time records, schedules, and settings are stored exclusively on your device. We have no access to this information."
+      },
+      "cloud": {
+        "title": "No Cloud Servers",
+        "description": "We don't have databases or cloud servers that store your personal information. Your data never leaves your device unless you explicitly choose to export or share it."
+      },
+      "accounts": {
+        "title": "No User Accounts",
+        "description": "The app works without creating user accounts, which means we don't collect or store personal identification information like names, email addresses, or phone numbers."
+      }
+    },
+    "backup": {
+      "title": "Data Backup",
+      "description": "Since all data is stored locally on your device, you are responsible for creating regular backups. The app provides export functionality to help you save your data securely."
+    },
+    "ai": {
+      "title": "AI Chat Features",
+      "anonymous": {
+        "title": "Anonymous Processing",
+        "description": "Messages sent to the AI chatbot are processed anonymously through Google's Gemini API. No personal information is included in these requests."
+      },
+      "chat": {
+        "title": "No Chat Storage",
+        "description": "We don't store chat history or conversations on our servers. All chat data remains on your device."
+      },
+      "images": {
+        "title": "Image Analysis",
+        "description": "Images analyzed by AI are processed temporarily and are not stored on external servers."
+      }
+    },
+    "subscriptions": {
+      "title": "Subscriptions",
+      "description": "If you purchase a premium subscription, payment information is handled by Apple App Store or Google Play Store according to their respective privacy policies. We don't have access to your payment details."
+    },
+    "location": {
+      "title": "Location Data",
+      "description": "Location data is used solely for the automatic timer functionality and is stored locally on your device. Location information is never transmitted to our servers."
+    },
+    "thirdParty": {
+      "title": "Third-Party Services",
+      "description": "We only use essential third-party services:",
+      "gemini": "Google Gemini API for AI chat functionality (anonymous)",
+      "revenueCat": "RevenueCat for subscription management",
+      "stores": "App stores for distribution and payments"
+    },
+    "security": {
+      "title": "Data Security",
+      "description": "Since all data is stored locally on your device, data security depends on your device's security measures. We recommend using device encryption and secure lock screens."
+    },
+    "children": {
+      "title": "Children's Privacy",
+      "description": "Our app is not designed for children under 13 years old. We don't knowingly collect personal information from minors."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "description": "We may update this Privacy Policy from time to time. Any changes will be posted in the app and will take effect immediately after publication."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have questions about this Privacy Policy, contact us at"
+    },
+    "footer": "This policy is effective from January 2025 and applies to all versions of VixTimeApp."
+  },
+  "terms": {
+    "backButton": "Back to VixTimeApp",
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: January 2025",
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "description": "By downloading, installing, or using VixTimeApp, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app."
+    },
+    "license": {
+      "title": "License to Use",
+      "description": "We grant you a limited, non-exclusive, non-transferable, and revocable license to use VixTimeApp for your personal and commercial use on devices you control.",
+      "restrictions": "You may not: copy, modify, or distribute the app; reverse engineer; use the app for illegal purposes; or violate intellectual property rights."
+    },
+    "subscriptions": {
+      "title": "Premium Subscriptions",
+      "premium": {
+        "title": "Premium Features:",
+        "description": "Premium subscription unlocks unlimited jobs, GPS Auto-Timer, full AI chatbot, watermark-free PDF export, and advanced billing features."
+      },
+      "billing": {
+        "title": "Billing:",
+        "description": "Subscriptions are billed in 3-month periods through your app store. Payment is charged upon purchase confirmation."
+      },
+      "cancellation": {
+        "title": "Cancellation:",
+        "description": "You can cancel your subscription anytime from your app store settings. Cancellation will be effective at the end of the current period."
+      }
+    },
+    "ai": {
+      "title": "AI Services",
+      "description": "The AI chatbot uses Google's Gemini API. By using this feature, you understand that AI responses are automatically generated and may not always be accurate. We are not responsible for decisions made based on AI responses."
+    },
+    "responsibilities": {
+      "title": "User Responsibilities",
+      "description": "You are responsible for:",
+      "item1": "Maintaining the confidentiality of your device",
+      "item2": "All activity that occurs on your device",
+      "item3": "Backing up your data regularly",
+      "item4": "Using the app in accordance with all applicable laws"
+    },
+    "prohibited": {
+      "title": "Prohibited Uses",
+      "description": "You must not:",
+      "item1": "Use the app for illegal or fraudulent activities",
+      "item2": "Attempt to hack or compromise the app's security",
+      "item3": "Use the app to track other people without their consent",
+      "item4": "Violate any privacy or data protection laws"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "warranty": "THE APP IS PROVIDED \"AS IS\" WITHOUT WARRANTIES",
+      "description": "We do not guarantee that the app will be uninterrupted, error-free, or completely secure. You use the app at your own risk."
+    },
+    "liability": {
+      "title": "Limitation of Liability",
+      "description": "In no event shall we be liable for any indirect, incidental, special, or consequential damages arising from your use or inability to use the app, even if we have been advised of the possibility of such damages."
+    },
+    "indemnification": {
+      "title": "Indemnification",
+      "description": "You agree to indemnify and hold harmless VixTimeApp and its affiliates from any claims, damages, or expenses arising from your use of the app or violation of these terms."
+    },
+    "governing": {
+      "title": "Governing Law",
+      "description": "These terms shall be governed by and construed in accordance with the laws of the European Union, without regard to its conflict of law provisions."
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "description": "We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting in the app."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "For questions about these Terms of Service, contact us at"
+    },
+    "footer": "By using VixTimeApp, you confirm that you have read, understood, and agreed to these Terms of Service."
   }
 }

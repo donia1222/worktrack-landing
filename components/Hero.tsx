@@ -43,11 +43,7 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
 
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {t('hero.title')}{' '}
@@ -76,6 +72,10 @@ export default function Hero() {
                 <span><strong>{t('hero.features.autoTimer')}</strong></span>
               </div>
               <div className="flex items-center gap-2">
+                <span className="text-cyan-500">📱</span>
+                <span><strong>{t('hero.features.widgets')}</strong></span>
+              </div>
+              <div className="flex items-center gap-2">
                 <span className="text-green-500">🤖</span>
                 <span><strong>{t('hero.features.aiChatbot')}</strong></span>
               </div>
@@ -83,19 +83,10 @@ export default function Hero() {
                 <span className="text-purple-500">📊</span>
                 <span><strong>{t('hero.features.pdfReports')}</strong></span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-orange-500">📱</span>
-                <span><strong>{t('hero.features.platforms')}</strong></span>
-              </div>
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
+          <div className="relative">
             <div className="relative mx-auto w-80 h-[650px]">
               {/* Phone mockup */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-700 rounded-[3rem] shadow-2xl" />
@@ -165,7 +156,7 @@ export default function Hero() {
               {/* Notch */}
               <div className="absolute top-[15px] left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl" />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
       
