@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Clock, Menu, X, Download } from 'lucide-react'
 import { useLanguage } from '@/lib/language'
 import LanguageSelector from './LanguageSelector'
+import Image from 'next/image'
 
 const getNavItems = (t: (key: string) => string) => [
   { label: t('navigation.features'), href: '#features' },
@@ -75,18 +76,18 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
-            className="flex items-center gap-2 cursor-pointer"
+            className="cursor-pointer"
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('#hero')}
           >
-            <div className={`w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center`}>
-              <Clock className={`w-5 h-5 text-white`} />
-            </div>
-            <div className={`text-xl font-bold flex`}>
-              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
-              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
-              <span className="text-[#34C759]" style={{ fontWeight: '800' }}>App</span>
-            </div>
+            <Image
+              src="/vixtime-logo.svg"
+              alt="VixTime"
+              width={140}
+              height={42}
+              className="h-10 w-auto"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
