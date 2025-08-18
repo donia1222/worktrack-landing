@@ -50,20 +50,20 @@ export default function Pricing() {
   const plans = getPlans(t)
   
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
             {t('pricing.title')}{' '}
             <span className="gradient-text">{t('pricing.titleAccent')}</span> {t('pricing.titleEnd')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
             {t('pricing.description')} <strong>{t('pricing.descriptionBold')}</strong>
           </p>
         </motion.div>
@@ -76,31 +76,31 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`relative rounded-3xl p-8 ${
+              className={`relative rounded-2xl p-6 sm:p-8 ${
                 plan.popular 
-                  ? 'bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-500 shadow-xl' 
-                  : 'bg-gray-50 border border-gray-200'
+                  ? 'bg-gradient-to-br from-blue-50 via-white to-purple-50 border-2 border-blue-400 shadow-2xl transform hover:scale-105 transition-transform' 
+                  : 'bg-white border border-gray-200 shadow-md hover:shadow-lg transition-shadow'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+                <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-1 shadow-lg">
                     <Zap className="w-4 h-4" />
                     {t('pricing.premium.popular')}
                   </div>
                 </div>
               )}
 
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                <p className="text-gray-600 mb-4">{plan.description}</p>
+              <div className="mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-4">{plan.description}</p>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-5xl font-bold text-gray-900">€{plan.price}</span>
+                  <span className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">€{plan.price}</span>
                   <span className="text-gray-600">{plan.duration ? `/${plan.duration}` : '/mes'}</span>
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-6">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
                     {feature.included ? (
@@ -108,24 +108,22 @@ export default function Pricing() {
                     ) : (
                       <X className="w-5 h-5 text-gray-300 mt-0.5 flex-shrink-0" />
                     )}
-                    <span className={feature.included ? 'text-gray-700' : 'text-gray-400'}>
+                    <span className={`text-sm sm:text-base ${feature.included ? 'text-gray-700' : 'text-gray-400'}`}>
                       {feature.text}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`w-full py-4 rounded-full font-semibold transition-colors ${
+              <button
+                className={`w-full py-3 sm:py-4 rounded-xl font-medium transition-all text-sm sm:text-base ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 shadow-lg'
-                    : 'bg-white text-gray-800 border-2 border-gray-300 hover:border-gray-400'
+                    ? 'bg-gradient-to-r from-blue-600 via-blue-500 to-purple-600 text-white hover:from-blue-700 hover:via-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors'
                 }`}
               >
                 {plan.cta}
-              </motion.button>
+              </button>
             </motion.div>
           ))}
         </div>

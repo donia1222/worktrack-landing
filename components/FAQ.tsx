@@ -129,20 +129,20 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
             {t('faq.title')}{' '}
             <span className="gradient-text">{t('faq.titleAccent')}</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
             {t('faq.description')}
           </p>
         </motion.div>
@@ -161,7 +161,7 @@ export default function FAQ() {
             placeholder={t('faq.search')}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 bg-white rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full pl-12 pr-4 py-3 bg-white rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base shadow-sm"
           />
         </motion.div>
 
@@ -179,7 +179,7 @@ export default function FAQ() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full font-medium transition-all flex items-center gap-2 ${
+                className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all flex items-center gap-2 ${
                   selectedCategory === category.id
                     ? 'bg-blue-500 text-white shadow-lg'
                     : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
@@ -215,13 +215,13 @@ export default function FAQ() {
                   key={faq.id}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+                  className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                 >
                   <button
                     onClick={() => toggleItem(faq.id)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
-                    <span className="font-semibold text-gray-900 pr-4">
+                    <span className="text-sm sm:text-base font-semibold text-gray-900 pr-4">
                       {faq.question}
                     </span>
                     <motion.div
@@ -241,7 +241,7 @@ export default function FAQ() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 pb-4 text-gray-600">
+                        <div className="px-4 sm:px-6 pb-3 sm:pb-4 text-sm sm:text-base text-gray-600">
                           {faq.answer}
                         </div>
                       </motion.div>
@@ -259,21 +259,19 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mt-12 p-8 bg-blue-50 rounded-2xl"
+          className="text-center mt-8 sm:mt-12 p-6 sm:p-8 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl border border-blue-100"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-2">
             {t('faq.contactCta.title')}
           </h3>
-          <p className="text-gray-600 mb-4">
+          <p className="text-sm sm:text-base text-gray-600 mb-4">
             {t('faq.contactCta.description')}
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors"
+          <button
+            className="px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all text-sm sm:text-base shadow-lg hover:shadow-xl"
           >
             {t('faq.contactCta.button')}
-          </motion.button>
+          </button>
         </motion.div>
       </div>
     </section>

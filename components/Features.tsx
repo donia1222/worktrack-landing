@@ -1,6 +1,4 @@
 'use client'
-
-import { motion } from 'framer-motion'
 import { 
   MapPin, 
   Clock, 
@@ -63,82 +61,47 @@ const getFeatures = (t: (key: string) => string) => [
   },
 ]
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-}
-
 export default function Features() {
   const { t } = useLanguage()
   const features = getFeatures(t)
   
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
             {t('features.title')}{' '}
             <span className="gradient-text">{t('features.titleAccent')}</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
             {t('features.description')}
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={item}
-              whileHover={{ scale: 1.05 }}
-              className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="relative bg-white rounded-xl p-5 shadow-md border border-gray-100"
             >
-              <div className={`${feature.lightColor} w-14 h-14 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                <feature.icon className={`w-7 h-7 ${feature.color.replace('bg-', 'text-')}`} />
+              <div className={`${feature.lightColor} w-12 h-12 rounded-xl flex items-center justify-center mb-3`}>
+                <feature.icon className={`w-6 h-6 ${feature.color.replace('bg-', 'text-')}`} />
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 {feature.title}
               </h3>
               
-              <p className="text-gray-600">
+              <p className="text-sm text-gray-600">
                 {feature.description}
               </p>
               
-              <div className={`absolute top-0 right-0 w-32 h-32 ${feature.color} opacity-5 rounded-full filter blur-3xl group-hover:opacity-10 transition-opacity`} />
-            </motion.div>
+              <div className={`absolute top-0 right-0 w-32 h-32 ${feature.color} opacity-5 rounded-full filter blur-3xl`} />
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
+        <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-8 flex-wrap justify-center">
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-500" />
@@ -157,7 +120,7 @@ export default function Features() {
               <span className="text-gray-700 font-medium"><strong>{t('features.badges.subscriptions')}</strong></span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

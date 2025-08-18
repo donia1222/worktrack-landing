@@ -1,9 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Clock, MapPin, ChevronDown, Play } from 'lucide-react'
-import Image from 'next/image'
+import { Clock, MapPin, ChevronDown } from 'lucide-react'
 import DemoModal from './DemoModal'
 import { useLanguage } from '@/lib/language'
 
@@ -11,62 +9,38 @@ export default function Hero() {
   const { t } = useLanguage()
   const [isDemoOpen, setIsDemoOpen] = useState(false)
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-[600px] sm:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-green-50" />
       
-      {/* Animated circles */}
-      <motion.div
-        className="absolute top-20 left-20 w-72 h-72 bg-blue-400 rounded-full filter blur-3xl opacity-20"
-        animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 90, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      <motion.div
-        className="absolute bottom-20 right-20 w-96 h-96 bg-green-400 rounded-full filter blur-3xl opacity-20"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          rotate: [0, -90, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
+      {/* Background circles */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400 rounded-full filter blur-3xl opacity-20" />
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-green-400 rounded-full filter blur-3xl opacity-20" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
 
-            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               {t('hero.title')}{' '}
               <span className="gradient-text">{t('hero.titleAccent')}</span>
             </h2>
             
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-base sm:text-lg text-gray-600 mb-6">
               {t('hero.description')}
               <br />{t('hero.subtitle')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <motion.button
-                className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <div className="flex flex-col sm:flex-row gap-3 mb-6">
+              <button
+                className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 {t('hero.downloadButton')}
-              </motion.button>
+              </button>
 
             </div>
             
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+            <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-blue-500" />
                 <span><strong>{t('hero.features.autoTimer')}</strong></span>
@@ -119,11 +93,11 @@ export default function Hero() {
                     <div className="bg-blue-50 p-4 rounded-2xl">
                       <div className="text-2xl mb-1">💼</div>
                       <div className="text-2xl font-bold text-gray-900">1</div>
-                      <div className="text-xs text-gray-600">Trabajos activos</div>
+                      <div className="text-xs text-gray-600">{t('mockup.activeJobs')}</div>
                     </div>
                     <div className="bg-green-50 p-4 rounded-2xl">
                       <div className="text-2xl mb-1">⏰</div>
-                      <div className="text-sm font-semibold text-gray-900">Auto-timer</div>
+                      <div className="text-sm font-semibold text-gray-900">{t('mockup.autoTimer')}</div>
                     </div>
                   </div>
                   
@@ -131,10 +105,10 @@ export default function Hero() {
                   <div className="bg-purple-50 p-4 rounded-2xl mb-4">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="text-xl">📅</div>
-                      <span className="font-semibold text-gray-800">Agosto</span>
+                      <span className="font-semibold text-gray-800">{t('mockup.august')}</span>
                     </div>
                     <div className="grid grid-cols-7 gap-1 text-xs">
-                      {['L','M','M','J','V','S','D'].map((day, i) => (
+                      {(t('mockup.weekDays') as any as string[]).map((day, i) => (
                         <div key={i} className="text-center text-gray-500 font-medium">{day}</div>
                       ))}
                       {[...Array(31)].map((_, i) => (
@@ -161,13 +135,9 @@ export default function Hero() {
       </div>
       
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <ChevronDown className="w-8 h-8 text-gray-400" />
-      </motion.div>
+      </div>
 
       {/* Demo Modal */}
       <DemoModal isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />

@@ -207,8 +207,8 @@
     }
   },
   "cta": {
-    "title": "Beginnen Sie heute mit der Kontrolle Ihrer Zeit",
-    "titleAccent": "",
+    "title": "Beginnen Sie heute mit der Kontrolle",
+    "titleAccent": "Ihrer Zeit",
     "description": "Schließen Sie sich Tausenden von Fachleuten an, die bereits auf VixTimeApp vertrauen, um ihre Arbeitszeit intelligent zu verwalten.",
     "rating": "4.8/5 im App Store",
     "downloadButton": "Kostenlos Herunterladen",
@@ -246,6 +246,35 @@
       "5": "Allein die Rechnungserstellung ist das Premium wert. Ich werde schneller bezahlt und verbringe keine Zeit mit Papierkram.",
       "6": "Mein Team liebt die Genauigkeit der GPS-Verfolgung. Keine Streitigkeiten mehr über geleistete Stunden - alles ist automatisch und transparent."
     }
+  },
+  "mockup": {
+    "activeJobs": "Aktive Jobs",
+    "autoTimer": "Auto-Timer",
+    "august": "August",
+    "reports": "Berichte",
+    "selectedJob": "Ausgewählter Job",
+    "test": "Test",
+    "thisMonth": "Diesen Monat",
+    "totalHours": "Gesamt Stunden",
+    "workedDays": "Arbeitstage",
+    "averageDay": "Durchschnitt/Tag",
+    "distributionByJob": "Verteilung nach Job",
+    "weekDays": ["M", "D", "M", "D", "F", "S", "S"],
+    "settings": "Einstellungen",
+    "jobManagement": "Job-Verwaltung",
+    "jobManagementDesc": "Konfigurieren Sie Ihre Jobs mit Zeitplänen, Tarifen und Abrechnung",
+    "myJobs": "Meine Jobs",
+    "myJobsDesc": "Hinzufügen, bearbeiten und konfigurieren",
+    "appConfiguration": "App-Konfiguration",
+    "generalPreferences": "Allgemeine Einstellungen",
+    "generalPreferencesDesc": "Benachrichtigungen, Sprache, Thema",
+    "aiAssistant": "KI-Assistent für Arbeitspläne",
+    "aiGreeting": "Hallo! Ich bin Ihr Assistent für die Analyse von Arbeitszeiten.",
+    "analyzeImages": "Bilder und PDF-Dokumente analysieren",
+    "extractDays": "Arbeitstage und Zeitpläne extrahieren",
+    "identifyDays": "Freie Tage und Urlaub identifizieren",
+    "exportSchedules": "Zeitpläne in Kalender exportieren",
+    "typeMessage": "Geben Sie Ihre Nachricht hier ein..."
   },
   "footer": {
     "description": "Die ultimative App für intelligente Arbeitszeitkontrolle.",
