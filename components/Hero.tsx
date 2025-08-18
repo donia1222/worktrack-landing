@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight mt-16">
               {t('hero.title')}{' '}
               <span className="gradient-text">{t('hero.titleAccent')}</span>
             </h2>
