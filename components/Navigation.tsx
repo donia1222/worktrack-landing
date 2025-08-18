@@ -67,8 +67,8 @@ export default function Navigation() {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       } ${
         isScrolled 
-          ? 'bg-white/98 backdrop-blur-lg shadow-md border-b border-gray-100' 
-          : 'bg-white/95 backdrop-blur-md'
+          ? 'bg-white/99 backdrop-blur-lg shadow-md border-b border-gray-100' 
+          : 'bg-white/99 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

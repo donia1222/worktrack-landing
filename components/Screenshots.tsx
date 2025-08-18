@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLanguage } from '@/lib/language'
+import Image from 'next/image'
 
 const getScreenshots = (t: (key: string) => string) => [
   {
@@ -12,39 +13,89 @@ const getScreenshots = (t: (key: string) => string) => [
     mockup: {
       time: '20:10',
       content: (
-        <div className="p-4">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <span className="text-white text-sm">⏰</span>
+        <div className="p-3 bg-gray-50">
+          <div className="flex items-center justify-between mb-4">
+            <div className="font-bold text-xl">
+              <span className="text-[#007AFF]">Vix</span>
+              <span className="text-[#5856D6]">Time</span>
             </div>
-            <div className="font-semibold flex">
-              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
-              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
-              <span className="text-[#34C759]" style={{ fontWeight: '800' }}>App</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-3 mb-4">
-            <div className="bg-blue-50 p-3 rounded-xl">
-              <div className="text-xl mb-1">💼</div>
-              <div className="text-lg font-bold">1</div>
-              <div className="text-xs text-gray-600">{t('mockup.activeJobs')}</div>
-            </div>
-            <div className="bg-green-50 p-3 rounded-xl">
-              <div className="text-xl mb-1">⏰</div>
-              <div className="text-sm font-semibold">{t('mockup.autoTimer')}</div>
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center border-4 border-green-400">
+              <span className="text-green-500 text-lg">⏰</span>
             </div>
           </div>
-          <div className="bg-purple-50 p-3 rounded-xl">
-            <div className="text-lg mb-2">📅 {t('mockup.august')}</div>
-            <div className="grid grid-cols-7 gap-1 text-xs">
-              {[...Array(31)].map((_, i) => (
-                <div key={i} className={`h-6 flex items-center justify-center rounded ${
-                  i === 3 ? 'bg-blue-500 text-white' : 
-                  i === 4 ? 'bg-green-500 text-white' : ''
-                }`}>
-                  {i + 1}
+          <div className="grid grid-cols-2 gap-2 mb-3">
+            <div className="bg-blue-100 p-3 rounded-xl">
+              <div className="flex items-center justify-center mb-1">
+                <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white">💼</span>
                 </div>
-              ))}
+              </div>
+              <div className="text-center">
+                <div className="text-[10px] text-gray-600">Trabajos activos</div>
+                <div className="text-2xl font-bold text-blue-800">1</div>
+                <div className="text-[10px] text-gray-500">Bbb</div>
+              </div>
+            </div>
+            <div className="bg-green-100 p-3 rounded-xl">
+              <div className="flex items-center justify-center mb-1">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">⏰</span>
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-[10px] text-gray-600">Auto-timer</div>
+                <div className="text-lg font-bold">00:00:00</div>
+                <div className="text-[10px] text-gray-500">Auto-timer inactivo</div>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-2 mb-3">
+            <div className="bg-gray-100 p-3 rounded-xl">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-semibold">Mi Calendario</span>
+                <span className="text-sm">📅</span>
+              </div>
+              <div className="grid grid-cols-3 gap-1 text-center">
+                <div>
+                  <div className="text-[10px] text-gray-500">L</div>
+                  <div className="text-sm font-bold text-blue-500">18</div>
+                  <div className="text-lg">💼</div>
+                </div>
+                <div>
+                  <div className="text-[10px] text-gray-500">M</div>
+                  <div className="text-sm font-bold">19</div>
+                  <div className="text-lg">💼</div>
+                </div>
+                <div>
+                  <div className="text-[10px] text-gray-500">M</div>
+                  <div className="text-sm font-bold">20</div>
+                  <div className="text-lg">🏠</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-purple-100 p-3 rounded-xl">
+              <div className="text-xs font-semibold mb-1">Horarios Estándar</div>
+              <div className="text-sm font-bold text-purple-800">09:00 - 17:00</div>
+              <div className="text-[10px] text-gray-600">5 días/semana</div>
+              <div className="flex justify-end mt-1">
+                <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">⏰</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-blue-100 p-3 rounded-xl">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white">✨</span>
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold">Asistente IA</span>
+                  <span className="text-[10px] bg-blue-500 text-white px-2 py-0.5 rounded-full">NUEVO</span>
+                </div>
+                <div className="text-[10px] text-gray-600 mt-0.5">¡Hola! Soy tu asistente...</div>
+              </div>
             </div>
           </div>
         </div>
@@ -188,9 +239,26 @@ const getScreenshots = (t: (key: string) => string) => [
 ]
 
 export default function Screenshots() {
-  const { t } = useLanguage()
-  const screenshots = getScreenshots(t)
+  const { t, language } = useLanguage()
   const [currentIndex, setCurrentIndex] = useState(0)
+
+  const screenshots = [
+    { 
+      image: '/screenshots/es/cap4.png',
+      title: t('screenshots.items.dashboard.title'), 
+      description: t('screenshots.items.dashboard.description') 
+    },
+    { 
+         image: '/screenshots/es/map.png',
+      title: t('screenshots.items.reports.title'), 
+      description: t('screenshots.items.reports.description') 
+    },
+    { 
+       image: '/screenshots/es/botp.png',
+      title: t('screenshots.items.aiBot.title'), 
+      description: t('screenshots.items.aiBot.description') 
+    }
+  ]
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % screenshots.length)
@@ -236,27 +304,18 @@ export default function Screenshots() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center"
             >
-              {/* Phone mockup */}
-              <div className="relative mx-auto w-64 sm:w-72 h-[500px] sm:h-[580px] mb-6 sm:mb-8">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-700 rounded-[3rem] shadow-2xl" />
-                <div className="absolute inset-[3px] bg-black rounded-[2.8rem]" />
-                <div className="absolute inset-[15px] bg-white rounded-[2.3rem] overflow-hidden">
-                  {/* Status bar */}
-                  <div className="h-8 bg-gray-50 flex items-center justify-between px-6 text-xs">
-                    <span className="font-semibold">{screenshots[currentIndex].mockup.time}</span>
-                    <div className="flex gap-1">
-                      <div className="w-4 h-3 bg-gray-800 rounded-sm" />
-                      <div className="w-4 h-3 bg-gray-800 rounded-sm" />
-                      <div className="w-4 h-3 bg-gray-300 rounded-sm" />
-                    </div>
-                  </div>
-                  
-                  {/* App content */}
-                  {screenshots[currentIndex].mockup.content}
+              {/* Screenshot */}
+              <div className="mb-6 sm:mb-8">
+                <div className="relative mx-auto" style={{ maxWidth: '350px' }}>
+                  <Image
+                    src={screenshots[currentIndex].image}
+                    alt={screenshots[currentIndex].title}
+                    width={350}
+                    height={700}
+                    className="rounded-2xl shadow-2xl"
+                    priority
+                  />
                 </div>
-                
-                {/* Notch */}
-                <div className="absolute top-[15px] left-1/2 transform -translate-x-1/2 w-28 h-5 bg-black rounded-b-2xl" />
               </div>
 
               {/* Description */}

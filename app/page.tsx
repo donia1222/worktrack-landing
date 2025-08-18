@@ -15,7 +15,7 @@ export default function Home() {
       <Navigation />
       <main className="overflow-x-hidden">
         <Hero />
-        <Stats />
+
         <Features />
         <Screenshots />
         <Testimonials />

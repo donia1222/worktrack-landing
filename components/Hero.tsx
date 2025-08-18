@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { Clock, MapPin, ChevronDown } from 'lucide-react'
+import { MapPin, ChevronDown } from 'lucide-react'
 import DemoModal from './DemoModal'
 import { useLanguage } from '@/lib/language'
+import Image from 'next/image'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -61,74 +62,15 @@ export default function Hero() {
           </div>
           
           <div className="relative">
-            <div className="relative mx-auto w-80 h-[650px]">
-              {/* Phone mockup */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-700 rounded-[3rem] shadow-2xl" />
-              <div className="absolute inset-[3px] bg-black rounded-[2.8rem]" />
-              <div className="absolute inset-[15px] bg-white rounded-[2.3rem] overflow-hidden">
-                {/* Status bar */}
-                <div className="h-8 bg-gray-50 flex items-center justify-between px-6 text-xs">
-                  <span className="font-semibold">20:10</span>
-                  <div className="flex gap-1">
-                    <div className="w-4 h-3 bg-gray-800 rounded-sm" />
-                    <div className="w-4 h-3 bg-gray-800 rounded-sm" />
-                    <div className="w-4 h-3 bg-gray-300 rounded-sm" />
-                  </div>
-                </div>
-                
-                {/* App content */}
-                <div className="p-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                      <Clock className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="font-semibold flex">
-                      <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
-                      <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
-                      <span className="text-[#34C759]" style={{ fontWeight: '800' }}>App</span>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="bg-blue-50 p-4 rounded-2xl">
-                      <div className="text-2xl mb-1">💼</div>
-                      <div className="text-2xl font-bold text-gray-900">1</div>
-                      <div className="text-xs text-gray-600">{t('mockup.activeJobs')}</div>
-                    </div>
-                    <div className="bg-green-50 p-4 rounded-2xl">
-                      <div className="text-2xl mb-1">⏰</div>
-                      <div className="text-sm font-semibold text-gray-900">{t('mockup.autoTimer')}</div>
-                    </div>
-                  </div>
-                  
-                  {/* Calendar preview */}
-                  <div className="bg-purple-50 p-4 rounded-2xl mb-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="text-xl">📅</div>
-                      <span className="font-semibold text-gray-800">{t('mockup.august')}</span>
-                    </div>
-                    <div className="grid grid-cols-7 gap-1 text-xs">
-                      {(t('mockup.weekDays') as any as string[]).map((day, i) => (
-                        <div key={i} className="text-center text-gray-500 font-medium">{day}</div>
-                      ))}
-                      {[...Array(31)].map((_, i) => (
-                        <div 
-                          key={i} 
-                          className={`aspect-square flex items-center justify-center rounded-lg text-xs
-                            ${i === 3 ? 'bg-blue-500 text-white font-bold' : 
-                              i === 4 ? 'bg-green-500 text-white' : 
-                              'text-gray-600'}`}
-                        >
-                          {i + 1}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Notch */}
-              <div className="absolute top-[15px] left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl" />
+            <div className="relative mx-auto" style={{ maxWidth: '300px'}}>
+              <Image
+                src='/screenshots/es/calendar.png'
+                alt="VixTime App"
+                width={300}
+                height={600}
+                className="rounded-2xl shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>
