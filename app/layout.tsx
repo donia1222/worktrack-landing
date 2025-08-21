@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import LanguageProvider from '@/components/LanguageProvider'
 import CookieNotice from '@/components/CookieNotice'
+import { LaunchModalProvider } from '@/contexts/LaunchModalContext'
 
 export const metadata: Metadata = {
   title: 'WorkTrack - Control de Horas de Trabajo',
@@ -23,8 +24,10 @@ export default function RootLayout({
     <html lang="es">
       <body className="bg-gray-50">
         <LanguageProvider>
-          {children}
-          <CookieNotice />
+          <LaunchModalProvider>
+            {children}
+            <CookieNotice />
+          </LaunchModalProvider>
         </LanguageProvider>
       </body>
     </html>

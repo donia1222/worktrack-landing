@@ -5,9 +5,11 @@ import { MapPin, ChevronDown } from 'lucide-react'
 import DemoModal from './DemoModal'
 import { useLanguage } from '@/lib/language'
 import Image from 'next/image'
+import { useLaunchModal } from '@/contexts/LaunchModalContext'
 
 export default function Hero() {
   const { t } = useLanguage()
+  const { openModal } = useLaunchModal()
   const [isDemoOpen, setIsDemoOpen] = useState(false)
   return (
     <section id="hero" className="relative min-h-[600px] sm:min-h-screen flex items-center justify-center overflow-hidden">
@@ -34,6 +36,7 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <button
+                onClick={openModal}
                 className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-medium rounded-xl hover:from-blue-700 hover:to-blue-600 transition-all shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 {t('hero.downloadButton')}

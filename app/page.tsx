@@ -1,3 +1,5 @@
+'use client'
+
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
@@ -8,8 +10,12 @@ import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
+import { LaunchModal } from '@/components/LaunchModal'
+import { useLaunchModal } from '@/contexts/LaunchModalContext'
 
 export default function Home() {
+  const { isOpen, closeModal } = useLaunchModal()
+  
   return (
     <>
       <Navigation />
@@ -24,6 +30,7 @@ export default function Home() {
         <CTA />
         <Footer />
       </main>
+      <LaunchModal isOpen={isOpen} onClose={closeModal} />
     </>
   )
 }

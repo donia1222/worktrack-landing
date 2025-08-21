@@ -310,6 +310,15 @@
       "learnMore": "Learn more"
     }
   },
+  "launchModal": {
+    "title": "Coming Soon!",
+    "subtitle": "VixTimeApp will be available very soon",
+    "date": "September 6th",
+    "year": "2025",
+    "description": "We're working on the final details to bring you the best GPS time tracking experience.",
+    "reminder": "Save this date in your calendar",
+    "button": "Got it"
+  },
   "contact": {
     "backButton": "Back to VixTimeApp",
     "title": "Need",
