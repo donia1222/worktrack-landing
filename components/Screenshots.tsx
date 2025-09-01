@@ -278,13 +278,7 @@ export default function Screenshots() {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-            {t('screenshots.title')}{' '}
-            <span className="gradient-text">{t('screenshots.titleAccent')}</span>
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-            {t('screenshots.description')}
-          </p>
+   
         </motion.div>
 
         <div className="relative">
