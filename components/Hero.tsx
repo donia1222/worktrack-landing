@@ -65,12 +65,12 @@ export default function Hero() {
           </div>
           
           <div className="relative">
-            <div className="relative mx-auto" style={{ maxWidth: '300px'}}>
+            <div className="relative mx-auto"   style={{ maxWidth: '500px'}}>
               <Image
                 src='/screenshots/es/calendar.png'
                 alt="VixTime App"
-                width={300}
-                height={600}
+                width={600}
+                height={800}
                 className="rounded-2xl shadow-2xl"
                 priority
               />
@@ -79,10 +79,7 @@ export default function Hero() {
         </div>
       </div>
       
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <ChevronDown className="w-8 h-8 text-gray-400" />
-      </div>
+  
 
       {/* Demo Modal */}
       <DemoModal isOpen={isDemoOpen} onClose={() => setIsDemoOpen(false)} />

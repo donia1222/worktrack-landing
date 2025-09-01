@@ -300,11 +300,11 @@ export default function Screenshots() {
             >
               {/* Screenshot */}
               <div className="mb-6 sm:mb-8">
-                <div className="relative mx-auto" style={{ maxWidth: '350px' }}>
+                <div className="relative mx-auto" style={{ maxWidth: '450px' }}>
                   <Image
                     src={screenshots[currentIndex].image}
                     alt={screenshots[currentIndex].title}
-                    width={350}
+                    width={400}
                     height={700}
                     className="rounded-2xl shadow-2xl"
                     priority
@@ -312,15 +312,7 @@ export default function Screenshots() {
                 </div>
               </div>
 
-              {/* Description */}
-              <div className="text-center max-w-md px-4">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-2">
-                  {screenshots[currentIndex].title}
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600">
-                  {screenshots[currentIndex].description}
-                </p>
-              </div>
+
             </motion.div>
 
             <button
