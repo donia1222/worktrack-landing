@@ -58,12 +58,12 @@
     },
     "badges": {
       "localStorage": "100% Privacy - Data Never Leaves Your Device",
-      "languages": "Available in 5 Languages",
-      "tech": "Works Offline - No Internet Required",
-      "subscriptions": "Free Forever Plan Available"
+      "languages": "10 Languages (ES, EN, DE, FR, IT, TR, RU, JA, PT, NL)",
+      "tech": "Works Offline - No Internet Required"
     }
   },
   "screenshots": {
+    "badge": "App Preview",
     "title": "Beautiful",
     "titleAccent": "Interface",
     "description": "Award-winning design that makes time tracking a pleasure, not a chore",
@@ -91,7 +91,7 @@
     "titleAccent": "Transparent",
     "titleEnd": "Pricing",
     "description": "Start free and see the difference. Upgrade when you're ready to unlock the full power of automated time tracking.",
-    "descriptionBold": "7-day free trial • Cancel anytime • No hidden fees",
+    "descriptionBold": "No commitment • Cancel anytime • No hidden fees",
     "free": {
       "name": "Starter",
       "price": "0",
@@ -301,7 +301,7 @@
     },
     "badges": {
       "secure": "100% Secure",
-      "languages": "Available in 5 languages"
+      "languages": "Available in 10 languages"
     },
     "copyright": "All rights reserved.",
     "cookieNotice": {

@@ -58,12 +58,11 @@
     },
     "badges": {
       "localStorage": "100% Almacenamiento Local",
-      "languages": "5 Idiomas (ES, EN, DE, FR, IT)",
-      "tech": "React Native + Expo SDK 52",
-      "subscriptions": "RevenueCat - Suscripciones"
+      "languages": "10 Idiomas (ES, EN, DE, FR, IT, TR, RU, JA, PT, NL)"
     }
   },
   "screenshots": {
+    "badge": "Vista Previa",
     "title": "Descubre cada",
     "titleAccent": "pantalla",
     "description": "Interfaz intuitiva diseñada para que controles tu tiempo sin esfuerzo",
@@ -109,7 +108,7 @@
       "price": "3.99",
       "duration": "3 meses",
       "description": "Todo el poder de VixTimeApp - 3 meses",
-      "cta": "Probar 7 días gratis",
+      "cta": "Obtener Premium",
       "popular": "Más Popular",
       "features": {
         "unlimitedJobs": "Trabajos ilimitados con horarios flexibles",
@@ -213,7 +212,7 @@
     "rating": "4.8/5 en App Store",
     "downloadButton": "Descargar Gratis",
     "demoButton": "Ver en acción",
-    "footer": "Sin tarjeta de crédito • 7 días de prueba premium gratis"
+    "footer": "Sin permanencia • Cancela cuando quieras"
   },
   "stats": {
     "title": "Números que",
@@ -301,7 +300,7 @@
     },
     "badges": {
       "secure": "100% Seguro",
-      "languages": "Disponible en 5 idiomas"
+      "languages": "Disponible en 10 idiomas"
     },
     "copyright": "Todos los derechos reservados.",
     "cookieNotice": {

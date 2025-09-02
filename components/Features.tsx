@@ -1,5 +1,5 @@
 "use client"
-import { MapPin, BarChart3, MessageSquare, Shield, Briefcase, Bell, Globe, Smartphone, Zap, Layout } from "lucide-react"
+import { MapPin, BarChart3, MessageSquare, Shield, Briefcase, Bell, Globe, Layout } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 
 const getFeatures = (t: (key: string) => string) => [
@@ -101,18 +101,6 @@ export default function Features() {
                 <Globe className="w-5 h-5 text-blue-600" />
               </div>
               <span className="text-slate-700 font-medium">{t("features.badges.languages")}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-violet-100 rounded-full flex items-center justify-center">
-                <Smartphone className="w-5 h-5 text-violet-600" />
-              </div>
-              <span className="text-slate-700 font-medium">{t("features.badges.tech")}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
-                <Zap className="w-5 h-5 text-amber-600" />
-              </div>
-              <span className="text-slate-700 font-medium">{t("features.badges.subscriptions")}</span>
             </div>
           </div>
         </div>

@@ -90,7 +90,7 @@ export default function Testimonials() {
                 </div>
 
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-slate-600 to-slate-800 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg">
                     {testimonial.avatar}
                   </div>
                   <div>

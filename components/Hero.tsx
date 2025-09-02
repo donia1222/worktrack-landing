@@ -44,10 +44,10 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={openModal}
-                className="group relative px-8 py-4 bg-blue-600 text-white font-semibold rounded-2xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 text-base"
+                className="group relative px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 text-sm"
               >
                 <span className="relative z-10">{t("hero.downloadButton")}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
               </button>
             </div>
 
@@ -89,7 +89,7 @@ export default function Hero() {
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-500/10 rounded-full" />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-indigo-500/10 rounded-full" />
 
-              <div className="relative bg-white p-2 rounded-3xl shadow-2xl shadow-slate-900/10">
+              <div className="relative">
                 <Image
                   src="/screenshots/es/calendar.png"
                   alt="VixTime App"

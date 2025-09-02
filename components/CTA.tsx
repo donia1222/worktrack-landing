@@ -7,7 +7,7 @@ import { useLanguage } from "@/lib/language"
 export default function CTA() {
   const { t } = useLanguage()
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 text-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
 
@@ -25,14 +25,14 @@ export default function CTA() {
             </span>
           </h2>
 
-          <p className="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl mx-auto text-pretty">{t("cta.description")}</p>
+          <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto text-pretty">{t("cta.description")}</p>
 
           <div className="flex items-center justify-center gap-1 mb-8">
-            <div className="flex items-center gap-1 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700/50">
+            <div className="flex items-center gap-1 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full border border-blue-200/50">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               ))}
-              <span className="ml-3 text-sm text-slate-300 font-medium">{t("cta.rating")}</span>
+              <span className="ml-3 text-sm text-slate-700 font-medium">{t("cta.rating")}</span>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ export default function CTA() {
             </button>
           </motion.div>
 
-          <p className="text-sm text-slate-400 font-medium">{t("cta.footer")}</p>
+          <p className="text-sm text-slate-600 font-medium">{t("cta.footer")}</p>
         </motion.div>
       </div>
     </section>

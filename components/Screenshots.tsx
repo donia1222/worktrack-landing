@@ -42,9 +42,9 @@ export default function Screenshots() {
   return (
     <section
       id="screenshots"
-      className="py-20 lg:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50/50 relative overflow-hidden"
+      className="py-20 lg:py-28 bg-gradient-to-b from-blue-50 via-blue-25 to-blue-50/50 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-30" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e40af_1px,transparent_1px),linear-gradient(to_bottom,#1e40af_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-40" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -56,11 +56,13 @@ export default function Screenshots() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100/80 backdrop-blur-sm rounded-full text-slate-600 text-sm font-medium mb-6 border border-slate-200/50">
             <Monitor className="w-4 h-4" />
-            App Preview
+            {t("screenshots.badge")}
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance">Experience the Interface</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance">
+            {t("screenshots.title")} <span className="bg-gradient-to-r from-slate-600 to-slate-800 bg-clip-text text-transparent">{t("screenshots.titleAccent")}</span>
+          </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto text-pretty leading-relaxed">
-            Discover how our intuitive design makes complex workflows simple and efficient
+            {t("screenshots.description")}
           </p>
         </motion.div>
 
@@ -91,15 +93,15 @@ export default function Screenshots() {
           >
             <div className="relative mb-12 lg:mb-16">
               <div className="relative mx-auto max-w-sm lg:max-w-lg">
-                <div className="absolute -inset-6 bg-gradient-to-r from-slate-200/40 via-slate-100/20 to-slate-200/40 rounded-[2.5rem] blur-xl opacity-60" />
-                <div className="relative bg-gradient-to-b from-white/95 to-slate-50/95 backdrop-blur-xl rounded-[2rem] p-4 shadow-2xl border border-white/50 ring-1 ring-slate-200/20">
-                  <div className="bg-gradient-to-b from-slate-50/50 to-white/80 rounded-[1.5rem] p-2 shadow-inner ring-1 ring-slate-200/30">
+                <div className="absolute -inset-6 bg-gradient-to-r from-blue-200/40 via-blue-100/20 to-blue-200/40 rounded-[2.5rem] blur-xl opacity-60" />
+                <div className="relative bg-gradient-to-b from-blue-50/95 to-blue-100/95 backdrop-blur-xl rounded-[2rem] p-4 shadow-2xl border border-blue-100/50 ring-1 ring-blue-200/20">
+                  <div className="bg-gradient-to-b from-blue-50/50 to-blue-25/80 rounded-[1.5rem] p-2 shadow-inner ring-1 ring-blue-200/30">
                     <Image
                       src={screenshots[currentIndex].image || "/placeholder.svg"}
                       alt={screenshots[currentIndex].title}
                       width={450}
                       height={800}
-                      className="rounded-2xl w-full h-auto shadow-lg ring-1 ring-slate-200/50"
+                      className="rounded-2xl w-full h-auto shadow-lg ring-1 ring-blue-200/50"
                       priority
                     />
                   </div>
@@ -111,13 +113,13 @@ export default function Screenshots() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-xl border border-slate-200/50 max-w-3xl mx-auto ring-1 ring-slate-200/20"
+              className="bg-blue-50/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-xl border border-blue-200/50 max-w-3xl mx-auto ring-1 ring-blue-200/20"
             >
               <div className="flex items-center gap-6 mb-6">
-                <div className="p-4 bg-gradient-to-br from-slate-100 to-slate-200/50 rounded-2xl shadow-inner">
+                <div className="p-4 bg-gradient-to-br from-blue-100 to-blue-200/50 rounded-2xl shadow-inner">
                   {(() => {
                     const IconComponent = screenshots[currentIndex].icon
-                    return IconComponent ? <IconComponent className="w-8 h-8 text-slate-700" /> : null
+                    return IconComponent ? <IconComponent className="w-8 h-8 text-blue-700" /> : null
                   })()}
                 </div>
                 <div>

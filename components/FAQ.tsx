@@ -190,7 +190,7 @@ export default function FAQ() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all flex items-center gap-2 hover:scale-105 ${
                   selectedCategory === category.id
-                    ? "bg-slate-900 text-white shadow-lg shadow-slate-900/25"
+                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/25"
                     : "bg-white/80 backdrop-blur-sm text-slate-600 hover:bg-slate-50 border border-slate-200 hover:border-slate-300"
                 }`}
               >
@@ -265,7 +265,7 @@ export default function FAQ() {
         >
           <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 mb-2">{t("faq.contactCta.title")}</h3>
           <p className="text-sm sm:text-base text-slate-600 mb-4">{t("faq.contactCta.description")}</p>
-          <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-slate-900 text-white rounded-xl font-medium hover:bg-slate-800 transition-all text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105">
+          <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-all text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105">
             {t("faq.contactCta.button")}
           </button>
         </motion.div>
