@@ -5,11 +5,11 @@ import CookieNotice from '@/components/CookieNotice'
 import { LaunchModalProvider } from '@/contexts/LaunchModalContext'
 
 export const metadata: Metadata = {
-  title: 'WorkTrack - Control de Horas de Trabajo',
+  title: 'VixTime - Control de Horas de Trabajo',
   description: 'La app definitiva para el seguimiento automático de tu tiempo laboral con geolocalización inteligente',
   keywords: 'control horario, geolocalización laboral, timer trabajo, app laboral',
   openGraph: {
-    title: 'WorkTrack - Control de Horas de Trabajo',
+    title: 'VixTime - Control de Horas de Trabajo',
     description: 'Seguimiento automático de tiempo laboral con geolocalización',
     images: ['/og-image.png'],
   },
