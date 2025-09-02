@@ -1,8 +1,10 @@
 {
   "navigation": {
     "features": "Funktionen",
-    "screenshots": "Screenshots",
-    "pricing": "Preise",
+    "aiScanner": "KI Scanner",
+    "smartWidgets": "iOS Widgets",
+    "workingPhone": "Demo",
+    "pricing": "Preise", 
     "faq": "FAQ",
     "contact": "Kontakt",
     "download": "Herunterladen"
@@ -32,8 +34,8 @@
         "description": "Erkennt automatisch, wann Sie zur Arbeit kommen oder gehen. Konfigurieren Sie Geofencing-Radius von 50m bis 500m und Verzögerungen von 2-10 Minuten. Keine Berührung der App erforderlich."
       },
       "widgets": {
-        "title": "iOS Widgets & Live Activities",
-        "description": "Startbildschirm-Widgets in 3 Größen. Live Activities auf Dynamic Island und Sperrbildschirm. 7-Tage-Kalenderansicht und Echtzeit-Timer direkt auf Ihrem Bildschirm."
+        "title": "Erweiterte iOS Widgets + Dynamic Island",
+        "description": "3 native iOS Widget-Größen mit Echtzeit-Datenaktualisierungen. Live Activities in Dynamic Island für iPhone 14 Pro+. Vollständige Kontrolle vom Sperrbildschirm."
       },
       "jobs": {
         "title": "Unbegrenzte Jobs (Premium)",
@@ -48,12 +50,12 @@
         "description": "Detaillierte Statistiken nach Job und Zeitraum. PDF-Export nur in Premium. Professionelles Abrechnungssystem enthalten."
       },
       "ai": {
-        "title": "Analyze-Bot KI (Gemini)",
-        "description": "Chatbot mit Gemini 1.5 Pro, der Bilder und PDFs von Arbeitsplänen analysiert. Extrahiert Tage, Schichten und exportiert automatisch in den Kalender."
+        "title": "Multimodale KI (GPT-4 + Gemini)",
+        "description": "Duale KI mit GPT-4 Vision + Google Gemini. Analysiert PDF-Dokumente, Zeitplan-Bilder, Arbeitsverträge. Automatische globale Rechtssuche in 10 Sprachen."
       },
       "notifications": {
-        "title": "Intelligente Benachrichtigungen",
-        "description": "3 spezialisierte Android-Kanäle. Kontextuelle Benachrichtigungen vor automatischen Aktionen. Anpassbare Arbeitserinnerungen und intelligente Berechtigungen."
+        "title": "Pro Benachrichtigungs-System",
+        "description": "3 spezialisierte Android-Kanäle: Auto-Timer, Erinnerungen, Allgemein. KI-gestützte kontextuelle Warnungen. Kompatibel mit iOS Focus Modes."
       }
     },
     "badges": {
@@ -61,27 +63,100 @@
       "languages": "10 Sprachen (ES, EN, DE, FR, IT, TR, RU, JA, PT, NL)"
     }
   },
-  "screenshots": {
-    "badge": "App Vorschau",
-    "title": "Entdecken Sie jeden",
-    "titleAccent": "Bildschirm",
-    "description": "Intuitive Benutzeroberfläche für mühellose Zeitkontrolle",
-    "items": {
-      "dashboard": {
-        "title": "Haupt-Dashboard",
-        "description": "Übersicht mit aktiven Jobs, Kalender und Schnellzugriff"
+  "aiScanner": {
+    "badge": "Revolutionäre KI",
+    "title": "Foto hochladen,", 
+    "titleAccent": "KI versteht alles",
+    "description": "Powered by GPT-4 Vision + Google Gemini. Analysiert Zeitpläne, Verträge und Rechnungen. Die fortschrittlichste KI für Arbeitsdokumente.",
+    "processTitle": "So funktioniert es",
+    "tryButton": "KI Scanner testen",
+    "capabilities": {
+      "schedules": {
+        "title": "Komplexe Zeitpläne", 
+        "description": "Erkennt mehrere Personen, geteilte Schichten, unregelmäßige Stunden. Extrahiert automatisch Daten, Zeiten und Standorte."
+      },
+      "contracts": {
+        "title": "Verträge & PDFs",
+        "description": "Analysiert vollständige PDF-Dokumente. Findet wichtige Klauseln, Tarife und spezifische Arbeitsbedingungen."
+      },
+      "invoices": {
+        "title": "Rechnungen & Lohnabrechnungen",
+        "description": "Verarbeitet Rechnungen, Lohnabrechnungen und Finanzdokumente. Berechnet Summen und extrahiert Buchhaltungsdaten."
+      }
+    },
+    "steps": {
+      "capture": {
+        "title": "Aufnehmen oder Hochladen",
+        "description": "Foto machen oder PDF aus der Galerie auswählen. KI akzeptiert jede Bildqualität."
+      },
+      "analyze": {
+        "title": "KI Verarbeitet",
+        "description": "GPT-4 Vision + Gemini analysieren das Dokument. Extrahieren Personen, Zeitpläne, Daten und strukturierte Daten."
+      },
+      "export": {
+        "title": "Auto Export",
+        "description": "Zeitpläne synchronisieren direkt mit Ihrem iOS/Android-Kalender. Professionelles PDF generiert."
+      }
+    }
+  },
+  "smartWidgets": {
+    "badge": "Native iOS",
+    "title": "Widgets die",
+    "titleAccent": "wirklich funktionieren", 
+    "description": "3 native iOS Widget-Größen mit Echtzeit-Datenaktualisierungen. Live Activities in Dynamic Island für iPhone 14 Pro+. Vollständige Kontrolle vom Sperrbildschirm.",
+    "sizesTitle": "Alle iOS Größen",
+    "sizesDescription": "Wählen Sie das perfekte Widget für Ihren Homescreen. Alle mit Echtzeit-aktualisierten Daten.",
+    "ctaButton": "Widgets in Aktion sehen",
+    "sizes": {
+      "small": {
+        "title": "Kleines Widget",
+        "description": "Aktiver Timer, Tagesstunden, Job-Status. Perfekt für schnelle Kontrolle ohne App zu öffnen."
+      },
+      "medium": {
+        "title": "Mittleres Widget",
+        "description": "Komplette Wochenansicht mit farbcodierten Arbeitstagen. Direkter Zugriff auf Hauptfunktionen."
+      },
+      "large": {
+        "title": "Großes Widget", 
+        "description": "Vollständiges Dashboard mit Statistiken, Diagrammen, bevorstehenden Terminen und Schnellzugriff auf alle Funktionen."
+      }
+    },
+    "features": {
+      "realTime": {
+        "title": "Echtzeit-Updates",
+        "description": "Widgets aktualisieren sich automatisch jede Minute. Timer läuft ohne App zu öffnen."
+      },
+      "dynamicIsland": {
+        "title": "Dynamic Island",
+        "description": "Live Activities zeigen aktiven Timer in Dynamic Island. Nur für iPhone 14 Pro und iPhone 15 Pro."
+      },
+      "lockScreen": {
+        "title": "Sperrbildschirm",
+        "description": "iOS 16+ Sperrbildschirm-Widgets. Timer starten/stoppen ohne Telefon zu entsperren."
+      }
+    }
+  },
+  "workingPhone": {
+    "badge": "Live Demo",
+    "title": "VixTimeApp",
+    "titleAccent": "in Aktion",
+    "description": "Interaktive Demo mit echten App-Bildschirmen. Sehen Sie, wie GPS-Timer, Kalender und KI-Assistent zusammenarbeiten.",
+    "screens": {
+      "calendar": {
+        "title": "Visueller Kalender",
+        "description": "Schöne Heatmap zeigt Ihre Arbeitsmuster. Ein Tippen, um Termine hinzuzufügen oder in iOS/Android-Kalender zu exportieren."
+      },
+      "autoTimer": {
+        "title": "GPS Auto-Timer",
+        "description": "Automatische Erkennung bei Arbeitsplatzankunft. Anpassbares Geofencing von 50m bis 500m Radius."
+      },
+      "notifications": {
+        "title": "Smart Benachrichtigungen",
+        "description": "3 spezialisierte Android-Kanäle. iOS Focus Mode kompatibel. Verpassen Sie nie wichtige Arbeitserinnerungen."
       },
       "reports": {
-        "title": "Detaillierte Berichte",
-        "description": "Vollständige Statistiken mit Diagrammen und Job-Verteilung"
-      },
-      "aiBot": {
-        "title": "Intelligenter KI-Chatbot",
-        "description": "Analysiert Arbeitsdokumente und extrahiert automatisch Informationen"
-      },
-      "settings": {
-        "title": "Flexible Konfiguration",
-        "description": "Passen Sie jeden Aspekt der App an Ihre Bedürfnisse an"
+        "title": "Professionelle Berichte",
+        "description": "Rechnungsfertige PDFs in Sekunden generieren. Automatische Berechnungen und anpassbare Vorlagen."
       }
     }
   },

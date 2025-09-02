@@ -1,7 +1,9 @@
 {
   "navigation": {
     "features": "Features",
-    "screenshots": "Screenshots",
+    "aiScanner": "AI Scanner",
+    "smartWidgets": "iOS Widgets",
+    "workingPhone": "Live Demo",
     "pricing": "Pricing",
     "faq": "FAQ",
     "contact": "Contact",
@@ -32,8 +34,8 @@
         "description": "Set it once, forget forever. Our patent-pending geofencing technology learns your work patterns and tracks time with 99.9% accuracy. Customizable detection zones from 50m to 500m."
       },
       "widgets": {
-        "title": "iOS Widgets & Live Activities",
-        "description": "Home screen widgets in 3 sizes. Live Activities on Dynamic Island and Lock Screen. 7-day calendar view and real-time timer display without opening the app."
+        "title": "Advanced iOS Widgets + Dynamic Island",
+        "description": "3 native iOS widget sizes with real-time data updates. Live Activities in Dynamic Island for iPhone 14 Pro+. Full control from lock screen and home screen."
       },
       "jobs": {
         "title": "Multi-Job Management",
@@ -48,12 +50,12 @@
         "description": "Generate professional PDF reports in seconds. Automatic income calculations, tax-ready summaries, and customizable templates that impress clients."
       },
       "ai": {
-        "title": "AI Schedule Assistant",
-        "description": "Powered by Google's Gemini 1.5 Pro. Simply snap a photo of any work schedule and watch as AI extracts, organizes, and imports everything automatically."
+        "title": "Multimodal AI (GPT-4 + Gemini)",
+        "description": "Dual AI with GPT-4 Vision + Google Gemini. Analyzes PDF documents, schedule images, work contracts. Automatic global legal search in 10 languages."
       },
       "notifications": {
-        "title": "Intelligent Notifications",
-        "description": "3 specialized Android channels. Contextual alerts before automatic actions. Customizable work reminders and smart permission handling. Never miss important updates."
+        "title": "Pro Notification System",
+        "description": "3 specialized Android channels: Auto-Timer, Reminders, General. AI-powered contextual alerts. Compatible with iOS Focus Modes and Android Do Not Disturb."
       }
     },
     "badges": {
@@ -62,27 +64,100 @@
       "tech": "Works Offline - No Internet Required"
     }
   },
-  "screenshots": {
-    "badge": "App Preview",
-    "title": "Beautiful",
-    "titleAccent": "Interface",
-    "description": "Award-winning design that makes time tracking a pleasure, not a chore",
-    "items": {
-      "dashboard": {
-        "title": "Smart Dashboard",
-        "description": "See everything at a glance - active timers, today's hours, weekly trends"
+  "aiScanner": {
+    "badge": "Revolutionary AI",
+    "title": "Upload a photo,",
+    "titleAccent": "AI understands everything",
+    "description": "Powered by GPT-4 Vision + Google Gemini. Analyzes schedules, contracts and invoices. The most advanced AI for work documents.",
+    "processTitle": "How it works",
+    "tryButton": "Try AI Scanner",
+    "capabilities": {
+      "schedules": {
+        "title": "Complex Schedules",
+        "description": "Detects multiple people, split shifts, irregular hours. Automatically extracts dates, times and locations."
+      },
+      "contracts": {
+        "title": "Contracts & PDFs",
+        "description": "Analyzes complete PDF documents. Finds important clauses, rates and specific work conditions."
+      },
+      "invoices": {
+        "title": "Invoices & Payslips", 
+        "description": "Processes invoices, payslips and financial documents. Calculates totals and extracts accounting data."
+      }
+    },
+    "steps": {
+      "capture": {
+        "title": "Capture or Upload",
+        "description": "Take a photo or select a PDF from your gallery. AI accepts any image quality."
+      },
+      "analyze": {
+        "title": "AI Processes",
+        "description": "GPT-4 Vision + Gemini analyze the document. Extract people, schedules, dates and structured data."
+      },
+      "export": {
+        "title": "Auto Export",
+        "description": "Schedules sync directly to your iOS/Android calendar. Professional PDF generated."
+      }
+    }
+  },
+  "smartWidgets": {
+    "badge": "Native iOS",
+    "title": "Widgets that",
+    "titleAccent": "actually work",
+    "description": "3 native iOS widget sizes with real-time data updates. Live Activities in Dynamic Island for iPhone 14 Pro+. Full control from lock screen.",
+    "sizesTitle": "All iOS Sizes",
+    "sizesDescription": "Choose the perfect widget for your home screen. All with real-time updated data.",
+    "ctaButton": "See Widgets in Action",
+    "sizes": {
+      "small": {
+        "title": "Small Widget",
+        "description": "Active timer, daily hours, job status. Perfect for quick control without opening the app."
+      },
+      "medium": {
+        "title": "Medium Widget", 
+        "description": "Complete weekly view with color-coded work days. Direct access to main functions."
+      },
+      "large": {
+        "title": "Large Widget",
+        "description": "Full dashboard with statistics, charts, upcoming schedules and quick access to all functions."
+      }
+    },
+    "features": {
+      "realTime": {
+        "title": "Real-Time Updates",
+        "description": "Widgets update automatically every minute. Watch the timer running without opening the app."
+      },
+      "dynamicIsland": {
+        "title": "Dynamic Island",
+        "description": "Live Activities show active timer in Dynamic Island. Only for iPhone 14 Pro and iPhone 15 Pro."
+      },
+      "lockScreen": {
+        "title": "Lock Screen",
+        "description": "iOS 16+ lock screen widgets. Start/stop timer without unlocking your phone."
+      }
+    }
+  },
+  "workingPhone": {
+    "badge": "Live Demo",
+    "title": "See VixTimeApp",
+    "titleAccent": "in action",
+    "description": "Interactive demo showing real app screens. Watch how the GPS timer, calendar and AI assistant work together.",
+    "screens": {
+      "calendar": {
+        "title": "Visual Calendar",
+        "description": "Beautiful heat map showing your work patterns. One tap to add schedules or export to iOS/Android calendar."
+      },
+      "autoTimer": {
+        "title": "GPS Auto-Timer",
+        "description": "Automatic detection when you arrive at work. Customizable geofencing from 50m to 500m radius."
+      },
+      "notifications": {
+        "title": "Smart Notifications", 
+        "description": "3 specialized Android channels. iOS Focus Mode compatible. Never miss important work reminders."
       },
       "reports": {
-        "title": "Analytics That Matter",
-        "description": "Stunning visualizations reveal productivity patterns and earning insights"
-      },
-      "aiBot": {
-        "title": "AI-Powered Assistant",
-        "description": "Chat naturally about your schedule, get instant answers and predictions"
-      },
-      "settings": {
-        "title": "Personalized Experience",
-        "description": "Fine-tune every detail to match your workflow perfectly"
+        "title": "Professional Reports",
+        "description": "Generate invoice-ready PDFs in seconds. Automatic calculations and customizable templates."
       }
     }
   },

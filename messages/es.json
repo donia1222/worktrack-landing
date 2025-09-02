@@ -1,6 +1,8 @@
 {
   "navigation": {
     "features": "Características",
+    "aiScanner": "IA Scanner",
+    "smartWidgets": "Widgets iOS",
     "screenshots": "Capturas",
     "pricing": "Precios",
     "faq": "FAQ",
@@ -32,8 +34,8 @@
         "description": "Detecta automáticamente cuando llegas o sales del trabajo. Configura radio de geofencing de 50m a 500m y retrasos de 2-10 minutos. Sin tocar la app."
       },
       "widgets": {
-        "title": "Widgets iOS y Live Activities",
-        "description": "Widgets de pantalla de inicio en 3 tamaños. Live Activities en Dynamic Island. Vista de calendario semanal y timer en tiempo real directo desde tu pantalla."
+        "title": "Widgets iOS Avanzados + Dynamic Island",
+        "description": "3 tamaños de widgets nativos iOS con datos en tiempo real. Live Activities en Dynamic Island para iPhone 14 Pro+. Control completo desde la pantalla de bloqueo."
       },
       "jobs": {
         "title": "Trabajos Ilimitados (Premium)",
@@ -48,17 +50,114 @@
         "description": "Estadísticas detalladas por trabajo y período. Exportación PDF solo en Premium. Sistema de facturación profesional incluido."
       },
       "ai": {
-        "title": "Analyze-Bot IA (Gemini)",
-        "description": "Chatbot con Gemini 1.5 Pro que analiza imágenes y PDFs de horarios laborales. Extrae días, turnos y exporta al calendario automáticamente."
+        "title": "IA Multimodal (GPT-4 + Gemini)",
+        "description": "Dual AI con GPT-4 Vision + Google Gemini. Analiza documentos PDF, imágenes de horarios, contratos laborales. Búsqueda legal mundial automática en 10 idiomas."
       },
       "notifications": {
-        "title": "Notificaciones Inteligentes",
-        "description": "3 canales especializados Android. Alertas contextuales antes de acciones automáticas. Recordatorios de trabajo personalizables y permisos inteligentes."
+        "title": "Sistema de Notificaciones Pro",
+        "description": "3 canales Android especializados: Auto-Timer, Recordatorios, General. Alertas contextuales con IA. Compatible con iOS Focus Modes y Android Do Not Disturb."
       }
     },
     "badges": {
       "localStorage": "100% Almacenamiento Local",
       "languages": "10 Idiomas (ES, EN, DE, FR, IT, TR, RU, JA, PT, NL)"
+    }
+  },
+  "aiScanner": {
+    "badge": "IA Revolucionaria",
+    "title": "Sube una foto,",
+    "titleAccent": "la IA lo entiende todo",
+    "description": "Powered by GPT-4 Vision + Google Gemini. Analiza horarios, contratos y facturas. La IA más avanzada para documentos laborales.",
+    "processTitle": "Así de simple funciona",
+    "tryButton": "Probar Scanner IA",
+    "capabilities": {
+      "schedules": {
+        "title": "Horarios Complejos",
+        "description": "Detecta múltiples personas, turnos divididos, horarios irregulares. Extrae automáticamente fechas, horas y ubicaciones."
+      },
+      "contracts": {
+        "title": "Contratos y PDFs", 
+        "description": "Analiza documentos PDF completos. Encuentra cláusulas importantes, tarifas y condiciones laborales específicas."
+      },
+      "invoices": {
+        "title": "Facturas y Nóminas",
+        "description": "Procesa facturas, recibos de sueldo y documentos financieros. Calcula totales y extrae datos contables."
+      }
+    },
+    "steps": {
+      "capture": {
+        "title": "Captura o Sube",
+        "description": "Toma una foto o selecciona un PDF desde tu galería. La IA acepta cualquier calidad de imagen."
+      },
+      "analyze": {
+        "title": "IA Procesa",
+        "description": "GPT-4 Vision + Gemini analizan el documento. Extraen personas, horarios, fechas y datos estructurados."
+      },
+      "export": {
+        "title": "Exporta Automáticamente", 
+        "description": "Los horarios se sincronizan directamente a tu calendario iOS/Android. PDF profesional generado."
+      }
+    }
+  },
+  "smartWidgets": {
+    "badge": "Nativo iOS",
+    "title": "Widgets que",
+    "titleAccent": "realmente funcionan",
+    "description": "3 tamaños de widgets nativos iOS con datos en tiempo real. Live Activities en Dynamic Island para iPhone 14 Pro+. Control total desde la pantalla de bloqueo.",
+    "sizesTitle": "Todos los tamaños iOS",
+    "sizesDescription": "Elige el widget perfecto para tu pantalla de inicio. Todos con datos actualizados en tiempo real.",
+    "ctaButton": "Ver Widgets en Acción",
+    "sizes": {
+      "small": {
+        "title": "Widget Pequeño",
+        "description": "Timer activo, horas del día, estado del trabajo. Perfecto para control rápido sin abrir la app."
+      },
+      "medium": {
+        "title": "Widget Mediano", 
+        "description": "Vista semanal completa con días trabajados coloreados. Acceso directo a funciones principales."
+      },
+      "large": {
+        "title": "Widget Grande",
+        "description": "Dashboard completo con estadísticas, gráficos, próximos horarios y accesos rápidos a todas las funciones."
+      }
+    },
+    "features": {
+      "realTime": {
+        "title": "Actualización en Tiempo Real",
+        "description": "Los widgets se actualizan automáticamente cada minuto. Ve el timer corriendo sin abrir la app."
+      },
+      "dynamicIsland": {
+        "title": "Dynamic Island",
+        "description": "Live Activities muestran el timer activo en Dynamic Island. Solo para iPhone 14 Pro y iPhone 15 Pro."
+      },
+      "lockScreen": {
+        "title": "Pantalla de Bloqueo",
+        "description": "Widgets en pantalla de bloqueo iOS 16+. Inicia/para timer sin desbloquear el teléfono."
+      }
+    }
+  },
+  "workingPhone": {
+    "badge": "En Vivo",
+    "title": "Ve WorkTrack",
+    "titleAccent": "trabajando",
+    "description": "Explora las pantallas principales de la app en un teléfono real. Control automático GPS, calendario visual, notificaciones inteligentes y reportes detallados.",
+    "screens": {
+      "calendar": {
+        "title": "Calendario Visual Completo",
+        "description": "Vista mensual con días trabajados coloreados por trabajo. Marca vacaciones, días libres y enfermedades. Sincronización automática con iOS/Android."
+      },
+      "autoTimer": {
+        "title": "Auto-Timer GPS Inteligente", 
+        "description": "Mapa en tiempo real mostrando tu ubicación y el radio de geofencing. El timer se activa automáticamente al llegar al trabajo."
+      },
+      "notifications": {
+        "title": "Notificaciones Contextuales",
+        "description": "Sistema inteligente de notificaciones con 3 canales Android. Alertas antes de acciones automáticas y recordatorios personalizables."
+      },
+      "reports": {
+        "title": "Reportes y Estadísticas",
+        "description": "Gráficos detallados de horas trabajadas, ingresos y tendencias. Exportación PDF profesional y sistema de facturación incluido."
+      }
     }
   },
   "screenshots": {
