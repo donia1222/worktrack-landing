@@ -21,7 +21,7 @@ export default function Footer() {
               <h3 className="text-xl font-bold flex">
                 <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
                 <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
-                <span className="text-[#34C759]" style={{ fontWeight: '800' }}>App</span>
+           
               </h3>
             </div>
             <p className="text-gray-400 text-xs sm:text-sm mb-4">
