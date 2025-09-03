@@ -67,35 +67,55 @@
     "badge": "IA Revolucionaria",
     "title": "Sube una foto,",
     "titleAccent": "la IA lo entiende todo",
-    "description": "Powered by GPT-4 Vision + Google Gemini. Analiza horarios, contratos y facturas. La IA más avanzada para documentos laborales.",
+    "description": "Powered by GPT-4 Vision + Google Gemini. Analiza horarios, contratos y facturas. Digitaliza planes de trabajo y sincroniza con calendario nativo.",
     "processTitle": "Así de simple funciona",
     "tryButton": "Probar Scanner IA",
+    "demoTitle": "Capacidades Avanzadas IA",
+    "accuracy": {
+      "title": "Precisión de la IA",
+      "text": "Detección de texto y datos"
+    },
+    "supportedFormats": {
+      "pdf": "PDFs completos",
+      "photo": "Fotos de planes",
+      "location": "Detección GPS",
+      "multilang": "10 idiomas"
+    },
     "capabilities": {
       "schedules": {
-        "title": "Horarios Complejos",
-        "description": "Detecta múltiples personas, turnos divididos, horarios irregulares. Extrae automáticamente fechas, horas y ubicaciones."
+        "title": "Planes de Trabajo",
+        "description": "Escanea y digitaliza cualquier plan de trabajo físico o PDF. Detecta automáticamente horarios, turnos y ubicaciones.",
+        "feature1": "Detección automática de turnos",
+        "feature2": "Múltiples personas por plan",
+        "feature3": "Horarios irregulares y divididos"
       },
-      "contracts": {
-        "title": "Contratos y PDFs", 
-        "description": "Analiza documentos PDF completos. Encuentra cláusulas importantes, tarifas y condiciones laborales específicas."
+      "calendar": {
+        "title": "Sincronización Calendario",
+        "description": "Conecta automáticamente con tu calendario nativo iOS/Android. Exporta horarios detectados directamente.",
+        "feature1": "Sync calendario nativo",
+        "feature2": "Exportación ICS automática",
+        "feature3": "Notificaciones inteligentes"
       },
-      "invoices": {
-        "title": "Facturas y Nóminas",
-        "description": "Procesa facturas, recibos de sueldo y documentos financieros. Calcula totales y extrae datos contables."
+      "legal": {
+        "title": "Información Legal Global",
+        "description": "Busca condiciones laborales específicas por países. Encuentra portales de empleo y información legal actualizada.",
+        "feature1": "Base datos 195+ países",
+        "feature2": "Condiciones laborales actuales",
+        "feature3": "Portales oficiales de empleo"
       }
     },
     "steps": {
       "capture": {
         "title": "Captura o Sube",
-        "description": "Toma una foto o selecciona un PDF desde tu galería. La IA acepta cualquier calidad de imagen."
+        "description": "Toma una foto de tu plan de trabajo o selecciona un PDF. La IA procesa cualquier calidad de imagen o documento."
       },
       "analyze": {
         "title": "IA Procesa",
-        "description": "GPT-4 Vision + Gemini analizan el documento. Extraen personas, horarios, fechas y datos estructurados."
+        "description": "Dual AI (GPT-4 + Gemini) analiza el documento. Extrae horarios, personas, ubicaciones y condiciones laborales."
       },
       "export": {
-        "title": "Exporta Automáticamente", 
-        "description": "Los horarios se sincronizan directamente a tu calendario iOS/Android. PDF profesional generado."
+        "title": "Sincroniza Automáticamente", 
+        "description": "Los horarios detectados se sincronizan con tu calendario nativo. Genera recordatorios y exporta PDFs profesionales."
       }
     }
   },
@@ -631,5 +651,82 @@
       "description": "Para preguntas sobre estos Términos de Servicio, contáctanos en"
     },
     "footer": "Al usar VixTimeApp, confirmas que has leído, entendido y aceptado estos Términos de Servicio."
+  },
+  "autoTimer": {
+    "badge": "Nivel Empresarial",
+    "title": "Auto-Timer GPS",
+    "titleAccent": "Inteligente",
+    "description": "Sistema de geofencing avanzado con 8+ servicios interconectados. Funciona con app cerrada, recuperación automática y precisión del 99.2%.",
+    "features": {
+      "geofencing": {
+        "title": "Geofencing Avanzado",
+        "description": "Radio configurable 50-500m con delays personalizables. APIs nativas iOS/Android Core Location para máxima precisión."
+      },
+      "background": {
+        "title": "Background Robusto", 
+        "description": "Funciona perfectamente con app cerrada. TaskManager nativo + recuperación automática de estados perdidos."
+      },
+      "intelligence": {
+        "title": "IA Predictiva",
+        "description": "Múltiples trabajos simultáneos, reconciliación automática y estados visuales claros con Live Activities."
+      }
+    },
+    "specs": {
+      "performance": {
+        "title": "Líneas de Código",
+        "unit": "líneas",
+        "description": "Servicios core optimizados"
+      },
+      "reliability": {
+        "title": "Precisión",
+        "unit": "precisión",
+        "description": "Detección GPS confiable"
+      },
+      "efficiency": {
+        "title": "Servicios",
+        "unit": "servicios",
+        "description": "Arquitectura multicapa"
+      }
+    },
+    "states": {
+      "inactive": "Inactivo",
+      "entering": "Entrando",
+      "active": "Activo", 
+      "leaving": "Saliendo",
+      "manual": "Manual"
+    },
+    "statesTitle": "Estados del Sistema",
+    "statesDescription": "Máquina de estados inteligente que gestiona automáticamente todas las transiciones de trabajo.",
+    "tryButton": "Probar AutoTimer",
+    "architectureTitle": "Arquitectura Técnica"
+  },
+  "autoTimerFeature": {
+    "badge": "GPS Inteligente",
+    "title": "AutoTimer que",
+    "titleAccent": "realmente funciona",
+    "description": "Detección automática por GPS cuando llegas o sales del trabajo. Sin tocar la app, sin configuración complicada.",
+    "features": {
+      "geofence": {
+        "title": "Detección por Proximidad",
+        "description": "Radio configurable de 50 a 500 metros. Detecta automáticamente cuando entras o sales de tu zona de trabajo."
+      },
+      "automatic": {
+        "title": "Inicio/Parada Automático",
+        "description": "Timer se inicia solo al llegar y se para al salir. Delays configurables de 2-10 minutos para evitar falsos positivos."
+      },
+      "background": {
+        "title": "Funciona en Background",
+        "description": "Trabaja perfectamente con la app cerrada. APIs nativas iOS/Android garantizan funcionamiento confiable 24/7."
+      }
+    },
+    "stats": {
+      "radius": "Radio GPS",
+      "delays": "Delays",
+      "monitoring": "Monitoreo"
+    },
+    "status": {
+      "active": "AutoTimer Activo",
+      "radius": "radio"
+    }
   }
 }

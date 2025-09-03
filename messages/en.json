@@ -68,35 +68,55 @@
     "badge": "Revolutionary AI",
     "title": "Upload a photo,",
     "titleAccent": "AI understands everything",
-    "description": "Powered by GPT-4 Vision + Google Gemini. Analyzes schedules, contracts and invoices. The most advanced AI for work documents.",
+    "description": "Powered by GPT-4 Vision + Google Gemini. Analyzes schedules, contracts and invoices. Digitizes work plans and syncs with native calendar.",
     "processTitle": "How it works",
     "tryButton": "Try AI Scanner",
+    "demoTitle": "Advanced AI Capabilities",
+    "accuracy": {
+      "title": "AI Precision",
+      "text": "Text and data detection"
+    },
+    "supportedFormats": {
+      "pdf": "Full PDFs",
+      "photo": "Plan photos",
+      "location": "GPS detection",
+      "multilang": "10 languages"
+    },
     "capabilities": {
       "schedules": {
-        "title": "Complex Schedules",
-        "description": "Detects multiple people, split shifts, irregular hours. Automatically extracts dates, times and locations."
+        "title": "Work Plans",
+        "description": "Scan and digitize any physical work plan or PDF. Automatically detects schedules, shifts and locations.",
+        "feature1": "Automatic shift detection",
+        "feature2": "Multiple people per plan",
+        "feature3": "Irregular and split schedules"
       },
-      "contracts": {
-        "title": "Contracts & PDFs",
-        "description": "Analyzes complete PDF documents. Finds important clauses, rates and specific work conditions."
+      "calendar": {
+        "title": "Calendar Sync",
+        "description": "Automatically connects with your native iOS/Android calendar. Exports detected schedules directly.",
+        "feature1": "Native calendar sync",
+        "feature2": "Automatic ICS export",
+        "feature3": "Smart notifications"
       },
-      "invoices": {
-        "title": "Invoices & Payslips", 
-        "description": "Processes invoices, payslips and financial documents. Calculates totals and extracts accounting data."
+      "legal": {
+        "title": "Global Legal Info",
+        "description": "Search specific labor conditions by country. Find employment portals and updated legal information.",
+        "feature1": "195+ countries database",
+        "feature2": "Current labor conditions",
+        "feature3": "Official employment portals"
       }
     },
     "steps": {
       "capture": {
         "title": "Capture or Upload",
-        "description": "Take a photo or select a PDF from your gallery. AI accepts any image quality."
+        "description": "Take a photo of your work plan or select a PDF. AI processes any image quality or document."
       },
       "analyze": {
         "title": "AI Processes",
-        "description": "GPT-4 Vision + Gemini analyze the document. Extract people, schedules, dates and structured data."
+        "description": "Dual AI (GPT-4 + Gemini) analyzes the document. Extracts schedules, people, locations and work conditions."
       },
       "export": {
-        "title": "Auto Export",
-        "description": "Schedules sync directly to your iOS/Android calendar. Professional PDF generated."
+        "title": "Auto Sync",
+        "description": "Detected schedules sync with your native calendar. Generate reminders and export professional PDFs."
       }
     }
   },
@@ -608,5 +628,82 @@
       "description": "For questions about these Terms of Service, contact us at"
     },
     "footer": "By using VixTimeApp, you confirm that you have read, understood, and agreed to these Terms of Service."
+  },
+  "autoTimer": {
+    "badge": "Enterprise Level",
+    "title": "GPS Auto-Timer",
+    "titleAccent": "Intelligent",
+    "description": "Advanced geofencing system with 8+ interconnected services. Works with app closed, automatic recovery and 99.2% precision.",
+    "features": {
+      "geofencing": {
+        "title": "Advanced Geofencing",
+        "description": "Configurable 50-500m radius with customizable delays. Native iOS/Android Core Location APIs for maximum precision."
+      },
+      "background": {
+        "title": "Robust Background", 
+        "description": "Works perfectly with app closed. Native TaskManager + automatic recovery of lost states."
+      },
+      "intelligence": {
+        "title": "Predictive AI",
+        "description": "Multiple simultaneous jobs, automatic reconciliation and clear visual states with Live Activities."
+      }
+    },
+    "specs": {
+      "performance": {
+        "title": "Lines of Code",
+        "unit": "lines",
+        "description": "Optimized core services"
+      },
+      "reliability": {
+        "title": "Precision",
+        "unit": "accuracy",
+        "description": "Reliable GPS detection"
+      },
+      "efficiency": {
+        "title": "Services",
+        "unit": "services",
+        "description": "Multi-layer architecture"
+      }
+    },
+    "states": {
+      "inactive": "Inactive",
+      "entering": "Entering",
+      "active": "Active", 
+      "leaving": "Leaving",
+      "manual": "Manual"
+    },
+    "statesTitle": "System States",
+    "statesDescription": "Intelligent state machine that automatically manages all work transitions.",
+    "tryButton": "Try AutoTimer",
+    "architectureTitle": "Technical Architecture"
+  },
+  "autoTimerFeature": {
+    "badge": "Smart GPS",
+    "title": "AutoTimer that",
+    "titleAccent": "actually works",
+    "description": "Automatic GPS detection when you arrive or leave work. No touching the app, no complicated setup.",
+    "features": {
+      "geofence": {
+        "title": "Proximity Detection",
+        "description": "Configurable radius from 50 to 500 meters. Automatically detects when you enter or leave your work zone."
+      },
+      "automatic": {
+        "title": "Auto Start/Stop",
+        "description": "Timer starts automatically on arrival and stops on exit. Configurable 2-10 minute delays to avoid false positives."
+      },
+      "background": {
+        "title": "Works in Background",
+        "description": "Works perfectly with app closed. Native iOS/Android APIs ensure reliable 24/7 operation."
+      }
+    },
+    "stats": {
+      "radius": "GPS Radius",
+      "delays": "Delays",
+      "monitoring": "Monitoring"
+    },
+    "status": {
+      "active": "AutoTimer Active",
+      "radius": "radius"
+    }
   }
 }

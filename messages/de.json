@@ -67,35 +67,55 @@
     "badge": "Revolutionäre KI",
     "title": "Foto hochladen,", 
     "titleAccent": "KI versteht alles",
-    "description": "Powered by GPT-4 Vision + Google Gemini. Analysiert Zeitpläne, Verträge und Rechnungen. Die fortschrittlichste KI für Arbeitsdokumente.",
+    "description": "Powered by GPT-4 Vision + Google Gemini. Analysiert Zeitpläne, Verträge und Rechnungen. Digitalisiert Arbeitspläne und synchronisiert mit nativem Kalender.",
     "processTitle": "So funktioniert es",
     "tryButton": "KI Scanner testen",
+    "demoTitle": "Erweiterte KI-Fähigkeiten",
+    "accuracy": {
+      "title": "KI-Präzision",
+      "text": "Text- und Datenerkennung"
+    },
+    "supportedFormats": {
+      "pdf": "Vollständige PDFs",
+      "photo": "Plan-Fotos",
+      "location": "GPS-Erkennung",
+      "multilang": "10 Sprachen"
+    },
     "capabilities": {
       "schedules": {
-        "title": "Komplexe Zeitpläne", 
-        "description": "Erkennt mehrere Personen, geteilte Schichten, unregelmäßige Stunden. Extrahiert automatisch Daten, Zeiten und Standorte."
+        "title": "Arbeitspläne",
+        "description": "Scannen und digitalisieren Sie jeden physischen Arbeitsplan oder PDF. Erkennt automatisch Zeitpläne, Schichten und Standorte.",
+        "feature1": "Automatische Schichterkennung",
+        "feature2": "Mehrere Personen pro Plan",
+        "feature3": "Unregelmäßige und geteilte Zeitpläne"
       },
-      "contracts": {
-        "title": "Verträge & PDFs",
-        "description": "Analysiert vollständige PDF-Dokumente. Findet wichtige Klauseln, Tarife und spezifische Arbeitsbedingungen."
+      "calendar": {
+        "title": "Kalender-Synchronisation",
+        "description": "Verbindet sich automatisch mit Ihrem nativen iOS/Android-Kalender. Exportiert erkannte Zeitpläne direkt.",
+        "feature1": "Native Kalender-Sync",
+        "feature2": "Automatischer ICS-Export",
+        "feature3": "Intelligente Benachrichtigungen"
       },
-      "invoices": {
-        "title": "Rechnungen & Lohnabrechnungen",
-        "description": "Verarbeitet Rechnungen, Lohnabrechnungen und Finanzdokumente. Berechnet Summen und extrahiert Buchhaltungsdaten."
+      "legal": {
+        "title": "Globale Rechtsinformationen",
+        "description": "Suchen Sie spezifische Arbeitsbedingungen nach Land. Finden Sie Arbeitsportale und aktualisierte Rechtsinformationen.",
+        "feature1": "195+ Länderdatenbank",
+        "feature2": "Aktuelle Arbeitsbedingungen",
+        "feature3": "Offizielle Arbeitsportale"
       }
     },
     "steps": {
       "capture": {
         "title": "Aufnehmen oder Hochladen",
-        "description": "Foto machen oder PDF aus der Galerie auswählen. KI akzeptiert jede Bildqualität."
+        "description": "Machen Sie ein Foto Ihres Arbeitsplans oder wählen Sie ein PDF. KI verarbeitet jede Bildqualität oder jedes Dokument."
       },
       "analyze": {
         "title": "KI Verarbeitet",
-        "description": "GPT-4 Vision + Gemini analysieren das Dokument. Extrahieren Personen, Zeitpläne, Daten und strukturierte Daten."
+        "description": "Dual-KI (GPT-4 + Gemini) analysiert das Dokument. Extrahiert Zeitpläne, Personen, Standorte und Arbeitsbedingungen."
       },
       "export": {
-        "title": "Auto Export",
-        "description": "Zeitpläne synchronisieren direkt mit Ihrem iOS/Android-Kalender. Professionelles PDF generiert."
+        "title": "Auto-Synchronisation",
+        "description": "Erkannte Zeitpläne synchronisieren mit Ihrem nativen Kalender. Generieren Sie Erinnerungen und exportieren Sie professionelle PDFs."
       }
     }
   },
@@ -607,5 +627,82 @@
       "description": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns unter"
     },
     "footer": "Durch die Nutzung von VixTimeApp bestätigen Sie, dass Sie diese Nutzungsbedingungen gelesen, verstanden und akzeptiert haben."
+  },
+  "autoTimer": {
+    "badge": "Unternehmensniveau",
+    "title": "GPS Auto-Timer",
+    "titleAccent": "Intelligent",
+    "description": "Erweiterte Geofencing-System mit 8+ vernetzten Diensten. Funktioniert bei geschlossener App, automatische Wiederherstellung und 99,2% Präzision.",
+    "features": {
+      "geofencing": {
+        "title": "Erweiterte Geofencing",
+        "description": "Konfigurierbarer 50-500m Radius mit anpassbaren Verzögerungen. Native iOS/Android Core Location APIs für maximale Präzision."
+      },
+      "background": {
+        "title": "Robuster Hintergrund", 
+        "description": "Funktioniert perfekt bei geschlossener App. Native TaskManager + automatische Wiederherstellung verlorener Zustände."
+      },
+      "intelligence": {
+        "title": "Prädiktive KI",
+        "description": "Mehrere gleichzeitige Jobs, automatische Abstimmung und klare visuelle Zustände mit Live Activities."
+      }
+    },
+    "specs": {
+      "performance": {
+        "title": "Codezeilen",
+        "unit": "Zeilen",
+        "description": "Optimierte Kerndienste"
+      },
+      "reliability": {
+        "title": "Präzision",
+        "unit": "Genauigkeit",
+        "description": "Zuverlässige GPS-Erkennung"
+      },
+      "efficiency": {
+        "title": "Dienste",
+        "unit": "Dienste",
+        "description": "Mehrschichtige Architektur"
+      }
+    },
+    "states": {
+      "inactive": "Inaktiv",
+      "entering": "Eintretend",
+      "active": "Aktiv", 
+      "leaving": "Verlassend",
+      "manual": "Manuell"
+    },
+    "statesTitle": "System-Zustände",
+    "statesDescription": "Intelligente Zustandsmaschine, die automatisch alle Arbeitsübergänge verwaltet.",
+    "tryButton": "AutoTimer testen",
+    "architectureTitle": "Technische Architektur"
+  },
+  "autoTimerFeature": {
+    "badge": "Intelligentes GPS",
+    "title": "AutoTimer der",
+    "titleAccent": "wirklich funktioniert",
+    "description": "Automatische GPS-Erkennung beim Ankommen oder Verlassen der Arbeit. Ohne die App zu berühren, ohne komplizierte Einrichtung.",
+    "features": {
+      "geofence": {
+        "title": "Näherungserkennung",
+        "description": "Konfigurierbarer Radius von 50 bis 500 Metern. Erkennt automatisch, wenn Sie Ihre Arbeitszone betreten oder verlassen."
+      },
+      "automatic": {
+        "title": "Auto Start/Stopp",
+        "description": "Timer startet automatisch bei Ankunft und stoppt beim Verlassen. Konfigurierbare 2-10 Minuten Verzögerungen um Fehlalarme zu vermeiden."
+      },
+      "background": {
+        "title": "Funktioniert im Hintergrund",
+        "description": "Funktioniert perfekt bei geschlossener App. Native iOS/Android APIs gewährleisten zuverlässigen 24/7 Betrieb."
+      }
+    },
+    "stats": {
+      "radius": "GPS Radius",
+      "delays": "Verzögerungen",
+      "monitoring": "Überwachung"
+    },
+    "status": {
+      "active": "AutoTimer Aktiv",
+      "radius": "Radius"
+    }
   }
 }
