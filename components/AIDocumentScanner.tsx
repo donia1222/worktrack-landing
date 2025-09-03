@@ -242,12 +242,7 @@ export default function AIDocumentScanner() {
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
-              <Camera className="w-5 h-5" />
-              {t("aiScanner.tryButton")}
-            </div>
-          </div>
+   
         </motion.div>
       </div>
     </section>

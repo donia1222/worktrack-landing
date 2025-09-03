@@ -134,16 +134,6 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-
-              <button
-                className={`w-full py-4 sm:py-5 rounded-2xl font-semibold text-base sm:text-lg transition-all duration-300 ${
-                  plan.popular
-                    ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl hover:shadow-blue-200/50 transform hover:-translate-y-0.5"
-                    : "bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 border border-slate-200 hover:border-slate-300"
-                }`}
-              >
-                {plan.cta}
-              </button>
             </motion.div>
           ))}
         </div>

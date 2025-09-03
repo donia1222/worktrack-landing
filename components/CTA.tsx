@@ -3,9 +3,11 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Star, Download } from "lucide-react"
 import { useLanguage } from "@/lib/language"
+import { useLaunchModal } from "@/contexts/LaunchModalContext"
 
 export default function CTA() {
   const { t } = useLanguage()
+ const { openModal } = useLaunchModal()
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 text-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
@@ -43,11 +45,14 @@ export default function CTA() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <button className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 flex items-center justify-center gap-3 text-base">
-              <Download className="w-5 h-5" />
-              {t("cta.downloadButton")}
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
+                <button
+                onClick={openModal}
+                className="group relative px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 text-sm"
+              >
+                <span className="relative z-10">{t("hero.downloadButton")}</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+              </button>
+
           </motion.div>
 
           <p className="text-sm text-slate-600 font-medium">{t("cta.footer")}</p>
