@@ -9,7 +9,7 @@ import { useLaunchModal } from '@/contexts/LaunchModalContext'
 
 const getNavItems = (t: (key: string) => string) => [
   { label: t('navigation.features'), href: '#features' },
-  { label: t('navigation.screenshots'), href: '#screenshots' },
+
   { label: t('navigation.pricing'), href: '#pricing' },
   { label: t('navigation.faq'), href: '#faq' },
   { label: t('navigation.contact'), href: '/contact' },

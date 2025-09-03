@@ -97,9 +97,9 @@ export default function AIDocumentScanner() {
                 <Image
                   src="/bot.png"
                   alt="VixTime AI Document Scanner"
-                  width={400}
-                  height={500}
-                  className="w-full h-auto"
+                  width={300}
+                  height={400}
+            
                   priority
                 />
                 <div className="absolute top-4 right-4 bg-green-500 rounded-full w-8 h-8 flex items-center justify-center shadow-lg">

@@ -26,7 +26,7 @@ export default function Home() {
 
         <Features />
         <AIDocumentScanner />
-        <SmartWidgets />
+
 
         <Testimonials />
         <Pricing />
