@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import LanguageProvider from '@/components/LanguageProvider'
 import CookieNotice from '@/components/CookieNotice'
+import AppWrapper from '@/components/AppWrapper'
 import { LaunchModalProvider } from '@/contexts/LaunchModalContext'
 
 export const metadata: Metadata = {
@@ -25,8 +26,10 @@ export default function RootLayout({
       <body className="bg-gray-50">
         <LanguageProvider>
           <LaunchModalProvider>
-            {children}
-            <CookieNotice />
+            <AppWrapper>
+              {children}
+              <CookieNotice />
+            </AppWrapper>
           </LaunchModalProvider>
         </LanguageProvider>
       </body>

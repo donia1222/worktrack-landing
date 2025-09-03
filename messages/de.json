@@ -9,6 +9,11 @@
     "contact": "Kontakt",
     "download": "Herunterladen"
   },
+  "loading": {
+    "appName": "VixTimeApp",
+    "tagline": "Intelligente Zeiterfassung",
+    "text": "Lade Erlebnis..."
+  },
   "hero": {
     "title": "Intelligente",
     "titleAccent": "Zeiterfassung",

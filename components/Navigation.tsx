@@ -96,7 +96,7 @@ export default function Navigation() {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-all text-gray-600 hover:text-blue-600 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all`}
+                className={`text-sm font-medium transition-all text-gray-800 hover:text-blue-600 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all`}
               >
                 {item.label}
               </button>
@@ -116,7 +116,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors`}
+            className={`md:hidden p-2 rounded-lg text-gray-800 hover:bg-gray-100 transition-colors`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -137,7 +137,7 @@ export default function Navigation() {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm"
+                  className="block w-full text-left px-4 py-2.5 rounded-lg text-gray-800 hover:bg-gray-50 hover:text-blue-600 transition-all text-sm"
                 >
                   {item.label}
                 </button>

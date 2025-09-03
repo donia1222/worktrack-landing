@@ -9,6 +9,11 @@
     "contact": "Contacto",
     "download": "Descargar"
   },
+  "loading": {
+    "appName": "VixTimeApp",
+    "tagline": "Control inteligente de horas",
+    "text": "Cargando experiencia..."
+  },
   "hero": {
     "title": "Control de Horas",
     "titleAccent": "Inteligente",

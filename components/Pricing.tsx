@@ -100,13 +100,13 @@ export default function Pricing() {
                 <p className="text-base sm:text-lg text-slate-600 mb-6 leading-relaxed">{plan.description}</p>
                 <div className="flex items-baseline gap-2">
                   <span
-                    className={`text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight ${
+                    className={`text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight ${
                       plan.popular
                         ? "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
                         : "text-slate-900"
                     }`}
                   >
-                    €{plan.price}
+                    {plan.price}
                   </span>
                   <span className="text-slate-500 text-lg">{plan.duration ? `/${plan.duration}` : "/mes"}</span>
                 </div>

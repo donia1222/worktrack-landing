@@ -9,6 +9,11 @@
     "contact": "Contact",
     "download": "Get App"
   },
+  "loading": {
+    "appName": "VixTimeApp",
+    "tagline": "Smart time tracking",
+    "text": "Loading experience..."
+  },
   "hero": {
     "title": "Track Work Hours",
     "titleAccent": "Automatically",

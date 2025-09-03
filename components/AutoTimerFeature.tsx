@@ -29,7 +29,7 @@ export default function AutoTimerFeature() {
   return (
     <section className="py-16 lg:py-20 bg-white ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left: Content */}
           <div className="space-y-8">
