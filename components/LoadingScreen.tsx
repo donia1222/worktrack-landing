@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { Clock, Zap, BarChart3, Smartphone } from 'lucide-react'
 import { useLanguage } from '@/lib/language'
 
@@ -13,7 +13,7 @@ export default function LoadingScreen({ isVisible }: LoadingScreenProps) {
   
   if (!isVisible) return null
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
@@ -29,7 +29,7 @@ export default function LoadingScreen({ isVisible }: LoadingScreenProps) {
     }
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: { 
       y: 0, 
@@ -38,7 +38,7 @@ export default function LoadingScreen({ isVisible }: LoadingScreenProps) {
     }
   }
 
-  const iconVariants = {
+  const iconVariants: Variants = {
     hidden: { scale: 0, rotate: -180 },
     visible: { 
       scale: 1, 
@@ -51,7 +51,7 @@ export default function LoadingScreen({ isVisible }: LoadingScreenProps) {
     }
   }
 
-  const pulseVariants = {
+  const pulseVariants: Variants = {
     pulse: {
       scale: [1, 1.1, 1],
       opacity: [1, 0.7, 1],
