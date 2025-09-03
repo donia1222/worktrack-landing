@@ -74,41 +74,50 @@ export default function Testimonials() {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t("testimonials.description")}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative"
-            >
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200/50 hover:border-slate-300/50 hover:-translate-y-1">
-                <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Quote className="w-8 h-8 text-slate-400" />
-                </div>
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex gap-8 pb-4 min-w-max">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative flex-shrink-0 w-80"
+              >
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200/50 hover:border-slate-300/50 hover:-translate-y-1 h-full">
+                  <motion.div 
+                    className="absolute top-6 left-6 opacity-10 group-hover:opacity-20"
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 0.1 }}
+                    whileHover={{ x: 5, opacity: 0.2 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.15 }}
+                  >
+                    <Quote className="w-8 h-8 text-slate-400" />
+                  </motion.div>
 
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg">
-                    {testimonial.avatar}
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-slate-900 text-lg">{testimonial.name}</h3>
+                      <p className="text-sm text-slate-600 font-medium">{testimonial.role}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900 text-lg">{testimonial.name}</h3>
-                    <p className="text-sm text-slate-600 font-medium">{testimonial.role}</p>
+
+                  <div className="flex gap-1 mb-6">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400 drop-shadow-sm" />
+                    ))}
                   </div>
-                </div>
 
-                <div className="flex gap-1 mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400 drop-shadow-sm" />
-                  ))}
+                  <p className="text-slate-700 italic leading-relaxed text-lg">"{testimonial.text}"</p>
                 </div>
-
-                <p className="text-slate-700 italic leading-relaxed text-lg">"{testimonial.text}"</p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
