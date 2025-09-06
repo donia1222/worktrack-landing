@@ -65,7 +65,7 @@
     },
     "badges": {
       "localStorage": "100% Almacenamiento Local",
-      "languages": "10 Idiomas (ES, EN, DE, FR, IT, TR, RU, JA, PT, NL)"
+      "languages": "3 Idiomas (ES, EN, DE)"
     }
   },
   "aiScanner": {
@@ -466,6 +466,7 @@
       },
       "location": {
         "title": "Ubicación",
+        "city": "St. Gallen, Suiza",
         "description": "Equipo distribuido en Europa"
       }
     },

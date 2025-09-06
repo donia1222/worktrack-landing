@@ -37,12 +37,24 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simular envío (aquí iría la lógica real de envío)
+    // Crear el mailto link con los datos del formulario
+    const subject = encodeURIComponent(formData.subject || t('contact.form.placeholders.subject'))
+    const body = encodeURIComponent(
+      `${t('contact.form.fields.name')}: ${formData.name}\n` +
+      `${t('contact.form.fields.email')}: ${formData.email}\n` +
+      `${t('contact.form.fields.reason')}: ${contactReasons.find(r => r.id === formData.reason)?.label || ''}\n\n` +
+      `${t('contact.form.fields.message')}:\n${formData.message}`
+    )
+    
+    // Abrir cliente de email
+    window.location.href = `mailto:support@vixtime.com?subject=${subject}&body=${body}`
+    
+    // Simular envío exitoso después de abrir el email
     setTimeout(() => {
       setIsSubmitting(false)
       setSubmitStatus('success')
       setFormData({ name: '', email: '', reason: '', subject: '', message: '' })
-    }, 2000)
+    }, 1000)
   }
 
   return (
@@ -105,7 +117,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">{t('contact.info.email.title')}</h3>
-                    <p className="text-gray-600 text-sm">support@vixtimeapp.com</p>
+                    <p className="text-gray-600 text-sm">support@vixtime.com</p>
                     <p className="text-gray-500 text-xs mt-1">{t('contact.info.email.description')}</p>
                   </div>
                 </div>
@@ -128,7 +140,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">{t('contact.info.location.title')}</h3>
-                    <p className="text-gray-600 text-sm">Barcelona, España</p>
+                    <p className="text-gray-600 text-sm">St. Gallen, Schweiz</p>
                     <p className="text-gray-500 text-xs mt-1">{t('contact.info.location.description')}</p>
                   </div>
                 </div>

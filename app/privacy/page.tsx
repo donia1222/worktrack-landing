@@ -197,8 +197,8 @@ export default function PrivacyPolicy() {
             <div className="bg-blue-50 rounded-lg p-4">
               <p className="text-blue-800">
                 {t('privacy.contact.description')}{' '}
-                <a href="mailto:support@vixtimeapp.com" className="font-semibold underline">
-                  support@vixtimeapp.com
+                <a href="mailto:support@vixtime.com" className="font-semibold underline">
+                  support@vixtime.com
                 </a>
               </p>
             </div>

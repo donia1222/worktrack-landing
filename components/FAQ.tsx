@@ -265,7 +265,10 @@ export default function FAQ() {
         >
           <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 mb-2">{t("faq.contactCta.title")}</h3>
           <p className="text-sm sm:text-base text-slate-600 mb-4">{t("faq.contactCta.description")}</p>
-          <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-all text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105">
+          <button 
+            onClick={() => window.location.href = 'mailto:support@vixtime.com?subject=' + encodeURIComponent(t("faq.contactCta.emailSubject")) + '&body=' + encodeURIComponent(t("faq.contactCta.emailBody"))}
+            className="px-5 sm:px-6 py-2.5 sm:py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-all text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105"
+          >
             {t("faq.contactCta.button")}
           </button>
         </motion.div>
