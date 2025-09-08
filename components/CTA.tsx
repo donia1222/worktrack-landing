@@ -48,8 +48,7 @@ export default function CTA() {
             </p>
           </div>
 
- 
-          <p className="text-sm text-slate-600 font-medium">{t("cta.footer")}</p>
+
         </motion.div>
       </div>
     </section>
