@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Clock, Menu, X, Download } from 'lucide-react'
 import { useLanguage } from '@/lib/language'
 import LanguageSelector from './LanguageSelector'
-import { useLaunchModal } from '@/contexts/LaunchModalContext'
 
 const getNavItems = (t: (key: string) => string) => [
   { label: t('navigation.features'), href: '#features' },
@@ -17,7 +16,6 @@ const getNavItems = (t: (key: string) => string) => [
 
 export default function Navigation() {
   const { t } = useLanguage()
-  const { openModal } = useLaunchModal()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -104,13 +102,15 @@ export default function Navigation() {
             
             <LanguageSelector variant="header" />
             
-            <button
-              onClick={openModal}
-              className={`px-5 py-2 rounded-xl font-medium transition-all flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg text-sm`}
+            <a
+              href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex items-center gap-2 px-5 py-2 rounded-xl font-medium transition-all bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg text-sm`}
             >
               <Download className="w-3.5 h-3.5" />
               {t('navigation.download')}
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -147,12 +147,14 @@ export default function Navigation() {
                 <LanguageSelector variant="mobile" />
               </div>
               
-              <button 
-                onClick={openModal}
+              <a 
+                href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full mt-4 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-xl font-medium hover:from-blue-700 hover:to-blue-600 transition-all flex items-center justify-center gap-2 shadow-lg text-sm">
                 <Download className="w-3.5 h-3.5" />
                 {t('navigation.download')}
-              </button>
+              </a>
             </div>
           </motion.div>
         )}

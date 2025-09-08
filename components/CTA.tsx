@@ -3,11 +3,9 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Star, Download } from "lucide-react"
 import { useLanguage } from "@/lib/language"
-import { useLaunchModal } from "@/contexts/LaunchModalContext"
 
 export default function CTA() {
   const { t } = useLanguage()
- const { openModal } = useLaunchModal()
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 text-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
@@ -45,13 +43,15 @@ export default function CTA() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-                <button
-                onClick={openModal}
-                className="group relative px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 text-sm"
+                <a
+                href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 text-sm"
               >
                 <span className="relative z-10">{t("hero.downloadButton")}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-              </button>
+              </a>
 
           </motion.div>
 

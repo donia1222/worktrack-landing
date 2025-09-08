@@ -3,7 +3,6 @@ import './globals.css'
 import LanguageProvider from '@/components/LanguageProvider'
 import CookieNotice from '@/components/CookieNotice'
 import AppWrapper from '@/components/AppWrapper'
-import { LaunchModalProvider } from '@/contexts/LaunchModalContext'
 
 export const metadata: Metadata = {
   title: 'VixTime - Control de Horas de Trabajo',
@@ -25,12 +24,10 @@ export default function RootLayout({
     <html lang="es">
       <body className="bg-gray-50">
         <LanguageProvider>
-          <LaunchModalProvider>
-            <AppWrapper>
-              {children}
-              <CookieNotice />
-            </AppWrapper>
-          </LaunchModalProvider>
+          <AppWrapper>
+            {children}
+            <CookieNotice />
+          </AppWrapper>
         </LanguageProvider>
       </body>
     </html>
