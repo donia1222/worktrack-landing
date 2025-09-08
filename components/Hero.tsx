@@ -186,7 +186,7 @@ export default function Hero() {
               </div>
 
               <div
-                className="absolute bottom-1/3 -right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce mr-4"
+                className="absolute bottom-1/3 -right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce mr-6"
                 style={{ animationDuration: "2.5s", animationDelay: "0.5s" }}
               >
                 <div className="flex items-center gap-2">
