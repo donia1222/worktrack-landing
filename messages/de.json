@@ -555,6 +555,7 @@
     "location": {
       "title": "Standortdaten",
       "description": "Standortdaten werden ausschließlich für die automatische Timer-Funktion verwendet und lokal auf Ihrem Gerät gespeichert. Standortinformationen werden niemals an unsere Server übertragen.",
+      "backgroundTitle": "Hintergrund-Nutzung",
       "background": "Die Nutzung des Standorts im Hintergrund ist streng auf die Funktionalität des automatischen Timers beschränkt. Sie wird niemals für Marketing oder Werbeverfolgung verwendet."
     },
     "thirdParty": {

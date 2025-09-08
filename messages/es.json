@@ -580,6 +580,7 @@
     "location": {
       "title": "Datos de Ubicación",
       "description": "Los datos de ubicación se usan únicamente para la funcionalidad del timer automático y se almacenan localmente en tu dispositivo. La información de ubicación nunca se transmite a nuestros servidores.",
+      "backgroundTitle": "Uso en segundo plano",
       "background": "El uso de la ubicación en segundo plano está estrictamente limitado a la funcionalidad del timer automático. Nunca se utiliza con fines de marketing o seguimiento publicitario."
     },
     "thirdParty": {

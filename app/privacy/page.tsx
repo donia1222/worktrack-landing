@@ -213,7 +213,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="bg-white/70 rounded-lg p-3">
                 <p className="text-blue-800">
-                  <strong>🎯 Uso en segundo plano:</strong> {t('privacy.location.background')}
+                  <strong>🎯 {t('privacy.location.backgroundTitle') || 'Background Usage'}:</strong> {t('privacy.location.background')}
                 </p>
               </div>
             </div>

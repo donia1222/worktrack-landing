@@ -556,6 +556,7 @@
     "location": {
       "title": "Location Data",
       "description": "Location data is used solely for the automatic timer functionality and is stored locally on your device. Location information is never transmitted to our servers.",
+      "backgroundTitle": "Background Usage",
       "background": "Background location usage is strictly limited to auto-timer functionality. It is never used for marketing or advertising tracking purposes."
     },
     "thirdParty": {
