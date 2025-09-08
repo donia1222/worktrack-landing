@@ -20,6 +20,7 @@
     "description": "Revolutionary GPS-powered time tracking that knows when you arrive and leave work. No more forgetting to clock in or out.",
     "subtitle": "Join thousands of professionals saving 10+ hours monthly on time management.",
     "downloadButton": "Get Started Free",
+    "iosAvailability": "Currently available for iOS devices only",
     "demoButton": "View Demo",
     "features": {
       "autoTimer": "Smart GPS Detection",
@@ -313,6 +314,7 @@
     "rating": "4.9/5 from 12,000+ reviews",
     "downloadButton": "Get VixTimeApp Free",
     "demoButton": "See it in action",
+    "iosAvailability": "Currently available for iOS devices only",
     "footer": "Available on iOS & Android • Setup in 30 seconds • Works offline"
   },
   "testimonials": {

@@ -111,7 +111,9 @@ export default function Hero() {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
-
+            <p className="text-sm text-slate-600 text-center">
+                  {t("hero.iosAvailability")}
+                </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 pt-12 border-t border-slate-200/50">

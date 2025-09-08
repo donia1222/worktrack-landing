@@ -20,6 +20,7 @@
     "description": "Auto-Timer GPS que detecta automáticamente cuando llegas al trabajo. Calendario visual, reportes PDF y chatbot IA para analizar horarios.",
     "subtitle": "Tu asistente definitivo para la gestión laboral.",
     "downloadButton": "Descargar App",
+    "iosAvailability": "Disponible solo para dispositivos iOS por el momento",
     "demoButton": "Ver Demo",
     "features": {
       "autoTimer": "Auto-Timer GPS",
@@ -336,6 +337,7 @@
     "rating": "4.8/5 en App Store",
     "downloadButton": "Descargar Gratis",
     "demoButton": "Ver en acción",
+    "iosAvailability": "Disponible solo para dispositivos iOS por el momento",
     "footer": "Sin permanencia • Cancela cuando quieras"
   },
   "stats": {
