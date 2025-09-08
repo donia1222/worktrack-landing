@@ -28,33 +28,26 @@ export default function CTA() {
           <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto text-pretty">{t("cta.description")}</p>
 
           <div className="flex items-center justify-center gap-1 mb-8">
-            <div className="flex items-center gap-1 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full border border-blue-200/50">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-              ))}
-              <span className="ml-3 text-sm text-slate-700 font-medium">{t("cta.rating")}</span>
-            </div>
-          </div>
-
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-                <a
+                     <div className="flex flex-col sm:flex-row gap-6 all:items-center"> 
+              <a
                 href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 text-sm"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
               >
-                <span className="relative z-10">{t("hero.downloadButton")}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <span className="relative z-10 flex items-center gap-3">
+                  {t("hero.downloadButton")}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
 
-          </motion.div>
+            </div>
 
+            
+          </div>
+
+ 
           <p className="text-sm text-slate-600 font-medium">{t("cta.footer")}</p>
         </motion.div>
       </div>
