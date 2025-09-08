@@ -487,10 +487,21 @@
   "privacy": {
     "backButton": "Back to VixTimeApp",
     "title": "Privacy Policy",
-    "lastUpdated": "Last Updated: January 2025",
+    "lastUpdated": "Last Updated: September 2025",
     "priority": {
       "title": "Your Privacy is Our Priority",
       "description": "At VixTimeApp, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your information when you use our work time tracking application."
+    },
+    "summary": {
+      "title": "Summary: We Store Absolutely Nothing",
+      "subtitle": "Your privacy in 4 clear points:",
+      "points": {
+        "noAccounts": "We don't create accounts",
+        "noPersonalData": "We don't ask for personal data (name, email, phone, addresses)",
+        "noAnalytics": "We don't do behavioral analytics or personalized advertising",
+        "noDataSelling": "We don't sell data"
+      },
+      "emphasis": "Everything stays on your device. We store absolutely nothing."
     },
     "storage": {
       "title": "Data Storage",
@@ -527,19 +538,33 @@
       }
     },
     "subscriptions": {
-      "title": "Subscriptions",
-      "description": "If you purchase a premium subscription, payment information is handled by Apple App Store or Google Play Store according to their respective privacy policies. We don't have access to your payment details."
+      "title": "Subscriptions", 
+      "description": "Purchases are managed by Apple App Store / Google Play. To validate your subscription we use RevenueCat, sending only:",
+      "revenuecatData": {
+        "identifier": "A random, app-scoped identifier (doesn't personally identify you)",
+        "receipt": "The purchase receipt provided by Apple/Google"
+      },
+      "purpose": "This ID is used exclusively to manage the subscription (activate/restore) and is not linked to your real identity.",
+      "noCollection": {
+        "title": "We don't collect:",
+        "noAccounts": "We don't create accounts",
+        "noPersonalInfo": "We don't ask for name, email, phone or addresses",
+        "noAnalytics": "We don't do behavioral analytics or personalized advertising",
+        "noDataSelling": "We don't sell data"
+      }
     },
     "location": {
       "title": "Location Data",
-      "description": "Location data is used solely for the automatic timer functionality and is stored locally on your device. Location information is never transmitted to our servers."
+      "description": "Location data is used solely for the automatic timer functionality and is stored locally on your device. Location information is never transmitted to our servers.",
+      "background": "Background location usage is strictly limited to auto-timer functionality. It is never used for marketing or advertising tracking purposes."
     },
     "thirdParty": {
       "title": "Third-Party Services",
-      "description": "We only use essential third-party services:",
-      "gemini": "Google Gemini API for AI chat functionality (anonymous)",
-      "revenueCat": "RevenueCat for subscription management",
-      "stores": "App stores for distribution and payments"
+      "description": "The app may send data to external services (e.g. Google Gemini for chatbot, RevenueCat for subscriptions). This data is processed anonymously and cannot be used to personally identify you. We, as developers, do not collect or store this information.",
+      "gemini": "Google Gemini: https://policies.google.com/privacy",
+      "revenueCat": "RevenueCat: https://www.revenuecat.com/privacy",
+      "stores": "App stores for distribution and payments",
+      "note": "These services follow their own privacy policies:"
     },
     "security": {
       "title": "Data Security",
@@ -551,18 +576,19 @@
     },
     "changes": {
       "title": "Changes to This Policy",
-      "description": "We may update this Privacy Policy from time to time. Any changes will be posted in the app and will take effect immediately after publication."
+      "description": "We may update this Privacy Policy from time to time. Any changes will be posted in the app and will take effect immediately after publication.",
+      "commitment": "We commit that no changes to this policy will compromise your privacy or anonymity. We will always preserve the fundamental principle: we store nothing about you."
     },
     "contact": {
       "title": "Contact Us",
       "description": "If you have questions about this Privacy Policy, contact us at"
     },
-    "footer": "This policy is effective from January 2025 and applies to all versions of VixTimeApp."
+    "footer": "This policy is effective from September 2025 and applies to all versions of VixTimeApp."
   },
   "terms": {
     "backButton": "Back to VixTimeApp",
     "title": "Terms of Service",
-    "lastUpdated": "Last Updated: January 2025",
+    "lastUpdated": "Last Updated: September 2025",
     "acceptance": {
       "title": "Acceptance of Terms",
       "description": "By downloading, installing, or using VixTimeApp, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app."

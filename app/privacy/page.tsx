@@ -50,6 +50,51 @@ export default function PrivacyPolicy() {
             </p>
           </div>
 
+          {/* Summary Section - Destacado */}
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-8 border-2 border-green-200">
+            <div className="text-center mb-6">
+              <h2 className="text-3xl font-bold text-green-900 mb-2">
+                {t('privacy.summary.title')}
+              </h2>
+              <p className="text-lg text-green-800 font-medium">
+                {t('privacy.summary.subtitle')}
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="bg-white/70 rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl">🚫</span>
+                  <span className="font-semibold text-gray-900">{t('privacy.summary.points.noAccounts')}</span>
+                </div>
+              </div>
+              <div className="bg-white/70 rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl">🔒</span>
+                  <span className="font-semibold text-gray-900">{t('privacy.summary.points.noPersonalData')}</span>
+                </div>
+              </div>
+              <div className="bg-white/70 rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl">🎯</span>
+                  <span className="font-semibold text-gray-900">{t('privacy.summary.points.noAnalytics')}</span>
+                </div>
+              </div>
+              <div className="bg-white/70 rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl">💰</span>
+                  <span className="font-semibold text-gray-900">{t('privacy.summary.points.noDataSelling')}</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-xl font-bold text-green-900 bg-white/80 rounded-lg p-4">
+                {t('privacy.summary.emphasis')}
+              </p>
+            </div>
+          </div>
+
           {/* Local Storage Section */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
@@ -128,33 +173,66 @@ export default function PrivacyPolicy() {
           {/* Subscriptions */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">💳 {t('privacy.subscriptions.title')}</h2>
-            <div className="bg-yellow-50 rounded-lg p-4">
-              <p className="text-yellow-800">
+            <div className="bg-yellow-50 rounded-lg p-4 space-y-4">
+              <p className="text-yellow-800 font-medium">
                 {t('privacy.subscriptions.description')}
               </p>
+              
+              {/* RevenueCat Data */}
+              <div className="bg-white/70 rounded-lg p-4">
+                <h4 className="font-semibold text-yellow-900 mb-2">📊 RevenueCat:</h4>
+                <ul className="list-disc list-inside space-y-1 text-yellow-800 ml-4">
+                  <li>{t('privacy.subscriptions.revenuecatData.identifier')}</li>
+                  <li>{t('privacy.subscriptions.revenuecatData.receipt')}</li>
+                </ul>
+              </div>
+              
+              <p className="text-yellow-800">
+                <strong>Propósito:</strong> {t('privacy.subscriptions.purpose')}
+              </p>
+              
+              {/* No Collection Section */}
+              <div className="bg-white/70 rounded-lg p-4">
+                <h4 className="font-semibold text-yellow-900 mb-2">{t('privacy.subscriptions.noCollection.title')}</h4>
+                <ul className="list-disc list-inside space-y-1 text-yellow-800 ml-4">
+                  <li>{t('privacy.subscriptions.noCollection.noAccounts')}</li>
+                  <li>{t('privacy.subscriptions.noCollection.noPersonalInfo')}</li>
+                  <li>{t('privacy.subscriptions.noCollection.noAnalytics')}</li>
+                  <li>{t('privacy.subscriptions.noCollection.noDataSelling')}</li>
+                </ul>
+              </div>
             </div>
           </section>
 
           {/* Location Data */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">📍 {t('privacy.location.title')}</h2>
-            <div className="bg-blue-50 rounded-lg p-4">
+            <div className="bg-blue-50 rounded-lg p-4 space-y-3">
               <p className="text-blue-800">
                 {t('privacy.location.description')}
               </p>
+              <div className="bg-white/70 rounded-lg p-3">
+                <p className="text-blue-800">
+                  <strong>🎯 Uso en segundo plano:</strong> {t('privacy.location.background')}
+                </p>
+              </div>
             </div>
           </section>
 
           {/* Third Party Services */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">🔗 {t('privacy.thirdParty.title')}</h2>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <p className="text-gray-700 mb-3">{t('privacy.thirdParty.description')}</p>
-              <ul className="list-disc list-inside space-y-1 text-gray-700">
-                <li><strong>{t('privacy.thirdParty.gemini')}</strong></li>
-                <li><strong>{t('privacy.thirdParty.revenueCat')}</strong></li>
-                <li><strong>{t('privacy.thirdParty.stores')}</strong></li>
-              </ul>
+            <div className="bg-gray-50 rounded-lg p-4 space-y-3">
+              <p className="text-gray-700 font-medium">{t('privacy.thirdParty.description')}</p>
+              
+              <div className="bg-white/70 rounded-lg p-3">
+                <p className="text-gray-700 mb-2 font-medium">{t('privacy.thirdParty.note')}</p>
+                <ul className="list-disc list-inside space-y-1 text-gray-700">
+                  <li><strong>{t('privacy.thirdParty.gemini')}</strong></li>
+                  <li><strong>{t('privacy.thirdParty.revenueCat')}</strong></li>
+                  <li><strong>{t('privacy.thirdParty.stores')}</strong></li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -184,10 +262,15 @@ export default function PrivacyPolicy() {
           {/* Changes */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">📝 {t('privacy.changes.title')}</h2>
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-gray-50 rounded-lg p-4 space-y-3">
               <p className="text-gray-700">
                 {t('privacy.changes.description')}
               </p>
+              <div className="bg-green-100 rounded-lg p-3 border-l-4 border-green-500">
+                <p className="text-green-800 font-medium">
+                  <strong>🛡️ Compromiso:</strong> {t('privacy.changes.commitment')}
+                </p>
+              </div>
             </div>
           </section>
 
