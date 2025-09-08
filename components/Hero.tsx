@@ -176,17 +176,17 @@ export default function Hero() {
 
               {/* Floating UI elements */}
               <div
-                className="absolute top-1/4 -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce"
+                className="absolute top-1/4 -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce ml-4"
                 style={{ animationDuration: "2s" }}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 ">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                   <span className="text-xs font-medium text-slate-700">AutoTimer</span>
                 </div>
               </div>
 
               <div
-                className="absolute bottom-1/3 -right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce"
+                className="absolute bottom-1/3 -right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce mr-4"
                 style={{ animationDuration: "2.5s", animationDelay: "0.5s" }}
               >
                 <div className="flex items-center gap-2">
