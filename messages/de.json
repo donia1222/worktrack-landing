@@ -206,9 +206,24 @@
     },
     "premium": {
       "name": "Premium",
-      "price": "3.99",
-      "duration": "3 Monate",
-      "description": "Die volle Power von VixTimeApp - 3 Monate",
+      "plans": {
+        "3months": {
+          "price": "5.69 CHF",
+          "duration": "3 Monate",
+          "popular": true
+        },
+        "6months": {
+          "price": "9.49 CHF", 
+          "duration": "6 Monate",
+          "popular": false
+        },
+        "1year": {
+          "price": "14.24 CHF",
+          "duration": "1 Jahr",
+          "popular": false
+        }
+      },
+      "description": "Die volle Power von VixTimeApp",
       "cta": "Premium erhalten",
       "popular": "Am Beliebtesten",
       "features": {

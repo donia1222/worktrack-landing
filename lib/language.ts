@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, createContext, useContext } from 'react'
+import { detectLanguageAndCountry } from './geoDetection'
 
 export type Language = 'es' | 'en' | 'de'
 
@@ -10,18 +11,27 @@ export const languages = {
   de: 'Deutsch'
 } as const
 
-// Detect browser language
+// Detect browser language with geographic detection
 export function detectBrowserLanguage(): Language {
   if (typeof window === 'undefined') return 'es'
   
+  // First try geographic detection
+  const { language } = detectLanguageAndCountry()
+  
+  // Validate the detected language
+  if (language === 'es' || language === 'en' || language === 'de') {
+    return language
+  }
+  
+  // Fallback to old browser language detection
   const browserLang = window.navigator.language.toLowerCase()
   
   if (browserLang.startsWith('es')) return 'es'
-  if (browserLang.startsWith('en')) return 'en'
+  if (browserLang.startsWith('en')) return 'en'  
   if (browserLang.startsWith('de')) return 'de'
   
-  // Default to English for other languages
-  return 'en'
+  // Default fallback
+  return 'es'
 }
 
 // Language Context

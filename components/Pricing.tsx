@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Check, X, Star } from "lucide-react"
 import { useLanguage } from "@/lib/language"
+import { useCurrency } from "@/hooks/useCurrency"
 
 const getPlans = (t: (key: string) => string) => [
   {
@@ -25,8 +26,8 @@ const getPlans = (t: (key: string) => string) => [
   },
   {
     name: t("pricing.premium.name"),
-    price: t("pricing.premium.price"),
-    duration: t("pricing.premium.duration"),
+    price: "5.69 CHF", // FIXED SWITZERLAND PRICE
+    duration: t("pricing.premium.plans.3months.duration"),
     description: t("pricing.premium.description"),
     features: [
       { text: t("pricing.premium.features.unlimitedJobs"), included: true },
@@ -42,12 +43,55 @@ const getPlans = (t: (key: string) => string) => [
     ],
     cta: t("pricing.premium.cta"),
     popular: true,
+    badge: t("pricing.premium.popular"),
+    alternativePlans: [
+      {
+        price: "9.49 CHF", // FIXED SWITZERLAND PRICE
+        duration: t("pricing.premium.plans.6months.duration"),
+      },
+      {
+        price: "14.24 CHF", // FIXED SWITZERLAND PRICE
+        duration: t("pricing.premium.plans.1year.duration"),
+      }
+    ]
   },
 ]
 
 export default function Pricing() {
   const { t } = useLanguage()
-  const plans = getPlans(t)
+  const { currency, isLoading } = useCurrency()
+  
+  // Override prices with country-detected currency if available
+  const getPlansWithCurrency = () => {
+    const basePlans = getPlans(t)
+    
+    if (!currency || isLoading) {
+      return basePlans // Use translation prices as fallback
+    }
+    
+    // Override premium plan prices with country-detected currency
+    return basePlans.map((plan, index) => {
+      if (index === 1) { // Premium plan
+        return {
+          ...plan,
+          price: currency.prices['3months'],
+          alternativePlans: [
+            {
+              price: currency.prices['6months'],
+              duration: plan.alternativePlans?.[0]?.duration || t("pricing.premium.plans.6months.duration"),
+            },
+            {
+              price: currency.prices['1year'],
+              duration: plan.alternativePlans?.[1]?.duration || t("pricing.premium.plans.1year.duration"),
+            }
+          ]
+        }
+      }
+      return plan
+    })
+  }
+  
+  const plans = getPlansWithCurrency()
 
   return (
     <section id="pricing" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
@@ -74,12 +118,8 @@ export default function Pricing() {
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
               className={`relative rounded-3xl p-8 sm:p-10 transition-all duration-300 ${
                 plan.popular
                   ? "bg-white border-2 border-blue-200 shadow-2xl shadow-blue-100/50 hover:shadow-3xl hover:shadow-blue-200/60 hover:-translate-y-1"
@@ -98,18 +138,42 @@ export default function Pricing() {
               <div className="mb-8">
                 <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">{plan.name}</h3>
                 <p className="text-base sm:text-lg text-slate-600 mb-6 leading-relaxed">{plan.description}</p>
-                <div className="flex items-baseline gap-2">
-                  <span
-                    className={`text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight ${
-                      plan.popular
-                        ? "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
-                        : "text-slate-900"
-                    }`}
-                  >
-                    {plan.price}
-                  </span>
-                  <span className="text-slate-500 text-lg">{plan.duration ? `/${plan.duration}` : "/mes"}</span>
-                </div>
+                
+                {plan.alternativePlans ? (
+                  <div className="space-y-3">
+                    <div className="flex items-baseline gap-2">
+                      <span
+                        className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
+                      >
+                        {plan.price}
+                      </span>
+                      <span className="text-slate-500 text-lg">/{plan.duration}</span>
+                      <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded-full ml-2">{plan.badge}</span>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-2 text-sm text-slate-600">
+                      {plan.alternativePlans.map((altPlan, idx) => (
+                        <div key={idx} className="bg-slate-50 rounded-lg px-3 py-2 text-center">
+                          <span className="font-semibold text-slate-800">{altPlan.price}</span>
+                          <span className="text-slate-500">/{altPlan.duration}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-baseline gap-2">
+                    <span
+                      className={`text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight ${
+                        plan.popular
+                          ? "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
+                          : "text-slate-900"
+                      }`}
+                    >
+                      {plan.price}
+                    </span>
+                    <span className="text-slate-500 text-lg">{(plan as any).duration ? `/${(plan as any).duration}` : "/mes"}</span>
+                  </div>
+                )}
               </div>
 
               <ul className="space-y-4 mb-8">
@@ -134,7 +198,7 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
         </div>
 
