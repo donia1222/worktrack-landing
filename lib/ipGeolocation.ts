@@ -55,10 +55,15 @@ export async function detectCountryByIP(): Promise<CountryDetection> {
       try {
         console.log(`🔍 Trying API: ${api}`)
         
+        const controller = new AbortController()
+        const timeoutId = setTimeout(() => controller.abort(), 3000)
+        
         const response = await fetch(api, {
           method: 'GET',
-          timeout: 3000
+          signal: controller.signal
         })
+        
+        clearTimeout(timeoutId)
         
         if (response.ok) {
           let countryCode = ''
