@@ -89,33 +89,9 @@ export default function Hero() {
                 </span>
               </h1>
 
-              {/* Enhanced description with better spacing */}
-              <div className="space-y-4">
-                <p className="text-xl sm:text-1xl text-slate-600 leading-relaxed font-medium">
-                  {t("hero.description")}
-                </p>
-                <p className="text-lg text-slate-500 leading-relaxed">{t("hero.subtitle")}</p>
-              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6">
-              <a
-                href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
-              >
-                <span className="relative z-10 flex items-center gap-3">
-                  {t("hero.downloadButton")}
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
-  
-            </div>
-          <p className="text-sm text-slate-600 ">
-                  {t("hero.iosAvailability")}
-                </p>
+    
             <div className="grid grid-cols-2 gap-4 pt-12 border-t border-slate-200/50">
               {[
                 { icon: Zap, color: "blue", key: "autoTimer" },
@@ -139,6 +115,18 @@ export default function Hero() {
                 </div>
               ))}
             </div>
+                        <a
+                href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
+              >
+                <span className="relative z-10 flex items-center gap-3">
+                  {t("hero.downloadButton")}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
           </div>
 
           <div
