@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50"
+      className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50"
     >
       <div className="absolute inset-0 overflow-hidden">
         {/* Animated gradient orbs */}
@@ -80,7 +80,7 @@ export default function Hero() {
           <div
             className={`space-y-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <div className="space-y-8">
+            <div className="space-y-8 mt-20">
               {/* Enhanced title with gradient text and better typography */}
                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
                 {t("hero.title")}{" "}
@@ -92,7 +92,7 @@ export default function Hero() {
             </div>
 
     
-            <div className="grid grid-cols-2 gap-4 pt-12 border-t border-slate-200/50">
+            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200/50">
               {[
                 { icon: Zap, color: "blue", key: "autoTimer" },
                 { icon: Sparkles, color: "cyan", key: "widgets" },
