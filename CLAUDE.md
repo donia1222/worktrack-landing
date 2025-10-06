@@ -1,8 +1,8 @@
-# VixTimeApp Landing Page - Claude Assistant Guide
+# WorkTi Landing Page - Claude Assistant Guide
 
 ## 📋 Información del Proyecto
 
-**VixTimeApp** es una aplicación móvil para el control inteligente de horas de trabajo con geolocalización GPS. Esta landing page promociona la app y está construida con Next.js, TypeScript y Tailwind CSS.
+**WorkTi** es una aplicación móvil para el control inteligente de horas de trabajo con geolocalización GPS. Esta landing page promociona la app y está construida con Next.js, TypeScript y Tailwind CSS.
 
 ### 🎯 Características Principales de la App
 - **Auto-Timer GPS**: Detecta automáticamente cuando llegas/sales del trabajo
@@ -229,6 +229,7 @@ console.log(localStorage.getItem('cookieAccepted'))
 ## 📞 Información de Contacto del Proyecto
 
 **Repositorio**: https://github.com/donia1222/worktrack-landing.git
+**Nombre de la aplicación**: WorkTi (anteriormente VixTimeApp)
 **Tecnologías**: Next.js 15, TypeScript, Tailwind CSS, Framer Motion
 **Idiomas**: Español (por defecto), Inglés, Alemán
 **Estado**: Landing page funcional lista para producción

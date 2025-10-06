@@ -10,7 +10,7 @@
     "download": "Descargar"
   },
   "loading": {
-    "appName": "VixTimeApp",
+    "appName": "WorkTi",
     "tagline": "Control inteligente de horas",
     "text": "Cargando experiencia..."
   },
@@ -247,7 +247,7 @@
           "popular": false
         }
       },
-      "description": "Todo el poder de VixTimeApp",
+      "description": "Todo el poder de WorkTi",
       "cta": "Obtener Premium",
       "popular": "Más Popular",
       "features": {
@@ -268,7 +268,7 @@
   "faq": {
     "title": "Preguntas",
     "titleAccent": "Frecuentes",
-    "description": "Encuentra respuestas a las dudas más comunes sobre VixTimeApp",
+    "description": "Encuentra respuestas a las dudas más comunes sobre WorkTi",
     "search": "Buscar en las preguntas frecuentes...",
     "categories": {
       "general": "General",
@@ -348,7 +348,7 @@
   "cta": {
     "title": "Comienza a controlar tu tiempo",
     "titleAccent": "hoy mismo",
-    "description": "Únete a miles de profesionales que ya confían en VixTimeApp para gestionar su tiempo laboral de forma inteligente.",
+    "description": "Únete a miles de profesionales que ya confían en WorkTi para gestionar su tiempo laboral de forma inteligente.",
     "rating": "4.8/5 en App Store",
     "downloadButton": "Descargar Gratis",
     "demoButton": "Ver en acción",
@@ -369,7 +369,7 @@
   "testimonials": {
     "title": "Amado por",
     "titleAccent": "Profesionales",
-    "description": "Descubre por qué miles eligen VixTimeApp para gestionar su tiempo",
+    "description": "Descubre por qué miles eligen WorkTi para gestionar su tiempo",
     "roles": {
       "freelancer": "Escritor Freelance",
       "consultant": "Consultor de Negocios",
@@ -379,7 +379,7 @@
       "manager": "Gerente de Proyectos"
     },
     "reviews": {
-      "1": "VixTimeApp ha transformado completamente cómo gestiono mi tiempo. El auto-timer GPS es como magia - ¡nunca más olvido registrar horas!",
+      "1": "WorkTi ha transformado completamente cómo gestiono mi tiempo. El auto-timer GPS es como magia - ¡nunca más olvido registrar horas!",
       "2": "Como alguien que maneja múltiples clientes, la función multi-trabajo es un salvavidas. Los reportes son profesionales y a los clientes les encantan.",
       "3": "El asistente IA analizó mi horario en papel e importó todo perfectamente. ¡Me ahorró horas de entrada manual!",
       "4": "Finalmente, un rastreador de tiempo que respeta la privacidad. Todo permanece en mi dispositivo, y los respaldos automáticos me dan tranquilidad.",
@@ -452,7 +452,7 @@
   },
   "launchModal": {
     "title": "¡Próximamente!",
-    "subtitle": "VixTimeApp estará disponible muy pronto",
+    "subtitle": "WorkTi estará disponible muy pronto",
     "date": "1 de Octubre",
     "year": "2025",
     "description": "Estamos trabajando en los últimos detalles para ofrecerte la mejor experiencia de control horario con GPS.",
@@ -460,11 +460,11 @@
     "button": "Entendido"
   },
   "contact": {
-    "backButton": "Volver a VixTimeApp",
+    "backButton": "Volver a WorkTi",
     "title": "¿Necesitas",
     "titleAccent": "ayuda",
     "titleEnd": "?",
-    "description": "Estamos aquí para ayudarte con VixTimeApp. Envíanos un mensaje y te responderemos lo antes posible.",
+    "description": "Estamos aquí para ayudarte con WorkTi. Envíanos un mensaje y te responderemos lo antes posible.",
     "hero": {
       "title": "¿Hablamos?",
       "description": "Estamos aquí para ayudarte. Envíanos tu consulta y te responderemos lo antes posible."
@@ -526,12 +526,12 @@
     }
   },
   "privacy": {
-    "backButton": "Volver a VixTimeApp",
+    "backButton": "Volver a WorkTi",
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización: Septiembre 2025",
     "priority": {
       "title": "Tu Privacidad es Nuestra Prioridad",
-      "description": "En VixTimeApp, nos tomamos tu privacidad en serio. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu información cuando usas nuestra aplicación de seguimiento de tiempo de trabajo."
+      "description": "En WorkTi, nos tomamos tu privacidad en serio. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu información cuando usas nuestra aplicación de seguimiento de tiempo de trabajo."
     },
     "summary": {
       "title": "Resumen: No Almacenamos Nada de Nada",
@@ -625,19 +625,19 @@
       "title": "Contáctanos",
       "description": "Si tienes preguntas sobre esta Política de Privacidad, contáctanos en"
     },
-    "footer": "Esta política es efectiva desde septiembre de 2025 y se aplica a todas las versiones de VixTimeApp."
+    "footer": "Esta política es efectiva desde septiembre de 2025 y se aplica a todas las versiones de WorkTi."
   },
   "terms": {
-    "backButton": "Volver a VixTimeApp",
+    "backButton": "Volver a WorkTi",
     "title": "Términos de Servicio",
     "lastUpdated": "Última actualización: Septiembre 2025",
     "acceptance": {
       "title": "Aceptación de Términos",
-      "description": "Al descargar, instalar o usar VixTimeApp, aceptas estar sujeto a estos Términos de Servicio. Si no estás de acuerdo con estos términos, por favor no uses la app."
+      "description": "Al descargar, instalar o usar WorkTi, aceptas estar sujeto a estos Términos de Servicio. Si no estás de acuerdo con estos términos, por favor no uses la app."
     },
     "license": {
       "title": "Licencia de Uso",
-      "description": "Te otorgamos una licencia limitada, no exclusiva, no transferible y revocable para usar VixTimeApp para tu uso personal y comercial en dispositivos que controles.",
+      "description": "Te otorgamos una licencia limitada, no exclusiva, no transferible y revocable para usar WorkTi para tu uso personal y comercial en dispositivos que controles.",
       "restrictions": "No puedes: copiar, modificar o distribuir la app; realizar ingeniería inversa; usar la app para fines ilegales; o violar los derechos de propiedad intelectual."
     },
     "subscriptions": {
@@ -686,7 +686,7 @@
     },
     "indemnification": {
       "title": "Indemnización",
-      "description": "Aceptas indemnizar y eximir de responsabilidad a VixTimeApp y sus afiliados de cualquier reclamo, daño o gasto derivado de tu uso de la app o violación de estos términos."
+      "description": "Aceptas indemnizar y eximir de responsabilidad a WorkTi y sus afiliados de cualquier reclamo, daño o gasto derivado de tu uso de la app o violación de estos términos."
     },
     "governing": {
       "title": "Ley Aplicable",
@@ -700,7 +700,7 @@
       "title": "Contacto",
       "description": "Para preguntas sobre estos Términos de Servicio, contáctanos en"
     },
-    "footer": "Al usar VixTimeApp, confirmas que has leído, entendido y aceptado estos Términos de Servicio."
+    "footer": "Al usar WorkTi, confirmas que has leído, entendido y aceptado estos Términos de Servicio."
   },
   "autoTimer": {
     "badge": "Nivel Empresarial",

@@ -47,7 +47,7 @@ export default function ContactPage() {
     )
     
     // Abrir cliente de email
-    window.location.href = `mailto:support@vixtime.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:support@workti.com?subject=${subject}&body=${body}`
     
     // Simular envío exitoso después de abrir el email
     setTimeout(() => {

@@ -82,9 +82,9 @@ export default function Navigation() {
               <Clock className="w-5 h-5 text-white" />
             </div>
             <h3 className="text-xl font-bold flex">
-              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
-              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
-        
+              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Work</span>
+              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Ti</span>
+
             </h3>
           </div>
 

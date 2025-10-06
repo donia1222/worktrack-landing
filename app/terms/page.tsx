@@ -21,7 +21,7 @@ export default function TermsOfService() {
               <div className="w-8 h-8 bg-blue-500 rounded-xl flex items-center justify-center">
                 <Clock className="w-4 h-4 text-white" />
               </div>
-              <span className="font-bold text-gray-900">VixTimeApp</span>
+              <span className="font-bold text-gray-900">WorkTi</span>
             </div>
           </div>
         </div>

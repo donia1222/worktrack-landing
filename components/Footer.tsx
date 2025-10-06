@@ -19,9 +19,9 @@ export default function Footer() {
                 <Clock className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-xl font-bold flex">
-                <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Vix</span>
-                <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time</span>
-           
+                <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Work</span>
+                <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Ti</span>
+
               </h3>
             </div>
             <p className="text-gray-400 text-xs sm:text-sm mb-4">
@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
           
           <div className="mt-6 text-center text-sm text-gray-400">
-            <p>© {currentYear} VixTimeApp. {t('footer.copyright')}</p>
+            <p>© {currentYear} WorkTi. {t('footer.copyright')}</p>
           </div>
         </div>
       </div>

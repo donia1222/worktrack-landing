@@ -153,7 +153,7 @@ export default function Hero() {
               <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-2 shadow-2xl">
                 <Image
                   src="/screenshots/es/calendar.png"
-                  alt="VixTime App"
+                  alt="WorkTi App"
                   width={600}
                   height={800}
                   className="rounded-2xl w-full h-auto shadow-lg"

@@ -20,7 +20,7 @@ export default function StructuredData() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "VixTime",
+          "name": "WorkTi",
           "url": "https://www.vixtime.com",
           "logo": "https://www.vixtime.com/logo.png",
           "description": "Aplicación móvil líder para control automático de horarios laborales con geolocalización GPS"
