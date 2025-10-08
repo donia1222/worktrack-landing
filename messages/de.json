@@ -22,6 +22,11 @@
     "downloadButton": "App Herunterladen",
     "iosAvailability": "Derzeit nur für iOS-Geräte verfügbar",
     "demoButton": "Demo Ansehen",
+    "tagline": {
+      "work": "Ihre Arbeit",
+      "hours": "Ihre Stunden",
+      "control": "Ihre Kontrolle"
+    },
     "features": {
       "autoTimer": "GPS Auto-Timer",
       "widgets": "iOS Widgets",

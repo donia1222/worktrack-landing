@@ -185,6 +185,23 @@ export default function Hero() {
                 </div>
               </div>
             </div>
+
+            {/* Tagline below image */}
+            <div className="mt-8 flex justify-center">
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border-2 border-slate-200/50 shadow-lg">
+                <span className="text-base font-bold text-blue-600 border-b-2 border-blue-600 pb-0.5">
+                  {t("hero.tagline.work")}
+                </span>
+                <span className="text-slate-400">•</span>
+                <span className="text-base font-bold text-purple-600 border-b-2 border-purple-600 pb-0.5">
+                  {t("hero.tagline.hours")}
+                </span>
+                <span className="text-slate-400">•</span>
+                <span className="text-base font-bold text-green-600 border-b-2 border-green-600 pb-0.5">
+                  {t("hero.tagline.control")}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

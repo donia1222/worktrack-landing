@@ -22,6 +22,11 @@
     "downloadButton": "Get Started Free",
     "iosAvailability": "Currently available for iOS devices only",
     "demoButton": "View Demo",
+    "tagline": {
+      "work": "Your Work",
+      "hours": "Your Hours",
+      "control": "Your Control"
+    },
     "features": {
       "autoTimer": "Smart GPS Detection",
       "widgets": "iOS Widgets",
