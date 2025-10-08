@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import LoadingScreen from './LoadingScreen'
-import { LaunchModal } from './LaunchModal'
 
 interface AppWrapperProps {
   children: React.ReactNode
@@ -11,15 +10,10 @@ interface AppWrapperProps {
 
 export default function AppWrapper({ children }: AppWrapperProps) {
   const [isLoading, setIsLoading] = useState(true)
-  const [showLaunchModal, setShowLaunchModal] = useState(false)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
-      // Show launch modal 1 second after loading is complete
-      setTimeout(() => {
-        setShowLaunchModal(true)
-      }, 1000)
     }, 3000) // 3 seconds delay
 
     return () => clearTimeout(timer)
@@ -34,11 +28,6 @@ export default function AppWrapper({ children }: AppWrapperProps) {
       <div className={isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}>
         {children}
       </div>
-
-      <LaunchModal
-        isOpen={showLaunchModal}
-        onClose={() => setShowLaunchModal(false)}
-      />
     </>
   )
 }
