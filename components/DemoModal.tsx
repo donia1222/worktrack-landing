@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Play, Clock, MapPin, BarChart3, Calendar, MessageSquare } from 'lucide-react'
+import { X, Play, Clock, MapPin, BarChart3, Calendar, CalendarCheck } from 'lucide-react'
 
 interface DemoStep {
   id: number
@@ -131,30 +131,29 @@ const demoSteps: DemoStep[] = [
   },
   {
     id: 5,
-    title: 'Chatbot IA',
-    description: 'Analiza documentos laborales y extrae información automáticamente',
-    icon: MessageSquare,
+    title: 'Registra cualquier día',
+    description: 'Trabajo, día libre, vacaciones o baja — en pocos segundos',
+    icon: CalendarCheck,
     mockup: (
       <div className="p-4 bg-white rounded-2xl">
-        <h3 className="font-semibold mb-3">Asistente IA</h3>
-        <div className="space-y-3">
-          <div className="bg-gray-100 rounded-lg p-3 text-sm">
-            <div className="text-xs text-gray-500 mb-1">Tú:</div>
-            <div>Analiza mi horario de agosto</div>
+        <h3 className="font-semibold mb-3">Tipo de día</h3>
+        <div className="grid grid-cols-2 gap-2 text-sm">
+          <div className="bg-blue-50 border-2 border-blue-500 rounded-lg p-3 text-center font-semibold text-blue-700">
+            Trabajo
           </div>
-          <div className="bg-blue-50 rounded-lg p-3 text-sm">
-            <div className="text-xs text-blue-600 mb-1">VixTimeApp IA:</div>
-            <div>He detectado:</div>
-            <ul className="mt-2 space-y-1 text-xs">
-              <li>• 20 días laborables</li>
-              <li>• Turno: 9:00 - 17:00</li>
-              <li>• Total: 160 horas</li>
-              <li>• 2 días de vacaciones</li>
-            </ul>
-            <button className="mt-2 text-xs text-blue-600 font-semibold">
-              Añadir al calendario →
-            </button>
+          <div className="bg-gray-50 rounded-lg p-3 text-center text-gray-600">
+            Día libre
           </div>
+          <div className="bg-gray-50 rounded-lg p-3 text-center text-gray-600">
+            Vacaciones
+          </div>
+          <div className="bg-gray-50 rounded-lg p-3 text-center text-gray-600">
+            Baja
+          </div>
+        </div>
+        <div className="mt-3 flex items-center justify-between text-sm bg-green-50 rounded-lg p-3">
+          <span className="text-gray-600">Horas trabajadas</span>
+          <span className="font-semibold text-green-700">8h</span>
         </div>
       </div>
     )
@@ -201,7 +200,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b">
               <h2 className="text-2xl font-bold text-gray-900">
-                Demo Interactiva de VixTimeApp
+                Demo Interactiva de WorkTime Control
               </h2>
               <button
                 onClick={onClose}
@@ -328,7 +327,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                   whileTap={{ scale: 0.95 }}
                   className="px-6 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors"
                 >
-                  Descargar VixTimeApp
+                  Descargar WorkTime Control
                 </motion.button>
               </div>
             </div>

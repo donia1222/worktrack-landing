@@ -16,7 +16,7 @@ const getPlans = (t: (key: string) => string) => [
       { text: t("pricing.free.features.basicReports"), included: true },
       { text: t("pricing.free.features.basicCalendar"), included: true },
       { text: t("pricing.premium.features.autoTimer"), included: false },
-      { text: t("pricing.premium.features.aiBot"), included: false },
+      { text: t("pricing.premium.features.salaryStats"), included: false },
       { text: t("pricing.premium.features.unlimitedJobs"), included: false },
       { text: t("pricing.premium.features.calendarSync"), included: false },
       { text: t("pricing.premium.features.billing"), included: false },
@@ -32,7 +32,7 @@ const getPlans = (t: (key: string) => string) => [
     features: [
       { text: t("pricing.premium.features.unlimitedJobs"), included: true },
       { text: t("pricing.premium.features.autoTimer"), included: true },
-      { text: t("pricing.premium.features.aiBot"), included: true },
+      { text: t("pricing.premium.features.salaryStats"), included: true },
       { text: t("pricing.premium.features.geofencing"), included: true },
       { text: t("pricing.premium.features.pdfExport"), included: true },
       { text: t("pricing.premium.features.calendarSync"), included: true },

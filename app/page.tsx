@@ -5,10 +5,9 @@ import Hero from '@/components/Hero'
 import Stats from '@/components/Stats'
 import Features from '@/components/Features'
 import AutoTimerFeature from '@/components/AutoTimerFeature'
-import AIDocumentScanner from '@/components/AIDocumentScanner'
+import ExportReports from '@/components/ExportReports'
 import SmartWidgets from '@/components/SmartWidgets'
 import WorkingPhone from '@/components/WorkingPhone'
-import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
@@ -23,10 +22,8 @@ export default function Home() {
 
         <Features />
         <AutoTimerFeature />
-        <AIDocumentScanner />
+        <ExportReports />
 
-
-        <Testimonials />
         <Pricing />
         <FAQ />
         <CTA />

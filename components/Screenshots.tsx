@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, Monitor, BarChart3, Bot } from "lucide-react"
+import { ChevronLeft, ChevronRight, Monitor, BarChart3, CalendarCheck } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 
@@ -12,22 +12,22 @@ export default function Screenshots() {
 
   const screenshots = [
     {
-      image: "/screenshots/es/cap4.png",
+      image: "/new/home.png",
       title: t("screenshots.items.dashboard.title"),
       description: t("screenshots.items.dashboard.description"),
       icon: Monitor,
     },
     {
-      image: "/screenshots/es/map.png",
+      image: "/new/reports.png",
       title: t("screenshots.items.reports.title"),
       description: t("screenshots.items.reports.description"),
       icon: BarChart3,
     },
     {
-      image: "/screenshots/es/botp.png",
+      image: "/new/register-day.png",
       title: t("screenshots.items.aiBot.title"),
       description: t("screenshots.items.aiBot.description"),
-      icon: Bot,
+      icon: CalendarCheck,
     },
   ]
 

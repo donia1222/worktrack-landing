@@ -7,19 +7,19 @@
     "pricing": "Precios",
     "faq": "FAQ",
     "contact": "Contacto",
-    "download": "Descargar"
+    "download": "Descargar en iOS"
   },
   "loading": {
-    "appName": "WorkTi",
+    "appName": "WorkTime Control",
     "tagline": "Control inteligente de horas",
     "text": "Cargando experiencia..."
   },
   "hero": {
     "title": "Control de Horas",
     "titleAccent": "Inteligente",
-    "description": "Auto-Timer GPS que detecta automáticamente cuando llegas al trabajo. Calendario visual, reportes PDF y chatbot IA para analizar horarios.",
+    "description": "Auto-Timer GPS que detecta automáticamente cuando llegas al trabajo. Calendario visual, reportes PDF y sincronización con tu calendario nativo.",
     "subtitle": "Tu asistente definitivo para la gestión laboral.",
-    "downloadButton": "Descargar App",
+    "downloadButton": "Descargar en iOS",
     "iosAvailability": "Disponible solo para dispositivos iOS por el momento",
     "demoButton": "Ver Demo",
     "tagline": {
@@ -30,7 +30,7 @@
     "features": {
       "autoTimer": "Auto-Timer GPS",
       "widgets": "Widgets iOS",
-      "aiChatbot": "Chatbot IA",
+      "calendarSync": "Sincronización Calendario",
       "pdfReports": "Reportes PDF",
       "platforms": "iOS & Android"
     }
@@ -60,9 +60,9 @@
         "title": "Reportes y Exportación",
         "description": "Estadísticas detalladas por trabajo y período. Exportación PDF solo en Premium. Sistema de facturación profesional incluido."
       },
-      "ai": {
-        "title": "IA Multimodal (GPT-4 + Gemini)",
-        "description": "Dual AI con GPT-4 Vision + Google Gemini. Analiza documentos PDF, imágenes de horarios, contratos laborales. Búsqueda legal mundial automática en 10 idiomas."
+      "salary": {
+        "title": "Estadísticas de Salario",
+        "description": "Consulta tus ingresos mensuales, horas totales y comparativas semanales calculadas automáticamente."
       },
       "notifications": {
         "title": "Sistema de Notificaciones Pro",
@@ -71,62 +71,61 @@
     },
     "badges": {
       "localStorage": "100% Almacenamiento Local",
-      "languages": "3 Idiomas (ES, EN, DE)"
+      "languages": "10 Idiomas"
     }
   },
-  "aiScanner": {
-    "badge": "IA Revolucionaria",
-    "title": "Sube una foto,",
-    "titleAccent": "la IA lo entiende todo",
-    "description": "Powered by GPT-4 Vision + Google Gemini. Analiza horarios, contratos y facturas. Digitaliza planes de trabajo y sincroniza con calendario nativo.",
+  "exportReports": {
+    "badge": "Reportes Profesionales",
+    "title": "Tus horas,",
+    "titleAccent": "listas para exportar",
+    "description": "Genera reportes en PDF por semana, mes, año o un rango de fechas personalizado. Con un solo toque.",
     "processTitle": "Así de simple funciona",
-    "tryButton": "Probar Scanner IA",
-    "demoTitle": "Capacidades Avanzadas IA",
+    "demoTitle": "Todo en un solo reporte",
     "accuracy": {
-      "title": "Precisión de la IA",
-      "text": "Detección de texto y datos"
+      "title": "Datos siempre al día",
+      "text": "Calculado en tiempo real desde tus registros"
     },
     "supportedFormats": {
-      "pdf": "PDFs completos",
-      "photo": "Fotos de planes",
-      "location": "Detección GPS",
+      "pdf": "Exportación PDF",
+      "photo": "Semana, mes o año",
+      "location": "Rango personalizado",
       "multilang": "10 idiomas"
     },
     "capabilities": {
       "schedules": {
-        "title": "Planes de Trabajo",
-        "description": "Escanea y digitaliza cualquier plan de trabajo físico o PDF. Detecta automáticamente horarios, turnos y ubicaciones.",
-        "feature1": "Detección automática de turnos",
-        "feature2": "Múltiples personas por plan",
-        "feature3": "Horarios irregulares y divididos"
+        "title": "Reportes en PDF",
+        "description": "Genera reportes profesionales por semana, mes, año o un rango de fechas a tu medida.",
+        "feature1": "Horas totales y días trabajados",
+        "feature2": "Desglose por trabajo",
+        "feature3": "Un toque para exportar"
       },
       "calendar": {
-        "title": "Sincronización Calendario",
-        "description": "Conecta automáticamente con tu calendario nativo iOS/Android. Exporta horarios detectados directamente.",
-        "feature1": "Sync calendario nativo",
-        "feature2": "Exportación ICS automática",
-        "feature3": "Notificaciones inteligentes"
+        "title": "Actividad Reciente",
+        "description": "Consulta y edita tus registros de horas al instante, filtrando por trabajo o periodo.",
+        "feature1": "Editar o eliminar registros",
+        "feature2": "Historial completo",
+        "feature3": "Filtra por trabajo"
       },
       "legal": {
-        "title": "Información Legal Global",
-        "description": "Busca condiciones laborales específicas por países. Encuentra portales de empleo y información legal actualizada.",
-        "feature1": "Base datos 195+ países",
-        "feature2": "Condiciones laborales actuales",
-        "feature3": "Portales oficiales de empleo"
+        "title": "Datos de Facturación",
+        "description": "Añade tus datos fiscales y de empresa para que el PDF quede listo para enviar.",
+        "feature1": "Logo y datos de empresa",
+        "feature2": "Tarifas por hora",
+        "feature3": "Cálculo automático de ingresos"
       }
     },
     "steps": {
       "capture": {
-        "title": "Captura o Sube",
-        "description": "Toma una foto de tu plan de trabajo o selecciona un PDF. La IA procesa cualquier calidad de imagen o documento."
+        "title": "Elige el Periodo",
+        "description": "Semana, mes, año o un rango de fechas personalizado — tú decides qué periodo consultar."
       },
       "analyze": {
-        "title": "IA Procesa",
-        "description": "Dual AI (GPT-4 + Gemini) analiza el documento. Extrae horarios, personas, ubicaciones y condiciones laborales."
+        "title": "Revisa tus Horas",
+        "description": "Consulta el desglose de horas totales, días trabajados y actividad reciente por trabajo."
       },
       "export": {
-        "title": "Sincroniza Automáticamente", 
-        "description": "Los horarios detectados se sincronizan con tu calendario nativo. Genera recordatorios y exporta PDFs profesionales."
+        "title": "Exporta a PDF",
+        "description": "Un toque para generar un PDF profesional, listo para guardar o enviar."
       }
     }
   },
@@ -144,7 +143,7 @@
         "description": "Timer activo, horas del día, estado del trabajo. Perfecto para control rápido sin abrir la app."
       },
       "medium": {
-        "title": "Widget Mediano", 
+        "title": "Widget Mediano",
         "description": "Vista semanal completa con días trabajados coloreados. Acceso directo a funciones principales."
       },
       "large": {
@@ -178,7 +177,7 @@
         "description": "Vista mensual con días trabajados coloreados por trabajo. Marca vacaciones, días libres y enfermedades. Sincronización automática con iOS/Android."
       },
       "autoTimer": {
-        "title": "Auto-Timer GPS Inteligente", 
+        "title": "Auto-Timer GPS Inteligente",
         "description": "Mapa en tiempo real mostrando tu ubicación y el radio de geofencing. El timer se activa automáticamente al llegar al trabajo."
       },
       "notifications": {
@@ -206,8 +205,8 @@
         "description": "Estadísticas completas con gráficos y distribución por trabajo"
       },
       "aiBot": {
-        "title": "Chatbot IA Inteligente",
-        "description": "Analiza documentos laborales y extrae información automáticamente"
+        "title": "Registra Cualquier Día",
+        "description": "Trabajo, día libre, vacaciones o baja — en pocos segundos"
       },
       "settings": {
         "title": "Configuración Flexible",
@@ -242,7 +241,7 @@
           "popular": true
         },
         "6months": {
-          "price": "€9.99", 
+          "price": "€9.99",
           "duration": "6 meses",
           "popular": false
         },
@@ -252,13 +251,13 @@
           "popular": false
         }
       },
-      "description": "Todo el poder de WorkTi",
+      "description": "Todo el poder de WorkTime Control",
       "cta": "Obtener Premium",
       "popular": "Más Popular",
       "features": {
         "unlimitedJobs": "Trabajos ilimitados con horarios flexibles",
         "autoTimer": "Auto-Timer GPS (radio 50m-500m)",
-        "aiBot": "Analyze-Bot IA con Gemini 1.5 Pro",
+        "salaryStats": "Estadísticas de salario y horas",
         "geofencing": "Geofencing personalizable por trabajo",
         "pdfExport": "Exportación PDF",
         "calendarSync": "Sincronización calendario iOS/Android",
@@ -273,7 +272,7 @@
   "faq": {
     "title": "Preguntas",
     "titleAccent": "Frecuentes",
-    "description": "Encuentra respuestas a las dudas más comunes sobre WorkTi",
+    "description": "Encuentra respuestas a las dudas más comunes sobre WorkTime Control",
     "search": "Buscar en las preguntas frecuentes...",
     "categories": {
       "general": "General",
@@ -353,7 +352,7 @@
   "cta": {
     "title": "Comienza a controlar tu tiempo",
     "titleAccent": "hoy mismo",
-    "description": "Únete a miles de profesionales que ya confían en WorkTi para gestionar su tiempo laboral de forma inteligente.",
+    "description": "Únete a miles de profesionales que ya confían en WorkTime Control para gestionar su tiempo laboral de forma inteligente.",
     "rating": "4.8/5 en App Store",
     "downloadButton": "Descargar Gratis",
     "demoButton": "Ver en acción",
@@ -374,7 +373,7 @@
   "testimonials": {
     "title": "Amado por",
     "titleAccent": "Profesionales",
-    "description": "Descubre por qué miles eligen WorkTi para gestionar su tiempo",
+    "description": "Descubre por qué miles eligen WorkTime Control para gestionar su tiempo",
     "roles": {
       "freelancer": "Escritor Freelance",
       "consultant": "Consultor de Negocios",
@@ -384,7 +383,7 @@
       "manager": "Gerente de Proyectos"
     },
     "reviews": {
-      "1": "WorkTi ha transformado completamente cómo gestiono mi tiempo. El auto-timer GPS es como magia - ¡nunca más olvido registrar horas!",
+      "1": "WorkTime Control ha transformado completamente cómo gestiono mi tiempo. El auto-timer GPS es como magia - ¡nunca más olvido registrar horas!",
       "2": "Como alguien que maneja múltiples clientes, la función multi-trabajo es un salvavidas. Los reportes son profesionales y a los clientes les encantan.",
       "3": "El asistente IA analizó mi horario en papel e importó todo perfectamente. ¡Me ahorró horas de entrada manual!",
       "4": "Finalmente, un rastreador de tiempo que respeta la privacidad. Todo permanece en mi dispositivo, y los respaldos automáticos me dan tranquilidad.",
@@ -404,7 +403,15 @@
     "workedDays": "Días trabajados",
     "averageDay": "Promedio/día",
     "distributionByJob": "Distribución por trabajo",
-    "weekDays": ["L", "M", "M", "J", "V", "S", "D"],
+    "weekDays": [
+      "L",
+      "M",
+      "M",
+      "J",
+      "V",
+      "S",
+      "D"
+    ],
     "settings": "Configuración",
     "jobManagement": "Gestión de Trabajos",
     "jobManagementDesc": "Configura tus trabajos con horarios, tarifas y facturación",
@@ -457,7 +464,7 @@
   },
   "launchModal": {
     "title": "¡Próximamente!",
-    "subtitle": "WorkTi estará disponible muy pronto",
+    "subtitle": "WorkTime Control estará disponible muy pronto",
     "date": "1 de Octubre",
     "year": "2025",
     "description": "Estamos trabajando en los últimos detalles para ofrecerte la mejor experiencia de control horario con GPS.",
@@ -465,11 +472,11 @@
     "button": "Entendido"
   },
   "contact": {
-    "backButton": "Volver a WorkTi",
+    "backButton": "Volver a WorkTime Control",
     "title": "¿Necesitas",
     "titleAccent": "ayuda",
     "titleEnd": "?",
-    "description": "Estamos aquí para ayudarte con WorkTi. Envíanos un mensaje y te responderemos lo antes posible.",
+    "description": "Estamos aquí para ayudarte con WorkTime Control. Envíanos un mensaje y te responderemos lo antes posible.",
     "hero": {
       "title": "¿Hablamos?",
       "description": "Estamos aquí para ayudarte. Envíanos tu consulta y te responderemos lo antes posible."
@@ -531,12 +538,12 @@
     }
   },
   "privacy": {
-    "backButton": "Volver a WorkTi",
+    "backButton": "Volver a WorkTime Control",
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización: Septiembre 2025",
     "priority": {
       "title": "Tu Privacidad es Nuestra Prioridad",
-      "description": "En WorkTi, nos tomamos tu privacidad en serio. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu información cuando usas nuestra aplicación de seguimiento de tiempo de trabajo."
+      "description": "En WorkTime Control, nos tomamos tu privacidad en serio. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos tu información cuando usas nuestra aplicación de seguimiento de tiempo de trabajo."
     },
     "summary": {
       "title": "Resumen: No Almacenamos Nada de Nada",
@@ -630,19 +637,19 @@
       "title": "Contáctanos",
       "description": "Si tienes preguntas sobre esta Política de Privacidad, contáctanos en"
     },
-    "footer": "Esta política es efectiva desde septiembre de 2025 y se aplica a todas las versiones de WorkTi."
+    "footer": "Esta política es efectiva desde septiembre de 2025 y se aplica a todas las versiones de WorkTime Control."
   },
   "terms": {
-    "backButton": "Volver a WorkTi",
+    "backButton": "Volver a WorkTime Control",
     "title": "Términos de Servicio",
     "lastUpdated": "Última actualización: Septiembre 2025",
     "acceptance": {
       "title": "Aceptación de Términos",
-      "description": "Al descargar, instalar o usar WorkTi, aceptas estar sujeto a estos Términos de Servicio. Si no estás de acuerdo con estos términos, por favor no uses la app."
+      "description": "Al descargar, instalar o usar WorkTime Control, aceptas estar sujeto a estos Términos de Servicio. Si no estás de acuerdo con estos términos, por favor no uses la app."
     },
     "license": {
       "title": "Licencia de Uso",
-      "description": "Te otorgamos una licencia limitada, no exclusiva, no transferible y revocable para usar WorkTi para tu uso personal y comercial en dispositivos que controles.",
+      "description": "Te otorgamos una licencia limitada, no exclusiva, no transferible y revocable para usar WorkTime Control para tu uso personal y comercial en dispositivos que controles.",
       "restrictions": "No puedes: copiar, modificar o distribuir la app; realizar ingeniería inversa; usar la app para fines ilegales; o violar los derechos de propiedad intelectual."
     },
     "subscriptions": {
@@ -691,7 +698,7 @@
     },
     "indemnification": {
       "title": "Indemnización",
-      "description": "Aceptas indemnizar y eximir de responsabilidad a WorkTi y sus afiliados de cualquier reclamo, daño o gasto derivado de tu uso de la app o violación de estos términos."
+      "description": "Aceptas indemnizar y eximir de responsabilidad a WorkTime Control y sus afiliados de cualquier reclamo, daño o gasto derivado de tu uso de la app o violación de estos términos."
     },
     "governing": {
       "title": "Ley Aplicable",
@@ -705,7 +712,7 @@
       "title": "Contacto",
       "description": "Para preguntas sobre estos Términos de Servicio, contáctanos en"
     },
-    "footer": "Al usar WorkTi, confirmas que has leído, entendido y aceptado estos Términos de Servicio."
+    "footer": "Al usar WorkTime Control, confirmas que has leído, entendido y aceptado estos Términos de Servicio."
   },
   "autoTimer": {
     "badge": "Nivel Empresarial",
@@ -718,7 +725,7 @@
         "description": "Radio configurable 50-500m con delays personalizables. APIs nativas iOS/Android Core Location para máxima precisión."
       },
       "background": {
-        "title": "Background Robusto", 
+        "title": "Background Robusto",
         "description": "Funciona perfectamente con app cerrada. TaskManager nativo + recuperación automática de estados perdidos."
       },
       "intelligence": {
@@ -746,7 +753,7 @@
     "states": {
       "inactive": "Inactivo",
       "entering": "Entrando",
-      "active": "Activo", 
+      "active": "Activo",
       "leaving": "Saliendo",
       "manual": "Manual"
     },

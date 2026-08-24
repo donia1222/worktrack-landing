@@ -1,6 +1,6 @@
 "use client"
 
-import { Sparkles, Zap, BarChart3, Bot, ArrowRight, Play } from "lucide-react"
+import { Sparkles, Zap, BarChart3, CalendarCheck, ArrowRight, Play } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 import { useState, useEffect } from "react"
@@ -75,12 +75,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-36">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div
             className={`space-y-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <div className="space-y-8 mt-20">
+            <div className="space-y-8">
               {/* Enhanced title with gradient text and better typography */}
                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
                 {t("hero.title")}{" "}
@@ -96,7 +96,7 @@ export default function Hero() {
               {[
                 { icon: Zap, color: "blue", key: "autoTimer" },
                 { icon: Sparkles, color: "cyan", key: "widgets" },
-                { icon: Bot, color: "green", key: "aiChatbot" },
+                { icon: CalendarCheck, color: "green", key: "calendarSync" },
                 { icon: BarChart3, color: "purple", key: "pdfReports" },
               ].map((feature, index) => (
                 <div
@@ -119,7 +119,7 @@ export default function Hero() {
                 href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
+                className="hidden lg:inline-flex group relative items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   {t("hero.downloadButton")}
@@ -132,7 +132,7 @@ export default function Hero() {
           <div
             className={`relative lg:pl-12 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
           >
-            <div className="relative mx-auto max-w-md lg:max-w-lg">
+            <div className="relative mx-auto max-w-[220px] lg:max-w-[240px]">
               {/* Enhanced decorative elements */}
               <div className="absolute -inset-8 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-[3rem] blur-3xl animate-pulse" />
 
@@ -150,18 +150,16 @@ export default function Hero() {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 rounded-3xl blur-sm opacity-30 animate-pulse" />
 
               {/* Main image container */}
-              <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-2 shadow-2xl">
-                <Image
-                  src="/screenshots/es/calendar.png"
-                  alt="WorkTi App"
-                  width={600}
-                  height={800}
-                  className="rounded-2xl w-full h-auto shadow-lg"
-                  priority
-                />
-
-                {/* Overlay effects */}
-                <div className="absolute inset-2 rounded-2xl bg-gradient-to-t from-transparent via-transparent to-white/10 pointer-events-none" />
+              <div className="relative bg-slate-900 rounded-[2rem] p-2 shadow-2xl">
+                <div className="relative w-full aspect-[9/19] rounded-[1.4rem] overflow-hidden">
+                  <Image
+                    src="/new/home.png"
+                    alt="WorkTime Control App"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                  />
+                </div>
               </div>
 
               {/* Floating UI elements */}
@@ -180,8 +178,8 @@ export default function Hero() {
                 style={{ animationDuration: "2.5s", animationDelay: "0.5s" }}
               >
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-blue-600" />
-                  <span className="text-xs font-medium text-slate-700">AI Powered</span>
+                  <BarChart3 className="w-4 h-4 text-blue-600" />
+                  <span className="text-xs font-medium text-slate-700">PDF Reports</span>
                 </div>
               </div>
             </div>
@@ -201,6 +199,22 @@ export default function Hero() {
                   {t("hero.tagline.control")}
                 </span>
               </div>
+            </div>
+
+            {/* Botón de descarga — solo móvil, aquí abajo del todo */}
+            <div className="mt-8 flex justify-center lg:hidden">
+              <a
+                href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
+              >
+                <span className="relative z-10 flex items-center gap-3">
+                  {t("hero.downloadButton")}
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
             </div>
           </div>
         </div>

@@ -1,13 +1,13 @@
 "use client"
-import { MapPin, BarChart3, MessageSquare, Shield, Briefcase, Bell, Globe, Layout } from "lucide-react"
+import { Layout, Bell, Shield, Globe } from "lucide-react"
+import Image from "next/image"
 import { useLanguage } from "@/lib/language"
 
 const getFeatures = (t: (key: string) => string) => [
   {
-    icon: MapPin,
+    image: "/new/icons/timer.png",
     title: t("features.items.autoTimer.title"),
     description: t("features.items.autoTimer.description"),
-    color: "text-slate-700",
     bgColor: "bg-slate-50",
     borderColor: "border-slate-200",
   },
@@ -20,26 +20,23 @@ const getFeatures = (t: (key: string) => string) => [
     borderColor: "border-blue-200",
   },
   {
-    icon: Briefcase,
+    image: "/new/icons/jobs.png",
     title: t("features.items.jobs.title"),
     description: t("features.items.jobs.description"),
-    color: "text-emerald-700",
     bgColor: "bg-emerald-50",
     borderColor: "border-emerald-200",
   },
   {
-    icon: MessageSquare,
-    title: t("features.items.ai.title"),
-    description: t("features.items.ai.description"),
-    color: "text-violet-700",
+    image: "/new/icons/stats.png",
+    title: t("features.items.salary.title"),
+    description: t("features.items.salary.description"),
     bgColor: "bg-violet-50",
     borderColor: "border-violet-200",
   },
   {
-    icon: BarChart3,
+    image: "/new/icons/calendar.png",
     title: t("features.items.reports.title"),
     description: t("features.items.reports.description"),
-    color: "text-amber-700",
     bgColor: "bg-amber-50",
     borderColor: "border-amber-200",
   },
@@ -76,9 +73,13 @@ export default function Features() {
               className="group relative bg-white rounded-2xl p-8 border border-slate-200 hover:border-slate-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <div
-                className={`${feature.bgColor} ${feature.borderColor} w-14 h-14 rounded-xl border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                className={`${feature.bgColor} ${feature.borderColor} w-14 h-14 rounded-xl border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 overflow-hidden`}
               >
-                <feature.icon className={`w-7 h-7 ${feature.color}`} />
+                {feature.image ? (
+                  <Image src={feature.image} alt="" width={40} height={40} className="w-10 h-10 object-contain" />
+                ) : feature.icon ? (
+                  <feature.icon className={`w-7 h-7 ${feature.color}`} />
+                ) : null}
               </div>
 
               <h3 className="text-xl font-semibold text-slate-900 mb-3 text-balance">{feature.title}</h3>

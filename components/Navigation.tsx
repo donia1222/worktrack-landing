@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Clock, Menu, X, Download } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import { useLanguage } from '@/lib/language'
 import LanguageSelector from './LanguageSelector'
 
@@ -78,12 +79,10 @@ export default function Navigation() {
             className="cursor-pointer flex items-center gap-2"
             onClick={() => scrollToSection('#hero')}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-              <Clock className="w-5 h-5 text-white" />
-            </div>
+            <Image src="/new/app-icon.png" alt="Working Time Control" width={40} height={40} className="w-10 h-10 rounded-xl" priority />
             <h3 className="text-xl font-bold flex">
               <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Work</span>
-              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Ti</span>
+              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time Control</span>
 
             </h3>
           </div>
@@ -108,7 +107,6 @@ export default function Navigation() {
               rel="noopener noreferrer"
               className={`inline-flex items-center gap-2 px-5 py-2 rounded-xl font-medium transition-all bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg text-sm`}
             >
-              <Download className="w-3.5 h-3.5" />
               {t('navigation.download')}
             </a>
           </div>
@@ -152,7 +150,6 @@ export default function Navigation() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full mt-4 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-xl font-medium hover:from-blue-700 hover:to-blue-600 transition-all flex items-center justify-center gap-2 shadow-lg text-sm">
-                <Download className="w-3.5 h-3.5" />
                 {t('navigation.download')}
               </a>
             </div>
