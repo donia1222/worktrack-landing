@@ -283,7 +283,9 @@
     "contactCta": {
       "title": "¿No encuentras tu respuesta?",
       "description": "Nuestro equipo de soporte está aquí para ayudarte",
-      "button": "Contactar Soporte"
+      "button": "Contactar Soporte",
+      "emailSubject": "Consulta sobre WorkTi",
+      "emailBody": "Hola, tengo una pregunta sobre la app WorkTi:"
     },
     "questions": {
       "1": {

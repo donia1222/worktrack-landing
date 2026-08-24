@@ -30,6 +30,7 @@
       "autoTimer": "Smart GPS Detection",
       "widgets": "iOS Widgets",
       "aiChatbot": "AI Work Assistant",
+      "calendarSync": "Calendar Sync",
       "pdfReports": "Professional Reports",
       "platforms": "iOS & Android"
     }
@@ -63,6 +64,10 @@
         "title": "Multimodal AI (GPT-4 + Gemini)",
         "description": "Dual AI with GPT-4 Vision + Google Gemini. Analyzes PDF documents, schedule images, work contracts. Automatic global legal search in 10 languages."
       },
+      "salary": {
+        "title": "Salary Insights",
+        "description": "Check your monthly income, total hours, and weekly comparisons calculated automatically."
+      },
       "notifications": {
         "title": "Pro Notification System",
         "description": "3 specialized Android channels: Auto-Timer, Reminders, General. AI-powered contextual alerts. Compatible with iOS Focus Modes and Android Do Not Disturb."
@@ -72,6 +77,30 @@
       "localStorage": "100% Privacy - Data Never Leaves Your Device",
       "languages": "3 Languages (ES, EN, DE)",
       "tech": "Works Offline - No Internet Required"
+    }
+  },
+  "screenshots": {
+    "badge": "Preview",
+    "title": "Discover every",
+    "titleAccent": "screen",
+    "description": "Intuitive interface designed to help you track your time effortlessly",
+    "items": {
+      "dashboard": {
+        "title": "Main Dashboard",
+        "description": "Overview with active jobs, calendar, and quick access"
+      },
+      "reports": {
+        "title": "Detailed Reports",
+        "description": "Complete statistics with charts and breakdown by job"
+      },
+      "aiBot": {
+        "title": "Log Any Day",
+        "description": "Work, day off, vacation, or sick leave — in seconds"
+      },
+      "settings": {
+        "title": "Flexible Settings",
+        "description": "Customize every aspect of the app to fit your needs"
+      }
     }
   },
   "exportReports": {
@@ -234,6 +263,7 @@
         "unlimitedJobs": "Unlimited jobs & clients",
         "autoTimer": "GPS Auto-Timer saves 10+ hours/month",
         "aiBot": "AI Assistant powered by Gemini 1.5 Pro",
+  "salaryStats": "Salary and hours statistics",
         "geofencing": "Custom geofencing for each location",
         "pdfExport": "Professional PDF invoices",
         "calendarSync": "Native calendar integration",
@@ -260,7 +290,9 @@
     "contactCta": {
       "title": "Can't find your answer?",
       "description": "Our support team is here to help you",
-      "button": "Contact Support"
+      "button": "Contact Support",
+      "emailSubject": "Question about WorkTi",
+      "emailBody": "Hi, I have a question about the WorkTi app:"
     },
     "questions": {
       "1": {

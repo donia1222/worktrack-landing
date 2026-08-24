@@ -30,6 +30,7 @@
       "autoTimer": "GPS Auto-Timer",
       "widgets": "iOS Widgets",
       "aiChatbot": "KI-Chatbot",
+      "calendarSync": "Kalendersynchronisation",
       "pdfReports": "PDF-Berichte",
       "platforms": "iOS & Android"
     }
@@ -63,6 +64,10 @@
         "title": "Multimodale KI (GPT-4 + Gemini)",
         "description": "Duale KI mit GPT-4 Vision + Google Gemini. Analysiert PDF-Dokumente, Zeitplan-Bilder, Arbeitsverträge. Automatische globale Rechtssuche in 10 Sprachen."
       },
+      "salary": {
+        "title": "Gehaltsübersicht",
+        "description": "Sehen Sie Ihr monatliches Einkommen, die Gesamtstunden und wöchentliche Vergleiche, automatisch berechnet."
+      },
       "notifications": {
         "title": "Pro Benachrichtigungs-System",
         "description": "3 spezialisierte Android-Kanäle: Auto-Timer, Erinnerungen, Allgemein. KI-gestützte kontextuelle Warnungen. Kompatibel mit iOS Focus Modes."
@@ -71,6 +76,30 @@
     "badges": {
       "localStorage": "100% Lokaler Speicher",
       "languages": "3 Sprachen (ES, EN, DE)"
+    }
+  },
+  "screenshots": {
+    "badge": "Vorschau",
+    "title": "Entdecken Sie jeden",
+    "titleAccent": "Bildschirm",
+    "description": "Intuitive Oberfläche, damit Sie Ihre Zeit mühelos erfassen können",
+    "items": {
+      "dashboard": {
+        "title": "Hauptdashboard",
+        "description": "Übersicht mit aktiven Jobs, Kalender und Schnellzugriffen"
+      },
+      "reports": {
+        "title": "Detaillierte Berichte",
+        "description": "Vollständige Statistiken mit Diagrammen und Aufschlüsselung nach Job"
+      },
+      "aiBot": {
+        "title": "Jeden Tag erfassen",
+        "description": "Arbeit, freier Tag, Urlaub oder Krankheit — in wenigen Sekunden"
+      },
+      "settings": {
+        "title": "Flexible Einstellungen",
+        "description": "Passen Sie jeden Aspekt der App an Ihre Bedürfnisse an"
+      }
     }
   },
   "exportReports": {
@@ -233,6 +262,7 @@
         "unlimitedJobs": "Unbegrenzte Jobs mit flexiblen Arbeitszeiten",
         "autoTimer": "GPS Auto-Timer (50m-500m Radius)",
         "aiBot": "Analyze-Bot KI mit Gemini 1.5 Pro",
+  "salaryStats": "Gehalts- und Stundenstatistik",
         "geofencing": "Anpassbares Geofencing pro Job",
         "pdfExport": "PDF-Export",
         "calendarSync": "iOS/Android Kalender-Synchronisation",
@@ -259,7 +289,9 @@
     "contactCta": {
       "title": "Können Sie Ihre Antwort nicht finden?",
       "description": "Unser Support-Team ist da, um Ihnen zu helfen",
-      "button": "Support Kontaktieren"
+      "button": "Support Kontaktieren",
+      "emailSubject": "Frage zu WorkTi",
+      "emailBody": "Hallo, ich habe eine Frage zur WorkTi-App:"
     },
     "questions": {
       "1": {
