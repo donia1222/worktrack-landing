@@ -1,7 +1,6 @@
 {
   "navigation": {
     "features": "Features",
-    "aiScanner": "AI Scanner",
     "smartWidgets": "iOS Widgets",
     "workingPhone": "Live Demo",
     "pricing": "Pricing",
@@ -75,59 +74,58 @@
       "tech": "Works Offline - No Internet Required"
     }
   },
-  "aiScanner": {
-    "badge": "Revolutionary AI",
-    "title": "Upload a photo,",
-    "titleAccent": "AI understands everything",
-    "description": "Powered by GPT-4 Vision + Google Gemini. Analyzes schedules, contracts and invoices. Digitizes work plans and syncs with native calendar.",
+  "exportReports": {
+    "badge": "Professional Reports",
+    "title": "Your hours,",
+    "titleAccent": "ready to export",
+    "description": "Generate PDF reports by week, month, year or a custom date range. With just one tap.",
     "processTitle": "How it works",
-    "tryButton": "Try AI Scanner",
-    "demoTitle": "Advanced AI Capabilities",
+    "demoTitle": "Everything in one report",
     "accuracy": {
-      "title": "AI Precision",
-      "text": "Text and data detection"
+      "title": "Always up to date",
+      "text": "Calculated in real time from your records"
     },
     "supportedFormats": {
-      "pdf": "Full PDFs",
-      "photo": "Plan photos",
-      "location": "GPS detection",
+      "pdf": "PDF export",
+      "photo": "Week, month or year",
+      "location": "Custom range",
       "multilang": "10 languages"
     },
     "capabilities": {
       "schedules": {
-        "title": "Work Plans",
-        "description": "Scan and digitize any physical work plan or PDF. Automatically detects schedules, shifts and locations.",
-        "feature1": "Automatic shift detection",
-        "feature2": "Multiple people per plan",
-        "feature3": "Irregular and split schedules"
+        "title": "PDF Reports",
+        "description": "Generate professional reports by week, month, year or a date range that suits you.",
+        "feature1": "Total hours and days worked",
+        "feature2": "Breakdown by job",
+        "feature3": "One tap to export"
       },
       "calendar": {
-        "title": "Calendar Sync",
-        "description": "Automatically connects with your native iOS/Android calendar. Exports detected schedules directly.",
-        "feature1": "Native calendar sync",
-        "feature2": "Automatic ICS export",
-        "feature3": "Smart notifications"
+        "title": "Recent Activity",
+        "description": "Check and edit your time entries instantly, filtered by job or period.",
+        "feature1": "Edit or delete entries",
+        "feature2": "Full history",
+        "feature3": "Filter by job"
       },
       "legal": {
-        "title": "Global Legal Info",
-        "description": "Search specific labor conditions by country. Find employment portals and updated legal information.",
-        "feature1": "195+ countries database",
-        "feature2": "Current labor conditions",
-        "feature3": "Official employment portals"
+        "title": "Billing Details",
+        "description": "Add your tax and company details so the PDF is ready to send.",
+        "feature1": "Company logo and details",
+        "feature2": "Hourly rates",
+        "feature3": "Automatic income calculation"
       }
     },
     "steps": {
       "capture": {
-        "title": "Capture or Upload",
-        "description": "Take a photo of your work plan or select a PDF. AI processes any image quality or document."
+        "title": "Choose the Period",
+        "description": "Week, month, year or a custom date range — you decide what period to check."
       },
       "analyze": {
-        "title": "AI Processes",
-        "description": "Dual AI (GPT-4 + Gemini) analyzes the document. Extracts schedules, people, locations and work conditions."
+        "title": "Review your Hours",
+        "description": "See the breakdown of total hours, days worked and recent activity per job."
       },
       "export": {
-        "title": "Auto Sync",
-        "description": "Detected schedules sync with your native calendar. Generate reminders and export professional PDFs."
+        "title": "Export to PDF",
+        "description": "One tap to generate a professional PDF, ready to save or send."
       }
     }
   },
@@ -145,7 +143,7 @@
         "description": "Active timer, daily hours, job status. Perfect for quick control without opening the app."
       },
       "medium": {
-        "title": "Medium Widget", 
+        "title": "Medium Widget",
         "description": "Complete weekly view with color-coded work days. Direct access to main functions."
       },
       "large": {
@@ -183,7 +181,7 @@
         "description": "Automatic detection when you arrive at work. Customizable geofencing from 50m to 500m radius."
       },
       "notifications": {
-        "title": "Smart Notifications", 
+        "title": "Smart Notifications",
         "description": "3 specialized Android channels. iOS Focus Mode compatible. Never miss important work reminders."
       },
       "reports": {
@@ -219,7 +217,7 @@
           "popular": true
         },
         "6months": {
-          "price": "$10.99", 
+          "price": "$10.99",
           "duration": "6 months",
           "popular": false
         },
@@ -381,7 +379,15 @@
     "workedDays": "Days worked",
     "averageDay": "Average/day",
     "distributionByJob": "Distribution by job",
-    "weekDays": ["M", "T", "W", "T", "F", "S", "S"],
+    "weekDays": [
+      "M",
+      "T",
+      "W",
+      "T",
+      "F",
+      "S",
+      "S"
+    ],
     "settings": "Settings",
     "jobManagement": "Job Management",
     "jobManagementDesc": "Configure your jobs with schedules, rates and billing",
@@ -560,7 +566,7 @@
       }
     },
     "subscriptions": {
-      "title": "Subscriptions", 
+      "title": "Subscriptions",
       "description": "Purchases are managed by Apple App Store / Google Play. To validate your subscription we use RevenueCat, sending only:",
       "revenuecatData": {
         "identifier": "A random, app-scoped identifier (doesn't personally identify you)",
@@ -694,7 +700,7 @@
         "description": "Configurable 50-500m radius with customizable delays. Native iOS/Android Core Location APIs for maximum precision."
       },
       "background": {
-        "title": "Robust Background", 
+        "title": "Robust Background",
         "description": "Works perfectly with app closed. Native TaskManager + automatic recovery of lost states."
       },
       "intelligence": {
@@ -722,7 +728,7 @@
     "states": {
       "inactive": "Inactive",
       "entering": "Entering",
-      "active": "Active", 
+      "active": "Active",
       "leaving": "Leaving",
       "manual": "Manual"
     },

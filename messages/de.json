@@ -1,10 +1,9 @@
 {
   "navigation": {
     "features": "Funktionen",
-    "aiScanner": "KI Scanner",
     "smartWidgets": "iOS Widgets",
     "workingPhone": "Demo",
-    "pricing": "Preise", 
+    "pricing": "Preise",
     "faq": "FAQ",
     "contact": "Kontakt",
     "download": "Für iOS herunterladen"
@@ -74,66 +73,65 @@
       "languages": "3 Sprachen (ES, EN, DE)"
     }
   },
-  "aiScanner": {
-    "badge": "Revolutionäre KI",
-    "title": "Foto hochladen,", 
-    "titleAccent": "KI versteht alles",
-    "description": "Powered by GPT-4 Vision + Google Gemini. Analysiert Zeitpläne, Verträge und Rechnungen. Digitalisiert Arbeitspläne und synchronisiert mit nativem Kalender.",
-    "processTitle": "So funktioniert es",
-    "tryButton": "KI Scanner testen",
-    "demoTitle": "Erweiterte KI-Fähigkeiten",
+  "exportReports": {
+    "badge": "Professionelle Berichte",
+    "title": "Deine Stunden,",
+    "titleAccent": "bereit zum Export",
+    "description": "Erstelle PDF-Berichte nach Woche, Monat, Jahr oder einem individuellen Zeitraum. Mit nur einem Tipp.",
+    "processTitle": "So einfach funktioniert's",
+    "demoTitle": "Alles in einem Bericht",
     "accuracy": {
-      "title": "KI-Präzision",
-      "text": "Text- und Datenerkennung"
+      "title": "Immer aktuell",
+      "text": "In Echtzeit aus deinen Einträgen berechnet"
     },
     "supportedFormats": {
-      "pdf": "Vollständige PDFs",
-      "photo": "Plan-Fotos",
-      "location": "GPS-Erkennung",
+      "pdf": "PDF-Export",
+      "photo": "Woche, Monat oder Jahr",
+      "location": "Individueller Zeitraum",
       "multilang": "10 Sprachen"
     },
     "capabilities": {
       "schedules": {
-        "title": "Arbeitspläne",
-        "description": "Scannen und digitalisieren Sie jeden physischen Arbeitsplan oder PDF. Erkennt automatisch Zeitpläne, Schichten und Standorte.",
-        "feature1": "Automatische Schichterkennung",
-        "feature2": "Mehrere Personen pro Plan",
-        "feature3": "Unregelmäßige und geteilte Zeitpläne"
+        "title": "PDF-Berichte",
+        "description": "Erstelle professionelle Berichte nach Woche, Monat, Jahr oder einem selbst gewählten Zeitraum.",
+        "feature1": "Gesamtstunden und Arbeitstage",
+        "feature2": "Aufschlüsselung nach Job",
+        "feature3": "Ein Tipp zum Exportieren"
       },
       "calendar": {
-        "title": "Kalender-Synchronisation",
-        "description": "Verbindet sich automatisch mit Ihrem nativen iOS/Android-Kalender. Exportiert erkannte Zeitpläne direkt.",
-        "feature1": "Native Kalender-Sync",
-        "feature2": "Automatischer ICS-Export",
-        "feature3": "Intelligente Benachrichtigungen"
+        "title": "Letzte Aktivität",
+        "description": "Sieh dir deine Zeiteinträge sofort an und bearbeite sie, gefiltert nach Job oder Zeitraum.",
+        "feature1": "Einträge bearbeiten oder löschen",
+        "feature2": "Vollständiger Verlauf",
+        "feature3": "Nach Job filtern"
       },
       "legal": {
-        "title": "Globale Rechtsinformationen",
-        "description": "Suchen Sie spezifische Arbeitsbedingungen nach Land. Finden Sie Arbeitsportale und aktualisierte Rechtsinformationen.",
-        "feature1": "195+ Länderdatenbank",
-        "feature2": "Aktuelle Arbeitsbedingungen",
-        "feature3": "Offizielle Arbeitsportale"
+        "title": "Rechnungsdaten",
+        "description": "Füge deine Steuer- und Firmendaten hinzu, damit das PDF versandbereit ist.",
+        "feature1": "Firmenlogo und -daten",
+        "feature2": "Stundensätze",
+        "feature3": "Automatische Einkommensberechnung"
       }
     },
     "steps": {
       "capture": {
-        "title": "Aufnehmen oder Hochladen",
-        "description": "Machen Sie ein Foto Ihres Arbeitsplans oder wählen Sie ein PDF. KI verarbeitet jede Bildqualität oder jedes Dokument."
+        "title": "Zeitraum wählen",
+        "description": "Woche, Monat, Jahr oder ein individueller Zeitraum — du entscheidest, was du einsehen willst."
       },
       "analyze": {
-        "title": "KI Verarbeitet",
-        "description": "Dual-KI (GPT-4 + Gemini) analysiert das Dokument. Extrahiert Zeitpläne, Personen, Standorte und Arbeitsbedingungen."
+        "title": "Stunden prüfen",
+        "description": "Sieh dir die Gesamtstunden, Arbeitstage und die letzte Aktivität pro Job an."
       },
       "export": {
-        "title": "Auto-Synchronisation",
-        "description": "Erkannte Zeitpläne synchronisieren mit Ihrem nativen Kalender. Generieren Sie Erinnerungen und exportieren Sie professionelle PDFs."
+        "title": "Als PDF exportieren",
+        "description": "Ein Tipp genügt, um ein professionelles PDF zu erstellen, bereit zum Speichern oder Versenden."
       }
     }
   },
   "smartWidgets": {
     "badge": "Native iOS",
     "title": "Widgets die",
-    "titleAccent": "wirklich funktionieren", 
+    "titleAccent": "wirklich funktionieren",
     "description": "3 native iOS Widget-Größen mit Echtzeit-Datenaktualisierungen. Live Activities in Dynamic Island für iPhone 14 Pro+. Vollständige Kontrolle vom Sperrbildschirm.",
     "sizesTitle": "Alle iOS Größen",
     "sizesDescription": "Wählen Sie das perfekte Widget für Ihren Homescreen. Alle mit Echtzeit-aktualisierten Daten.",
@@ -148,7 +146,7 @@
         "description": "Komplette Wochenansicht mit farbcodierten Arbeitstagen. Direkter Zugriff auf Hauptfunktionen."
       },
       "large": {
-        "title": "Großes Widget", 
+        "title": "Großes Widget",
         "description": "Vollständiges Dashboard mit Statistiken, Diagrammen, bevorstehenden Terminen und Schnellzugriff auf alle Funktionen."
       }
     },
@@ -218,7 +216,7 @@
           "popular": true
         },
         "6months": {
-          "price": "9.49 CHF", 
+          "price": "9.49 CHF",
           "duration": "6 Monate",
           "popular": false
         },
@@ -380,7 +378,15 @@
     "workedDays": "Arbeitstage",
     "averageDay": "Durchschnitt/Tag",
     "distributionByJob": "Verteilung nach Job",
-    "weekDays": ["M", "D", "M", "D", "F", "S", "S"],
+    "weekDays": [
+      "M",
+      "D",
+      "M",
+      "D",
+      "F",
+      "S",
+      "S"
+    ],
     "settings": "Einstellungen",
     "jobManagement": "Job-Verwaltung",
     "jobManagementDesc": "Konfigurieren Sie Ihre Jobs mit Zeitplänen, Tarifen und Abrechnung",
@@ -693,7 +699,7 @@
         "description": "Konfigurierbarer 50-500m Radius mit anpassbaren Verzögerungen. Native iOS/Android Core Location APIs für maximale Präzision."
       },
       "background": {
-        "title": "Robuster Hintergrund", 
+        "title": "Robuster Hintergrund",
         "description": "Funktioniert perfekt bei geschlossener App. Native TaskManager + automatische Wiederherstellung verlorener Zustände."
       },
       "intelligence": {
@@ -721,7 +727,7 @@
     "states": {
       "inactive": "Inaktiv",
       "entering": "Eintretend",
-      "active": "Aktiv", 
+      "active": "Aktiv",
       "leaving": "Verlassend",
       "manual": "Manuell"
     },
