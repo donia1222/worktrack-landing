@@ -92,7 +92,7 @@ export default function AutoTimerFeature() {
             <div className="relative max-w-xs mx-auto">              
               <div className="relative bg-gradient-to-br from-blue-100/60 to-blue-200/40 rounded-3xl p-6">
                 <Image
-                  src="/phone/mapaautotimmer.png"
+                  src="/phone/autotimer-2026.jpg"
                   alt="AutoTimer GPS Interface"
                   width={280}
                   height={420}

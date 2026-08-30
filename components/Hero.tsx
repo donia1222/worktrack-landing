@@ -153,7 +153,7 @@ export default function Hero() {
               <div className="relative bg-slate-900 rounded-[2rem] p-2 shadow-2xl">
                 <div className="relative w-full aspect-[9/19] rounded-[1.4rem] overflow-hidden">
                   <Image
-                    src="/new/home.png"
+                    src="/new/home-2026.jpg"
                     alt="WorkTime Control App"
                     fill
                     className="object-cover object-top"

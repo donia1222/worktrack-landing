@@ -797,5 +797,33 @@
       "active": "AutoTimer Active",
       "radius": "radius"
     }
+  },
+  "appShowcase": {
+    "badge": "This is the app",
+    "title": "Designed so you",
+    "titleAccent": "never think about it",
+    "description": "A clear interface built to log your hours effortlessly, from any screen of your day.",
+    "items": {
+      "dashboard": {
+        "badge": "Main Dashboard",
+        "title": "Your whole job on one screen",
+        "description": "Switch between Manual Timer and AutoTimer, check your work calendar, and see your total hours for the month at a glance."
+      },
+      "register": {
+        "badge": "Manual Entry",
+        "title": "Add any day in seconds",
+        "description": "Pick the day type, adjust hours with quick presets, and add optional notes. Perfect for filling in a forgotten day."
+      },
+      "widget": {
+        "badge": "Home Screen Widget",
+        "title": "Your hours, without opening the app",
+        "description": "Check your monthly calendar and total hours worked straight from your phone's home screen."
+      },
+      "live": {
+        "badge": "Live Tracking",
+        "title": "Watch your shift in real time",
+        "description": "The timer runs while you work, with configurable breaks and your monthly total always visible."
+      }
+    }
   }
 }

@@ -796,5 +796,33 @@
       "active": "AutoTimer Aktiv",
       "radius": "Radius"
     }
+  },
+  "appShowcase": {
+    "badge": "So sieht die App aus",
+    "title": "Entwickelt, damit du",
+    "titleAccent": "nicht mehr daran denken musst",
+    "description": "Eine klare Oberfläche, die deine Arbeitszeit mühelos erfasst – auf jedem Bildschirm deines Tages.",
+    "items": {
+      "dashboard": {
+        "badge": "Hauptübersicht",
+        "title": "Deine ganze Arbeit auf einem Bildschirm",
+        "description": "Wechsle zwischen manuellem Timer und AutoTimer, prüfe deinen Arbeitskalender und sieh deine Gesamtstunden im Monat auf einen Blick."
+      },
+      "register": {
+        "badge": "Manuelle Eingabe",
+        "title": "Füge jeden Tag in Sekunden hinzu",
+        "description": "Wähle die Art des Tages, passe die Stunden mit Schnellauswahl an und füge optionale Notizen hinzu. Ideal für vergessene Tage."
+      },
+      "widget": {
+        "badge": "Homescreen-Widget",
+        "title": "Deine Stunden, ohne die App zu öffnen",
+        "description": "Sieh deinen Monatskalender und die gesamten Arbeitsstunden direkt vom Homescreen deines Handys."
+      },
+      "live": {
+        "badge": "Live-Tracking",
+        "title": "Verfolge deine Schicht in Echtzeit",
+        "description": "Der Timer läuft während der Arbeit, mit konfigurierbaren Pausen und der monatlichen Gesamtzeit stets im Blick."
+      }
+    }
   }
 }

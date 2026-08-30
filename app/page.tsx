@@ -2,6 +2,7 @@
 
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
+import AppShowcase from '@/components/AppShowcase'
 import Stats from '@/components/Stats'
 import Features from '@/components/Features'
 import AutoTimerFeature from '@/components/AutoTimerFeature'
@@ -19,6 +20,7 @@ export default function Home() {
       <Navigation />
       <main className="overflow-x-hidden">
         <Hero />
+        <AppShowcase />
 
         <Features />
         <AutoTimerFeature />

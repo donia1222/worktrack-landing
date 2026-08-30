@@ -791,5 +791,33 @@
       "active": "AutoTimer Activo",
       "radius": "radio"
     }
+  },
+  "appShowcase": {
+    "badge": "Así es la app",
+    "title": "Diseñada para que",
+    "titleAccent": "no pienses en ella",
+    "description": "Una interfaz clara pensada para registrar tus horas sin esfuerzo, desde cualquier pantalla de tu día.",
+    "items": {
+      "dashboard": {
+        "badge": "Panel Principal",
+        "title": "Todo tu trabajo en una pantalla",
+        "description": "Cambia entre timer manual y AutoTimer, revisa tu calendario laboral y consulta tus horas totales del mes de un vistazo."
+      },
+      "register": {
+        "badge": "Registro Manual",
+        "title": "Añade cualquier día en segundos",
+        "description": "Elige el tipo de jornada, ajusta las horas con presets rápidos y añade notas opcionales. Ideal para completar días olvidados."
+      },
+      "widget": {
+        "badge": "Widget de Pantalla de Inicio",
+        "title": "Tus horas, sin abrir la app",
+        "description": "Consulta tu calendario mensual y el total de horas trabajadas directamente desde la pantalla de inicio de tu móvil."
+      },
+      "live": {
+        "badge": "Seguimiento en Vivo",
+        "title": "Mira tu turno en tiempo real",
+        "description": "El cronómetro corre mientras trabajas, con pausas configurables y el total de horas del mes siempre visible."
+      }
+    }
   }
 }
