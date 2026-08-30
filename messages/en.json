@@ -825,5 +825,21 @@
         "description": "The timer runs while you work, with configurable breaks and your monthly total always visible."
       }
     }
+  },
+  "autoTimerGeofence": {
+    "badge": "Smart Location",
+    "title": "Starts counting when you arrive,",
+    "titleAccent": "stops when you leave",
+    "description": "AutoTimer detects your real-time location. As soon as you enter your work zone, the timer starts on its own; when you leave, it stops automatically — no need to touch anything.",
+    "points": {
+      "arrive": {
+        "title": "Arrival detected",
+        "description": "GPS recognizes you've entered your work radius and starts the timer instantly."
+      },
+      "leave": {
+        "title": "Departure detected",
+        "description": "When you leave the configured zone, AutoTimer stops counting and saves your shift automatically."
+      }
+    }
   }
 }

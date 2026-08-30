@@ -824,5 +824,21 @@
         "description": "Der Timer läuft während der Arbeit, mit konfigurierbaren Pausen und der monatlichen Gesamtzeit stets im Blick."
       }
     }
+  },
+  "autoTimerGeofence": {
+    "badge": "Intelligenter Standort",
+    "title": "Zählt automatisch, sobald du ankommst,",
+    "titleAccent": "stoppt, wenn du gehst",
+    "description": "AutoTimer erkennt deinen Standort in Echtzeit. Sobald du deine Arbeitszone betrittst, startet der Timer von selbst; wenn du sie verlässt, stoppt er automatisch – ganz ohne Eingriff.",
+    "points": {
+      "arrive": {
+        "title": "Ankunft erkannt",
+        "description": "Das GPS erkennt, dass du den Radius deines Arbeitsplatzes betreten hast, und startet den Timer sofort."
+      },
+      "leave": {
+        "title": "Abfahrt erkannt",
+        "description": "Wenn du die eingestellte Zone verlässt, stoppt AutoTimer die Zählung und speichert deine Schicht automatisch."
+      }
+    }
   }
 }

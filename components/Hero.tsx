@@ -164,7 +164,7 @@ export default function Hero() {
 
               {/* Floating UI elements */}
               <div
-                className="absolute top-1/4 -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce ml-4"
+                className="absolute top-[45%] -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce ml-4"
                 style={{ animationDuration: "2s" }}
               >
                 <div className="flex items-center gap-2 ">

@@ -819,5 +819,21 @@
         "description": "El cronómetro corre mientras trabajas, con pausas configurables y el total de horas del mes siempre visible."
       }
     }
+  },
+  "autoTimerGeofence": {
+    "badge": "Ubicación Inteligente",
+    "title": "Empieza a contar cuando llegas,",
+    "titleAccent": "para cuando te vas",
+    "description": "El AutoTimer detecta tu ubicación en tiempo real. En cuanto entras en tu zona de trabajo, el cronómetro arranca solo; al salir, se detiene automáticamente sin que tengas que tocar nada.",
+    "points": {
+      "arrive": {
+        "title": "Llegada detectada",
+        "description": "El GPS reconoce que has entrado en el radio de tu trabajo y activa el temporizador al instante."
+      },
+      "leave": {
+        "title": "Salida detectada",
+        "description": "Al abandonar la zona configurada, el AutoTimer para el conteo y guarda tu jornada automáticamente."
+      }
+    }
   }
 }

@@ -6,6 +6,7 @@ import AppShowcase from '@/components/AppShowcase'
 import Stats from '@/components/Stats'
 import Features from '@/components/Features'
 import AutoTimerFeature from '@/components/AutoTimerFeature'
+import AutoTimerGeofence from '@/components/AutoTimerGeofence'
 import ExportReports from '@/components/ExportReports'
 import SmartWidgets from '@/components/SmartWidgets'
 import WorkingPhone from '@/components/WorkingPhone'
@@ -21,6 +22,7 @@ export default function Home() {
       <main className="overflow-x-hidden">
         <Hero />
         <AppShowcase />
+        <AutoTimerGeofence />
 
         <Features />
         <AutoTimerFeature />
