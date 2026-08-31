@@ -429,6 +429,12 @@
     "exportSchedules": "Exportar horarios al calendario",
     "typeMessage": "Escribe tu mensaje aquí..."
   },
+  "mobileBanner": {
+    "name": "WorkTi",
+    "subtitle": "Gratis · Sin cuenta",
+    "download": "Abrir",
+    "comingSoon": "Próximamente"
+  },
   "footer": {
     "description": "La app definitiva para el control inteligente de tu tiempo laboral.",
     "product": "Producto",

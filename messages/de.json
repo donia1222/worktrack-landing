@@ -435,6 +435,12 @@
     "exportSchedules": "Zeitpläne in Kalender exportieren",
     "typeMessage": "Geben Sie Ihre Nachricht hier ein..."
   },
+  "mobileBanner": {
+    "name": "WorkTi",
+    "subtitle": "Kostenlos · Kein Konto",
+    "download": "Öffnen",
+    "comingSoon": "Demnächst"
+  },
   "footer": {
     "description": "Die ultimative App für intelligente Arbeitszeitkontrolle.",
     "product": "Produkt",

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import LanguageProvider from '@/components/LanguageProvider'
 import CookieNotice from '@/components/CookieNotice'
+import MobileDownloadBanner from '@/components/MobileDownloadBanner'
 import AppWrapper from '@/components/AppWrapper'
 import StructuredData from '@/components/StructuredData'
 
@@ -109,6 +110,7 @@ export default function RootLayout({
           <AppWrapper>
             {children}
             <CookieNotice />
+            <MobileDownloadBanner />
           </AppWrapper>
         </LanguageProvider>
       </body>

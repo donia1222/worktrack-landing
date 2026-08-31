@@ -436,6 +436,12 @@
     "exportSchedules": "Export schedules to calendar",
     "typeMessage": "Type your message here..."
   },
+  "mobileBanner": {
+    "name": "WorkTi",
+    "subtitle": "Free · No account",
+    "download": "Open",
+    "comingSoon": "Coming soon"
+  },
   "footer": {
     "description": "The ultimate app for intelligent work time control.",
     "product": "Product",

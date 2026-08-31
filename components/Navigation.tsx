@@ -79,7 +79,7 @@ export default function Navigation() {
             className="cursor-pointer flex items-center gap-2"
             onClick={() => scrollToSection('#hero')}
           >
-            <Image src="/new/app-icon.png" alt="Working Time Control" width={40} height={40} className="w-10 h-10 rounded-xl" priority />
+            <Image src="/new/app-icono.png" alt="Working Time Control" width={40} height={40} className="w-10 h-10 rounded-xl" priority />
             <h3 className="text-xl font-bold flex">
               <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Work</span>
               <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time Control</span>

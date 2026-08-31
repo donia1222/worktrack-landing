@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, Variants } from 'framer-motion'
+import Image from 'next/image'
 import { Clock, Zap, BarChart3, Smartphone } from 'lucide-react'
 import { useLanguage } from '@/lib/language'
 
@@ -133,9 +134,14 @@ export default function LoadingScreen({ isVisible }: LoadingScreenProps) {
           <motion.div
             variants={pulseVariants}
             animate="pulse"
-            className="relative z-10 w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl"
+            className="relative z-10 w-24 h-24 rounded-2xl overflow-hidden shadow-2xl"
           >
-            <Clock className="w-12 h-12 text-white" />
+            <Image
+              src="/new/app-icono.png"
+              alt="WorkTi"
+              fill
+              className="object-cover"
+            />
           </motion.div>
 
           {/* Floating feature icons */}
