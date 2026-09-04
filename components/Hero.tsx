@@ -1,6 +1,6 @@
 "use client"
 
-import { Sparkles, Zap, BarChart3, CalendarCheck, ArrowRight, Play } from "lucide-react"
+import { Sparkles, Zap, BarChart3, CalendarCheck, ArrowRight, Play, Watch } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 import { useState, useEffect } from "react"
@@ -98,6 +98,15 @@ export default function Hero() {
 
               <p className="text-sm font-medium text-slate-500">
                 {t("hero.subtitle")}
+              </p>
+
+              {/* El reloj, en una línea y no en una sección: aquí lo ve todo el
+                  mundo en dos segundos, y a quien tenga Apple Watch le salta a
+                  la vista. Su sección viene después, cuando la página ya ha
+                  demostrado lo que promete el titular. */}
+              <p className="inline-flex items-center gap-2 self-start rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
+                <Watch className="h-4 w-4" />
+                {t("hero.reloj")}
               </p>
             </div>
 

@@ -5,7 +5,6 @@ import Hero from '@/components/Hero'
 import AppShowcase from '@/components/AppShowcase'
 import Stats from '@/components/Stats'
 import Features from '@/components/Features'
-import AutoTimerFeature from '@/components/AutoTimerFeature'
 import AutoTimerGeofence from '@/components/AutoTimerGeofence'
 import ExportReports from '@/components/ExportReports'
 import SmartWidgets from '@/components/SmartWidgets'
@@ -25,11 +24,12 @@ export default function Home() {
         <AppShowcase />
         <AutoTimerGeofence />
 
-        <Features />
-        {/* El reloj va justo después del AutoTimer: es su continuación
-            natural, y así la novedad aparece en la primera mitad. */}
+        {/* El reloj sube al cuarto puesto: es la novedad y lo que casi ningún
+            competidor tiene. Pero no va justo bajo el hero — la mayoría de
+            quien llega no tiene Apple Watch, así que primero la página
+            demuestra lo que promete el titular, y el reloj es el empujón. */}
         <AppleWatchTeaser />
-        <AutoTimerFeature />
+        <Features />
         <ExportReports />
 
         <Pricing />
