@@ -815,15 +815,15 @@
         "title": "Añade cualquier día en segundos",
         "description": "Elige el tipo de jornada, ajusta las horas con presets rápidos y añade notas opcionales. Ideal para completar días olvidados."
       },
-      "widget": {
-        "badge": "Widget de Pantalla de Inicio",
-        "title": "Tus horas, sin abrir la app",
-        "description": "Consulta tu calendario mensual y el total de horas trabajadas directamente desde la pantalla de inicio de tu móvil."
+      "reports": {
+        "badge": "Informes",
+        "title": "Tus horas, en números claros",
+        "description": "Cada jornada con su hora de entrada y de salida, el total del periodo y las horas extra si las hubo."
       },
-      "live": {
-        "badge": "Seguimiento en Vivo",
-        "title": "Mira tu turno en tiempo real",
-        "description": "El cronómetro corre mientras trabajas, con pausas configurables y el total de horas del mes siempre visible."
+      "salary": {
+        "badge": "Salario",
+        "title": "Y lo que has ganado con ellas",
+        "description": "Ingresos del mes, horas semana a semana, y el mes con más y con menos trabajo."
       }
     }
   },

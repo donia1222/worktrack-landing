@@ -5,30 +5,35 @@ import Image from "next/image"
 import { useLanguage } from "@/lib/language"
 
 export default function AppShowcase() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  // Solo hay capturas de los tres idiomas de la landing.
+  const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
+  // Las capturas van por idioma: un visitante alemán ve la app en alemán, que
+  // es la mitad de la promesa. Las anteriores eran del diseño viejo y estaban
+  // solo en un idioma.
   const items = [
     {
       key: "dashboard",
-      image: "/new/showcase-dashboard.png",
+      image: `/app/${idioma}/2-home.png`,
       rotate: "rotate-[-4deg]",
       side: "right" as const,
     },
     {
-      key: "widget",
-      image: "/new/showcase-widget.jpg",
+      key: "register",
+      image: `/app/${idioma}/4-calendario.png`,
       rotate: "rotate-[4deg]",
       side: "left" as const,
     },
     {
-      key: "register",
-      image: "/new/showcase-register.jpg",
+      key: "reports",
+      image: `/app/${idioma}/5-informes.png`,
       rotate: "rotate-[-4deg]",
       side: "right" as const,
     },
     {
-      key: "live",
-      image: "/new/home-2026.jpg",
+      key: "salary",
+      image: `/app/${idioma}/6-salario.png`,
       rotate: "rotate-[4deg]",
       side: "left" as const,
     },

@@ -821,15 +821,15 @@
         "title": "Add any day in seconds",
         "description": "Pick the day type, adjust hours with quick presets, and add optional notes. Perfect for filling in a forgotten day."
       },
-      "widget": {
-        "badge": "Home Screen Widget",
-        "title": "Your hours, without opening the app",
-        "description": "Check your monthly calendar and total hours worked straight from your phone's home screen."
+      "reports": {
+        "badge": "Reports",
+        "title": "Your hours, in clear numbers",
+        "description": "Every workday with its start and finish time, the period total, and overtime when there was any."
       },
-      "live": {
-        "badge": "Live Tracking",
-        "title": "Watch your shift in real time",
-        "description": "The timer runs while you work, with configurable breaks and your monthly total always visible."
+      "salary": {
+        "badge": "Earnings",
+        "title": "And what you earned with them",
+        "description": "Monthly income, hours week by week, and the months you worked most and least."
       }
     }
   },
