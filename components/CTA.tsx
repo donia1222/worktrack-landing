@@ -29,7 +29,7 @@ export default function CTA() {
 
           <div className="flex flex-col items-center gap-4 mb-8">
             <a
-              href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+              href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-block bg-black rounded-xl p-2 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:-translate-y-1"

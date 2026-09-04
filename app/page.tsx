@@ -14,6 +14,7 @@ import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
+import AppleWatchTeaser from '@/components/AppleWatchTeaser'
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
         <AutoTimerGeofence />
 
         <Features />
+        {/* El reloj va justo después del AutoTimer: es su continuación
+            natural, y así la novedad aparece en la primera mitad. */}
+        <AppleWatchTeaser />
         <AutoTimerFeature />
         <ExportReports />
 

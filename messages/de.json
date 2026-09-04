@@ -9,15 +9,15 @@
     "download": "Für iOS herunterladen"
   },
   "loading": {
-    "appName": "WorkTime Control",
+    "appName": "Working Time Control",
     "tagline": "Intelligente Zeiterfassung",
     "text": "Lade Erlebnis..."
   },
   "hero": {
-    "title": "Intelligente",
-    "titleAccent": "Zeiterfassung",
-    "description": "GPS Auto-Timer erkennt automatisch, wann Sie bei der Arbeit ankommen. Visueller Kalender, PDF-Berichte und KI-Chatbot zur Analyse von Arbeitszeiten.",
-    "subtitle": "Ihr ultimativer Assistent für das Arbeitsmanagement.",
+    "title": "Vergiss das",
+    "titleAccent": "Einstempeln.",
+    "description": "Die App merkt, wann du bei der Arbeit ankommst und wann du gehst. Deine Stunden schreiben sich von selbst, und am Monatsende sind sie schon zusammengerechnet.",
+    "subtitle": "Für alle, die auf Stundenbasis arbeiten — auch in mehreren Jobs.",
     "downloadButton": "Für iOS herunterladen",
     "iosAvailability": "Derzeit nur für iOS-Geräte verfügbar",
     "demoButton": "Demo Ansehen",
@@ -33,7 +33,8 @@
       "calendarSync": "Kalendersynchronisation",
       "pdfReports": "PDF-Berichte",
       "platforms": "iOS & Android"
-    }
+    },
+    "gratis": "Kostenlos. Ohne Konto, ohne Anmeldung."
   },
   "features": {
     "title": "Mehr als eine einfache",
@@ -70,7 +71,7 @@
       },
       "notifications": {
         "title": "Pro Benachrichtigungs-System",
-        "description": "3 spezialisierte Android-Kanäle: Auto-Timer, Erinnerungen, Allgemein. KI-gestützte kontextuelle Warnungen. Kompatibel mit iOS Focus Modes."
+        "description": "Hinweise, bevor der Auto-Timer startet oder stoppt, Erinnerungen an Ihren Zeitplan und eine Meldung zum Feierabend. Kompatibel mit den Fokus-Modi von iOS."
       }
     },
     "badges": {
@@ -196,7 +197,7 @@
   },
   "workingPhone": {
     "badge": "Live Demo",
-    "title": "WorkTime Control",
+    "title": "Working Time Control",
     "titleAccent": "in Aktion",
     "description": "Interaktive Demo mit echten App-Bildschirmen. Sehen Sie, wie GPS-Timer, Kalender und KI-Assistent zusammenarbeiten.",
     "screens": {
@@ -222,7 +223,7 @@
     "title": "Ehrliches",
     "titleAccent": "Freemium",
     "titleEnd": "Modell",
-    "description": "Testen Sie alle Grundfunktionen kostenlos. Upgraden Sie auf Premium, um GPS Auto-Timer, KI und unbegrenzte Jobs freizuschalten.",
+    "description": "Testen Sie alle Grundfunktionen kostenlos. Upgraden Sie auf Premium, um GPS Auto-Timer, Apple Watch und unbegrenzte Jobs freizuschalten.",
     "descriptionBold": "Keine Verpflichtung, jederzeit kündbar.",
     "free": {
       "name": "Kostenlos",
@@ -255,17 +256,17 @@
           "popular": false
         }
       },
-      "description": "Die volle Power von WorkTime Control",
+      "description": "Die volle Power von Working Time Control",
       "cta": "Premium erhalten",
       "popular": "Am Beliebtesten",
       "features": {
         "unlimitedJobs": "Unbegrenzte Jobs mit flexiblen Arbeitszeiten",
         "autoTimer": "GPS Auto-Timer (50m-500m Radius)",
         "aiBot": "Analyze-Bot KI mit Gemini 1.5 Pro",
-  "salaryStats": "Gehalts- und Stundenstatistik",
+        "salaryStats": "Gehalts- und Stundenstatistik",
         "geofencing": "Anpassbares Geofencing pro Job",
         "pdfExport": "PDF-Export",
-        "calendarSync": "iOS/Android Kalender-Synchronisation",
+        "calendarSync": "Synchronisation mit dem iPhone-Kalender",
         "billing": "Komplettes Abrechnungssystem",
         "notifications": "2 erweiterte Benachrichtigungskanäle",
         "backups": "Programmierbare automatische Backups",
@@ -277,7 +278,7 @@
   "faq": {
     "title": "Häufig gestellte",
     "titleAccent": "Fragen",
-    "description": "Finden Sie Antworten auf die häufigsten Fragen zu WorkTime Control",
+    "description": "Finden Sie Antworten auf die häufigsten Fragen zu Working Time Control",
     "search": "In häufig gestellten Fragen suchen...",
     "categories": {
       "general": "Allgemein",
@@ -335,12 +336,12 @@
         "answer": "Ja, vom Kalender-Bildschirm aus können Sie mit Ihrem nativen Kalender über die Sync-Schaltfläche synchronisieren."
       },
       "11": {
-        "question": "Funktioniert der Chatbot mit künstlicher Intelligenz?",
-        "answer": "Ja, er funktioniert mit Gemini 1.5 Pro und kann Bilder von Arbeitsplänen analysieren. Er kann Fehler machen, wenn der Arbeitsplan nicht gut definiert ist."
+        "question": "Funktioniert die App mit der Apple Watch?",
+        "answer": "Ja. Sie können den Arbeitstag am Handgelenk starten, pausieren und beenden, Ihre Woche und Ihre Statistik ansehen und Stunden zu einem Tag nachtragen — ohne das iPhone herauszuholen. Was Sie auf dem einen tun, erscheint auf dem anderen."
       },
       "12": {
         "question": "Funktioniert die App ohne Internetverbindung?",
-        "answer": "Ja, sie funktioniert perfekt ohne Internetverbindung. Alles wird lokal gespeichert, nur die Chatbot-Funktion zur Bildanalyse benötigt eine Verbindung."
+        "answer": "Ja, sie funktioniert einwandfrei ohne Internetverbindung. Alles wird auf Ihrem Gerät gespeichert, Sie können also auch ohne Empfang stempeln, den Kalender ansehen und Ihre Stunden prüfen."
       },
       "13": {
         "question": "Brauche ich ein Abonnement für alle Funktionen?",
@@ -359,7 +360,7 @@
   "cta": {
     "title": "Beginnen Sie heute mit der Kontrolle",
     "titleAccent": "Ihrer Zeit",
-    "description": "Schließen Sie sich Tausenden von Fachleuten an, die bereits auf WorkTime Control vertrauen, um ihre Arbeitszeit intelligent zu verwalten.",
+    "description": "Schließen Sie sich Tausenden von Fachleuten an, die bereits auf Working Time Control vertrauen, um ihre Arbeitszeit intelligent zu verwalten.",
     "rating": "4.8/5 im App Store",
     "downloadButton": "Kostenlos Herunterladen",
     "demoButton": "In Aktion sehen",
@@ -380,7 +381,7 @@
   "testimonials": {
     "title": "Geliebt von",
     "titleAccent": "Profis",
-    "description": "Erfahren Sie, warum Tausende WorkTime Control für ihr Zeitmanagement wählen",
+    "description": "Erfahren Sie, warum Tausende Working Time Control für ihr Zeitmanagement wählen",
     "roles": {
       "freelancer": "Freiberuflicher Autor",
       "consultant": "Unternehmensberater",
@@ -390,7 +391,7 @@
       "manager": "Projektmanager"
     },
     "reviews": {
-      "1": "WorkTime Control hat komplett verändert, wie ich meine Zeit verwalte. Der GPS Auto-Timer ist wie Magie - ich vergesse nie mehr, Stunden zu erfassen!",
+      "1": "Working Time Control hat komplett verändert, wie ich meine Zeit verwalte. Der GPS Auto-Timer ist wie Magie - ich vergesse nie mehr, Stunden zu erfassen!",
       "2": "Als jemand, der mehrere Kunden jongliert, ist die Multi-Job-Funktion ein Lebensretter. Berichte sind professionell und Kunden lieben sie.",
       "3": "Der KI-Assistent analysierte meinen Papierplan und importierte alles perfekt. Hat mir Stunden manueller Eingabe erspart!",
       "4": "Endlich ein Zeiterfasser, der die Privatsphäre respektiert. Alles bleibt auf meinem Gerät, und automatische Backups geben mir Sicherheit.",
@@ -477,7 +478,7 @@
   },
   "launchModal": {
     "title": "Bald verfügbar!",
-    "subtitle": "WorkTime Control wird sehr bald verfügbar sein",
+    "subtitle": "Working Time Control wird sehr bald verfügbar sein",
     "date": "1. Oktober",
     "year": "2025",
     "description": "Wir arbeiten an den letzten Details, um Ihnen die beste GPS-Zeiterfassungserfahrung zu bieten.",
@@ -485,11 +486,11 @@
     "button": "Verstanden"
   },
   "contact": {
-    "backButton": "Zurück zu WorkTime Control",
+    "backButton": "Zurück zu Working Time Control",
     "title": "Brauchen Sie",
     "titleAccent": "Hilfe",
     "titleEnd": "?",
-    "description": "Wir sind hier, um Ihnen mit WorkTime Control zu helfen. Senden Sie uns eine Nachricht und wir melden uns so schnell wie möglich bei Ihnen.",
+    "description": "Wir sind hier, um Ihnen mit Working Time Control zu helfen. Senden Sie uns eine Nachricht und wir melden uns so schnell wie möglich bei Ihnen.",
     "hero": {
       "title": "Lassen Sie uns sprechen",
       "description": "Wir sind hier um zu helfen. Senden Sie uns Ihre Anfrage und wir antworten so schnell wie möglich."
@@ -550,12 +551,12 @@
     }
   },
   "privacy": {
-    "backButton": "Zurück zu WorkTime Control",
+    "backButton": "Zurück zu Working Time Control",
     "title": "Datenschutzrichtlinie",
     "lastUpdated": "Letzte Aktualisierung: September 2025",
     "priority": {
       "title": "Ihre Privatsphäre ist unsere Priorität",
-      "description": "Bei WorkTime Control nehmen wir Ihre Privatsphäre ernst. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unsere Arbeitszeiterfassungs-App nutzen."
+      "description": "Bei Working Time Control nehmen wir Ihre Privatsphäre ernst. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unsere Arbeitszeiterfassungs-App nutzen."
     },
     "summary": {
       "title": "Zusammenfassung: Wir Speichern Absolut Nichts",
@@ -649,19 +650,19 @@
       "title": "Kontaktieren Sie uns",
       "description": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns unter"
     },
-    "footer": "Diese Richtlinie gilt ab September 2025 und gilt für alle Versionen von WorkTime Control."
+    "footer": "Diese Richtlinie gilt ab September 2025 und gilt für alle Versionen von Working Time Control."
   },
   "terms": {
-    "backButton": "Zurück zu WorkTime Control",
+    "backButton": "Zurück zu Working Time Control",
     "title": "Nutzungsbedingungen",
     "lastUpdated": "Letzte Aktualisierung: September 2025",
     "acceptance": {
       "title": "Annahme der Bedingungen",
-      "description": "Durch das Herunterladen, Installieren oder Verwenden von WorkTime Control erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie die App bitte nicht."
+      "description": "Durch das Herunterladen, Installieren oder Verwenden von Working Time Control erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie die App bitte nicht."
     },
     "license": {
       "title": "Nutzungslizenz",
-      "description": "Wir gewähren Ihnen eine begrenzte, nicht exklusive, nicht übertragbare und widerrufliche Lizenz zur Nutzung von WorkTime Control für Ihre persönliche und kommerzielle Nutzung auf von Ihnen kontrollierten Geräten.",
+      "description": "Wir gewähren Ihnen eine begrenzte, nicht exklusive, nicht übertragbare und widerrufliche Lizenz zur Nutzung von Working Time Control für Ihre persönliche und kommerzielle Nutzung auf von Ihnen kontrollierten Geräten.",
       "restrictions": "Sie dürfen nicht: die App kopieren, modifizieren oder verteilen; Reverse Engineering betreiben; die App für illegale Zwecke verwenden; oder geistige Eigentumsrechte verletzen."
     },
     "subscriptions": {
@@ -710,7 +711,7 @@
     },
     "indemnification": {
       "title": "Schadloshaltung",
-      "description": "Sie erklären sich damit einverstanden, WorkTime Control und seine verbundenen Unternehmen von allen Ansprüchen, Schäden oder Ausgaben freizustellen, die aus Ihrer Nutzung der App oder Verletzung dieser Bedingungen entstehen."
+      "description": "Sie erklären sich damit einverstanden, Working Time Control und seine verbundenen Unternehmen von allen Ansprüchen, Schäden oder Ausgaben freizustellen, die aus Ihrer Nutzung der App oder Verletzung dieser Bedingungen entstehen."
     },
     "governing": {
       "title": "Anwendbares Recht",
@@ -724,7 +725,7 @@
       "title": "Kontakt",
       "description": "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns unter"
     },
-    "footer": "Durch die Nutzung von WorkTime Control bestätigen Sie, dass Sie diese Nutzungsbedingungen gelesen, verstanden und akzeptiert haben."
+    "footer": "Durch die Nutzung von Working Time Control bestätigen Sie, dass Sie diese Nutzungsbedingungen gelesen, verstanden und akzeptiert haben."
   },
   "autoTimer": {
     "badge": "Unternehmensniveau",
@@ -790,7 +791,7 @@
       },
       "background": {
         "title": "Funktioniert im Hintergrund",
-        "description": "Funktioniert perfekt bei geschlossener App. Native iOS/Android APIs gewährleisten zuverlässigen 24/7 Betrieb."
+        "description": "Funktioniert perfekt bei geschlossener App. Native iOS-APIs gewährleisten zuverlässigen 24/7-Betrieb."
       }
     },
     "stats": {
@@ -844,6 +845,37 @@
       "leave": {
         "title": "Abfahrt erkannt",
         "description": "Wenn du die eingestellte Zone verlässt, stoppt AutoTimer die Zählung und speichert deine Schicht automatisch."
+      }
+    }
+  },
+  "watch": {
+    "badge": "Jetzt auf der Apple Watch",
+    "title": "Deine Stunden,",
+    "titleAccent": "am Handgelenk.",
+    "description": "Starten, pausieren und beenden, ohne das Handy aus der Tasche zu holen. Was du auf einem machst, erscheint auf dem anderen — auch wenn das Handy zu Hause bleibt.",
+    "screen": {
+      "title": "Timer",
+      "manual": "Manuell",
+      "auto": "Auto",
+      "start": "Starten",
+      "week": "Diese Woche"
+    },
+    "features": {
+      "start": {
+        "title": "Starten und stoppen",
+        "body": "Ohne das Handy zu zücken."
+      },
+      "week": {
+        "title": "Deine Woche",
+        "body": "Tage und Stunden auf einen Blick."
+      },
+      "stats": {
+        "title": "Statistik",
+        "body": "Woche, Monat und drei Monate."
+      },
+      "sync": {
+        "title": "Immer aktuell",
+        "body": "Ist das Handy weg, wird später gesendet."
       }
     }
   }

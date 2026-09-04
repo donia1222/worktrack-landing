@@ -20,7 +20,7 @@ export default function StructuredData() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "WorkTime Control",
+          "name": "Working Time Control",
           "url": "https://www.vixtime.com",
           "logo": "https://www.vixtime.com/logo.png",
           "description": "App para controlar y calcular el tiempo de trabajo automáticamente con geolocalización GPS"
@@ -31,7 +31,7 @@ export default function StructuredData() {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "WorkTime Control",
+    "name": "Working Time Control",
     "url": "https://www.vixtime.com",
     "logo": "https://www.vixtime.com/logo.png",
     "description": "App para controlar el tiempo de trabajo y calcular tus horas automáticamente con geolocalización GPS",
@@ -39,14 +39,14 @@ export default function StructuredData() {
     "applicationCategory": "BusinessApplication",
     "operatingSystem": ["iOS"],
     "sameAs": [
-      "https://apps.apple.com/us/app/vixtime/id6745336262"
+      "https://apps.apple.com/app/id6745336262"
     ]
   };
 
   const softwareApplicationData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "WorkTime Control",
+    "name": "Working Time Control",
     "description": "Controla y calcula tu tiempo de trabajo automáticamente con geolocalización GPS. Calendario visual, reportes PDF y facturación profesional.",
     "url": "https://www.vixtime.com",
     "applicationCategory": "BusinessApplication",
@@ -100,11 +100,11 @@ export default function StructuredData() {
     ],
     "screenshot": "https://www.vixtime.com/screenshot.png",
     "downloadUrl": [
-      "https://apps.apple.com/us/app/vixtime/id6745336262"
+      "https://apps.apple.com/app/id6745336262"
     ],
     "author": {
       "@type": "Organization",
-      "name": "WorkTime Control Team"
+      "name": "Working Time Control Team"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -118,9 +118,9 @@ export default function StructuredData() {
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "WorkTime Control",
+    "name": "Working Time Control",
     "url": "https://www.vixtime.com",
-    "description": "Página oficial de WorkTime Control - Controla y calcula tu tiempo de trabajo con GPS",
+    "description": "Página oficial de Working Time Control - Controla y calcula tu tiempo de trabajo con GPS",
     "inLanguage": ["es", "en", "de"],
     "potentialAction": {
       "@type": "SearchAction",
@@ -135,10 +135,10 @@ export default function StructuredData() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "¿Qué es WorkTime Control?",
+        "name": "¿Qué es Working Time Control?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "WorkTime Control es una aplicación móvil para controlar y calcular el tiempo de trabajo automáticamente con geolocalización GPS, detectando cuando llegas y sales del trabajo sin intervención manual."
+          "text": "Working Time Control es una aplicación móvil para controlar y calcular el tiempo de trabajo automáticamente con geolocalización GPS, detectando cuando llegas y sales del trabajo sin intervención manual."
         }
       },
       {
@@ -151,10 +151,10 @@ export default function StructuredData() {
       },
       {
         "@type": "Question",
-        "name": "¿Cuánto cuesta WorkTime Control?",
+        "name": "¿Cuánto cuesta Working Time Control?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "WorkTime Control tiene un plan gratuito con funciones básicas y un plan Premium con trabajos ilimitados, Auto-Timer GPS, reportes PDF y facturación completa, disponible por 3, 6 o 12 meses."
+          "text": "Working Time Control tiene un plan gratuito con funciones básicas y un plan Premium con trabajos ilimitados, Auto-Timer GPS, reportes PDF y facturación completa, disponible por 3, 6 o 12 meses."
         }
       },
       {
@@ -162,7 +162,7 @@ export default function StructuredData() {
         "name": "¿Mis datos están seguros?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí, WorkTime Control utiliza almacenamiento local al 100%, lo que significa que todos tus datos permanecen únicamente en tu dispositivo, garantizando total privacidad."
+          "text": "Sí, Working Time Control utiliza almacenamiento local al 100%, lo que significa que todos tus datos permanecen únicamente en tu dispositivo, garantizando total privacidad."
         }
       }
     ]

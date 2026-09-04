@@ -200,7 +200,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b">
               <h2 className="text-2xl font-bold text-gray-900">
-                Demo Interactiva de WorkTime Control
+                Demo Interactiva de Working Time Control
               </h2>
               <button
                 onClick={onClose}
@@ -327,7 +327,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                   whileTap={{ scale: 0.95 }}
                   className="px-6 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors"
                 >
-                  Descargar WorkTime Control
+                  Descargar Working Time Control
                 </motion.button>
               </div>
             </div>

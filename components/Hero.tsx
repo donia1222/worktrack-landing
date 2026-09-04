@@ -89,6 +89,16 @@ export default function Hero() {
                 </span>
               </h1>
 
+              {/* La frase que sostiene el titular. Estaba escrita en los
+                  ficheros de idioma pero no se pintaba en ninguna parte, así
+                  que el titular quedaba solo y sin explicar qué hace la app. */}
+              <p className="max-w-xl text-lg sm:text-xl text-slate-600 leading-relaxed">
+                {t("hero.description")}
+              </p>
+
+              <p className="text-sm font-medium text-slate-500">
+                {t("hero.subtitle")}
+              </p>
             </div>
 
     
@@ -116,7 +126,7 @@ export default function Hero() {
               ))}
             </div>
                         <a
-                href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+                href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden lg:inline-flex group relative items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
@@ -127,6 +137,12 @@ export default function Hero() {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
+
+              {/* La primera pregunta de quien llega desde un anuncio es cuanto
+                  cuesta. Si no se responde aqui, una parte se va sin bajar. */}
+              <p className="hidden lg:block mt-3 text-sm text-slate-500">
+                {t("hero.gratis")}
+              </p>
           </div>
 
           <div
@@ -154,7 +170,7 @@ export default function Hero() {
                 <div className="relative w-full aspect-[9/19] rounded-[1.4rem] overflow-hidden">
                   <Image
                     src="/new/home-2026.jpg"
-                    alt="WorkTime Control App"
+                    alt="Working Time Control App"
                     fill
                     className="object-cover object-top"
                     priority
@@ -204,7 +220,7 @@ export default function Hero() {
             {/* Botón de descarga — solo móvil, aquí abajo del todo */}
             <div className="mt-8 flex justify-center lg:hidden">
               <a
-                href="https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+                href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"

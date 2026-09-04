@@ -7,12 +7,14 @@ import AppWrapper from '@/components/AppWrapper'
 import StructuredData from '@/components/StructuredData'
 
 export const metadata: Metadata = {
-  title: 'WorkTime Control - Controla tu Tiempo de Trabajo con GPS | App Móvil',
-  description: 'WorkTime Control: la app para controlar el tiempo de trabajo y calcular tus horas automáticamente con geolocalización GPS. Auto-Timer, calendario, reportes PDF y facturación. Disponible en iOS. ¡Descarga gratis!',
-  applicationName: 'WorkTime Control',
+  // Corto a propósito: Google corta el título sobre los 60 caracteres, y
+  // lo que sobraba («| App Móvil») no lo veía nadie.
+  title: 'Working Time Control — Ficha solo, con GPS',
+  description: 'La app detecta cuándo llegas al trabajo y cuándo te vas: tus horas se apuntan solas. Para quien cobra por horas y tiene más de un trabajo. Calendario, informes en PDF y Apple Watch. Gratis en iOS.',
+  applicationName: 'Working Time Control',
   category: 'productivity',
   keywords: [
-    'WorkTime Control',
+    'Working Time Control',
     'worktime control app',
     'controlar tiempo de trabajo',
     'control de tiempo en el trabajo',
@@ -38,9 +40,9 @@ export const metadata: Metadata = {
     'work time tracker app',
     'time tracking app GPS',
   ].join(', '),
-  authors: [{ name: 'WorkTime Control Team' }],
-  creator: 'WorkTime Control',
-  publisher: 'WorkTime Control',
+  authors: [{ name: 'Working Time Control Team' }],
+  creator: 'Working Time Control',
+  publisher: 'Working Time Control',
   formatDetection: {
     email: false,
     address: false,
@@ -57,16 +59,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: 'WorkTime Control',
-    title: 'WorkTime Control - Controla tu Tiempo de Trabajo con GPS',
-    description: 'Controla y calcula tu tiempo de trabajo automáticamente con geolocalización GPS. Calendario visual, reportes PDF y facturación, todo en una app.',
+    siteName: 'Working Time Control',
+    title: 'Working Time Control — Olvídate de fichar',
+    description: 'La app detecta cuándo llegas al trabajo y cuándo te vas. Tus horas se apuntan solas, y al final del mes ya están sumadas.',
     url: 'https://www.vixtime.com',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'WorkTime Control - App para Controlar el Tiempo de Trabajo',
+        alt: 'Working Time Control - App para Controlar el Tiempo de Trabajo',
         type: 'image/png',
       }
     ],
@@ -75,8 +77,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WorkTime Control - Controla tu Tiempo de Trabajo con GPS',
-    description: 'Controla y calcula tu tiempo de trabajo automáticamente con geolocalización GPS. Calendario, reportes PDF y facturación.',
+    title: 'Working Time Control — Olvídate de fichar',
+    description: 'La app detecta cuándo llegas y cuándo te vas. Tus horas se apuntan solas.',
     images: ['/og-image.png'],
     creator: '@WorkTimeControlApp',
     site: '@WorkTimeControlApp',

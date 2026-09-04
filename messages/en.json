@@ -9,15 +9,15 @@
     "download": "Download on iOS"
   },
   "loading": {
-    "appName": "WorkTime Control",
+    "appName": "Working Time Control",
     "tagline": "Smart time tracking",
     "text": "Loading experience..."
   },
   "hero": {
-    "title": "Track Work Hours",
-    "titleAccent": "Automatically",
-    "description": "Revolutionary GPS-powered time tracking that knows when you arrive and leave work. No more forgetting to clock in or out.",
-    "subtitle": "Join thousands of professionals saving 10+ hours monthly on time management.",
+    "title": "Never clock in",
+    "titleAccent": "again.",
+    "description": "The app knows when you arrive at work and when you leave. Your hours log themselves, and by the end of the month they are already added up.",
+    "subtitle": "For people paid by the hour, with more than one job.",
     "downloadButton": "Download on iOS",
     "iosAvailability": "Currently available for iOS devices only",
     "demoButton": "View Demo",
@@ -33,7 +33,8 @@
       "calendarSync": "Calendar Sync",
       "pdfReports": "Professional Reports",
       "platforms": "iOS & Android"
-    }
+    },
+    "gratis": "Free. No account, no sign-up."
   },
   "features": {
     "title": "Built for",
@@ -70,7 +71,7 @@
       },
       "notifications": {
         "title": "Pro Notification System",
-        "description": "3 specialized Android channels: Auto-Timer, Reminders, General. AI-powered contextual alerts. Compatible with iOS Focus Modes and Android Do Not Disturb."
+        "description": "Alerts before the Auto-Timer starts or stops, schedule reminders, and a notice when your workday ends. Compatible with iOS Focus Modes."
       }
     },
     "badges": {
@@ -197,7 +198,7 @@
   },
   "workingPhone": {
     "badge": "Live Demo",
-    "title": "See WorkTime Control",
+    "title": "See Working Time Control",
     "titleAccent": "in action",
     "description": "Interactive demo showing real app screens. Watch how the GPS timer, calendar and AI assistant work together.",
     "screens": {
@@ -228,7 +229,7 @@
     "free": {
       "name": "Starter",
       "price": "0",
-      "description": "Perfect for trying WorkTime Control",
+      "description": "Perfect for trying Working Time Control",
       "cta": "Start Free",
       "features": {
         "oneJob": "Track one job",
@@ -263,7 +264,7 @@
         "unlimitedJobs": "Unlimited jobs & clients",
         "autoTimer": "GPS Auto-Timer saves 10+ hours/month",
         "aiBot": "AI Assistant powered by Gemini 1.5 Pro",
-  "salaryStats": "Salary and hours statistics",
+        "salaryStats": "Salary and hours statistics",
         "geofencing": "Custom geofencing for each location",
         "pdfExport": "Professional PDF invoices",
         "calendarSync": "Native calendar integration",
@@ -278,7 +279,7 @@
   "faq": {
     "title": "Frequently Asked",
     "titleAccent": "Questions",
-    "description": "Find answers to the most common questions about WorkTime Control",
+    "description": "Find answers to the most common questions about Working Time Control",
     "search": "Search in frequently asked questions...",
     "categories": {
       "general": "General",
@@ -336,12 +337,12 @@
         "answer": "Yes, from the calendar screen you can sync with your native calendar using the sync button."
       },
       "11": {
-        "question": "Does the chatbot work with artificial intelligence?",
-        "answer": "Yes, it works with Gemini 1.5 Pro and can analyze images of work schedules. It may make mistakes if the work plan is not well defined."
+        "question": "Does it work with Apple Watch?",
+        "answer": "Yes. You can start, pause and finish your workday from your wrist, check your week and your statistics, and add hours to a day — without taking out your phone. What you do on one appears on the other."
       },
       "12": {
         "question": "Does the app work without internet connection?",
-        "answer": "Yes, it works perfectly without internet connection. Everything is stored locally, only the chatbot function for analyzing images requires connection."
+        "answer": "Yes, it works perfectly without an internet connection. Everything is stored on your device, so you can clock in, check your calendar and look at your hours with no signal."
       },
       "13": {
         "question": "Do I need a subscription for all features?",
@@ -360,9 +361,9 @@
   "cta": {
     "title": "Ready to save",
     "titleAccent": "10+ hours per month?",
-    "description": "Stop wasting time on manual tracking. Let WorkTime Control handle it automatically while you focus on what matters.",
+    "description": "Stop wasting time on manual tracking. Let Working Time Control handle it automatically while you focus on what matters.",
     "rating": "4.9/5 from 12,000+ reviews",
-    "downloadButton": "Get WorkTime Control Free",
+    "downloadButton": "Get Working Time Control Free",
     "demoButton": "See it in action",
     "iosAvailability": "Currently available for iOS devices only",
     "footer": "Available on iOS & Android • Setup in 30 seconds • Works offline"
@@ -370,7 +371,7 @@
   "testimonials": {
     "title": "Loved by",
     "titleAccent": "Professionals",
-    "description": "See why thousands choose WorkTime Control for their time tracking needs",
+    "description": "See why thousands choose Working Time Control for their time tracking needs",
     "roles": {
       "freelancer": "Freelance Writer",
       "consultant": "Business Consultant",
@@ -380,7 +381,7 @@
       "manager": "Project Manager"
     },
     "reviews": {
-      "1": "WorkTime Control has completely transformed how I manage my time. The GPS auto-timer is like magic - I never forget to log hours anymore!",
+      "1": "Working Time Control has completely transformed how I manage my time. The GPS auto-timer is like magic - I never forget to log hours anymore!",
       "2": "As someone juggling multiple clients, the multi-job feature is a lifesaver. Reports are professional and clients love them.",
       "3": "The AI assistant analyzed my paper schedule and imported everything perfectly. Saved me hours of manual entry!",
       "4": "Finally, a time tracker that respects privacy. Everything stays on my device, and the automatic backups give me peace of mind.",
@@ -478,7 +479,7 @@
   },
   "launchModal": {
     "title": "Coming Soon!",
-    "subtitle": "WorkTime Control will be available very soon",
+    "subtitle": "Working Time Control will be available very soon",
     "date": "October 1st",
     "year": "2025",
     "description": "We're working on the final details to bring you the best GPS time tracking experience.",
@@ -486,11 +487,11 @@
     "button": "Got it"
   },
   "contact": {
-    "backButton": "Back to WorkTime Control",
+    "backButton": "Back to Working Time Control",
     "title": "Need",
     "titleAccent": "help",
     "titleEnd": "?",
-    "description": "We're here to help you with WorkTime Control. Send us a message and we'll get back to you as soon as possible.",
+    "description": "We're here to help you with Working Time Control. Send us a message and we'll get back to you as soon as possible.",
     "hero": {
       "title": "Let's Talk",
       "description": "We're here to help. Send us your query and we'll respond as soon as possible."
@@ -551,12 +552,12 @@
     }
   },
   "privacy": {
-    "backButton": "Back to WorkTime Control",
+    "backButton": "Back to Working Time Control",
     "title": "Privacy Policy",
     "lastUpdated": "Last Updated: September 2025",
     "priority": {
       "title": "Your Privacy is Our Priority",
-      "description": "At WorkTime Control, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your information when you use our work time tracking application."
+      "description": "At Working Time Control, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your information when you use our work time tracking application."
     },
     "summary": {
       "title": "Summary: We Store Absolutely Nothing",
@@ -650,19 +651,19 @@
       "title": "Contact Us",
       "description": "If you have questions about this Privacy Policy, contact us at"
     },
-    "footer": "This policy is effective from September 2025 and applies to all versions of WorkTime Control."
+    "footer": "This policy is effective from September 2025 and applies to all versions of Working Time Control."
   },
   "terms": {
-    "backButton": "Back to WorkTime Control",
+    "backButton": "Back to Working Time Control",
     "title": "Terms of Service",
     "lastUpdated": "Last Updated: September 2025",
     "acceptance": {
       "title": "Acceptance of Terms",
-      "description": "By downloading, installing, or using WorkTime Control, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app."
+      "description": "By downloading, installing, or using Working Time Control, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the app."
     },
     "license": {
       "title": "License to Use",
-      "description": "We grant you a limited, non-exclusive, non-transferable, and revocable license to use WorkTime Control for your personal and commercial use on devices you control.",
+      "description": "We grant you a limited, non-exclusive, non-transferable, and revocable license to use Working Time Control for your personal and commercial use on devices you control.",
       "restrictions": "You may not: copy, modify, or distribute the app; reverse engineer; use the app for illegal purposes; or violate intellectual property rights."
     },
     "subscriptions": {
@@ -711,7 +712,7 @@
     },
     "indemnification": {
       "title": "Indemnification",
-      "description": "You agree to indemnify and hold harmless WorkTime Control and its affiliates from any claims, damages, or expenses arising from your use of the app or violation of these terms."
+      "description": "You agree to indemnify and hold harmless Working Time Control and its affiliates from any claims, damages, or expenses arising from your use of the app or violation of these terms."
     },
     "governing": {
       "title": "Governing Law",
@@ -725,7 +726,7 @@
       "title": "Contact",
       "description": "For questions about these Terms of Service, contact us at"
     },
-    "footer": "By using WorkTime Control, you confirm that you have read, understood, and agreed to these Terms of Service."
+    "footer": "By using Working Time Control, you confirm that you have read, understood, and agreed to these Terms of Service."
   },
   "autoTimer": {
     "badge": "Enterprise Level",
@@ -791,7 +792,7 @@
       },
       "background": {
         "title": "Works in Background",
-        "description": "Works perfectly with app closed. Native iOS/Android APIs ensure reliable 24/7 operation."
+        "description": "Works perfectly with the app closed. Native iOS APIs ensure reliable 24/7 operation."
       }
     },
     "stats": {
@@ -845,6 +846,37 @@
       "leave": {
         "title": "Departure detected",
         "description": "When you leave the configured zone, AutoTimer stops counting and saves your shift automatically."
+      }
+    }
+  },
+  "watch": {
+    "badge": "Now on Apple Watch",
+    "title": "Your hours,",
+    "titleAccent": "on your wrist.",
+    "description": "Clock in, pause and finish without taking your phone out of your pocket. What you do on one shows on the other — even if the phone stayed at home.",
+    "screen": {
+      "title": "Timer",
+      "manual": "Manual",
+      "auto": "Auto",
+      "start": "Start",
+      "week": "This week"
+    },
+    "features": {
+      "start": {
+        "title": "Start and stop",
+        "body": "Without taking your phone out."
+      },
+      "week": {
+        "title": "Your week",
+        "body": "Days and hours, at a glance."
+      },
+      "stats": {
+        "title": "Statistics",
+        "body": "Week, month and three months."
+      },
+      "sync": {
+        "title": "Always in sync",
+        "body": "If your phone is away, it sends when you meet again."
       }
     }
   }

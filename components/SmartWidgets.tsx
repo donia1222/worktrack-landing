@@ -99,13 +99,13 @@ export default function SmartWidgets() {
             className="relative"
           >
             <div className="relative max-w-sm mx-auto">
-              {/* Real iPhone with WorkTime Control Widget */}
+              {/* Real iPhone with Working Time Control Widget */}
               <div className="relative">
                 <div className="absolute -inset-8 bg-gradient-to-r from-purple-300/30 to-orange-300/30 blur-3xl opacity-50" />
                 <div className="relative">
                   <Image
                     src="/widget.png"
-                    alt="WorkTime Control iOS Widget on iPhone"
+                    alt="Working Time Control iOS Widget on iPhone"
                     width={400}
                     height={800}
                     className="w-full h-auto"

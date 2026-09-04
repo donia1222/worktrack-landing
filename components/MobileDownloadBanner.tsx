@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useLanguage } from '@/lib/language'
 
 const APP_STORE_URL =
-  'https://apps.apple.com/us/app/vixtime/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431'
+  'https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431'
 
 type Platform = 'ios' | 'android' | null
 

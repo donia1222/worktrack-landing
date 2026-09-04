@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/new/app-icon.png" alt="WorkTime Control" width={40} height={40} className="w-10 h-10 rounded-xl" />
+              <Image src="/new/app-icon.png" alt="Working Time Control" width={40} height={40} className="w-10 h-10 rounded-xl" />
               <h3 className="text-xl font-bold flex">
                 <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Work</span>
                 <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time Control</span>
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
           
           <div className="mt-6 text-center text-sm text-gray-400">
-            <p>© {currentYear} WorkTime Control. {t('footer.copyright')}</p>
+            <p>© {currentYear} Working Time Control. {t('footer.copyright')}</p>
           </div>
         </div>
       </div>
