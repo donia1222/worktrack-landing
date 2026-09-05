@@ -226,11 +226,11 @@ export default function Hero() {
                   la protagonista. Mismo dibujo animado que la sección
                   dedicada (AppleWatchTeaser), escalado con transform CSS. */}
               <div
-                className={`absolute -right-24 top-[10%] z-20 hidden h-[190px] w-[156px] transition-all duration-1000 delay-500 sm:block sm:-right-28 sm:h-[210px] sm:w-[173px] lg:-right-32 ${
+                className={`absolute -right-8 top-[6%] z-20 h-[132px] w-[108px] transition-all duration-1000 delay-500 sm:-right-28 sm:top-[10%] sm:h-[210px] sm:w-[173px] lg:-right-32 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                 }`}
               >
-                <div className="origin-top-left scale-[0.71] sm:scale-[0.79]">
+                <div className="origin-top-left scale-[0.49] sm:scale-[0.79]">
                   <WatchDrawing idioma={idioma} />
                 </div>
               </div>
