@@ -22,7 +22,12 @@ import { Play, CalendarDays, BarChart3, RefreshCw } from "lucide-react";
  * Se generan con el guion de `capturas-reloj/`: si cambia una pantalla del
  * reloj, se relanza y se vuelven a copiar aquí.
  */
-function WatchDrawing({ idioma }: { idioma: string }) {
+/**
+ * Se exporta también para el Hero: ahí se planta en miniatura junto al
+ * teléfono, con las mismas animaciones (carrusel + puntos), solo que a
+ * escala reducida con un transform CSS.
+ */
+export function WatchDrawing({ idioma }: { idioma: string }) {
   const [actual, setActual] = useState(0);
 
   // Pasa sola cada cuatro segundos, y se puede tocar un punto para ir a una.

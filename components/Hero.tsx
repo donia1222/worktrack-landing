@@ -2,11 +2,24 @@
 
 import { Sparkles, Zap, BarChart3, CalendarCheck, ArrowRight, Play, Watch } from "lucide-react"
 import { useLanguage } from "@/lib/language"
+import { WatchDrawing } from "./AppleWatchTeaser"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 
 export default function Hero() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  // El reloj solo tiene capturas en es/en/de: fuera de esos, se enseña en
+  // inglés antes que una imagen rota.
+  const idioma = ["es", "en", "de"].includes(language) ? language : "en"
+
+  // La captura del teléfono en el Hero: solo hay versión propia en es/de,
+  // así que en inglés (y cualquier otro idioma) se enseña la de siempre.
+  const heroImage =
+    idioma === "es"
+      ? "/new/1-autotimer-es.png"
+      : idioma === "de"
+        ? "/new/1-autotimer-de.png"
+        : "/new/home-2026-3.webp"
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
 
@@ -178,7 +191,7 @@ export default function Hero() {
               <div className="relative bg-slate-900 rounded-[2rem] p-2 shadow-2xl">
                 <div className="relative w-full aspect-[9/19] rounded-[1.4rem] overflow-hidden">
                   <Image
-                    src="/new/home-2026.jpg"
+                    src={heroImage}
                     alt="Working Time Control App"
                     fill
                     className="object-cover object-top"
@@ -194,7 +207,7 @@ export default function Hero() {
               >
                 <div className="flex items-center gap-2 ">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-xs font-medium text-slate-700">AutoTimer</span>
+                  <span className="text-xs font-medium text-slate-700">GPS Timer</span>
                 </div>
               </div>
 
@@ -205,6 +218,20 @@ export default function Hero() {
                 <div className="flex items-center gap-2">
                   <BarChart3 className="w-4 h-4 text-blue-600" />
                   <span className="text-xs font-medium text-slate-700">PDF Reports</span>
+                </div>
+              </div>
+
+              {/* El Apple Watch, en miniatura junto al teléfono: se aleja bien
+                  a la derecha para no tapar la pantalla del teléfono, que es
+                  la protagonista. Mismo dibujo animado que la sección
+                  dedicada (AppleWatchTeaser), escalado con transform CSS. */}
+              <div
+                className={`absolute -right-24 top-[10%] z-20 hidden h-[190px] w-[156px] transition-all duration-1000 delay-500 sm:block sm:-right-28 sm:h-[210px] sm:w-[173px] lg:-right-32 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                }`}
+              >
+                <div className="origin-top-left scale-[0.71] sm:scale-[0.79]">
+                  <WatchDrawing idioma={idioma} />
                 </div>
               </div>
             </div>

@@ -6,7 +6,16 @@ import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 
 export default function AutoTimerGeofence() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+
+  // Solo hay captura propia en es/de; en el resto de idiomas se enseña la
+  // de siempre (en inglés, con el geofencing en el mapa).
+  const phoneImage =
+    language === "es"
+      ? "/new/3-timer-es.png"
+      : language === "de"
+        ? "/new/3-timer-de.png"
+        : "/phone/autotimer-geofence.jpg"
 
   const points = [
     {
@@ -38,7 +47,7 @@ export default function AutoTimerGeofence() {
               <div className="relative bg-slate-900 rounded-[2rem] p-2 shadow-2xl">
                 <div className="relative w-full aspect-[9/19] rounded-[1.4rem] overflow-hidden">
                   <Image
-                    src="/phone/autotimer-geofence.jpg"
+                    src={phoneImage}
                     alt="AutoTimer GPS geofencing"
                     fill
                     className="object-cover object-top"
