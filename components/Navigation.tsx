@@ -7,9 +7,18 @@ import Image from 'next/image'
 import { useLanguage } from '@/lib/language'
 import LanguageSelector from './LanguageSelector'
 
+// El orden es el de la pagina, no el de importancia: quien abre el menu esta
+// buscando algo que ya ha visto pasar, o algo que sabe que viene mas abajo.
+//
+// En pantalla ancha no caben los siete sin apretar la barra, asi que ahi salen
+// los cuatro de siempre y el resto vive en el menu del movil, que es una lista
+// y admite los que hagan falta.
 const getNavItems = (t: (key: string) => string) => [
+  { label: t('navigation.autoTimer'), href: '#autotimer', soloMovil: true },
+  { label: t('navigation.watch'), href: '#apple-watch', soloMovil: true },
+  { label: t('navigation.smartWidgets'), href: '#smart-widgets', soloMovil: true },
   { label: t('navigation.features'), href: '#features' },
-
+  { label: t('navigation.reports'), href: '#export-reports', soloMovil: true },
   { label: t('navigation.pricing'), href: '#pricing' },
   { label: t('navigation.faq'), href: '#faq' },
   { label: t('navigation.contact'), href: '/contact' },
@@ -89,7 +98,7 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+            {navItems.filter((item) => !item.soloMovil).map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}

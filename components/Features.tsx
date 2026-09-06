@@ -1,5 +1,5 @@
 "use client"
-import { Layout, Bell, Shield, Globe, ArrowUpRight } from "lucide-react"
+import { Bell, Shield, Globe, ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/language"
@@ -14,13 +14,6 @@ const getFeatures = (t: (key: string) => string) => [
     // La estrella de la app: ocupa el doble de ancho en el bento para que
     // se note que es la característica principal, no una más de seis.
     big: true,
-  },
-  {
-    icon: Layout,
-    title: t("features.items.widgets.title"),
-    description: t("features.items.widgets.description"),
-    accent: "from-indigo-500 to-blue-500",
-    glow: "bg-indigo-500/10",
   },
   {
     image: "/new/icons/jobs.png",
@@ -81,15 +74,25 @@ export default function Features() {
         {/* Bento grid: una tarjeta grande (la función estrella) más cinco
             normales, en vez de seis cajas idénticas — así se lee de un
             vistazo cuál es la diferencial de la app. */}
-        <div className="mb-16 grid auto-rows-[minmax(220px,auto)] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {/* En el movil se pasa de lado en vez de apilarse: cinco tarjetas una
+            debajo de otra son cinco pantallas de scroll antes de llegar a los
+            precios. De tableta para arriba vuelve la rejilla, donde se ven
+            todas a la vez y el bento tiene sentido. */}
+        <div className="mb-16 -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:auto-rows-[minmax(220px,auto)] sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 24 }}
+              // Antes entraban con `amount: 0.3` —o sea, cuando ya se veia un
+              // tercio de la tarjeta— y con el retraso calculado por columna:
+              // en el movil, que es de una sola columna, eso daba tarjetas
+              // apareciendo de golpe y con esperas que no seguian el orden.
+              // Ahora arrancan un poco antes de entrar, en orden, y con la
+              // curva de iOS en vez de un frenazo.
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-              className={`group relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-slate-300 hover:shadow-2xl hover:shadow-slate-900/5 ${
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.55, ease: [0.32, 0.72, 0, 1], delay: Math.min(index, 4) * 0.06 }}
+              className={`group relative w-[82%] shrink-0 snap-center overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 transition-all duration-500 hover:-translate-y-1.5 hover:border-slate-300 hover:shadow-2xl hover:shadow-slate-900/5 sm:w-auto sm:shrink ${
                 feature.big ? "lg:col-span-2" : ""
               }`}
             >

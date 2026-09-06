@@ -110,7 +110,7 @@ export default function AppleWatchTeaser() {
   const idioma = ["es", "en", "de"].includes(language) ? language : "en";
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-slate-50">
+    <section id="apple-watch" className="py-16 lg:py-24 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* El reloj, sobre un halo del color de la app */}

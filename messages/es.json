@@ -6,7 +6,10 @@
     "pricing": "Precios",
     "faq": "FAQ",
     "contact": "Contacto",
-    "download": "Descargar en iOS"
+    "download": "Descargar en iOS",
+    "autoTimer": "AutoTimer",
+    "watch": "Apple Watch",
+    "reports": "Informes"
   },
   "loading": {
     "appName": "Working Time Control",
