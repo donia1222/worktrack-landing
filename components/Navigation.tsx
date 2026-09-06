@@ -10,13 +10,21 @@ import LanguageSelector from './LanguageSelector'
 // El orden es el de la pagina, no el de importancia: quien abre el menu esta
 // buscando algo que ya ha visto pasar, o algo que sabe que viene mas abajo.
 //
-// En pantalla ancha no caben los siete sin apretar la barra, asi que ahi salen
-// los cuatro de siempre y el resto vive en el menu del movil, que es una lista
-// y admite los que hagan falta.
+// Cuantos salen depende del sitio que haya, no del capricho:
+//
+// - En el movil, todos: es una lista desplegable y no compite con nada.
+// - En un portatil ancho, seis. Los dos que se anaden son el reloj y los
+//   widgets, que es lo que casi ningun competidor tiene.
+// - En un portatil estrecho vuelven a ser cuatro: con seis, la barra empezaba
+//   a rozar el nombre de la izquierda.
+//
+// AutoTimer e Informes se quedan solo en el movil: el primero es la seccion
+// que viene justo debajo del hero —se llega bajando, sin buscarlo— y el
+// segundo no es lo que trae a nadie a la pagina.
 const getNavItems = (t: (key: string) => string) => [
   { label: t('navigation.autoTimer'), href: '#autotimer', soloMovil: true },
-  { label: t('navigation.watch'), href: '#apple-watch', soloMovil: true },
-  { label: t('navigation.smartWidgets'), href: '#smart-widgets', soloMovil: true },
+  { label: t('navigation.watch'), href: '#apple-watch', soloGrande: true },
+  { label: t('navigation.smartWidgets'), href: '#smart-widgets', soloGrande: true },
   { label: t('navigation.features'), href: '#features' },
   { label: t('navigation.reports'), href: '#export-reports', soloMovil: true },
   { label: t('navigation.pricing'), href: '#pricing' },
@@ -97,12 +105,14 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-7">
             {navItems.filter((item) => !item.soloMovil).map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-all text-gray-800 hover:text-blue-600 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all`}
+                className={`text-sm font-medium transition-all text-gray-800 hover:text-blue-600 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-blue-600 after:transition-all ${
+                  item.soloGrande ? 'hidden lg:block' : ''
+                }`}
               >
                 {item.label}
               </button>
