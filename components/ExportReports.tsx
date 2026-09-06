@@ -32,24 +32,6 @@ export default function ExportReports() {
     }
   ]
 
-  const steps = [
-    {
-      step: "01",
-      title: t("exportReports.steps.capture.title"),
-      description: t("exportReports.steps.capture.description")
-    },
-    {
-      step: "02",
-      title: t("exportReports.steps.analyze.title"),
-      description: t("exportReports.steps.analyze.description")
-    },
-    {
-      step: "03",
-      title: t("exportReports.steps.export.title"),
-      description: t("exportReports.steps.export.description")
-    }
-  ]
-
   return (
     <section
       id="export-reports"
@@ -194,41 +176,6 @@ export default function ExportReports() {
             </div>
           </motion.div>
         </div>
-
-        {/* Process Steps */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-blue-200/50 shadow-xl"
-        >
-          <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 text-center mb-12">
-            {t("exportReports.processTitle")}
-          </h3>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="text-center relative">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-lg">
-                  {step.step}
-                </div>
-
-                <h4 className="text-lg font-semibold text-slate-900 mb-3">
-                  {step.title}
-                </h4>
-
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  {step.description}
-                </p>
-
-                {index < steps.length - 1 && (
-                  <ArrowRight className="w-6 h-6 text-blue-400 absolute top-8 -right-4 hidden md:block" />
-                )}
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )
