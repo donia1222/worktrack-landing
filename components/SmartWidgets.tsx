@@ -40,21 +40,27 @@ export default function SmartWidgets() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* El telefono, sobre un halo del color de la app */}
           <div className="relative flex justify-center lg:order-2">
-            <div className="absolute h-[320px] w-[320px] rounded-full bg-gradient-to-br from-violet-200/50 to-transparent blur-2xl" />
+            <div className="absolute h-[300px] w-[300px] rounded-full bg-gradient-to-br from-violet-200/50 to-transparent blur-2xl" />
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
-              className="relative w-full max-w-[300px]"
+              // El mismo telefono, la misma medida y el mismo marco que la
+              // seccion del AutoTimer: sin el, la captura flotaba como un
+              // rectangulo suelto y no se entendia que era una pantalla.
+              className="relative mx-auto w-[200px] sm:w-[220px]"
             >
-              <Image
-                src="/new/showcase-widget.jpg"
-                alt="Working Time Control"
-                width={1206}
-                height={2494}
-                className="h-auto w-full"
-              />
+              <div className="relative rounded-[2rem] bg-slate-900 p-2 shadow-2xl">
+                <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.4rem]">
+                  <Image
+                    src="/new/showcase-widget.jpg"
+                    alt="Working Time Control"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
             </motion.div>
           </div>
 
