@@ -4,37 +4,44 @@
 // `next-intl` directamente: el resto de componentes usan este, y con
 // `useTranslations` no se encuentra el contexto.
 import { useLanguage } from "@/lib/language";
-import { useEffect, useState } from "react";
+import { useSegundosTrabajados } from "@/lib/liveTimer";
 import { Play, CalendarDays, BarChart3, RefreshCw } from "lucide-react";
 
 /**
  * El Apple Watch: la caja dibujada, la pantalla de verdad.
  *
  * La caja sigue siendo un SVG —así se escala sin pesar y encaja con el color de
- * la página— pero dentro va una captura real del reloj, en carrusel de tres.
+ * la página— pero dentro va una captura real del reloj congelada en la
+ * pantalla del timer corriendo, con el número tapado y repintado en vivo con
+ * los mismos segundos que el teléfono (ver lib/liveTimer.ts): así reloj y
+ * teléfono se ven contando exactamente lo mismo, a la vez.
  *
- * Antes la pantalla también se dibujaba, repintando el texto para que se
- * tradujera solo. Tenía sentido cuando no había capturas; ahora las hay, y
- * justo en los tres idiomas que tiene la landing. Enseñar el producto de verdad
- * convence más que enseñar un dibujo de él, sobre todo si la visita ha llegado
- * pagando un clic.
+ * Antes había un carrusel de tres capturas (timer/calendario/estadísticas)
+ * que iban rotando solas. Se quitó: si el reloj cambia de pantalla, deja de
+ * verse el cronómetro y ya no tiene sentido decir que "va a la par" del
+ * teléfono. Fijo en la del timer, siempre a juego.
  *
  * Se generan con el guion de `capturas-reloj/`: si cambia una pantalla del
  * reloj, se relanza y se vuelven a copiar aquí.
  */
+// El "1:47:15" grande de la captura no es de verdad: se tapa ese hueco exacto
+// (medido sobre el PNG de 368x448 del simulador) y se repinta con el
+// cronómetro real. El formato de Apple Watch no rellena la hora con un cero
+// ("9:03:15", no "09:03:15"), a diferencia del teléfono.
+function tiempoFormateadoReloj(segundos: number) {
+  const h = Math.floor(segundos / 3600);
+  const m = Math.floor((segundos % 3600) / 60);
+  const s = segundos % 60;
+  return `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
 /**
  * Se exporta también para el Hero: ahí se planta en miniatura junto al
- * teléfono, con las mismas animaciones (carrusel + puntos), solo que a
- * escala reducida con un transform CSS.
+ * teléfono, con la misma animación, solo que a escala reducida con un
+ * transform CSS.
  */
 export function WatchDrawing({ idioma }: { idioma: string }) {
-  const [actual, setActual] = useState(0);
-
-  // Pasa sola cada cuatro segundos, y se puede tocar un punto para ir a una.
-  useEffect(() => {
-    const t = setInterval(() => setActual((n) => (n + 1) % 3), 4000);
-    return () => clearInterval(t);
-  }, []);
+  const segundos = useSegundosTrabajados();
 
   return (
     <div className="relative w-[220px] h-[268px] mx-auto">
@@ -59,38 +66,19 @@ export function WatchDrawing({ idioma }: { idioma: string }) {
         <rect x="24" y="31" width="172" height="206" rx="38" fill="#000000" />
       </svg>
 
-      {/* La pantalla, con la captura de verdad del reloj.
-          Antes era el dibujo repintado con texto: se traducia solo, pero
-          ensenaba un dibujo. Ahora son capturas reales del simulador, y
-          existen justo en los tres idiomas que tiene la landing. */}
+      {/* La pantalla, con la captura de verdad del reloj (timer corriendo) y
+          el número tapado + repintado en vivo encima. */}
       <div className="absolute left-[24px] top-[31px] h-[206px] w-[172px] overflow-hidden rounded-[38px] bg-black">
-        {[1, 2, 3].map((n) => (
-          <img
-            key={n}
-            src={`/reloj/${idioma}/${n}.png`}
-            alt=""
-            aria-hidden={n !== actual + 1}
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-              n === actual + 1 ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-      </div>
+        <img src={`/reloj/${idioma}/corriendo.png`} alt="" className="absolute inset-0 h-full w-full object-cover" />
 
-      {/* Los puntos, fuera de la pantalla y encima de la caja: dentro taparian
-          la captura, que ya trae los suyos. */}
-      <div className="absolute bottom-[30px] left-0 right-0 flex justify-center gap-[5px]">
-        {[0, 1, 2].map((i) => (
-          <button
-            key={i}
-            type="button"
-            aria-label={`${i + 1}`}
-            onClick={() => setActual(i)}
-            className={`h-[5px] rounded-full transition-all duration-300 ${
-              i === actual ? "w-[14px] bg-white" : "w-[5px] bg-white/35"
-            }`}
-          />
-        ))}
+        <div
+          className="absolute flex items-center justify-center bg-black"
+          style={{ left: "31.5%", right: "30.7%", top: "50%", height: "5.8%" }}
+        >
+          <span className="whitespace-nowrap text-[15px] font-bold tabular-nums tracking-tight text-white">
+            {tiempoFormateadoReloj(segundos)}
+          </span>
+        </div>
       </div>
     </div>
   );

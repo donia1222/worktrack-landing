@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
+import { horaInicioTrabajo, tiempoFormateado, useSegundosTrabajados } from "@/lib/liveTimer"
 
 /**
  * Las capturas del cronómetro (3-timer-es/en/de.png) son fijas, pero varias
@@ -11,13 +12,6 @@ import { useEffect, useState } from "react"
  * el móvil está mostrando la jornada en directo. Se usa tanto en el Hero
  * como en el bloque de AutoTimer — misma captura, mismo overlay.
  */
-function tiempoFormateado(segundos: number) {
-  const h = Math.floor(segundos / 3600)
-  const m = Math.floor((segundos % 3600) / 60)
-  const s = segundos % 60
-  return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":")
-}
-
 // La fecha real de hoy, con el mismo formato que traía la captura original
 // en cada idioma ("Viernes, 4 de septiembre" / "Freitag, 4. September" /
 // "Friday, September 4"). El español la necesita con la mayúscula inicial a
@@ -45,12 +39,6 @@ function horaFormateada(idioma: string, fecha: Date) {
     hour12: false,
   }).format(fecha)
 }
-
-// Arranca en 9h 03min: se ve una jornada ya en marcha desde que aparece la
-// imagen, en vez de un cronómetro a cero que parece recién empezado. Cuantas
-// más horas lleve, más atrás cae la "hora de inicio" (ahora menos esto) —
-// con 9h03 la jornada empieza sobre las cuatro y media de la tarde.
-const SEGUNDOS_INICIALES = 9 * 3600 + 3 * 60
 
 // La captura en inglés (3-timer-en.png) no es la misma imagen que la de
 // es/de: mide 1206x2491 en vez de 1206x2622, y las tres zonas borradas
@@ -85,17 +73,11 @@ export default function LiveTimerOverlay({
   texto: string
   textoInicio: string
 }) {
-  const [segundos, setSegundos] = useState(SEGUNDOS_INICIALES)
-  // Se fijan al montar: la fecha de hoy y la hora a la que "empezó" la
-  // jornada (ahora menos las 7h03 iniciales), para que no cambien en cada
-  // re-render ni salten al segundo siguiente.
+  // Mismo punto de partida que el reloj (lib/liveTimer.ts): los dos cuentan
+  // exactamente lo mismo, no cada uno por su cuenta desde que se monta.
+  const segundos = useSegundosTrabajados()
   const [hoy] = useState(() => new Date())
-  const [horaInicio] = useState(() => new Date(Date.now() - SEGUNDOS_INICIALES * 1000))
-
-  useEffect(() => {
-    const id = setInterval(() => setSegundos((s) => s + 1), 1000)
-    return () => clearInterval(id)
-  }, [])
+  const [horaInicio] = useState(horaInicioTrabajo)
 
   const posicion = POSICION_POR_IDIOMA[idioma] ?? POSICION_POR_IDIOMA.es
 
