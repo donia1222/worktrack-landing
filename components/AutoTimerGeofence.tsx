@@ -4,18 +4,62 @@ import { motion } from "framer-motion"
 import { MapPin, PlayCircle, StopCircle } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
+import { useEffect, useState } from "react"
+
+// La captura es fija, pero el cronómetro "00:00:25" que se ve dentro no lo
+// es de verdad: aquí se tapa ese trozo exacto de la imagen (medido en
+// píxeles sobre el PNG original) y se pinta encima un contador que sí
+// corre, con la misma tipografía y color, para que parezca que el móvil
+// está contando en directo.
+function tiempoFormateado(segundos: number) {
+  const h = Math.floor(segundos / 3600)
+  const m = Math.floor((segundos % 3600) / 60)
+  const s = segundos % 60
+  return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":")
+}
+
+function CronometroEnVivo() {
+  const [segundos, setSegundos] = useState(25)
+
+  useEffect(() => {
+    const id = setInterval(() => setSegundos((s) => s + 1), 1000)
+    return () => clearInterval(id)
+  }, [])
+
+  return (
+    <div
+      className="absolute flex items-center justify-center"
+      style={{
+        left: "22.3%",
+        right: "22.2%",
+        top: "32.6%",
+        height: "4.5%",
+        backgroundColor: "#f5f5f9",
+      }}
+    >
+      <span
+        className="text-[16px] font-bold tabular-nums tracking-tight sm:text-[17px]"
+        style={{ color: "rgb(32, 40, 57)" }}
+      >
+        {tiempoFormateado(segundos)}
+      </span>
+    </div>
+  )
+}
 
 export default function AutoTimerGeofence() {
   const { t, language } = useLanguage()
 
   // Solo hay captura propia en es/de; en el resto de idiomas se enseña la
-  // de siempre (en inglés, con el geofencing en el mapa).
+  // de siempre (en inglés, con el geofencing en el mapa) — ahí no se pone
+  // el cronómetro en vivo porque esa imagen no es el mismo diseño.
   const phoneImage =
     language === "es"
       ? "/new/3-timer-es.png"
       : language === "de"
         ? "/new/3-timer-de.png"
         : "/phone/autotimer-geofence.jpg"
+  const conCronometroEnVivo = language === "es" || language === "de"
 
   const points = [
     {
@@ -52,6 +96,7 @@ export default function AutoTimerGeofence() {
                     fill
                     className="object-cover object-top"
                   />
+                  {conCronometroEnVivo && <CronometroEnVivo />}
                 </div>
               </div>
             </div>
