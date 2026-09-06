@@ -160,39 +160,38 @@
     }
   },
   "smartWidgets": {
-    "badge": "Native iOS",
-    "title": "Widgets die",
-    "titleAccent": "wirklich funktionieren",
-    "description": "3 native iOS Widget-Größen mit Echtzeit-Datenaktualisierungen. Live Activities in Dynamic Island für iPhone 14 Pro+. Vollständige Kontrolle vom Sperrbildschirm.",
-    "sizesTitle": "Alle iOS Größen",
-    "sizesDescription": "Wählen Sie das perfekte Widget für Ihren Homescreen. Alle mit Echtzeit-aktualisierten Daten.",
-    "ctaButton": "Widgets in Aktion sehen",
+    "badge": "Nativ für iOS",
+    "title": "Auf dem Home-Bildschirm,",
+    "titleAccent": "ohne die App zu öffnen",
+    "description": "Drei Widget-Größen, die sich selbst aktualisieren. Ein Blick genügt, um zu sehen, wie der Tag läuft.",
+    "sizesTitle": "Wähl die passende Größe",
+    "sizesDescription": "Alle drei zeigen aktuelle Daten. Du kannst jederzeit wechseln.",
     "sizes": {
       "small": {
-        "title": "Kleines Widget",
-        "description": "Aktiver Timer, Tagesstunden, Job-Status. Perfekt für schnelle Kontrolle ohne App zu öffnen."
+        "title": "Klein",
+        "description": "Der laufende Zähler, mit dem Job und den heutigen Stunden."
       },
       "medium": {
-        "title": "Mittleres Widget",
-        "description": "Komplette Wochenansicht mit farbcodierten Arbeitstagen. Direkter Zugriff auf Hauptfunktionen."
+        "title": "Mittel",
+        "description": "Heute und die Wochenübersicht, nebeneinander."
       },
       "large": {
-        "title": "Großes Widget",
-        "description": "Vollständiges Dashboard mit Statistiken, Diagrammen, bevorstehenden Terminen und Schnellzugriff auf alle Funktionen."
+        "title": "Groß",
+        "description": "Die ganze Woche mit Minikalender und Gesamtsumme."
       }
     },
     "features": {
       "realTime": {
-        "title": "Echtzeit-Updates",
-        "description": "Widgets aktualisieren sich automatisch jede Minute. Timer läuft ohne App zu öffnen."
+        "title": "Immer aktuell",
+        "description": "Das Widget aktualisiert sich selbst, während du arbeitest. Nichts zu öffnen."
       },
       "dynamicIsland": {
         "title": "Dynamic Island",
-        "description": "Live Activities zeigen aktiven Timer in Dynamic Island. Nur für iPhone 14 Pro und iPhone 15 Pro."
+        "description": "Die laufende Schicht erscheint in der Dynamic Island — und lässt sich dort beenden."
       },
-      "lockScreen": {
-        "title": "Sperrbildschirm",
-        "description": "iOS 16+ Sperrbildschirm-Widgets. Timer starten/stoppen ohne Telefon zu entsperren."
+      "oneTap": {
+        "title": "Ein Tippen und du bist drin",
+        "description": "Ein Tipp auf das Widget bringt dich direkt zum passenden Bildschirm."
       }
     }
   },

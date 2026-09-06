@@ -162,38 +162,37 @@
   },
   "smartWidgets": {
     "badge": "Native iOS",
-    "title": "Widgets that",
-    "titleAccent": "actually work",
-    "description": "3 native iOS widget sizes with real-time data updates. Live Activities in Dynamic Island for iPhone 14 Pro+. Full control from lock screen.",
-    "sizesTitle": "All iOS Sizes",
-    "sizesDescription": "Choose the perfect widget for your home screen. All with real-time updated data.",
-    "ctaButton": "See Widgets in Action",
+    "title": "On your Home Screen,",
+    "titleAccent": "without opening the app",
+    "description": "Three widget sizes that keep themselves up to date. One glance tells you where today stands.",
+    "sizesTitle": "Pick the one that fits",
+    "sizesDescription": "All three show current data. Switch between them whenever you like.",
     "sizes": {
       "small": {
-        "title": "Small Widget",
-        "description": "Active timer, daily hours, job status. Perfect for quick control without opening the app."
+        "title": "Small",
+        "description": "The running shift counter, with the job and today's hours."
       },
       "medium": {
-        "title": "Medium Widget",
-        "description": "Complete weekly view with color-coded work days. Direct access to main functions."
+        "title": "Medium",
+        "description": "Today and the week's summary, side by side."
       },
       "large": {
-        "title": "Large Widget",
-        "description": "Full dashboard with statistics, charts, upcoming schedules and quick access to all functions."
+        "title": "Large",
+        "description": "The whole week with the mini calendar and the running total."
       }
     },
     "features": {
       "realTime": {
-        "title": "Real-Time Updates",
-        "description": "Widgets update automatically every minute. Watch the timer running without opening the app."
+        "title": "Always current",
+        "description": "The widget refreshes itself while you work. Nothing to open."
       },
       "dynamicIsland": {
         "title": "Dynamic Island",
-        "description": "Live Activities show active timer in Dynamic Island. Only for iPhone 14 Pro and iPhone 15 Pro."
+        "description": "Your running shift shows in the Dynamic Island, and you can end it right there."
       },
-      "lockScreen": {
-        "title": "Lock Screen",
-        "description": "iOS 16+ lock screen widgets. Start/stop timer without unlocking your phone."
+      "oneTap": {
+        "title": "One tap and you're in",
+        "description": "Tapping the widget takes you straight to the screen you need."
       }
     }
   },
