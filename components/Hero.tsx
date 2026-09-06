@@ -225,7 +225,11 @@ export default function Hero() {
                     className="object-cover object-top"
                     priority
                   />
-                  <LiveTimerOverlay idioma={idioma} texto={t("liveTimer.working")} />
+                  <LiveTimerOverlay
+                    idioma={idioma}
+                    texto={t("liveTimer.working")}
+                    textoInicio={t("liveTimer.startedAt")}
+                  />
                 </div>
               </div>
 

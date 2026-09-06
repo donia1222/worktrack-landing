@@ -887,6 +887,7 @@
     "text": "Do you have an hourly job? Your hours, always under control with\nWorkTimeControl."
   },
   "liveTimer": {
-    "working": "You're working"
+    "working": "You're working",
+    "startedAt": "Started at"
   }
 }

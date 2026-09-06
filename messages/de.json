@@ -886,6 +886,7 @@
     "text": "Hast du einen Stundenjob? Deine Stunden, immer unter Kontrolle mit\nWorkTimeControl."
   },
   "liveTimer": {
-    "working": "Du arbeitest"
+    "working": "Du arbeitest",
+    "startedAt": "Gestartet um"
   }
 }
