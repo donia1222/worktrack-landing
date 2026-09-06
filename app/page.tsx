@@ -27,8 +27,8 @@ export default function Home() {
       <main className="overflow-x-clip">
         <Hero />
         <ScrollTextReveal />
-        <AppShowcase />
         <AutoTimerGeofence />
+        <AppShowcase />
 
         {/* El reloj sube al cuarto puesto: es la novedad y lo que casi ningún
             competidor tiene. Pero no va justo bajo el hero — la mayoría de
