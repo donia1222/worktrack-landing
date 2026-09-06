@@ -880,5 +880,8 @@
         "body": "If your phone is away, it sends when you meet again."
       }
     }
+  },
+  "scrollReveal": {
+    "text": "Do you have an hourly job? Your hours, always under control with\nWorkTimeControl."
   }
 }

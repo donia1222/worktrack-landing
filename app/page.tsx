@@ -14,6 +14,7 @@ import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import AppleWatchTeaser from '@/components/AppleWatchTeaser'
+import ScrollTextReveal from '@/components/ScrollTextReveal'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Navigation />
       <main className="overflow-x-hidden">
         <Hero />
+        <ScrollTextReveal />
         <AppShowcase />
         <AutoTimerGeofence />
 

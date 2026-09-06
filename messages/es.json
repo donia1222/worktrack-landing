@@ -874,5 +874,8 @@
         "body": "Si el móvil no está cerca, se envía al reencontrarse."
       }
     }
+  },
+  "scrollReveal": {
+    "text": "¿Tienes un trabajo por horas? Tus horas, siempre bajo control con\nWorkTimeControl."
   }
 }

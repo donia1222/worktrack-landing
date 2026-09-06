@@ -879,5 +879,8 @@
         "body": "Ist das Handy weg, wird später gesendet."
       }
     }
+  },
+  "scrollReveal": {
+    "text": "Hast du einen Stundenjob? Deine Stunden, immer unter Kontrolle mit\nWorkTimeControl."
   }
 }
