@@ -6,6 +6,7 @@ import MobileDownloadBanner from '@/components/MobileDownloadBanner'
 import AppWrapper from '@/components/AppWrapper'
 import StructuredData from '@/components/StructuredData'
 import { Analytics } from '@vercel/analytics/next'
+import MetaPixel from '@/components/MetaPixel'
 
 export const metadata: Metadata = {
   // Corto a propósito: Google corta el título sobre los 60 caracteres, y
@@ -117,6 +118,7 @@ export default function RootLayout({
           </AppWrapper>
         </LanguageProvider>
         <Analytics />
+        <MetaPixel />
       </body>
     </html>
   )
