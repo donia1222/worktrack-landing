@@ -5,9 +5,35 @@ import { useLanguage } from "@/lib/language"
 import { WatchDrawing } from "./AppleWatchTeaser"
 import Image from "next/image"
 import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
+import { useAppLoading } from "@/lib/loading"
+
+// El chip "tu trabajo · tus horas · tu control": en móvil hay que bajar un
+// poco para verlo, así que en vez de estar siempre visible entra con un
+// rebote suave palabra a palabra cada vez que aparece en pantalla, y se
+// desvanece igual al subir — se siente vivo en lugar de estático.
+const taglineContenedor = {
+  oculto: {},
+  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+}
+
+const taglinePalabra = {
+  oculto: { opacity: 0, y: 18, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 300, damping: 15 },
+  },
+}
 
 export default function Hero() {
   const { t, language } = useLanguage()
+  // Mientras dure el loading de arranque, el contenido está en el DOM con
+  // opacidad 0: si el tagline animara "al entrar en pantalla" ya se
+  // dispararía y acabaría ahí abajo, invisible. Se frena hasta que el
+  // loading termine.
+  const cargando = useAppLoading()
   // El reloj solo tiene capturas en es/en/de: fuera de esos, se enseña en
   // inglés antes que una imagen rota.
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
@@ -238,19 +264,35 @@ export default function Hero() {
 
             {/* Tagline below image */}
             <div className="mt-8 flex justify-center">
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border-2 border-slate-200/50 shadow-lg">
-                <span className="text-base font-bold text-blue-600 border-b-2 border-blue-600 pb-0.5">
+              <motion.div
+                variants={taglineContenedor}
+                initial="oculto"
+                animate={cargando ? "oculto" : undefined}
+                whileInView={!cargando ? "visible" : undefined}
+                viewport={{ once: false, amount: 0.7 }}
+                className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border-2 border-slate-200/50 shadow-lg"
+              >
+                <motion.span
+                  variants={taglinePalabra}
+                  className="text-base font-bold text-blue-600 border-b-2 border-blue-600 pb-0.5"
+                >
                   {t("hero.tagline.work")}
-                </span>
+                </motion.span>
                 <span className="text-slate-400">•</span>
-                <span className="text-base font-bold text-purple-600 border-b-2 border-purple-600 pb-0.5">
+                <motion.span
+                  variants={taglinePalabra}
+                  className="text-base font-bold text-purple-600 border-b-2 border-purple-600 pb-0.5"
+                >
                   {t("hero.tagline.hours")}
-                </span>
+                </motion.span>
                 <span className="text-slate-400">•</span>
-                <span className="text-base font-bold text-green-600 border-b-2 border-green-600 pb-0.5">
+                <motion.span
+                  variants={taglinePalabra}
+                  className="text-base font-bold text-green-600 border-b-2 border-green-600 pb-0.5"
+                >
                   {t("hero.tagline.control")}
-                </span>
-              </div>
+                </motion.span>
+              </motion.div>
             </div>
 
             {/* Botón de descarga — solo móvil, aquí abajo del todo */}

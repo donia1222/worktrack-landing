@@ -36,7 +36,18 @@ function mezclarColor(t: number): string {
 
 export default function ScrollTextReveal() {
   const { t } = useLanguage()
-  const words = t("scrollReveal.text").split(" ")
+
+  // Las líneas del texto (separadas con "\n" en el JSON de traducciones) se
+  // fuerzan con <br/>: así "WorkTimeControl" siempre cae en su propia línea
+  // en vez de partirse donde toque según el ancho de pantalla.
+  const words = t("scrollReveal.text")
+    .split("\n")
+    .flatMap((linea, li) =>
+      linea
+        .trim()
+        .split(" ")
+        .map((texto, wi) => ({ texto, saltoAntes: li > 0 && wi === 0 }))
+    )
 
   const containerRef = useRef<HTMLDivElement>(null)
   const [progreso, setProgreso] = useState(0)
@@ -98,13 +109,16 @@ export default function ScrollTextReveal() {
     >
       <div className={`${posicionTexto} z-10 flex h-screen items-center justify-center px-6`}>
         <p className="max-w-4xl text-center text-3xl font-bold leading-snug sm:text-4xl lg:text-5xl">
-          {words.map((word, i) => {
+          {words.map(({ texto, saltoAntes }, i) => {
             const inicio = i / words.length
             const fin = inicio + 1 / words.length
             const progresoPalabra = Math.min(1, Math.max(0, (progreso - inicio) / (fin - inicio)))
             return (
-              <span key={i} className="mr-[0.28em] inline-block" style={{ color: mezclarColor(progresoPalabra) }}>
-                {word}
+              <span key={i}>
+                {saltoAntes && <br />}
+                <span className="mr-[0.28em] inline-block" style={{ color: mezclarColor(progresoPalabra) }}>
+                  {texto}
+                </span>
               </span>
             )
           })}

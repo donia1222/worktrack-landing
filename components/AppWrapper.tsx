@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import LoadingScreen from './LoadingScreen'
+import { LoadingProvider } from '@/lib/loading'
 
 interface AppWrapperProps {
   children: React.ReactNode
@@ -20,7 +21,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
   }, [])
 
   return (
-    <>
+    <LoadingProvider value={isLoading}>
       <AnimatePresence mode="wait">
         {isLoading && <LoadingScreen isVisible={isLoading} />}
       </AnimatePresence>
@@ -28,6 +29,6 @@ export default function AppWrapper({ children }: AppWrapperProps) {
       <div className={isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}>
         {children}
       </div>
-    </>
+    </LoadingProvider>
   )
 }
