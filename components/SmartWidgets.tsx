@@ -49,10 +49,10 @@ export default function SmartWidgets() {
               className="relative w-full max-w-[300px]"
             >
               <Image
-                src="/widget.png"
+                src="/new/showcase-widget.jpg"
                 alt="Working Time Control"
-                width={400}
-                height={800}
+                width={1206}
+                height={2494}
                 className="h-auto w-full"
               />
             </motion.div>
