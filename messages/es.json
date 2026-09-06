@@ -879,5 +879,8 @@
   },
   "scrollReveal": {
     "text": "¿Tienes un trabajo por horas? Tus horas, siempre bajo control con\nWorkTimeControl."
+  },
+  "liveTimer": {
+    "working": "Estás trabajando"
   }
 }

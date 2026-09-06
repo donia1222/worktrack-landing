@@ -885,5 +885,8 @@
   },
   "scrollReveal": {
     "text": "Do you have an hourly job? Your hours, always under control with\nWorkTimeControl."
+  },
+  "liveTimer": {
+    "working": "You're working"
   }
 }

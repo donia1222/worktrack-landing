@@ -3,6 +3,7 @@
 import { Sparkles, Zap, BarChart3, CalendarCheck, ArrowRight, Play, Watch } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import { WatchDrawing } from "./AppleWatchTeaser"
+import LiveTimerOverlay from "./LiveTimerOverlay"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
@@ -38,14 +39,15 @@ export default function Hero() {
   // inglés antes que una imagen rota.
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
-  // La captura del teléfono en el Hero: solo hay versión propia en es/de,
-  // así que en inglés (y cualquier otro idioma) se enseña la de siempre.
+  // La captura del teléfono en el Hero: la misma que en el bloque de
+  // AutoTimer (AutoTimerGeofence.tsx) — ahora que hay versión propia en los
+  // tres idiomas, se enseña la que toque en cada uno.
   const heroImage =
     idioma === "es"
-      ? "/new/1-autotimer-es.png"
+      ? "/new/3-timer-es.png"
       : idioma === "de"
-        ? "/new/1-autotimer-de.png"
-        : "/new/home-2026-3.webp"
+        ? "/new/3-timer-de.png"
+        : "/new/3-timer-en.png"
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
 
@@ -223,27 +225,7 @@ export default function Hero() {
                     className="object-cover object-top"
                     priority
                   />
-                </div>
-              </div>
-
-              {/* Floating UI elements */}
-              <div
-                className="absolute top-[45%] -left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce ml-4"
-                style={{ animationDuration: "2s" }}
-              >
-                <div className="flex items-center gap-2 ">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-xs font-medium text-slate-700">GPS Timer</span>
-                </div>
-              </div>
-
-              <div
-                className="absolute bottom-1/3 -right-8 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-xl animate-bounce mr-6"
-                style={{ animationDuration: "2.5s", animationDelay: "0.5s" }}
-              >
-                <div className="flex items-center gap-2">
-                  <BarChart3 className="w-4 h-4 text-blue-600" />
-                  <span className="text-xs font-medium text-slate-700">PDF Reports</span>
+                  <LiveTimerOverlay idioma={idioma} texto={t("liveTimer.working")} />
                 </div>
               </div>
 
