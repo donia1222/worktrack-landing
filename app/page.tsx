@@ -20,7 +20,11 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="overflow-x-hidden">
+      {/* overflow-x-clip, no overflow-x-hidden: hidden fuerza overflow-y a
+          "auto" en cuanto un eje deja de ser "visible", y eso rompe
+          position:sticky en cualquier hijo (deja de anclarse al viewport).
+          clip da el mismo recorte horizontal sin ese efecto secundario. */}
+      <main className="overflow-x-clip">
         <Hero />
         <ScrollTextReveal />
         <AppShowcase />
