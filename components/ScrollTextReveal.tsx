@@ -25,9 +25,15 @@ type Fase = "antes" | "fijo" | "despues"
 const COLOR_APAGADO: [number, number, number] = [148, 163, 184] // slate-400
 const COLOR_VIVO: [number, number, number] = [15, 23, 42] // slate-900
 
-function mezclarColor(t: number): string {
+// El nombre de la app, al revelarse, no se queda en el mismo gris oscuro que
+// el resto de la frase: coge los dos colores del logo de la cabecera
+// (Navigation.tsx), "Work" en azul y "TimeControl." en índigo.
+const COLOR_WORK: [number, number, number] = [0, 122, 255] // #007AFF
+const COLOR_TIMECONTROL: [number, number, number] = [88, 86, 214] // #5856D6
+
+function mezclarColor(t: number, destino: [number, number, number] = COLOR_VIVO): string {
   const [r1, g1, b1] = COLOR_APAGADO
-  const [r2, g2, b2] = COLOR_VIVO
+  const [r2, g2, b2] = destino
   const r = Math.round(r1 + (r2 - r1) * t)
   const g = Math.round(g1 + (g2 - g1) * t)
   const b = Math.round(b1 + (b2 - b1) * t)
@@ -113,11 +119,24 @@ export default function ScrollTextReveal() {
             const inicio = i / words.length
             const fin = inicio + 1 / words.length
             const progresoPalabra = Math.min(1, Math.max(0, (progreso - inicio) / (fin - inicio)))
+
+            // El nombre de la app va partido en dos colores, como en la
+            // cabecera: "Work" + "TimeControl." — el resto de palabras se
+            // pintan normal, en un solo tramo.
+            const esNombreApp = texto === "WorkTimeControl."
+
             return (
               <span key={i}>
                 {saltoAntes && <br />}
-                <span className="mr-[0.28em] inline-block" style={{ color: mezclarColor(progresoPalabra) }}>
-                  {texto}
+                <span className="mr-[0.28em] inline-block">
+                  {esNombreApp ? (
+                    <>
+                      <span style={{ color: mezclarColor(progresoPalabra, COLOR_WORK) }}>Work</span>
+                      <span style={{ color: mezclarColor(progresoPalabra, COLOR_TIMECONTROL) }}>TimeControl.</span>
+                    </>
+                  ) : (
+                    <span style={{ color: mezclarColor(progresoPalabra) }}>{texto}</span>
+                  )}
                 </span>
               </span>
             )
