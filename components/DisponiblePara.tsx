@@ -12,10 +12,10 @@ import { useLanguage } from "@/lib/language"
  * isla del teléfono, la cámara del iPad, la corona del reloj— y todos comparten
  * grosor de línea, así que juntos parecen una familia y no un pegote.
  *
- * El Mac no está. La app se ejecuta en Apple Silicon y ya aprovecha el ancho,
- * pero hasta que no esté probado de verdad no se anuncia: prometer un aparato
- * en la landing y que se vea mal es peor que no nombrarlo. Cuando lo esté,
- * basta con quitar el comentario de la entrada `mac` de abajo.
+ * El Mac entra el 07/09/2026, despues de probarlo: la app corre en Apple
+ * Silicon y desde el ancho de 1100pt aprovecha la ventana en vez de quedarse
+ * en una columna de telefono en medio de la pantalla. Se nombra ahora porque
+ * esta comprobado, no porque sea compatible sobre el papel.
  */
 
 const trazo = {
@@ -63,24 +63,23 @@ function AppleWatch() {
   )
 }
 
-// Reservado: ver el comentario de arriba.
-// function Mac() {
-//   return (
-//     <svg viewBox="0 0 40 40" className="h-9 w-9" aria-hidden="true">
-//       <g {...trazo}>
-//         <rect x="8" y="9" width="24" height="16" rx="2" />
-//         <path d="M5 29h30l-2-4H7l-2 4Z" />
-//         <line x1="17" y1="27" x2="23" y2="27" />
-//       </g>
-//     </svg>
-//   )
-// }
+function Mac() {
+  return (
+    <svg viewBox="0 0 40 40" className="h-9 w-9" aria-hidden="true">
+      <g {...trazo}>
+        <rect x="8" y="9" width="24" height="16" rx="2" />
+        <path d="M5 29h30l-2-4H7l-2 4Z" />
+        <line x1="17" y1="27" x2="23" y2="27" />
+      </g>
+    </svg>
+  )
+}
 
 const aparatos = [
   { clave: "iphone", nombre: "iPhone", Dibujo: IPhone },
   { clave: "ipad", nombre: "iPad", Dibujo: IPad },
   { clave: "watch", nombre: "Apple Watch", Dibujo: AppleWatch },
-  // { clave: "mac", nombre: "Mac", Dibujo: Mac },
+  { clave: "mac", nombre: "Mac", Dibujo: Mac },
 ]
 
 export default function DisponiblePara({ className = "" }: { className?: string }) {
@@ -93,7 +92,7 @@ export default function DisponiblePara({ className = "" }: { className?: string 
       <span className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
         {t("hero.disponible")}
       </span>
-      <div className="flex items-center gap-7 sm:gap-9">
+      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 sm:gap-x-8">
         {aparatos.map(({ clave, nombre, Dibujo }) => (
           <div key={clave} className="flex flex-col items-center gap-1 text-slate-700">
             <Dibujo />
