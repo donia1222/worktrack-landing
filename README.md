@@ -6,6 +6,7 @@
 
 
 
+
 - ⚡ **Next.js 15** with App Router and TypeScript
 - 🎨 **Tailwind CSS** for responsive design
 - 🌍 **Trilingual**: Spanish, English, German
