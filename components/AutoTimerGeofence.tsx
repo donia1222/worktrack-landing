@@ -19,6 +19,16 @@ export default function AutoTimerGeofence() {
         ? "/new/1-autotimer-de.png"
         : "/new/home-2026-3.webp"
 
+  // El punto azul de ubicación, en el mapa, con su aro semitransparente: en
+  // la captura está quieto. Centro medido a mano sobre cada imagen (varían
+  // un poco entre idiomas porque no son exactamente la misma captura).
+  const centroPunto =
+    language === "es"
+      ? { left: "50.5%", top: "38.8%" }
+      : language === "de"
+        ? { left: "49.9%", top: "38.9%" }
+        : { left: "50.5%", top: "35.1%" }
+
   const points = [
     {
       icon: PlayCircle,
@@ -54,6 +64,17 @@ export default function AutoTimerGeofence() {
                     fill
                     className="object-cover object-top"
                   />
+
+                  {/* El aro del punto de ubicación, animado encima de la
+                      captura: en la imagen está quieto, aquí pulsa hacia
+                      fuera y se desvanece, en bucle, como el "estoy aquí" de
+                      Maps de verdad. */}
+                  <div
+                    className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2"
+                    style={{ left: centroPunto.left, top: centroPunto.top, width: "20%", aspectRatio: "1 / 1" }}
+                  >
+                    <div className="absolute inset-0 animate-ping rounded-full bg-emerald-400/40" />
+                  </div>
                 </div>
               </div>
             </div>
