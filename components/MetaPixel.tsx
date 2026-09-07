@@ -51,7 +51,15 @@ export default function MetaPixel() {
       if (!enlace) return
       const destino = enlace.getAttribute('href') || ''
       if (!destino.includes('apps.apple.com')) return
-      window.fbq?.('track', 'Lead', { content_name: 'app_store' })
+      // De donde salio el toque. Saber que dos personas descargaron no dice
+      // nada; saber si lo hicieron desde el hero o despues de leerse la pagina
+      // entera dice donde esta el trabajo. `data-zona` va en cada enlace y, si
+      // alguno se queda sin poner, cae en la seccion que lo contiene.
+      const zona =
+        enlace.closest<HTMLElement>('[data-zona]')?.dataset.zona ||
+        enlace.closest('section')?.id ||
+        'sin_marcar'
+      window.fbq?.('track', 'Lead', { content_name: `app_store_${zona}`, content_category: zona })
     }
 
     window.addEventListener('scroll', alBajar, { passive: true })

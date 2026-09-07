@@ -29,7 +29,7 @@ import { useEffect, useState } from "react";
 // (medido sobre el PNG de 368x448 del simulador) y se repinta con el
 // cronómetro real. El formato de Apple Watch no rellena la hora con un cero
 // ("9:03:15", no "09:03:15"), a diferencia del teléfono.
-function tiempoFormateadoReloj(segundos: number) {
+export function tiempoFormateadoReloj(segundos: number) {
   const h = Math.floor(segundos / 3600);
   const m = Math.floor((segundos % 3600) / 60);
   const s = segundos % 60;
@@ -40,7 +40,7 @@ function tiempoFormateadoReloj(segundos: number) {
 // captura original): tampoco es de verdad, así que se tapa y se repinta con
 // la hora real de quien visita la página. En inglés con AM/PM, en
 // español/alemán en 24h — igual que la hora de inicio del teléfono.
-function horaSistemaFormateada(idioma: string, fecha: Date) {
+export function horaSistemaFormateada(idioma: string, fecha: Date) {
   if (idioma === "en") {
     return new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", hour12: true }).format(fecha);
   }
@@ -51,7 +51,7 @@ function horaSistemaFormateada(idioma: string, fecha: Date) {
   }).format(fecha);
 }
 
-function useRelojDelSistema() {
+export function useRelojDelSistema() {
   const [ahora, setAhora] = useState(() => new Date());
 
   useEffect(() => {
@@ -128,61 +128,46 @@ const VENTAJAS = [
   { icono: RefreshCw, clave: "sync", color: "text-amber-600 bg-amber-50" },
 ];
 
+/**
+ * Debajo del héroe animado (AppleWatchScrollHero, que ya enseña el reloj
+ * grande y el título "Tus horas, en la muñeca" como overlay durante el
+ * scroll fijado), solo queda la insignia pequeña, la descripción y la
+ * lista de funciones — repetir el título aquí sería redundante justo
+ * después de haberlo visto en grande encima del reloj.
+ */
 export default function AppleWatchTeaser() {
-  const { t, language } = useLanguage();
-  // Solo hay capturas de los tres idiomas de la landing; si algun dia hay
-  // un idioma mas, se le ensena el ingles antes que una imagen rota.
-  const idioma = ["es", "en", "de"].includes(language) ? language : "en";
+  const { t } = useLanguage();
 
   return (
-    <section id="apple-watch" className="py-16 lg:py-24 bg-gradient-to-b from-white to-slate-50">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* El reloj, sobre un halo del color de la app */}
-          <div className="relative flex justify-center">
-            <div className="absolute h-[320px] w-[320px] rounded-full bg-gradient-to-br from-indigo-200/50 to-transparent blur-2xl" />
-            <div className="relative">
-              <WatchDrawing idioma={idioma} />
-            </div>
-          </div>
+    <section className="pb-16 lg:pb-24 bg-gradient-to-b from-white to-slate-50">
+      <div className="mx-auto max-w-2xl px-6 text-center">
+        <span className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-semibold text-indigo-700">
+          {t("watch.badge")}
+        </span>
 
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-semibold text-indigo-700">
-              {t("watch.badge")}
-            </span>
+        <p className="mt-5 text-lg leading-relaxed text-slate-600">
+          {t("watch.description")}
+        </p>
 
-            <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
-              {t("watch.title")}{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                {t("watch.titleAccent")}
+        <div className="mt-8 grid gap-3 text-left sm:grid-cols-2">
+          {VENTAJAS.map(({ icono: Icono, clave, color }) => (
+            <div
+              key={clave}
+              className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/70 p-4 backdrop-blur-sm"
+            >
+              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${color}`}>
+                <Icono className="h-[18px] w-[18px]" />
               </span>
-            </h2>
-
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
-              {t("watch.description")}
-            </p>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {VENTAJAS.map(({ icono: Icono, clave, color }) => (
-                <div
-                  key={clave}
-                  className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/70 p-4 backdrop-blur-sm"
-                >
-                  <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${color}`}>
-                    <Icono className="h-[18px] w-[18px]" />
-                  </span>
-                  <span className="text-sm">
-                    <span className="block font-semibold text-slate-900">
-                      {t(`watch.features.${clave}.title`)}
-                    </span>
-                    <span className="mt-0.5 block leading-snug text-slate-600">
-                      {t(`watch.features.${clave}.body`)}
-                    </span>
-                  </span>
-                </div>
-              ))}
+              <span className="text-sm">
+                <span className="block font-semibold text-slate-900">
+                  {t(`watch.features.${clave}.title`)}
+                </span>
+                <span className="mt-0.5 block leading-snug text-slate-600">
+                  {t(`watch.features.${clave}.body`)}
+                </span>
+              </span>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

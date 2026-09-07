@@ -58,9 +58,16 @@ export default function MobileDownloadBanner() {
   }
 
   const handleClick = () => {
-    if (platform === 'ios') {
-      window.location.href = APP_STORE_URL
-    }
+    if (platform !== 'ios') return
+    // A mano, porque esto no es un enlace: el pixel escucha clics en <a> y este
+    // banner es un div que navega por JS, asi que se le escapaba entero. Y es
+    // el boton de descarga que ve la mayoria del trafico de anuncios, que llega
+    // por movil.
+    window.fbq?.('track', 'Lead', {
+      content_name: 'app_store_banner_movil',
+      content_category: 'banner_movil',
+    })
+    window.location.href = APP_STORE_URL
   }
 
   if (!platform) return null
