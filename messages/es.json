@@ -837,7 +837,8 @@
         "title": "Y lo que has ganado con ellas",
         "description": "Ingresos del mes, horas semana a semana, y el mes con más y con menos trabajo."
       }
-    }
+    },
+    "swipe": "Desliza para ver más"
   },
   "autoTimerGeofence": {
     "badge": "Ubicación Inteligente",

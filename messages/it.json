@@ -835,7 +835,8 @@
         "title": "E quanto ci hai guadagnato",
         "description": "Il reddito del mese, le ore settimana per settimana e i mesi in cui hai lavorato di più e di meno."
       }
-    }
+    },
+    "swipe": "Scorri per vedere di più"
   },
   "autoTimerGeofence": {
     "badge": "Posizione intelligente",

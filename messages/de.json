@@ -835,7 +835,8 @@
         "title": "Und was du damit verdient hast",
         "description": "Einnahmen im Monat, Stunden Woche für Woche, und die Monate mit den meisten und wenigsten Stunden."
       }
-    }
+    },
+    "swipe": "Wische für mehr"
   },
   "autoTimerGeofence": {
     "badge": "Intelligenter Standort",

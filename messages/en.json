@@ -835,7 +835,8 @@
         "title": "And what you earned with them",
         "description": "Monthly income, hours week by week, and the months you worked most and least."
       }
-    }
+    },
+    "swipe": "Swipe to see more"
   },
   "autoTimerGeofence": {
     "badge": "Smart Location",

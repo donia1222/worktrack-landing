@@ -835,7 +835,8 @@
         "title": "En wat je ermee verdiende",
         "description": "Je maandinkomen, je uren per week, en de maanden waarin je het meest en het minst werkte."
       }
-    }
+    },
+    "swipe": "Veeg voor meer"
   },
   "autoTimerGeofence": {
     "badge": "Slimme locatie",

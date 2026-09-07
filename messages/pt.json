@@ -835,7 +835,8 @@
         "title": "E quanto ganhou com elas",
         "description": "O rendimento do mês, as horas semana a semana e os meses em que trabalhou mais e menos."
       }
-    }
+    },
+    "swipe": "Deslize para ver mais"
   },
   "autoTimerGeofence": {
     "badge": "Localização inteligente",

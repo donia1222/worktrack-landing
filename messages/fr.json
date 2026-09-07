@@ -835,7 +835,8 @@
         "title": "Et ce que vous avez gagné",
         "description": "Vos revenus du mois, vos heures semaine par semaine, et les mois où vous avez le plus et le moins travaillé."
       }
-    }
+    },
+    "swipe": "Faites glisser pour voir plus"
   },
   "autoTimerGeofence": {
     "badge": "Localisation intelligente",

@@ -57,13 +57,28 @@ export default function AppleWatchScrollHero() {
   // opacidad (así el blanco de detrás no se ve vacío durante el
   // crecimiento), y en el remate final vuelve a crecer, esta vez él,
   // sobreponiéndose al reloj que se encoge y se difumina detrás.
-  const desenfoqueFondo = useTransform(scrollYProgress, [0, 0.22], [18, 1])
-  const filtroFondo = useMotionTemplate`blur(${desenfoqueFondo}px)`
+  const desenfoqueFondo = useTransform(scrollYProgress, [0, 0.22], [18, 0])
+  // `none` en cuanto el desenfoque se acaba, en vez de un `blur(0px)`
+  // perpetuo. Un filtro activo obliga al navegador a rasterizar el texto en
+  // una capa aparte —y a dejarla ahi mientras exista—, asi que las letras se
+  // veian con los bordes sucios justo cuando mas grandes estan. Ademas esa
+  // capa se recorta al viewport y en movil dejaba una linea fina cruzando la
+  // pantalla por encima del texto.
+  const filtroFondo = useTransform(desenfoqueFondo, (px) =>
+    px < 0.15 ? 'none' : `blur(${px}px)`,
+  )
   const opacidadFondo = useTransform(scrollYProgress, [0, 0.1, 0.22], [0, 0.5, 1])
-  // En móvil el texto ya ocupa casi todo el ancho de la pantalla desde el
-  // principio (13vw × 11 caracteres): crecer 1.6x lo saca del viewport y se
-  // corta por los lados. En móvil crece bastante menos.
-  const escalaFondo = useTransform(scrollYProgress, [0.86, 1], [1, escritorio ? 1.6 : 1.08])
+
+  // El texto se dibuja siempre al tamaño mas grande al que va a llegar, y la
+  // escala lo *encoge* hasta que toca crecer. Al reves —dibujarlo pequeño y
+  // agrandarlo— el navegador estira los pixeles que ya habia pintado y las
+  // letras salen borrosas; encogiendo, el trazo se mantiene limpio.
+  //
+  // En movil el texto ya ocupa casi todo el ancho desde el principio
+  // (13vw × 11 caracteres), asi que crece poco: 1.6x lo sacaria del viewport
+  // y se cortaria por los lados.
+  const CRECIMIENTO = escritorio ? 1.6 : 1.08
+  const escalaFondo = useTransform(scrollYProgress, [0.86, 1], [1 / CRECIMIENTO, 1])
 
   // Timer (con el cronómetro en vivo) → calendario → estadísticas.
   const opacidadTimer = useTransform(scrollYProgress, [0, 0.2, 0.24], [1, 1, 0])
@@ -89,7 +104,7 @@ export default function AppleWatchScrollHero() {
         <div className="pointer-events-none absolute inset-0 flex translate-y-[6%] items-center justify-center">
           <motion.p
             style={{ opacity: opacidadFondo, filter: filtroFondo, scale: escalaFondo }}
-            className="select-none whitespace-nowrap text-center text-[13vw] font-black leading-none tracking-tight text-slate-300 sm:text-[10vw]"
+            className="select-none whitespace-nowrap text-center text-[14vw] font-black leading-none tracking-tight text-slate-300 antialiased [transform:translateZ(0)] sm:text-[16vw]"
           >
             Apple Watch
           </motion.p>
@@ -166,7 +181,10 @@ export default function AppleWatchScrollHero() {
               style={{ opacity: opacidadOverlay }}
               className="absolute inset-0 flex items-center justify-center bg-black/60 p-4 text-center"
             >
-              <motion.p style={{ y: yOverlay }} className="text-base font-bold leading-snug text-white">
+              <motion.p
+                style={{ y: yOverlay }}
+                className="text-balance text-[15px] font-bold leading-tight text-white sm:text-base"
+              >
                 {t("watch.title")} <span className="text-indigo-300">{t("watch.titleAccent")}</span>
               </motion.p>
             </motion.div>
