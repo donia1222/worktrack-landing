@@ -785,11 +785,6 @@
         "badge": "Relatórios",
         "title": "As suas horas, em números claros",
         "description": "Cada dia com a hora de entrada e de saída, o total do período e as horas extra quando as houve."
-      },
-      "salary": {
-        "badge": "Rendimentos",
-        "title": "E quanto ganhou com elas",
-        "description": "O rendimento do mês, as horas semana a semana e os meses em que trabalhou mais e menos."
       }
     },
     "swipe": "Deslize para ver mais"

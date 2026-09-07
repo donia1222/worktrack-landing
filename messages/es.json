@@ -785,11 +785,6 @@
         "badge": "Informes",
         "title": "Tus horas, en números claros",
         "description": "Cada jornada con su hora de entrada y de salida, el total del periodo y las horas extra si las hubo."
-      },
-      "salary": {
-        "badge": "Salario",
-        "title": "Y lo que has ganado con ellas",
-        "description": "Ingresos del mes, horas semana a semana, y el mes con más y con menos trabajo."
       }
     },
     "swipe": "Desliza para ver más"

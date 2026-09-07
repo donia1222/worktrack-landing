@@ -785,11 +785,6 @@
         "badge": "Rapporten",
         "title": "Je uren, in duidelijke cijfers",
         "description": "Elke werkdag met begin- en eindtijd, het totaal van de periode, en de overuren als die er waren."
-      },
-      "salary": {
-        "badge": "Verdiensten",
-        "title": "En wat je ermee verdiende",
-        "description": "Je maandinkomen, je uren per week, en de maanden waarin je het meest en het minst werkte."
       }
     },
     "swipe": "Veeg voor meer"

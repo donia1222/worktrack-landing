@@ -28,13 +28,12 @@ export default function AppShowcase() {
     { key: "dashboard", image: `/app/${idioma}/2-home.png` },
     { key: "register", image: `/app/${idioma}/4-calendario.png` },
     { key: "reports", image: `/app/${idioma}/5-informes.png` },
-    { key: "salary", image: `/app/${idioma}/6-salario.png` },
   ]
 
-  // El escalón de cada columna. Las de fuera caen, las de dentro suben: da la
-  // curva suave del centro sin que ninguna se despegue del grupo.
-  const escalon = ["lg:translate-y-8", "lg:-translate-y-4", "lg:translate-y-4", "lg:-translate-y-8"]
-  const giro = ["lg:-rotate-[2.5deg]", "lg:rotate-[1.5deg]", "lg:-rotate-[1.5deg]", "lg:rotate-[2.5deg]"]
+  // El escalón de cada columna: las de fuera caen y la del medio sube, que es
+  // lo que da la curva sin que ninguna se despegue del grupo.
+  const escalon = ["lg:translate-y-6", "lg:-translate-y-6", "lg:translate-y-6"]
+  const giro = ["lg:-rotate-[2deg]", "lg:rotate-0", "lg:rotate-[2deg]"]
 
   const contenedor = useRef<HTMLDivElement>(null)
   const aLaVista = useInView(contenedor, { once: true, margin: "-80px" })
@@ -78,7 +77,7 @@ export default function AppShowcase() {
               -mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-4 pb-6
               [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
               sm:gap-7
-              lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:px-0 lg:pb-0
+              lg:mx-0 lg:grid lg:grid-cols-3 lg:justify-items-center lg:gap-10 lg:overflow-visible lg:px-0 lg:pb-0
             "
           >
             {items.map((item, i) => (
@@ -87,7 +86,7 @@ export default function AppShowcase() {
                 initial={{ opacity: 0, y: 26 }}
                 animate={aLaVista ? { opacity: 1, y: 0 } : undefined}
                 transition={{ duration: 0.55, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
-                className={`w-[68vw] max-w-[260px] shrink-0 snap-center sm:w-[54vw] lg:w-auto lg:max-w-none ${escalon[i]}`}
+                className={`w-[68vw] max-w-[260px] shrink-0 snap-center sm:w-[54vw] lg:w-full lg:max-w-[268px] ${escalon[i]}`}
               >
                 {/* La captura, con su marco. El giro solo en pantallas
                     grandes: en móvil, con las tarjetas casi tocándose, las
@@ -103,7 +102,7 @@ export default function AppShowcase() {
                         src={item.image}
                         alt={t(`appShowcase.items.${item.key}.title`)}
                         fill
-                        sizes="(max-width: 1024px) 60vw, 260px"
+                        sizes="(max-width: 1024px) 60vw, 268px"
                         className="object-cover object-top"
                       />
                     </div>

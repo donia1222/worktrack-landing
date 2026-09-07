@@ -35,7 +35,7 @@ export default function SmartWidgets() {
   const { t } = useLanguage()
 
   return (
-    <section id="smart-widgets" className="py-16 lg:py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section id="smart-widgets" className="py-20 pb-28 lg:pt-28 lg:pb-36 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* El telefono, sobre un halo del color de la app */}

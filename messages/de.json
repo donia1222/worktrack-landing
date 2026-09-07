@@ -785,11 +785,6 @@
         "badge": "Berichte",
         "title": "Deine Stunden, in klaren Zahlen",
         "description": "Jeder Arbeitstag mit Beginn und Feierabend, die Summe des Zeitraums und Überstunden, wenn es welche gab."
-      },
-      "salary": {
-        "badge": "Verdienst",
-        "title": "Und was du damit verdient hast",
-        "description": "Einnahmen im Monat, Stunden Woche für Woche, und die Monate mit den meisten und wenigsten Stunden."
       }
     },
     "swipe": "Wische für mehr"

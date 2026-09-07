@@ -785,11 +785,6 @@
         "badge": "Reports",
         "title": "Your hours, in clear numbers",
         "description": "Every workday with its start and finish time, the period total, and overtime when there was any."
-      },
-      "salary": {
-        "badge": "Earnings",
-        "title": "And what you earned with them",
-        "description": "Monthly income, hours week by week, and the months you worked most and least."
       }
     },
     "swipe": "Swipe to see more"

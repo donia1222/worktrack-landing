@@ -785,11 +785,6 @@
         "badge": "Rapports",
         "title": "Vos heures, en chiffres clairs",
         "description": "Chaque journée avec son heure de début et de fin, le total de la période, et les heures supplémentaires quand il y en a eu."
-      },
-      "salary": {
-        "badge": "Revenus",
-        "title": "Et ce que vous avez gagné",
-        "description": "Vos revenus du mois, vos heures semaine par semaine, et les mois où vous avez le plus et le moins travaillé."
       }
     },
     "swipe": "Faites glisser pour voir plus"
