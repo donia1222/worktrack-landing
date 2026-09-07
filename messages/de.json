@@ -9,7 +9,8 @@
     "download": "Für iOS herunterladen",
     "autoTimer": "AutoTimer",
     "watch": "Apple Watch",
-    "reports": "Berichte"
+    "reports": "Berichte",
+    "language": "Sprache"
   },
   "loading": {
     "appName": "Working Time Control",
@@ -80,7 +81,8 @@
     },
     "badges": {
       "localStorage": "100% Lokaler Speicher",
-      "languages": "3 Sprachen (ES, EN, DE)"
+      "languages": "8 Sprachen",
+      "tech": "Funktioniert offline — ohne Internet"
     }
   },
   "screenshots": {

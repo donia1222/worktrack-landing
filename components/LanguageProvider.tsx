@@ -1,17 +1,27 @@
 'use client'
 
 import { useState, useEffect, ReactNode } from 'react'
-import { LanguageContext, Language, detectBrowserLanguage } from '@/lib/language'
+import { LanguageContext, Language, detectBrowserLanguage, isLanguage } from '@/lib/language'
 
 // Import translations
 import esMessages from '@/messages/es.json'
 import enMessages from '@/messages/en.json'
 import deMessages from '@/messages/de.json'
+import frMessages from '@/messages/fr.json'
+import itMessages from '@/messages/it.json'
+import ptMessages from '@/messages/pt.json'
+import nlMessages from '@/messages/nl.json'
+import jaMessages from '@/messages/ja.json'
 
-const messages = {
+const messages: Record<Language, any> = {
   es: esMessages,
   en: enMessages,
-  de: deMessages
+  de: deMessages,
+  fr: frMessages,
+  it: itMessages,
+  pt: ptMessages,
+  nl: nlMessages,
+  ja: jaMessages,
 }
 
 interface LanguageProviderProps {
@@ -19,15 +29,18 @@ interface LanguageProviderProps {
 }
 
 export default function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguageState] = useState<Language>('es')
+  const [language, setLanguageState] = useState<Language>('en')
   const [isHydrated, setIsHydrated] = useState(false)
 
   useEffect(() => {
     // Check localStorage first, then browser language
-    const savedLang = localStorage.getItem('worktrack-language') as Language
+    // Validado, no confiado: en localStorage puede haber un idioma que ya no
+    // existe —o que nunca existio— y entonces `messages[language]` era
+    // undefined y la pagina salia con las claves crudas.
+    const savedLang = localStorage.getItem('worktrack-language')
     const detectedLang = detectBrowserLanguage()
-    
-    const initialLang = savedLang || detectedLang
+
+    const initialLang = isLanguage(savedLang) ? savedLang : detectedLang
     setLanguageState(initialLang)
     setIsHydrated(true)
   }, [])
@@ -41,12 +54,21 @@ export default function LanguageProvider({ children }: LanguageProviderProps) {
   const t = (key: string): string => {
     const keys = key.split('.')
     let value: any = messages[language]
-    
+
     for (const k of keys) {
       value = value?.[k]
     }
-    
-    return value || key
+
+    // Si a un idioma le falta una clave, se cae al ingles antes que a la clave
+    // cruda: «hero.title» en mitad de la pagina se ve mucho peor que la misma
+    // frase en ingles.
+    if (typeof value === 'string') return value
+
+    let respaldo: any = messages.en
+    for (const k of keys) {
+      respaldo = respaldo?.[k]
+    }
+    return typeof respaldo === 'string' ? respaldo : key
   }
 
   // Prevent hydration mismatch

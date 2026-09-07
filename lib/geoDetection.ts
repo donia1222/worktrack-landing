@@ -37,11 +37,16 @@ export const COUNTRY_MAPPING: Record<string, CountryConfig> = {
   'AT': { code: 'AT', language: 'de', currency: 'EUR', currencySymbol: '€' },
 
   // European countries -> EUR
-  'FR': { code: 'FR', language: 'es', currency: 'EUR', currencySymbol: '€' },
-  'IT': { code: 'IT', language: 'es', currency: 'EUR', currencySymbol: '€' },
-  'PT': { code: 'PT', language: 'es', currency: 'EUR', currencySymbol: '€' },
-  'NL': { code: 'NL', language: 'en', currency: 'EUR', currencySymbol: '€' },
-  'BE': { code: 'BE', language: 'en', currency: 'EUR', currencySymbol: '€' },
+  'FR': { code: 'FR', language: 'fr', currency: 'EUR', currencySymbol: '€' },
+  'IT': { code: 'IT', language: 'it', currency: 'EUR', currencySymbol: '€' },
+  'PT': { code: 'PT', language: 'pt', currency: 'EUR', currencySymbol: '€' },
+  'NL': { code: 'NL', language: 'nl', currency: 'EUR', currencySymbol: '€' },
+  'BE': { code: 'BE', language: 'nl', currency: 'EUR', currencySymbol: '€' },
+
+  // Los que faltaban: caian en el mapa vacio y de ahi al idioma por defecto.
+  'BR': { code: 'BR', language: 'pt', currency: 'EUR', currencySymbol: '€' },
+  'JP': { code: 'JP', language: 'ja', currency: 'USD', currencySymbol: '$' },
+  'LU': { code: 'LU', language: 'fr', currency: 'EUR', currencySymbol: '€' },
 }
 
 export function getCountryFromNavigator(): string | null {

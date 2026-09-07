@@ -1,0 +1,894 @@
+{
+  "navigation": {
+    "features": "Fonctionnalités",
+    "smartWidgets": "Widgets iOS",
+    "workingPhone": "Démo",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "download": "Télécharger sur iOS",
+    "autoTimer": "AutoTimer",
+    "watch": "Apple Watch",
+    "reports": "Rapports",
+    "language": "Langue"
+  },
+  "loading": {
+    "appName": "Working Time Control",
+    "tagline": "Vos heures, comptées toutes seules",
+    "text": "Chargement..."
+  },
+  "hero": {
+    "title": "Ne pointez",
+    "titleAccent": "plus jamais.",
+    "description": "L'application sait quand vous arrivez au travail et quand vous en partez. Vos heures s'enregistrent seules, et à la fin du mois elles sont déjà additionnées.",
+    "subtitle": "Pour ceux qui sont payés à l'heure, et qui ont plus d'un emploi.",
+    "downloadButton": "Télécharger sur iOS",
+    "iosAvailability": "Disponible uniquement sur iOS pour le moment",
+    "demoButton": "Voir la démo",
+    "tagline": {
+      "work": "Votre travail",
+      "hours": "Vos heures",
+      "control": "Votre contrôle"
+    },
+    "features": {
+      "autoTimer": "Détection GPS intelligente",
+      "widgets": "Widgets iOS",
+      "aiChatbot": "Assistant IA",
+      "calendarSync": "Synchronisation du calendrier",
+      "pdfReports": "Rapports professionnels",
+      "platforms": "iOS et Android"
+    },
+    "gratis": "Gratuit. Sans compte, sans inscription.",
+    "reloj": "Désormais sur Apple Watch"
+  },
+  "features": {
+    "title": "Conçu pour les",
+    "titleAccent": "professionnels",
+    "description": "Construit avec les technologies les plus récentes pour offrir le suivi du temps le plus précis et le plus respectueux de la vie privée. Vos données ne quittent jamais votre appareil.",
+    "items": {
+      "autoTimer": {
+        "title": "Automatisation GPS intelligente",
+        "description": "Réglez-le une fois, oubliez-le pour toujours. Notre géorepérage apprend vos habitudes et compte vos heures avec 99,9 % de précision. Zones de détection réglables de 50 à 500 mètres."
+      },
+      "widgets": {
+        "title": "Widgets iOS avancés et Dynamic Island",
+        "description": "Trois tailles de widgets natifs qui se mettent à jour tout seuls. Activités en direct dans la Dynamic Island sur iPhone 14 Pro et plus. Contrôle complet depuis l'écran verrouillé et l'écran d'accueil."
+      },
+      "jobs": {
+        "title": "Plusieurs emplois à la fois",
+        "description": "Vous jonglez entre plusieurs clients ? Suivez un nombre illimité d'emplois en parallèle, avec des couleurs, des horaires coupés et des tarifs propres à chacun. Parfait pour les indépendants et les intérimaires."
+      },
+      "calendar": {
+        "title": "Votre travail, en un coup d'œil",
+        "description": "Des calendriers clairs montrent vos habitudes de travail d'un seul regard. Synchronisation avec votre calendrier, suivi des congés et export ICS en une touche."
+      },
+      "reports": {
+        "title": "Des rapports prêts à facturer",
+        "description": "Générez un rapport PDF professionnel en quelques secondes. Revenus calculés automatiquement, récapitulatifs prêts pour les impôts et mise en page personnalisable."
+      },
+      "ai": {
+        "title": "IA multimodale (GPT-4 + Gemini)",
+        "description": "Deux IA : GPT-4 Vision et Google Gemini. Analyse les PDF, les photos d'horaires et les contrats de travail. Recherche automatique des règles en dix langues."
+      },
+      "salary": {
+        "title": "Ce que vous gagnez",
+        "description": "Consultez vos revenus du mois, vos heures totales et la comparaison entre les semaines, calculés automatiquement."
+      },
+      "notifications": {
+        "title": "Des notifications utiles",
+        "description": "Une alerte avant que l'AutoTimer démarre ou s'arrête, des rappels d'horaires et un avis quand votre journée est finie. Compatible avec les modes de concentration d'iOS."
+      }
+    },
+    "badges": {
+      "localStorage": "100 % privé — vos données restent sur votre appareil",
+      "languages": "8 langues",
+      "tech": "Fonctionne hors ligne — aucune connexion requise"
+    }
+  },
+  "screenshots": {
+    "badge": "Aperçu",
+    "title": "Découvrez chaque",
+    "titleAccent": "écran",
+    "description": "Une interface claire, pensée pour compter vos heures sans effort",
+    "items": {
+      "dashboard": {
+        "title": "Écran principal",
+        "description": "Vue d'ensemble avec vos emplois actifs, le calendrier et les accès rapides"
+      },
+      "reports": {
+        "title": "Rapports détaillés",
+        "description": "Statistiques complètes avec graphiques et détail par emploi"
+      },
+      "aiBot": {
+        "title": "Enregistrez n'importe quel jour",
+        "description": "Travail, repos, vacances ou maladie — en quelques secondes"
+      },
+      "settings": {
+        "title": "Réglages souples",
+        "description": "Adaptez chaque détail de l'application à votre situation"
+      }
+    }
+  },
+  "exportReports": {
+    "badge": "Rapports professionnels",
+    "title": "Vos heures,",
+    "titleAccent": "prêtes à envoyer",
+    "description": "Générez un rapport PDF par semaine, par mois, par année ou sur la période de votre choix. En une seule touche.",
+    "processTitle": "Comment ça marche",
+    "demoTitle": "Tout dans un seul rapport",
+    "accuracy": {
+      "title": "Toujours à jour",
+      "text": "Calculé en direct à partir de vos enregistrements"
+    },
+    "supportedFormats": {
+      "pdf": "Export PDF",
+      "photo": "Semaine, mois ou année",
+      "location": "Période personnalisée",
+      "multilang": "Dix langues"
+    },
+    "capabilities": {
+      "schedules": {
+        "title": "Rapports PDF",
+        "description": "Générez des rapports professionnels par semaine, mois, année ou sur la période qui vous arrange.",
+        "feature1": "Heures totales et jours travaillés",
+        "feature2": "Détail par emploi",
+        "feature3": "Une touche pour exporter"
+      },
+      "calendar": {
+        "title": "Activité récente",
+        "description": "Consultez et modifiez vos enregistrements à l'instant, filtrés par emploi ou par période.",
+        "feature1": "Modifier ou supprimer un enregistrement",
+        "feature2": "Historique complet",
+        "feature3": "Filtrer par emploi"
+      },
+      "legal": {
+        "title": "Données de facturation",
+        "description": "Ajoutez vos informations fiscales et professionnelles pour que le PDF soit prêt à envoyer.",
+        "feature1": "Logo et coordonnées",
+        "feature2": "Tarifs horaires",
+        "feature3": "Revenus calculés automatiquement"
+      }
+    },
+    "steps": {
+      "capture": {
+        "title": "Choisissez la période",
+        "description": "Semaine, mois, année ou dates au choix — c'est vous qui décidez ce que vous voulez voir."
+      },
+      "analyze": {
+        "title": "Vérifiez vos heures",
+        "description": "Le détail des heures totales, des jours travaillés et de l'activité récente pour chaque emploi."
+      },
+      "export": {
+        "title": "Exportez en PDF",
+        "description": "Une touche pour générer un PDF professionnel, prêt à garder ou à envoyer."
+      }
+    }
+  },
+  "smartWidgets": {
+    "badge": "iOS natif",
+    "title": "Sur votre écran d'accueil,",
+    "titleAccent": "sans ouvrir l'app",
+    "description": "Trois tailles de widgets qui se tiennent à jour toutes seules. Un regard suffit pour savoir où en est votre journée.",
+    "sizesTitle": "Choisissez celui qui vous va",
+    "sizesDescription": "Les trois affichent des données actuelles. Changez quand vous voulez.",
+    "sizes": {
+      "small": {
+        "title": "Petit",
+        "description": "Le compteur en cours, avec l'emploi et les heures du jour."
+      },
+      "medium": {
+        "title": "Moyen",
+        "description": "La journée et le résumé de la semaine, côte à côte."
+      },
+      "large": {
+        "title": "Grand",
+        "description": "Toute la semaine avec le mini-calendrier et le total en cours."
+      }
+    },
+    "features": {
+      "realTime": {
+        "title": "Toujours à jour",
+        "description": "Le widget se rafraîchit pendant que vous travaillez. Rien à ouvrir."
+      },
+      "dynamicIsland": {
+        "title": "Dynamic Island",
+        "description": "Votre journée en cours s'affiche dans la Dynamic Island, et vous pouvez l'arrêter directement là."
+      },
+      "oneTap": {
+        "title": "Une touche et vous y êtes",
+        "description": "Touchez le widget et vous arrivez droit sur l'écran qu'il vous faut."
+      }
+    }
+  },
+  "workingPhone": {
+    "badge": "Démo",
+    "title": "Working Time Control",
+    "titleAccent": "en action",
+    "description": "Une démo interactive avec de vrais écrans de l'application. Regardez comment le minuteur GPS, le calendrier et l'assistant IA travaillent ensemble.",
+    "screens": {
+      "calendar": {
+        "title": "Calendrier visuel",
+        "description": "Un calendrier clair qui montre vos habitudes de travail. Une touche pour ajouter un horaire ou l'exporter vers votre calendrier iOS ou Android."
+      },
+      "autoTimer": {
+        "title": "AutoTimer GPS",
+        "description": "Détection automatique dès que vous arrivez au travail. Géorepérage réglable de 50 à 500 mètres."
+      },
+      "notifications": {
+        "title": "Notifications intelligentes",
+        "description": "Trois canaux dédiés sur Android. Compatible avec les modes de concentration d'iOS. Ne manquez plus un rappel important."
+      },
+      "reports": {
+        "title": "Rapports professionnels",
+        "description": "Générez en quelques secondes un PDF prêt à facturer. Calculs automatiques et mise en page personnalisable."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Des tarifs",
+    "titleAccent": "clairs",
+    "titleEnd": "et simples",
+    "description": "Commencez gratuitement et voyez la différence. Passez à la version supérieure quand vous serez prêt à tout automatiser.",
+    "descriptionBold": "Sans engagement • Résiliable à tout moment • Sans frais cachés",
+    "free": {
+      "name": "Découverte",
+      "price": "0",
+      "description": "Parfait pour essayer Working Time Control",
+      "cta": "Commencer gratuitement",
+      "features": {
+        "oneJob": "Un emploi suivi",
+        "basicTimer": "Suivi manuel du temps",
+        "basicReports": "Récapitulatifs mensuels",
+        "basicCalendar": "Vue calendrier"
+      }
+    },
+    "premium": {
+      "name": "Professionnel",
+      "plans": {
+        "3months": {
+          "price": "$6.59",
+          "duration": "3 mois",
+          "popular": true
+        },
+        "6months": {
+          "price": "$10.99",
+          "duration": "6 mois",
+          "popular": false
+        },
+        "1year": {
+          "price": "$16.49",
+          "duration": "1 an",
+          "popular": false
+        }
+      },
+      "description": "Tout ce qu'il faut pour ne plus perdre une heure",
+      "cta": "Essai gratuit de 7 jours",
+      "popular": "Le meilleur choix",
+      "features": {
+        "unlimitedJobs": "Emplois et clients illimités",
+        "autoTimer": "L'AutoTimer GPS vous fait gagner plus de 10 h par mois",
+        "aiBot": "Assistant IA propulsé par Gemini 1.5 Pro",
+        "salaryStats": "Statistiques d'heures et de revenus",
+        "geofencing": "Géorepérage réglable pour chaque lieu",
+        "pdfExport": "Factures PDF professionnelles",
+        "calendarSync": "Intégration au calendrier de l'appareil",
+        "billing": "Revenus suivis automatiquement",
+        "notifications": "Rappels intelligents",
+        "backups": "Sauvegardes automatiques dans le cloud",
+        "support": "Support prioritaire et accès anticipé"
+      }
+    },
+    "footer": "Rejoignez plus de 50 000 professionnels • Sans carte bancaire • Tous les prix TTC"
+  },
+  "faq": {
+    "title": "Questions",
+    "titleAccent": "fréquentes",
+    "description": "Les réponses aux questions les plus posées sur Working Time Control",
+    "search": "Rechercher dans les questions fréquentes...",
+    "categories": {
+      "general": "Général",
+      "time": "Temps",
+      "billing": "Facturation",
+      "technical": "Technique"
+    },
+    "noResults": "Aucune question ne correspond à votre recherche.",
+    "contactCta": {
+      "title": "Vous ne trouvez pas votre réponse ?",
+      "description": "Notre équipe est là pour vous aider",
+      "button": "Contacter le support",
+      "emailSubject": "Question à propos de WorkTi",
+      "emailBody": "Bonjour, j'ai une question sur l'application WorkTi :"
+    },
+    "questions": {
+      "1": {
+        "question": "Comment commencer à utiliser l'application ?",
+        "answer": "Allez dans Réglages > Mes emplois et ajoutez votre premier emploi. Définissez les horaires, le lieu et les tarifs. Vous pourrez ensuite compter votre temps depuis l'écran principal."
+      },
+      "2": {
+        "question": "Comment enregistrer mon temps de travail ?",
+        "answer": "Depuis l'écran principal, choisissez votre emploi et appuyez sur démarrer. L'application se met à compter automatiquement. Appuyez sur terminer quand vous avez fini."
+      },
+      "3": {
+        "question": "Puis-je modifier mes enregistrements ?",
+        "answer": "Oui. Allez dans le calendrier et choisissez un jour pour voir vos enregistrements. Vous pouvez modifier l'heure de début, l'heure de fin et ajouter des notes."
+      },
+      "4": {
+        "question": "Comment fonctionne la géolocalisation ?",
+        "answer": "L'application utilise votre position pour vérifier que vous êtes bien sur votre lieu de travail. Vous réglez le rayon de tolérance dans les réglages de chaque emploi."
+      },
+      "5": {
+        "question": "Comment configurer la facturation ?",
+        "answer": "Dans chaque emploi, ouvrez l'onglet « Facturation » et indiquez votre tarif horaire. L'application calcule alors vos revenus automatiquement à partir du temps travaillé."
+      },
+      "6": {
+        "question": "Mes données sont-elles en sécurité ?",
+        "answer": "Toutes vos données sont stockées localement sur votre appareil. Nous n'envoyons aucune information personnelle vers des serveurs externes."
+      },
+      "7": {
+        "question": "Puis-je exporter mes données ?",
+        "answer": "Oui, depuis l'écran des rapports. Vous choisissez entre le format PDF et Excel pour vos enregistrements."
+      },
+      "8": {
+        "question": "Pourquoi la localisation ne fonctionne-t-elle pas ?",
+        "answer": "Vérifiez que vous avez bien autorisé l'accès à votre position. Allez dans Réglages > Confidentialité > Service de localisation et activez l'autorisation."
+      },
+      "9": {
+        "question": "Puis-je créer une notification pour me rappeler d'aller travailler ?",
+        "answer": "Oui. Sur l'écran du calendrier, quand vous ajoutez un horaire, un bouton permet de créer une notification qui vous rappellera l'heure d'aller au travail."
+      },
+      "10": {
+        "question": "Puis-je exporter mes jours de travail vers le calendrier du téléphone ?",
+        "answer": "Oui, depuis l'écran du calendrier vous pouvez le synchroniser avec le calendrier de l'appareil grâce au bouton de synchronisation."
+      },
+      "11": {
+        "question": "Est-ce que ça marche avec l'Apple Watch ?",
+        "answer": "Oui. Vous pouvez démarrer, mettre en pause et terminer votre journée depuis votre poignet, consulter votre semaine et vos statistiques, et ajouter des heures à un jour — sans sortir votre téléphone. Ce que vous faites sur l'un apparaît sur l'autre."
+      },
+      "12": {
+        "question": "L'application fonctionne-t-elle sans connexion ?",
+        "answer": "Oui, parfaitement. Tout est stocké sur votre appareil : vous pouvez pointer, consulter votre calendrier et regarder vos heures même sans réseau."
+      },
+      "13": {
+        "question": "Faut-il un abonnement pour toutes les fonctions ?",
+        "answer": "Pour profiter de 100 % des fonctions, oui, il faut un abonnement premium. La version gratuite comprend un emploi et les fonctions de base."
+      },
+      "14": {
+        "question": "Comment fonctionne l'AutoTimer GPS ?",
+        "answer": "L'AutoTimer détecte par GPS votre arrivée et votre départ du travail. Vous réglez vous-même le rayon de détection et les délais de démarrage et d'arrêt."
+      },
+      "15": {
+        "question": "Puis-je générer de vraies factures ?",
+        "answer": "Oui, la version premium comprend un système de facturation complet, avec vos coordonnées, le calcul des taxes et l'export en PDF professionnel."
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt à gagner",
+    "titleAccent": "plus de 10 h par mois ?",
+    "description": "Arrêtez de compter vos heures à la main. Laissez Working Time Control le faire tout seul pendant que vous vous occupez de l'essentiel.",
+    "rating": "4,9/5 sur plus de 12 000 avis",
+    "downloadButton": "Télécharger Working Time Control gratuitement",
+    "demoButton": "Voir comment ça marche",
+    "iosAvailability": "Disponible uniquement sur iOS pour le moment",
+    "footer": "Disponible sur iOS et Android • Installé en 30 secondes • Fonctionne hors ligne"
+  },
+  "testimonials": {
+    "title": "Adopté par les",
+    "titleAccent": "professionnels",
+    "description": "Pourquoi des milliers de personnes comptent leurs heures avec Working Time Control",
+    "roles": {
+      "freelancer": "Rédactrice indépendante",
+      "consultant": "Consultant",
+      "contractor": "Prestataire informatique",
+      "developer": "Développeur",
+      "designer": "Designer UX",
+      "manager": "Chef de projet"
+    },
+    "reviews": {
+      "1": "Working Time Control a complètement changé ma façon de gérer mon temps. L'AutoTimer GPS tient de la magie — je n'oublie plus jamais de noter mes heures !",
+      "2": "Comme je jongle entre plusieurs clients, pouvoir suivre plusieurs emplois me sauve la vie. Les rapports sont propres et mes clients les adorent.",
+      "3": "L'assistant IA a lu mon planning papier et a tout importé parfaitement. Des heures de saisie en moins !",
+      "4": "Enfin un suivi du temps qui respecte la vie privée. Tout reste sur mon appareil, et les sauvegardes automatiques me rassurent.",
+      "5": "Rien que la génération des factures vaut l'abonnement. Je suis payé plus vite et je ne passe plus une minute sur la paperasse.",
+      "6": "Mon équipe apprécie la précision du suivi GPS. Fini les discussions sur les heures travaillées — c'est automatique et tout le monde voit la même chose."
+    }
+  },
+  "stats": {
+    "title": "Des chiffres qui",
+    "titleAccent": "parlent",
+    "description": "Rejoignez une communauté grandissante de professionnels qui comptent leur temps",
+    "items": {
+      "users": "Utilisateurs actifs",
+      "timeSaved": "Économisé par mois",
+      "accuracy": "Précision GPS",
+      "rating": "App Store"
+    }
+  },
+  "mockup": {
+    "activeJobs": "Emplois actifs",
+    "autoTimer": "AutoTimer",
+    "august": "Août",
+    "reports": "Rapports",
+    "selectedJob": "Emploi sélectionné",
+    "test": "Test",
+    "thisMonth": "Ce mois-ci",
+    "totalHours": "Heures totales",
+    "workedDays": "Jours travaillés",
+    "averageDay": "Moyenne par jour",
+    "distributionByJob": "Répartition par emploi",
+    "weekDays": [
+      "L",
+      "M",
+      "M",
+      "J",
+      "V",
+      "S",
+      "D"
+    ],
+    "settings": "Réglages",
+    "jobManagement": "Gestion des emplois",
+    "jobManagementDesc": "Configurez vos emplois avec horaires, tarifs et facturation",
+    "myJobs": "Mes emplois",
+    "myJobsDesc": "Ajouter, modifier et configurer",
+    "appConfiguration": "Configuration de l'app",
+    "generalPreferences": "Préférences générales",
+    "generalPreferencesDesc": "Notifications, langue, thème",
+    "aiAssistant": "Assistant IA pour les horaires",
+    "aiGreeting": "Bonjour ! Je suis votre assistant spécialisé dans l'analyse des horaires de travail.",
+    "analyzeImages": "Analyser des images et des PDF",
+    "extractDays": "Extraire les jours et les horaires",
+    "identifyDays": "Repérer les jours de repos et les fériés",
+    "exportSchedules": "Exporter les horaires vers le calendrier",
+    "typeMessage": "Écrivez votre message ici..."
+  },
+  "mobileBanner": {
+    "name": "WorkTi",
+    "subtitle": "Gratuit · Sans compte",
+    "download": "Ouvrir",
+    "comingSoon": "Bientôt disponible"
+  },
+  "footer": {
+    "description": "L'application pour garder vos heures de travail sous contrôle.",
+    "product": "Produit",
+    "company": "Entreprise",
+    "support": "Assistance",
+    "links": {
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "updates": "Mises à jour",
+      "roadmap": "Feuille de route",
+      "about": "À propos",
+      "blog": "Blog",
+      "contact": "Contact",
+      "helpCenter": "Centre d'aide",
+      "documentation": "Documentation",
+      "guides": "Guides",
+      "api": "API"
+    },
+    "legal": {
+      "terms": "Conditions",
+      "privacy": "Confidentialité",
+      "cookies": "Cookies"
+    },
+    "badges": {
+      "secure": "100 % sécurisé",
+      "languages": "Disponible en dix langues"
+    },
+    "copyright": "Tous droits réservés.",
+    "cookieNotice": {
+      "text": "Ce site utilise des cookies pour améliorer votre visite. En continuant à naviguer, vous acceptez leur utilisation.",
+      "accept": "Accepter",
+      "learnMore": "En savoir plus"
+    }
+  },
+  "launchModal": {
+    "title": "Bientôt disponible !",
+    "subtitle": "Working Time Control arrive très bientôt",
+    "date": "October 1st",
+    "year": "2025",
+    "description": "Nous peaufinons les derniers détails pour vous offrir le meilleur suivi du temps par GPS.",
+    "reminder": "Notez cette date dans votre calendrier",
+    "button": "Compris"
+  },
+  "contact": {
+    "backButton": "Retour à Working Time Control",
+    "title": "Besoin",
+    "titleAccent": "d'aide",
+    "titleEnd": " ?",
+    "description": "Nous sommes là pour vous aider avec Working Time Control. Envoyez-nous un message et nous vous répondrons au plus vite.",
+    "hero": {
+      "title": "Parlons-en",
+      "description": "Nous sommes là pour vous aider. Envoyez votre question et nous vous répondrons au plus vite."
+    },
+    "info": {
+      "title": "Nous contacter",
+      "email": {
+        "title": "E-mail",
+        "description": "Réponse sous 24 h"
+      },
+      "response": {
+        "title": "Délai de réponse",
+        "description": "Nous répondons sous 24 heures",
+        "schedule": "Lun - ven : 9 h - 18 h (CET)",
+        "weekend": "Week-end : réponse limitée"
+      },
+      "location": {
+        "title": "Localisation",
+        "description": "Équipe répartie en Europe"
+      }
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "fields": {
+        "name": "Nom complet",
+        "email": "E-mail",
+        "reason": "Motif du contact",
+        "subject": "Objet",
+        "message": "Message"
+      },
+      "required": "Champs obligatoires",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": {
+        "title": "Message envoyé !",
+        "description": "Nous vous répondrons au plus vite.",
+        "button": "Envoyer un autre message"
+      },
+      "placeholders": {
+        "name": "Votre nom",
+        "email": "vous@email.com",
+        "reason": "Choisissez un motif",
+        "subject": "Décrivez votre demande en une ligne",
+        "message": "Décrivez votre demande ou votre problème en détail..."
+      }
+    },
+    "reasons": {
+      "support": "Assistance technique",
+      "bug": "Signaler un bug",
+      "feature": "Proposer une fonction",
+      "business": "Demande commerciale",
+      "feedback": "Avis général"
+    },
+    "faqLink": {
+      "title": "Une réponse rapide ?",
+      "description": "Consultez nos questions fréquentes. Beaucoup de réponses s'y trouvent déjà.",
+      "button": "Voir la FAQ"
+    }
+  },
+  "privacy": {
+    "backButton": "Retour à Working Time Control",
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour : septembre 2025",
+    "priority": {
+      "title": "Votre vie privée avant tout",
+      "description": "Chez Working Time Control, nous prenons votre vie privée au sérieux. Cette politique explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre application de suivi du temps de travail."
+    },
+    "summary": {
+      "title": "En résumé : nous ne stockons absolument rien",
+      "subtitle": "Votre vie privée en quatre points clairs :",
+      "points": {
+        "noAccounts": "Nous ne créons pas de comptes",
+        "noPersonalData": "Nous ne demandons aucune donnée personnelle (nom, e-mail, téléphone, adresse)",
+        "noAnalytics": "Nous ne faisons ni analyse comportementale ni publicité ciblée",
+        "noDataSelling": "Nous ne vendons aucune donnée"
+      },
+      "emphasis": "Tout reste sur votre appareil. Nous ne stockons absolument rien."
+    },
+    "storage": {
+      "title": "Stockage des données",
+      "local": {
+        "title": "Stockage 100 % local",
+        "description": "Toutes vos données de travail — vos emplois, vos enregistrements, vos horaires et vos réglages — sont conservées uniquement sur votre appareil. Nous n'y avons aucun accès."
+      },
+      "cloud": {
+        "title": "Aucun serveur dans le cloud",
+        "description": "Nous n'avons ni bases de données ni serveurs qui stockeraient vos informations personnelles. Vos données ne quittent jamais votre appareil, sauf si vous choisissez vous-même de les exporter ou de les partager."
+      },
+      "accounts": {
+        "title": "Aucun compte utilisateur",
+        "description": "L'application fonctionne sans compte, ce qui signifie que nous ne collectons ni ne conservons de données d'identification comme un nom, une adresse e-mail ou un numéro de téléphone."
+      }
+    },
+    "backup": {
+      "title": "Sauvegarde des données",
+      "description": "Comme tout est stocké localement sur votre appareil, c'est à vous de faire des sauvegardes régulières. L'application propose une fonction d'export pour conserver vos données en sécurité."
+    },
+    "ai": {
+      "title": "Le chat avec l'IA",
+      "anonymous": {
+        "title": "Traitement anonyme",
+        "description": "Les messages envoyés au chatbot sont traités de manière anonyme via l'API Gemini de Google. Aucune information personnelle n'est incluse dans ces requêtes."
+      },
+      "chat": {
+        "title": "Aucun historique conservé",
+        "description": "Nous ne conservons ni historique ni conversations sur nos serveurs. Toutes les données de chat restent sur votre appareil."
+      },
+      "images": {
+        "title": "Analyse d'images",
+        "description": "Les images analysées par l'IA sont traitées temporairement et ne sont pas conservées sur des serveurs externes."
+      }
+    },
+    "subscriptions": {
+      "title": "Abonnements",
+      "description": "Les achats sont gérés par l'App Store d'Apple ou Google Play. Pour valider votre abonnement, nous utilisons RevenueCat, à qui nous envoyons uniquement :",
+      "revenuecatData": {
+        "identifier": "Un identifiant aléatoire propre à l'application (qui ne vous identifie pas personnellement)",
+        "receipt": "Le reçu d'achat fourni par Apple ou Google"
+      },
+      "purpose": "Cet identifiant sert exclusivement à gérer l'abonnement (l'activer ou le restaurer) et n'est lié à aucune identité réelle.",
+      "noCollection": {
+        "title": "Ce que nous ne collectons pas :",
+        "noAccounts": "Nous ne créons pas de comptes",
+        "noPersonalInfo": "Nous ne demandons ni nom, ni e-mail, ni téléphone, ni adresse",
+        "noAnalytics": "Nous ne faisons ni analyse comportementale ni publicité ciblée",
+        "noDataSelling": "Nous ne vendons aucune donnée"
+      }
+    },
+    "location": {
+      "title": "Données de localisation",
+      "description": "Votre position sert uniquement au minuteur automatique et reste stockée sur votre appareil. Elle n'est jamais transmise à nos serveurs.",
+      "backgroundTitle": "Utilisation en arrière-plan",
+      "background": "L'utilisation de votre position en arrière-plan est strictement limitée à l'AutoTimer. Elle ne sert jamais à des fins de marketing ou de publicité."
+    },
+    "thirdParty": {
+      "title": "Services tiers",
+      "description": "L'application peut envoyer des données à des services externes (par exemple Google Gemini pour le chatbot, RevenueCat pour les abonnements). Ces données sont traitées de façon anonyme et ne permettent pas de vous identifier. En tant que développeurs, nous ne collectons ni ne conservons ces informations.",
+      "gemini": "Google Gemini : https://policies.google.com/privacy",
+      "revenueCat": "RevenueCat : https://www.revenuecat.com/privacy",
+      "stores": "Les boutiques d'applications, pour la distribution et les paiements",
+      "note": "Ces services appliquent leur propre politique de confidentialité :"
+    },
+    "security": {
+      "title": "Sécurité des données",
+      "description": "Comme tout est stocké localement, la sécurité de vos données dépend de celle de votre appareil. Nous recommandons d'activer le chiffrement et un verrouillage d'écran solide."
+    },
+    "children": {
+      "title": "Vie privée des enfants",
+      "description": "Notre application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles de mineurs."
+    },
+    "changes": {
+      "title": "Modifications de cette politique",
+      "description": "Nous pouvons mettre à jour cette politique de temps à autre. Toute modification sera publiée dans l'application et prendra effet immédiatement.",
+      "commitment": "Nous nous engageons à ce qu'aucune modification ne compromette votre vie privée ni votre anonymat. Le principe de base ne changera jamais : nous ne stockons rien sur vous."
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "description": "Si vous avez des questions sur cette politique, écrivez-nous à"
+    },
+    "footer": "Cette politique est en vigueur depuis septembre 2025 et s'applique à toutes les versions de Working Time Control."
+  },
+  "terms": {
+    "backButton": "Retour à Working Time Control",
+    "title": "Conditions d'utilisation",
+    "lastUpdated": "Dernière mise à jour : septembre 2025",
+    "acceptance": {
+      "title": "Acceptation des conditions",
+      "description": "En téléchargeant, en installant ou en utilisant Working Time Control, vous acceptez ces conditions d'utilisation. Si vous ne les acceptez pas, n'utilisez pas l'application."
+    },
+    "license": {
+      "title": "Licence d'utilisation",
+      "description": "Nous vous accordons une licence limitée, non exclusive, non transférable et révocable pour utiliser Working Time Control à titre personnel et professionnel, sur les appareils qui vous appartiennent.",
+      "restrictions": "Vous ne pouvez pas : copier, modifier ou distribuer l'application ; procéder à de la rétro-ingénierie ; utiliser l'application à des fins illégales ; ni porter atteinte aux droits de propriété intellectuelle."
+    },
+    "subscriptions": {
+      "title": "Abonnements premium",
+      "premium": {
+        "title": "Fonctions premium :",
+        "description": "L'abonnement premium débloque les emplois illimités, l'AutoTimer GPS, le chatbot IA complet, l'export PDF sans filigrane et les fonctions de facturation avancées."
+      },
+      "billing": {
+        "title": "Facturation :",
+        "description": "Les abonnements sont facturés par périodes de trois mois via votre boutique d'applications. Le paiement est prélevé à la confirmation de l'achat."
+      },
+      "cancellation": {
+        "title": "Résiliation :",
+        "description": "Vous pouvez résilier votre abonnement à tout moment depuis les réglages de votre boutique d'applications. La résiliation prend effet à la fin de la période en cours."
+      }
+    },
+    "ai": {
+      "title": "Services d'IA",
+      "description": "Le chatbot utilise l'API Gemini de Google. En utilisant cette fonction, vous comprenez que les réponses sont générées automatiquement et peuvent être inexactes. Nous ne sommes pas responsables des décisions prises sur la base de ces réponses."
+    },
+    "responsibilities": {
+      "title": "Responsabilités de l'utilisateur",
+      "description": "Vous êtes responsable de :",
+      "item1": "La confidentialité de votre appareil",
+      "item2": "Toute activité qui a lieu sur votre appareil",
+      "item3": "La sauvegarde régulière de vos données",
+      "item4": "L'utilisation de l'application dans le respect des lois en vigueur"
+    },
+    "prohibited": {
+      "title": "Usages interdits",
+      "description": "Il est interdit de :",
+      "item1": "Utiliser l'application à des fins illégales ou frauduleuses",
+      "item2": "Tenter de pirater ou de contourner la sécurité de l'application",
+      "item3": "Utiliser l'application pour suivre d'autres personnes sans leur consentement",
+      "item4": "Enfreindre les lois sur la vie privée ou la protection des données"
+    },
+    "disclaimer": {
+      "title": "Exclusion de garanties",
+      "warranty": "L'APPLICATION EST FOURNIE « EN L'ÉTAT », SANS GARANTIE",
+      "description": "Nous ne garantissons pas que l'application fonctionnera sans interruption, sans erreur ni de façon totalement sécurisée. Vous l'utilisez à vos propres risques."
+    },
+    "liability": {
+      "title": "Limitation de responsabilité",
+      "description": "En aucun cas nous ne serons responsables de dommages indirects, accessoires, spéciaux ou consécutifs résultant de l'utilisation ou de l'impossibilité d'utiliser l'application, même si nous avions été informés de la possibilité de tels dommages."
+    },
+    "indemnification": {
+      "title": "Garantie",
+      "description": "Vous acceptez de garantir Working Time Control et ses partenaires contre toute réclamation, tout dommage ou toute dépense découlant de votre utilisation de l'application ou d'un manquement à ces conditions."
+    },
+    "governing": {
+      "title": "Droit applicable",
+      "description": "Ces conditions sont régies et interprétées selon le droit de l'Union européenne, sans tenir compte des règles de conflit de lois."
+    },
+    "changes": {
+      "title": "Modification des conditions",
+      "description": "Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications prennent effet dès leur publication dans l'application."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Pour toute question sur ces conditions d'utilisation, écrivez-nous à"
+    },
+    "footer": "En utilisant Working Time Control, vous confirmez avoir lu, compris et accepté ces conditions d'utilisation."
+  },
+  "autoTimer": {
+    "badge": "Niveau professionnel",
+    "title": "AutoTimer GPS",
+    "titleAccent": "intelligent",
+    "description": "Un système de géorepérage avancé avec plus de huit services connectés. Fonctionne application fermée, se répare tout seul et atteint 99,2 % de précision.",
+    "features": {
+      "geofencing": {
+        "title": "Géorepérage avancé",
+        "description": "Rayon réglable de 50 à 500 mètres, avec vos propres délais. Utilise les API de localisation natives d'iOS et d'Android pour une précision maximale."
+      },
+      "background": {
+        "title": "Solide en arrière-plan",
+        "description": "Fonctionne parfaitement application fermée. TaskManager natif et reprise automatique en cas d'état perdu."
+      },
+      "intelligence": {
+        "title": "IA prédictive",
+        "description": "Plusieurs emplois en parallèle, réconciliation automatique et états visuels clairs avec les activités en direct."
+      }
+    },
+    "specs": {
+      "performance": {
+        "title": "Lignes de code",
+        "unit": "lignes",
+        "description": "Services centraux optimisés"
+      },
+      "reliability": {
+        "title": "Précision",
+        "unit": "de précision",
+        "description": "Détection GPS fiable"
+      },
+      "efficiency": {
+        "title": "Services",
+        "unit": "services",
+        "description": "Architecture en plusieurs couches"
+      }
+    },
+    "states": {
+      "inactive": "Inactif",
+      "entering": "Arrivée",
+      "active": "Actif",
+      "leaving": "Départ",
+      "manual": "Manuel"
+    },
+    "statesTitle": "États du système",
+    "statesDescription": "Une machine à états intelligente qui gère seule toutes les transitions de votre journée.",
+    "tryButton": "Essayer l'AutoTimer",
+    "architectureTitle": "Architecture technique"
+  },
+  "autoTimerFeature": {
+    "badge": "GPS intelligent",
+    "title": "Un AutoTimer qui",
+    "titleAccent": "marche vraiment",
+    "description": "Détection GPS automatique quand vous arrivez au travail ou que vous en partez. Sans toucher l'application, sans réglage compliqué.",
+    "features": {
+      "geofence": {
+        "title": "Détection de proximité",
+        "description": "Rayon réglable de 50 à 500 mètres. Détecte tout seul quand vous entrez dans votre zone de travail ou que vous en sortez."
+      },
+      "automatic": {
+        "title": "Démarre et s'arrête seul",
+        "description": "Le compteur démarre à l'arrivée et s'arrête au départ. Délais réglables de 2 à 10 minutes pour éviter les fausses détections."
+      },
+      "background": {
+        "title": "Fonctionne en arrière-plan",
+        "description": "Fonctionne parfaitement application fermée. Les API natives d'iOS assurent un fonctionnement fiable 24 h/24."
+      }
+    },
+    "stats": {
+      "radius": "Rayon GPS",
+      "delays": "Délais",
+      "monitoring": "Surveillance"
+    },
+    "status": {
+      "active": "AutoTimer actif",
+      "radius": "de rayon"
+    }
+  },
+  "appShowcase": {
+    "badge": "Voici l'application",
+    "title": "Pensée pour que vous",
+    "titleAccent": "n'y pensiez jamais",
+    "description": "Une interface claire, faite pour enregistrer vos heures sans effort, depuis n'importe quel écran de votre journée.",
+    "items": {
+      "dashboard": {
+        "badge": "Écran principal",
+        "title": "Toute votre journée sur un écran",
+        "description": "Passez du minuteur manuel à l'AutoTimer, consultez votre calendrier de travail et voyez d'un coup d'œil vos heures du mois."
+      },
+      "register": {
+        "badge": "Saisie manuelle",
+        "title": "Ajoutez un jour en quelques secondes",
+        "description": "Choisissez le type de journée, ajustez les heures avec les raccourcis et ajoutez une note si besoin. Parfait pour rattraper un jour oublié."
+      },
+      "reports": {
+        "badge": "Rapports",
+        "title": "Vos heures, en chiffres clairs",
+        "description": "Chaque journée avec son heure de début et de fin, le total de la période, et les heures supplémentaires quand il y en a eu."
+      },
+      "salary": {
+        "badge": "Revenus",
+        "title": "Et ce que vous avez gagné",
+        "description": "Vos revenus du mois, vos heures semaine par semaine, et les mois où vous avez le plus et le moins travaillé."
+      }
+    }
+  },
+  "autoTimerGeofence": {
+    "badge": "Localisation intelligente",
+    "title": "Compte dès que vous arrivez,",
+    "titleAccent": "s'arrête quand vous partez",
+    "description": "L'AutoTimer suit votre position en direct. Dès que vous entrez dans votre zone de travail, le compteur démarre tout seul ; quand vous partez, il s'arrête — vous n'avez rien à toucher.",
+    "points": {
+      "arrive": {
+        "title": "Arrivée détectée",
+        "description": "Le GPS reconnaît que vous êtes entré dans votre rayon de travail et lance le compteur aussitôt."
+      },
+      "leave": {
+        "title": "Départ détecté",
+        "description": "Quand vous quittez la zone réglée, l'AutoTimer arrête de compter et enregistre votre journée tout seul."
+      }
+    }
+  },
+  "watch": {
+    "badge": "Désormais sur Apple Watch",
+    "title": "Vos heures,",
+    "titleAccent": "au poignet.",
+    "description": "Pointez, mettez en pause et terminez sans sortir votre téléphone de votre poche. Ce que vous faites sur l'un se voit sur l'autre — même si le téléphone est resté à la maison.",
+    "screen": {
+      "title": "Minuteur",
+      "manual": "Manuel",
+      "auto": "Auto",
+      "start": "Démarrer",
+      "week": "Cette semaine"
+    },
+    "features": {
+      "start": {
+        "title": "Démarrer et arrêter",
+        "body": "Sans sortir votre téléphone."
+      },
+      "week": {
+        "title": "Votre semaine",
+        "body": "Jours et heures, d'un coup d'œil."
+      },
+      "stats": {
+        "title": "Statistiques",
+        "body": "Semaine, mois et trois mois."
+      },
+      "sync": {
+        "title": "Toujours synchronisé",
+        "body": "Si le téléphone est loin, l'envoi se fait dès que vous vous retrouvez."
+      }
+    }
+  },
+  "scrollReveal": {
+    "text": "Vous êtes payé à l'heure ? Vos heures toujours sous contrôle avec\nWorkTimeControl."
+  },
+  "liveTimer": {
+    "working": "Vous travaillez",
+    "startedAt": "Commencé à"
+  }
+}

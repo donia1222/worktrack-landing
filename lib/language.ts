@@ -3,13 +3,38 @@
 import { useState, useEffect, createContext, useContext } from 'react'
 import { detectLanguageAndCountry } from './geoDetection'
 
-export type Language = 'es' | 'en' | 'de'
+export type Language = 'es' | 'en' | 'de' | 'fr' | 'it' | 'pt' | 'nl' | 'ja'
 
+/** El nombre de cada idioma, escrito en ese idioma: nadie busca «espagnol»
+ *  en una lista, busca «Español». */
 export const languages = {
   es: 'Español',
   en: 'English',
-  de: 'Deutsch'
+  de: 'Deutsch',
+  fr: 'Français',
+  it: 'Italiano',
+  pt: 'Português',
+  nl: 'Nederlands',
+  ja: '日本語',
 } as const
+
+/** La bandera de cada uno, para la lista. */
+export const languageFlags: Record<Language, string> = {
+  es: '🇪🇸',
+  en: '🇬🇧',
+  de: '🇩🇪',
+  fr: '🇫🇷',
+  it: '🇮🇹',
+  pt: '🇵🇹',
+  nl: '🇳🇱',
+  ja: '🇯🇵',
+}
+
+export const languageCodes = Object.keys(languages) as Language[]
+
+export function isLanguage(valor: unknown): valor is Language {
+  return typeof valor === 'string' && (languageCodes as string[]).includes(valor)
+}
 
 // Detect browser language with geographic detection
 export function detectBrowserLanguage(): Language {
@@ -25,20 +50,26 @@ export function detectBrowserLanguage(): Language {
   const { language } = detectLanguageAndCountry()
   
   // Validate the detected language
-  if (language === 'es' || language === 'en' || language === 'de') {
+  if (isLanguage(language)) {
     return language
   }
+
+  // Fallback to old browser language detection. Se mira la lista entera de
+  // idiomas del navegador y no solo el primero: quien tiene el movil en ingles
+  // pero es holandes suele llevar «nl» en segundo lugar, y prefiere leer en el
+  // suyo si lo tenemos.
+  const preferidos = [
+    window.navigator.language,
+    ...(window.navigator.languages || []),
+  ].filter(Boolean)
+
+  for (const preferido of preferidos) {
+    const base = preferido.toLowerCase().split('-')[0]
+    if (isLanguage(base)) return base
+  }
   
-  // Fallback to old browser language detection
-  const browserLang = window.navigator.language.toLowerCase()
-  
-  if (browserLang.startsWith('es')) return 'es'
-  if (browserLang.startsWith('en')) return 'en'  
-  if (browserLang.startsWith('de')) return 'de'
-  
-  // Quien no habla ninguno de los tres —un holandes, un frances, un italiano—
-  // entendia menos español que ingles. Hasta que la pagina este traducida a
-  // mas idiomas, el ingles es la peor traduccion que menos gente pierde.
+  // Quien no hable ninguno de los ocho: el ingles es la traduccion que menos
+  // gente pierde, y ademas es el idioma en el que se anuncia.
   return 'en'
 }
 

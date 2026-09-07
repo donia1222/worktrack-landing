@@ -9,7 +9,9 @@
     "download": "Descargar en iOS",
     "autoTimer": "AutoTimer",
     "watch": "Apple Watch",
-    "reports": "Informes"
+    "reports": "Informes",
+    "language": "Idioma",
+    "workingPhone": "Demo en vivo"
   },
   "loading": {
     "appName": "Working Time Control",
@@ -34,7 +36,8 @@
       "widgets": "Widgets iOS",
       "calendarSync": "Sincronización Calendario",
       "pdfReports": "Reportes PDF",
-      "platforms": "iOS & Android"
+      "platforms": "iOS & Android",
+      "aiChatbot": "Asistente de trabajo con IA"
     },
     "gratis": "Gratis. Sin cuenta y sin registro.",
     "reloj": "Ya disponible en Apple Watch"
@@ -71,11 +74,16 @@
       "notifications": {
         "title": "Sistema de Notificaciones Pro",
         "description": "Avisos antes de que el Auto-Timer empiece o pare, recordatorios de tu horario y aviso al terminar la jornada. Compatible con los modos de concentración de iOS."
+      },
+      "ai": {
+        "title": "IA multimodal (GPT-4 + Gemini)",
+        "description": "Dos IA: GPT-4 Vision y Google Gemini. Analiza documentos PDF, fotos de horarios y contratos de trabajo. Busca las normas automáticamente en diez idiomas."
       }
     },
     "badges": {
       "localStorage": "100% Almacenamiento Local",
-      "languages": "10 Idiomas"
+      "languages": "8 idiomas",
+      "tech": "Funciona sin conexión — no necesita internet"
     }
   },
   "exportReports": {
@@ -267,7 +275,8 @@
         "billing": "Sistema completo de facturación",
         "notifications": "2 canales de notificaciones avanzadas",
         "backups": "Respaldos automáticos programables",
-        "support": "Soporte prioritario y actualizaciones"
+        "support": "Soporte prioritario y actualizaciones",
+        "aiBot": "Asistente de IA con Gemini 1.5 Pro"
       }
     },
     "footer": "Sin compromisos. Cancela cuando quieras. Todos los precios incluyen impuestos."

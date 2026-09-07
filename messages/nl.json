@@ -1,0 +1,894 @@
+{
+  "navigation": {
+    "features": "Functies",
+    "smartWidgets": "iOS-widgets",
+    "workingPhone": "Live demo",
+    "pricing": "Prijzen",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "download": "Download voor iOS",
+    "autoTimer": "AutoTimer",
+    "watch": "Apple Watch",
+    "reports": "Rapporten",
+    "language": "Taal"
+  },
+  "loading": {
+    "appName": "Working Time Control",
+    "tagline": "Slim je uren bijhouden",
+    "text": "Bezig met laden..."
+  },
+  "hero": {
+    "title": "Nooit meer",
+    "titleAccent": "inklokken.",
+    "description": "De app weet wanneer je op je werk aankomt en wanneer je weggaat. Je uren registreren zichzelf, en aan het eind van de maand zijn ze al opgeteld.",
+    "subtitle": "Voor wie per uur betaald wordt, en meer dan één baan heeft.",
+    "downloadButton": "Download voor iOS",
+    "iosAvailability": "Op dit moment alleen beschikbaar voor iOS",
+    "demoButton": "Bekijk de demo",
+    "tagline": {
+      "work": "Jouw werk",
+      "hours": "Jouw uren",
+      "control": "Jouw controle"
+    },
+    "features": {
+      "autoTimer": "Slimme gps-detectie",
+      "widgets": "iOS-widgets",
+      "aiChatbot": "AI-werkassistent",
+      "calendarSync": "Agendasynchronisatie",
+      "pdfReports": "Professionele rapporten",
+      "platforms": "iOS en Android"
+    },
+    "gratis": "Gratis. Geen account, geen registratie.",
+    "reloj": "Nu ook op de Apple Watch"
+  },
+  "features": {
+    "title": "Gemaakt voor",
+    "titleAccent": "professionals",
+    "description": "Gebouwd met de nieuwste technologie voor de nauwkeurigste urenregistratie met de meeste aandacht voor privacy. Je gegevens verlaten je toestel nooit.",
+    "items": {
+      "autoTimer": {
+        "title": "Slimme gps-automatisering",
+        "description": "Eén keer instellen en nooit meer omkijken. Onze geofencing leert je werkpatroon en registreert je tijd met 99,9% nauwkeurigheid. Detectiezones instelbaar van 50 tot 500 meter."
+      },
+      "widgets": {
+        "title": "Geavanceerde iOS-widgets en Dynamic Island",
+        "description": "Drie native widgetformaten die zichzelf bijwerken. Live activiteiten in de Dynamic Island voor iPhone 14 Pro en nieuwer. Volledige bediening vanaf je toegangsscherm en beginscherm."
+      },
+      "jobs": {
+        "title": "Meerdere banen tegelijk",
+        "description": "Werk je voor meerdere opdrachtgevers? Houd onbeperkt banen tegelijk bij, met eigen kleuren, gebroken diensten en eigen tarieven. Ideaal voor zzp'ers en uitzendkrachten."
+      },
+      "calendar": {
+        "title": "Visueel overzicht van je werk",
+        "description": "Overzichtelijke kalenders laten je werkpatroon in één oogopslag zien. Synchronisatie met je agenda, vakantiedagen bijhouden en exporteren naar ICS met één tik."
+      },
+      "reports": {
+        "title": "Rapporten klaar om te factureren",
+        "description": "Maak in seconden een professioneel pdf-rapport. Je inkomsten worden automatisch berekend, klaar voor de belasting en met een eigen opmaak."
+      },
+      "ai": {
+        "title": "Multimodale AI (GPT-4 + Gemini)",
+        "description": "Twee AI-modellen: GPT-4 Vision en Google Gemini. Analyseert pdf's, foto's van roosters en arbeidscontracten. Zoekt automatisch de regels op in tien talen."
+      },
+      "salary": {
+        "title": "Inzicht in je verdiensten",
+        "description": "Bekijk je maandinkomen, je totale uren en de vergelijking per week, allemaal automatisch berekend."
+      },
+      "notifications": {
+        "title": "Meldingen die kloppen",
+        "description": "Een seintje voordat de AutoTimer start of stopt, herinneringen voor je rooster en een melding als je werkdag erop zit. Werkt samen met de Focus-standen van iOS."
+      }
+    },
+    "badges": {
+      "localStorage": "100% privé — je gegevens blijven op je toestel",
+      "languages": "8 talen",
+      "tech": "Werkt offline — geen internet nodig"
+    }
+  },
+  "screenshots": {
+    "badge": "Voorproefje",
+    "title": "Bekijk elk",
+    "titleAccent": "scherm",
+    "description": "Een overzichtelijke app waarmee je je uren moeiteloos bijhoudt",
+    "items": {
+      "dashboard": {
+        "title": "Startscherm",
+        "description": "Overzicht met je actieve banen, de kalender en snelle toegang"
+      },
+      "reports": {
+        "title": "Uitgebreide rapporten",
+        "description": "Volledige statistieken met grafieken en een uitsplitsing per baan"
+      },
+      "aiBot": {
+        "title": "Elke dag vastleggen",
+        "description": "Werk, vrije dag, vakantie of ziekte — in enkele seconden"
+      },
+      "settings": {
+        "title": "Alles instelbaar",
+        "description": "Pas elk onderdeel van de app aan je eigen situatie aan"
+      }
+    }
+  },
+  "exportReports": {
+    "badge": "Professionele rapporten",
+    "title": "Je uren,",
+    "titleAccent": "klaar om te versturen",
+    "description": "Maak een pdf-rapport per week, maand, jaar of een periode die je zelf kiest. Met één tik.",
+    "processTitle": "Zo werkt het",
+    "demoTitle": "Alles in één rapport",
+    "accuracy": {
+      "title": "Altijd bijgewerkt",
+      "text": "Direct berekend uit je eigen registraties"
+    },
+    "supportedFormats": {
+      "pdf": "Pdf-export",
+      "photo": "Week, maand of jaar",
+      "location": "Eigen periode",
+      "multilang": "Tien talen"
+    },
+    "capabilities": {
+      "schedules": {
+        "title": "Pdf-rapporten",
+        "description": "Maak professionele rapporten per week, maand, jaar of een periode die jou uitkomt.",
+        "feature1": "Totale uren en gewerkte dagen",
+        "feature2": "Uitsplitsing per baan",
+        "feature3": "Eén tik om te exporteren"
+      },
+      "calendar": {
+        "title": "Recente activiteit",
+        "description": "Bekijk en bewerk je registraties meteen, gefilterd op baan of periode.",
+        "feature1": "Registraties bewerken of verwijderen",
+        "feature2": "Volledige geschiedenis",
+        "feature3": "Filteren op baan"
+      },
+      "legal": {
+        "title": "Factuurgegevens",
+        "description": "Vul je btw- en bedrijfsgegevens in, zodat de pdf klaar is om te versturen.",
+        "feature1": "Logo en bedrijfsgegevens",
+        "feature2": "Uurtarieven",
+        "feature3": "Inkomsten automatisch berekend"
+      }
+    },
+    "steps": {
+      "capture": {
+        "title": "Kies de periode",
+        "description": "Week, maand, jaar of zelf gekozen data — jij bepaalt welke periode je bekijkt."
+      },
+      "analyze": {
+        "title": "Bekijk je uren",
+        "description": "Zie de totale uren, de gewerkte dagen en de recente activiteit per baan."
+      },
+      "export": {
+        "title": "Exporteer naar pdf",
+        "description": "Eén tik voor een professionele pdf, klaar om te bewaren of te versturen."
+      }
+    }
+  },
+  "smartWidgets": {
+    "badge": "Native iOS",
+    "title": "Op je beginscherm,",
+    "titleAccent": "zonder de app te openen",
+    "description": "Drie widgetformaten die zichzelf bijhouden. Eén blik en je weet hoe je dag ervoor staat.",
+    "sizesTitle": "Kies het formaat dat past",
+    "sizesDescription": "Alle drie tonen actuele gegevens. Wissel wanneer je wilt.",
+    "sizes": {
+      "small": {
+        "title": "Klein",
+        "description": "De lopende teller, met de baan en de uren van vandaag."
+      },
+      "medium": {
+        "title": "Middel",
+        "description": "Vandaag en het weekoverzicht, naast elkaar."
+      },
+      "large": {
+        "title": "Groot",
+        "description": "De hele week met de minikalender en het lopende totaal."
+      }
+    },
+    "features": {
+      "realTime": {
+        "title": "Altijd actueel",
+        "description": "De widget werkt zichzelf bij terwijl je werkt. Je hoeft niets te openen."
+      },
+      "dynamicIsland": {
+        "title": "Dynamic Island",
+        "description": "Je lopende dienst staat in de Dynamic Island, en je stopt hem daar meteen."
+      },
+      "oneTap": {
+        "title": "Eén tik en je bent er",
+        "description": "Tik op de widget en je komt direct op het scherm dat je nodig hebt."
+      }
+    }
+  },
+  "workingPhone": {
+    "badge": "Live demo",
+    "title": "Zie Working Time Control",
+    "titleAccent": "in actie",
+    "description": "Een interactieve demo met echte schermen uit de app. Kijk hoe de gps-timer, de kalender en de AI-assistent samenwerken.",
+    "screens": {
+      "calendar": {
+        "title": "Visuele kalender",
+        "description": "Een overzichtelijke kalender die je werkpatroon laat zien. Eén tik om een rooster toe te voegen of naar je agenda te exporteren."
+      },
+      "autoTimer": {
+        "title": "Gps-AutoTimer",
+        "description": "Herkent automatisch wanneer je op je werk aankomt. Geofencing instelbaar van 50 tot 500 meter."
+      },
+      "notifications": {
+        "title": "Slimme meldingen",
+        "description": "Drie aparte meldingskanalen op Android. Werkt met de Focus-standen van iOS. Mis nooit meer een belangrijke herinnering."
+      },
+      "reports": {
+        "title": "Professionele rapporten",
+        "description": "Maak in seconden een pdf die klaar is om te factureren. Alles automatisch berekend, met een eigen opmaak."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Eenvoudig en",
+    "titleAccent": "eerlijk",
+    "titleEnd": "geprijsd",
+    "description": "Begin gratis en merk het verschil. Ga over op Premium wanneer je klaar bent voor volledig automatische urenregistratie.",
+    "descriptionBold": "Geen verplichtingen • Altijd opzegbaar • Geen verborgen kosten",
+    "free": {
+      "name": "Starter",
+      "price": "0",
+      "description": "Ideaal om Working Time Control uit te proberen",
+      "cta": "Gratis beginnen",
+      "features": {
+        "oneJob": "Eén baan bijhouden",
+        "basicTimer": "Handmatig je tijd bijhouden",
+        "basicReports": "Maandoverzichten",
+        "basicCalendar": "Kalenderweergave"
+      }
+    },
+    "premium": {
+      "name": "Professional",
+      "plans": {
+        "3months": {
+          "price": "$6.59",
+          "duration": "3 maanden",
+          "popular": true
+        },
+        "6months": {
+          "price": "$10.99",
+          "duration": "6 maanden",
+          "popular": false
+        },
+        "1year": {
+          "price": "$16.49",
+          "duration": "1 jaar",
+          "popular": false
+        }
+      },
+      "description": "Alles wat je nodig hebt om meer uit je tijd te halen",
+      "cta": "Start 7 dagen gratis",
+      "popular": "Beste keuze",
+      "features": {
+        "unlimitedJobs": "Onbeperkt banen en opdrachtgevers",
+        "autoTimer": "Gps-AutoTimer bespaart je 10+ uur per maand",
+        "aiBot": "AI-assistent op basis van Gemini 1.5 Pro",
+        "salaryStats": "Statistieken over uren en verdiensten",
+        "geofencing": "Eigen geofencing per locatie",
+        "pdfExport": "Professionele pdf-facturen",
+        "calendarSync": "Koppeling met je agenda",
+        "billing": "Inkomsten automatisch bijgehouden",
+        "notifications": "Slimme herinneringen",
+        "backups": "Automatische back-ups in de cloud",
+        "support": "Voorrang bij support en vroege toegang"
+      }
+    },
+    "footer": "Sluit je aan bij 50.000+ professionals • Geen creditcard nodig • Alle prijzen inclusief btw"
+  },
+  "faq": {
+    "title": "Veelgestelde",
+    "titleAccent": "vragen",
+    "description": "Hier vind je antwoord op de vragen die het vaakst gesteld worden over Working Time Control",
+    "search": "Zoek in de veelgestelde vragen...",
+    "categories": {
+      "general": "Algemeen",
+      "time": "Tijd",
+      "billing": "Facturatie",
+      "technical": "Technisch"
+    },
+    "noResults": "Geen vragen gevonden die bij je zoekopdracht passen.",
+    "contactCta": {
+      "title": "Staat je vraag er niet bij?",
+      "description": "Ons supportteam helpt je graag verder",
+      "button": "Neem contact op",
+      "emailSubject": "Vraag over WorkTi",
+      "emailBody": "Hallo, ik heb een vraag over de app WorkTi:"
+    },
+    "questions": {
+      "1": {
+        "question": "Hoe begin ik met de app?",
+        "answer": "Ga naar Instellingen > Mijn banen en voeg je eerste baan toe. Stel het rooster, de locatie en het tarief in. Daarna kun je vanaf het hoofdscherm je tijd gaan bijhouden."
+      },
+      "2": {
+        "question": "Hoe leg ik mijn werktijd vast?",
+        "answer": "Kies op het hoofdscherm je baan en tik op starten. De app begint dan automatisch je tijd bij te houden. Tik op stoppen als je klaar bent."
+      },
+      "3": {
+        "question": "Kan ik mijn registraties bewerken?",
+        "answer": "Ja. Ga naar de kalender en kies een dag om je registraties te bekijken. Je kunt de begintijd, de eindtijd en notities aanpassen."
+      },
+      "4": {
+        "question": "Hoe werkt de locatiebepaling?",
+        "answer": "De app gebruikt je locatie om te bepalen of je op je werk bent. Per baan stel je zelf in hoe groot de straal mag zijn."
+      },
+      "5": {
+        "question": "Hoe stel ik facturatie in?",
+        "answer": "Ga bij elke baan naar het tabblad Facturatie en vul je uurtarief in. De app rekent je verdiensten dan automatisch uit op basis van je gewerkte tijd."
+      },
+      "6": {
+        "question": "Zijn mijn gegevens veilig?",
+        "answer": "Al je gegevens staan lokaal op je toestel. We sturen geen persoonlijke informatie naar externe servers."
+      },
+      "7": {
+        "question": "Kan ik mijn gegevens exporteren?",
+        "answer": "Ja, dat doe je vanaf het rapportenscherm. Je kiest zelf tussen pdf of Excel voor je urenregistratie."
+      },
+      "8": {
+        "question": "Waarom werkt de locatie niet?",
+        "answer": "Controleer of je de app toestemming hebt gegeven voor je locatie. Ga naar Instellingen > Privacy > Locatie en zet de toestemming aan."
+      },
+      "9": {
+        "question": "Kan ik een melding instellen die me eraan herinnert dat ik moet werken?",
+        "answer": "Ja. Als je op het kalenderscherm een rooster toevoegt, zie je een knop om een melding aan te maken die je eraan herinnert wanneer je aan het werk moet."
+      },
+      "10": {
+        "question": "Kan ik mijn werkdagen naar de agenda van mijn telefoon exporteren?",
+        "answer": "Ja, vanaf het kalenderscherm synchroniseer je met de agenda van je toestel via de synchronisatieknop."
+      },
+      "11": {
+        "question": "Werkt het met de Apple Watch?",
+        "answer": "Ja. Je start, pauzeert en beëindigt je werkdag vanaf je pols, bekijkt je week en je statistieken en voegt uren toe aan een dag — zonder je telefoon te pakken. Wat je op de één doet, verschijnt op de ander."
+      },
+      "12": {
+        "question": "Werkt de app zonder internet?",
+        "answer": "Ja, helemaal. Alles staat op je toestel, dus je klokt in, bekijkt je kalender en je uren ook zonder bereik."
+      },
+      "13": {
+        "question": "Heb ik een abonnement nodig voor alle functies?",
+        "answer": "Voor alle functies heb je een premium-abonnement nodig. De gratis versie bevat één baan en de basisfuncties."
+      },
+      "14": {
+        "question": "Hoe werkt de gps-AutoTimer?",
+        "answer": "De AutoTimer merkt via gps wanneer je op je werk aankomt of weggaat. Je stelt zelf de straal in en hoeveel vertraging er zit op starten en stoppen."
+      },
+      "15": {
+        "question": "Kan ik professionele facturen maken?",
+        "answer": "Ja, de premium-versie bevat een volledig factuursysteem met bedrijfsgegevens, btw-berekening en export naar een professionele pdf."
+      }
+    }
+  },
+  "cta": {
+    "title": "Klaar om",
+    "titleAccent": "10+ uur per maand te besparen?",
+    "description": "Stop met handmatig bijhouden. Laat Working Time Control het automatisch doen, terwijl jij je op je werk richt.",
+    "rating": "4,9/5 uit meer dan 12.000 beoordelingen",
+    "downloadButton": "Working Time Control gratis downloaden",
+    "demoButton": "Bekijk hoe het werkt",
+    "iosAvailability": "Op dit moment alleen beschikbaar voor iOS",
+    "footer": "Beschikbaar voor iOS en Android • In 30 seconden ingesteld • Werkt offline"
+  },
+  "testimonials": {
+    "title": "Geliefd bij",
+    "titleAccent": "professionals",
+    "description": "Ontdek waarom duizenden mensen hun uren bijhouden met Working Time Control",
+    "roles": {
+      "freelancer": "Freelance tekstschrijver",
+      "consultant": "Bedrijfsadviseur",
+      "contractor": "IT-contractor",
+      "developer": "Softwareontwikkelaar",
+      "designer": "UX-ontwerper",
+      "manager": "Projectmanager"
+    },
+    "reviews": {
+      "1": "Working Time Control heeft de manier waarop ik mijn tijd bijhoud compleet veranderd. De gps-AutoTimer is bijna magie — ik vergeet nooit meer mijn uren te noteren!",
+      "2": "Ik werk voor meerdere opdrachtgevers, dus meerdere banen tegelijk bijhouden is voor mij een redding. De rapporten zien er professioneel uit en mijn klanten zijn er blij mee.",
+      "3": "De AI-assistent las mijn papieren rooster en zette alles perfect over. Dat scheelde me uren typwerk!",
+      "4": "Eindelijk een urenregistratie die privacy serieus neemt. Alles blijft op mijn toestel, en met de automatische back-ups slaap ik rustig.",
+      "5": "Alleen al het maken van facturen is de premium-versie waard. Ik word sneller betaald en ben nul tijd kwijt aan papierwerk.",
+      "6": "Mijn team vindt de gps-registratie erg nauwkeurig. Geen discussies meer over gewerkte uren — het gaat vanzelf en iedereen ziet hetzelfde."
+    }
+  },
+  "stats": {
+    "title": "Cijfers die",
+    "titleAccent": "spreken",
+    "description": "Sluit je aan bij een groeiende groep professionals die hun tijd serieus nemen",
+    "items": {
+      "users": "Actieve gebruikers",
+      "timeSaved": "Bespaard per maand",
+      "accuracy": "Gps-nauwkeurigheid",
+      "rating": "App Store"
+    }
+  },
+  "mockup": {
+    "activeJobs": "Actieve banen",
+    "autoTimer": "AutoTimer",
+    "august": "Augustus",
+    "reports": "Rapporten",
+    "selectedJob": "Geselecteerde baan",
+    "test": "Test",
+    "thisMonth": "Deze maand",
+    "totalHours": "Totaal uren",
+    "workedDays": "Gewerkte dagen",
+    "averageDay": "Gemiddeld per dag",
+    "distributionByJob": "Verdeling per baan",
+    "weekDays": [
+      "M",
+      "D",
+      "W",
+      "D",
+      "V",
+      "Z",
+      "Z"
+    ],
+    "settings": "Instellingen",
+    "jobManagement": "Banenbeheer",
+    "jobManagementDesc": "Stel je banen in met roosters, tarieven en facturatie",
+    "myJobs": "Mijn banen",
+    "myJobsDesc": "Toevoegen, bewerken en instellen",
+    "appConfiguration": "App-instellingen",
+    "generalPreferences": "Algemene voorkeuren",
+    "generalPreferencesDesc": "Meldingen, taal, thema",
+    "aiAssistant": "AI-assistent voor werkroosters",
+    "aiGreeting": "Hallo! Ik ben je assistent, gespecialiseerd in het analyseren van werkroosters.",
+    "analyzeImages": "Afbeeldingen en pdf-documenten analyseren",
+    "extractDays": "Werkdagen en roosters uitlezen",
+    "identifyDays": "Vrije dagen en feestdagen herkennen",
+    "exportSchedules": "Roosters naar je agenda exporteren",
+    "typeMessage": "Typ hier je bericht..."
+  },
+  "mobileBanner": {
+    "name": "WorkTi",
+    "subtitle": "Gratis · Geen account",
+    "download": "Openen",
+    "comingSoon": "Binnenkort"
+  },
+  "footer": {
+    "description": "De app om je werkuren slim onder controle te houden.",
+    "product": "Product",
+    "company": "Bedrijf",
+    "support": "Support",
+    "links": {
+      "features": "Functies",
+      "pricing": "Prijzen",
+      "updates": "Updates",
+      "roadmap": "Roadmap",
+      "about": "Over ons",
+      "blog": "Blog",
+      "contact": "Contact",
+      "helpCenter": "Helpcentrum",
+      "documentation": "Documentatie",
+      "guides": "Handleidingen",
+      "api": "API"
+    },
+    "legal": {
+      "terms": "Voorwaarden",
+      "privacy": "Privacy",
+      "cookies": "Cookies"
+    },
+    "badges": {
+      "secure": "100% veilig",
+      "languages": "Beschikbaar in tien talen"
+    },
+    "copyright": "Alle rechten voorbehouden.",
+    "cookieNotice": {
+      "text": "Deze website gebruikt cookies om je bezoek te verbeteren. Door verder te gaan ga je akkoord met het gebruik van cookies.",
+      "accept": "Akkoord",
+      "learnMore": "Meer informatie"
+    }
+  },
+  "launchModal": {
+    "title": "Binnenkort beschikbaar!",
+    "subtitle": "Working Time Control is er heel binnenkort",
+    "date": "October 1st",
+    "year": "2025",
+    "description": "We leggen de laatste hand aan de beste ervaring voor urenregistratie met gps.",
+    "reminder": "Zet deze datum in je agenda",
+    "button": "Begrepen"
+  },
+  "contact": {
+    "backButton": "Terug naar Working Time Control",
+    "title": "Kunnen we",
+    "titleAccent": "helpen",
+    "titleEnd": "?",
+    "description": "We helpen je graag met Working Time Control. Stuur ons een bericht en we reageren zo snel mogelijk.",
+    "hero": {
+      "title": "Laten we praten",
+      "description": "We staan voor je klaar. Stuur je vraag en we reageren zo snel mogelijk."
+    },
+    "info": {
+      "title": "Contactgegevens",
+      "email": {
+        "title": "E-mail",
+        "description": "Antwoord binnen 24 uur"
+      },
+      "response": {
+        "title": "Reactietijd",
+        "description": "We reageren binnen 24 uur",
+        "schedule": "Ma - vr: 9:00 - 18:00 (CET)",
+        "weekend": "Weekend: beperkte reactietijd"
+      },
+      "location": {
+        "title": "Locatie",
+        "description": "Verspreid team in Europa"
+      }
+    },
+    "form": {
+      "title": "Stuur ons een bericht",
+      "fields": {
+        "name": "Volledige naam",
+        "email": "E-mail",
+        "reason": "Reden voor contact",
+        "subject": "Onderwerp",
+        "message": "Bericht"
+      },
+      "required": "Verplichte velden",
+      "send": "Bericht versturen",
+      "sending": "Bezig met versturen...",
+      "success": {
+        "title": "Bericht verstuurd!",
+        "description": "We reageren zo snel mogelijk.",
+        "button": "Nog een bericht sturen"
+      },
+      "placeholders": {
+        "name": "Je naam",
+        "email": "jij@email.com",
+        "reason": "Kies een reden",
+        "subject": "Beschrijf je vraag in het kort",
+        "message": "Beschrijf je vraag of probleem zo volledig mogelijk..."
+      }
+    },
+    "reasons": {
+      "support": "Technische ondersteuning",
+      "bug": "Fout melden",
+      "feature": "Functie voorstellen",
+      "business": "Zakelijke vraag",
+      "feedback": "Algemene feedback"
+    },
+    "faqLink": {
+      "title": "Snel een antwoord?",
+      "description": "Bekijk onze veelgestelde vragen. Veel vragen zijn daar al beantwoord.",
+      "button": "Bekijk de FAQ"
+    }
+  },
+  "privacy": {
+    "backButton": "Terug naar Working Time Control",
+    "title": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: september 2025",
+    "priority": {
+      "title": "Je privacy staat voorop",
+      "description": "Bij Working Time Control nemen we je privacy serieus. Dit privacybeleid legt uit hoe we je gegevens verzamelen, gebruiken en beschermen wanneer je onze app voor urenregistratie gebruikt."
+    },
+    "summary": {
+      "title": "Kort gezegd: we bewaren helemaal niets",
+      "subtitle": "Je privacy in vier duidelijke punten:",
+      "points": {
+        "noAccounts": "We maken geen accounts aan",
+        "noPersonalData": "We vragen geen persoonsgegevens (naam, e-mail, telefoon, adres)",
+        "noAnalytics": "We doen niet aan gedragsanalyse of gepersonaliseerde advertenties",
+        "noDataSelling": "We verkopen geen gegevens"
+      },
+      "emphasis": "Alles blijft op je toestel. Wij bewaren helemaal niets."
+    },
+    "storage": {
+      "title": "Opslag van gegevens",
+      "local": {
+        "title": "100% lokale opslag",
+        "description": "Al je werkgegevens — je banen, je registraties, je roosters en je instellingen — staan uitsluitend op je eigen toestel. Wij hebben er geen toegang toe."
+      },
+      "cloud": {
+        "title": "Geen servers in de cloud",
+        "description": "We hebben geen databases of cloudservers waarop je persoonlijke gegevens staan. Je gegevens verlaten je toestel niet, tenzij je ze zelf exporteert of deelt."
+      },
+      "accounts": {
+        "title": "Geen gebruikersaccounts",
+        "description": "De app werkt zonder account, wat betekent dat we geen identificerende gegevens verzamelen of bewaren, zoals namen, e-mailadressen of telefoonnummers."
+      }
+    },
+    "backup": {
+      "title": "Back-ups",
+      "description": "Omdat alles lokaal op je toestel staat, ben je zelf verantwoordelijk voor het maken van regelmatige back-ups. De app biedt een exportfunctie zodat je je gegevens veilig kunt bewaren."
+    },
+    "ai": {
+      "title": "De AI-chat",
+      "anonymous": {
+        "title": "Anonieme verwerking",
+        "description": "Berichten aan de AI-chatbot worden anoniem verwerkt via de Gemini-API van Google. Er wordt geen persoonlijke informatie meegestuurd."
+      },
+      "chat": {
+        "title": "Geen chatgeschiedenis",
+        "description": "We bewaren geen chatgeschiedenis of gesprekken op onze servers. Alle chatgegevens blijven op je toestel."
+      },
+      "images": {
+        "title": "Analyse van afbeeldingen",
+        "description": "Afbeeldingen die door de AI geanalyseerd worden, worden tijdelijk verwerkt en niet op externe servers bewaard."
+      }
+    },
+    "subscriptions": {
+      "title": "Abonnementen",
+      "description": "Aankopen lopen via de App Store van Apple of Google Play. Om je abonnement te controleren gebruiken we RevenueCat, waar we alleen dit naartoe sturen:",
+      "revenuecatData": {
+        "identifier": "Een willekeurige code die alleen binnen deze app geldt (die jou niet persoonlijk identificeert)",
+        "receipt": "Het aankoopbewijs van Apple of Google"
+      },
+      "purpose": "Die code wordt alleen gebruikt om je abonnement te beheren (activeren of herstellen) en is niet gekoppeld aan je echte identiteit.",
+      "noCollection": {
+        "title": "Wat we niet verzamelen:",
+        "noAccounts": "We maken geen accounts aan",
+        "noPersonalInfo": "We vragen niet om naam, e-mail, telefoon of adres",
+        "noAnalytics": "We doen niet aan gedragsanalyse of gepersonaliseerde advertenties",
+        "noDataSelling": "We verkopen geen gegevens"
+      }
+    },
+    "location": {
+      "title": "Locatiegegevens",
+      "description": "Je locatie wordt alleen gebruikt voor de automatische timer en wordt lokaal op je toestel bewaard. Locatiegegevens worden nooit naar onze servers gestuurd.",
+      "backgroundTitle": "Gebruik op de achtergrond",
+      "background": "Het gebruik van je locatie op de achtergrond is strikt beperkt tot de AutoTimer. Het wordt nooit gebruikt voor marketing of advertenties."
+    },
+    "thirdParty": {
+      "title": "Diensten van derden",
+      "description": "De app kan gegevens sturen naar externe diensten (bijvoorbeeld Google Gemini voor de chatbot en RevenueCat voor abonnementen). Die gegevens worden anoniem verwerkt en kunnen niet gebruikt worden om jou persoonlijk te identificeren. Wij als ontwikkelaars verzamelen of bewaren deze informatie niet.",
+      "gemini": "Google Gemini: https://policies.google.com/privacy",
+      "revenueCat": "RevenueCat: https://www.revenuecat.com/privacy",
+      "stores": "App stores voor distributie en betalingen",
+      "note": "Deze diensten hebben hun eigen privacybeleid:"
+    },
+    "security": {
+      "title": "Veiligheid van je gegevens",
+      "description": "Omdat alles lokaal op je toestel staat, hangt de veiligheid af van de beveiliging van je toestel zelf. We raden aan je toestel te versleutelen en een goede schermvergrendeling te gebruiken."
+    },
+    "children": {
+      "title": "Privacy van kinderen",
+      "description": "Onze app is niet bedoeld voor kinderen onder de 13 jaar. We verzamelen niet bewust persoonlijke gegevens van minderjarigen."
+    },
+    "changes": {
+      "title": "Wijzigingen in dit beleid",
+      "description": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. Wijzigingen worden in de app gepubliceerd en gaan direct daarna in.",
+      "commitment": "We beloven dat geen enkele wijziging in dit beleid je privacy of je anonimiteit zal aantasten. Het uitgangspunt blijft altijd hetzelfde: wij bewaren niets over jou."
+    },
+    "contact": {
+      "title": "Neem contact op",
+      "description": "Heb je vragen over dit privacybeleid, neem dan contact met ons op via"
+    },
+    "footer": "Dit beleid geldt vanaf september 2025 en is van toepassing op alle versies van Working Time Control."
+  },
+  "terms": {
+    "backButton": "Terug naar Working Time Control",
+    "title": "Gebruiksvoorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: september 2025",
+    "acceptance": {
+      "title": "Aanvaarding van de voorwaarden",
+      "description": "Door Working Time Control te downloaden, te installeren of te gebruiken ga je akkoord met deze gebruiksvoorwaarden. Ben je het er niet mee eens, gebruik de app dan niet."
+    },
+    "license": {
+      "title": "Gebruikslicentie",
+      "description": "We geven je een beperkte, niet-exclusieve, niet-overdraagbare en herroepbare licentie om Working Time Control persoonlijk en zakelijk te gebruiken op toestellen die van jou zijn.",
+      "restrictions": "Je mag niet: de app kopiëren, aanpassen of verspreiden; de app reverse-engineeren; de app voor illegale doeleinden gebruiken; of intellectuele eigendomsrechten schenden."
+    },
+    "subscriptions": {
+      "title": "Premium-abonnementen",
+      "premium": {
+        "title": "Premium-functies:",
+        "description": "Een premium-abonnement geeft je onbeperkt banen, de gps-AutoTimer, de volledige AI-chatbot, pdf-export zonder watermerk en de uitgebreide factuurfuncties."
+      },
+      "billing": {
+        "title": "Facturatie:",
+        "description": "Abonnementen worden per drie maanden gefactureerd via je app store. De betaling wordt bij de bevestiging van de aankoop in rekening gebracht."
+      },
+      "cancellation": {
+        "title": "Opzeggen:",
+        "description": "Je kunt je abonnement op elk moment opzeggen via de instellingen van je app store. De opzegging gaat in aan het einde van de lopende periode."
+      }
+    },
+    "ai": {
+      "title": "AI-diensten",
+      "description": "De AI-chatbot gebruikt de Gemini-API van Google. Door deze functie te gebruiken begrijp je dat de antwoorden automatisch gegenereerd worden en niet altijd juist hoeven te zijn. Wij zijn niet verantwoordelijk voor beslissingen die je op basis van die antwoorden neemt."
+    },
+    "responsibilities": {
+      "title": "Verantwoordelijkheden van de gebruiker",
+      "description": "Jij bent verantwoordelijk voor:",
+      "item1": "Het beschermen van je eigen toestel",
+      "item2": "Alles wat er op je toestel gebeurt",
+      "item3": "Het regelmatig maken van back-ups",
+      "item4": "Het gebruiken van de app volgens de geldende wetgeving"
+    },
+    "prohibited": {
+      "title": "Verboden gebruik",
+      "description": "Het is niet toegestaan om:",
+      "item1": "De app te gebruiken voor illegale of frauduleuze doeleinden",
+      "item2": "De beveiliging van de app te kraken of te omzeilen",
+      "item3": "De app te gebruiken om anderen te volgen zonder hun toestemming",
+      "item4": "Privacy- of gegevensbeschermingswetgeving te schenden"
+    },
+    "disclaimer": {
+      "title": "Uitsluiting van garanties",
+      "warranty": "DE APP WORDT GELEVERD \"ZOALS HIJ IS\", ZONDER GARANTIES",
+      "description": "We garanderen niet dat de app ononderbroken, foutloos of volledig veilig werkt. Je gebruikt de app op eigen risico."
+    },
+    "liability": {
+      "title": "Beperking van aansprakelijkheid",
+      "description": "Wij zijn in geen geval aansprakelijk voor indirecte, incidentele, bijzondere of gevolgschade die voortkomt uit het gebruik of het niet kunnen gebruiken van de app, ook niet als wij op de mogelijkheid van zulke schade waren gewezen."
+    },
+    "indemnification": {
+      "title": "Vrijwaring",
+      "description": "Je vrijwaart Working Time Control en de daaraan verbonden partijen van claims, schade of kosten die voortkomen uit jouw gebruik van de app of uit het schenden van deze voorwaarden."
+    },
+    "governing": {
+      "title": "Toepasselijk recht",
+      "description": "Op deze voorwaarden is het recht van de Europese Unie van toepassing, met uitsluiting van de regels van internationaal privaatrecht."
+    },
+    "changes": {
+      "title": "Wijzigingen in de voorwaarden",
+      "description": "We behouden ons het recht voor deze voorwaarden op elk moment te wijzigen. Wijzigingen gaan in zodra ze in de app gepubliceerd zijn."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Voor vragen over deze gebruiksvoorwaarden kun je ons bereiken via"
+    },
+    "footer": "Door Working Time Control te gebruiken bevestig je dat je deze gebruiksvoorwaarden hebt gelezen, begrepen en aanvaard."
+  },
+  "autoTimer": {
+    "badge": "Professioneel niveau",
+    "title": "Gps-AutoTimer",
+    "titleAccent": "die meedenkt",
+    "description": "Geavanceerde geofencing met meer dan acht samenwerkende diensten. Werkt met de app gesloten, herstelt zichzelf en is 99,2% nauwkeurig.",
+    "features": {
+      "geofencing": {
+        "title": "Geavanceerde geofencing",
+        "description": "Straal instelbaar van 50 tot 500 meter, met eigen vertragingen. Gebruikt de native locatie-API's van iOS en Android voor maximale nauwkeurigheid."
+      },
+      "background": {
+        "title": "Betrouwbaar op de achtergrond",
+        "description": "Werkt gewoon door met de app gesloten. Native TaskManager en automatisch herstel als er een status verloren gaat."
+      },
+      "intelligence": {
+        "title": "Denkt vooruit",
+        "description": "Meerdere banen tegelijk, automatische correctie en duidelijke statussen met live activiteiten."
+      }
+    },
+    "specs": {
+      "performance": {
+        "title": "Regels code",
+        "unit": "regels",
+        "description": "Geoptimaliseerde kerndiensten"
+      },
+      "reliability": {
+        "title": "Nauwkeurigheid",
+        "unit": "nauwkeurig",
+        "description": "Betrouwbare gps-detectie"
+      },
+      "efficiency": {
+        "title": "Diensten",
+        "unit": "diensten",
+        "description": "Architectuur in meerdere lagen"
+      }
+    },
+    "states": {
+      "inactive": "Inactief",
+      "entering": "Aankomst",
+      "active": "Actief",
+      "leaving": "Vertrek",
+      "manual": "Handmatig"
+    },
+    "statesTitle": "Statussen van het systeem",
+    "statesDescription": "Een slimme toestandsmachine die alle overgangen van je werkdag zelf regelt.",
+    "tryButton": "Probeer de AutoTimer",
+    "architectureTitle": "Technische opbouw"
+  },
+  "autoTimerFeature": {
+    "badge": "Slimme gps",
+    "title": "Een AutoTimer die",
+    "titleAccent": "echt werkt",
+    "description": "Automatische gps-detectie als je op je werk aankomt of weggaat. Je hoeft de app niet aan te raken en er is geen ingewikkelde installatie.",
+    "features": {
+      "geofence": {
+        "title": "Detectie op afstand",
+        "description": "Straal instelbaar van 50 tot 500 meter. Merkt vanzelf wanneer je je werkgebied binnenkomt of verlaat."
+      },
+      "automatic": {
+        "title": "Start en stopt vanzelf",
+        "description": "De teller start bij aankomst en stopt bij vertrek. Instelbare vertraging van 2 tot 10 minuten om vals alarm te voorkomen."
+      },
+      "background": {
+        "title": "Werkt op de achtergrond",
+        "description": "Werkt gewoon door met de app gesloten. De native iOS-API's zorgen dat het dag en nacht betrouwbaar blijft."
+      }
+    },
+    "stats": {
+      "radius": "Gps-straal",
+      "delays": "Vertraging",
+      "monitoring": "Bewaking"
+    },
+    "status": {
+      "active": "AutoTimer actief",
+      "radius": "straal"
+    }
+  },
+  "appShowcase": {
+    "badge": "Dit is de app",
+    "title": "Zo gemaakt dat je",
+    "titleAccent": "er nooit aan denkt",
+    "description": "Een overzichtelijke app waarmee je je uren moeiteloos vastlegt, vanaf elk scherm van je dag.",
+    "items": {
+      "dashboard": {
+        "badge": "Startscherm",
+        "title": "Je hele werkdag op één scherm",
+        "description": "Wissel tussen de handmatige timer en de AutoTimer, bekijk je werkkalender en zie in één oogopslag je uren van deze maand."
+      },
+      "register": {
+        "badge": "Handmatig invoeren",
+        "title": "Voeg een dag toe in enkele seconden",
+        "description": "Kies het soort dag, pas de uren aan met de snelknoppen en voeg desgewenst een notitie toe. Ideaal voor een dag die je vergeten was."
+      },
+      "reports": {
+        "badge": "Rapporten",
+        "title": "Je uren, in duidelijke cijfers",
+        "description": "Elke werkdag met begin- en eindtijd, het totaal van de periode, en de overuren als die er waren."
+      },
+      "salary": {
+        "badge": "Verdiensten",
+        "title": "En wat je ermee verdiende",
+        "description": "Je maandinkomen, je uren per week, en de maanden waarin je het meest en het minst werkte."
+      }
+    }
+  },
+  "autoTimerGeofence": {
+    "badge": "Slimme locatie",
+    "title": "Begint te tellen als je aankomt,",
+    "titleAccent": "stopt als je weggaat",
+    "description": "De AutoTimer volgt je locatie op dat moment. Zodra je je werkgebied binnenkomt start de teller vanzelf; als je weggaat stopt hij automatisch — je hoeft niets aan te raken.",
+    "points": {
+      "arrive": {
+        "title": "Aankomst herkend",
+        "description": "De gps merkt dat je binnen je werkstraal bent en start de teller meteen."
+      },
+      "leave": {
+        "title": "Vertrek herkend",
+        "description": "Als je het ingestelde gebied verlaat, stopt de AutoTimer met tellen en bewaart je dienst vanzelf."
+      }
+    }
+  },
+  "watch": {
+    "badge": "Nu op de Apple Watch",
+    "title": "Je uren,",
+    "titleAccent": "om je pols.",
+    "description": "Inklokken, pauzeren en afsluiten zonder je telefoon uit je zak te halen. Wat je op de één doet, zie je op de ander — ook als je telefoon thuis is gebleven.",
+    "screen": {
+      "title": "Timer",
+      "manual": "Handmatig",
+      "auto": "Auto",
+      "start": "Starten",
+      "week": "Deze week"
+    },
+    "features": {
+      "start": {
+        "title": "Starten en stoppen",
+        "body": "Zonder je telefoon te pakken."
+      },
+      "week": {
+        "title": "Je week",
+        "body": "Dagen en uren, in één oogopslag."
+      },
+      "stats": {
+        "title": "Statistieken",
+        "body": "Week, maand en drie maanden."
+      },
+      "sync": {
+        "title": "Altijd gelijk",
+        "body": "Is je telefoon ver weg, dan stuurt hij het zodra jullie weer bij elkaar zijn."
+      }
+    }
+  },
+  "scrollReveal": {
+    "text": "Word je per uur betaald? Je uren altijd onder controle met\nWorkTimeControl."
+  },
+  "liveTimer": {
+    "working": "Je bent aan het werk",
+    "startedAt": "Gestart om"
+  }
+}
