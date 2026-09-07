@@ -160,11 +160,13 @@ export default function Navigation() {
                   {item.label}
                 </button>
               ))}
-              
-              <div className="border-t my-4 pt-4">
-                <LanguageSelector variant="mobile" />
-              </div>
-              
+
+              {/* Aqui habia un selector de idioma. Se quita: al desplegarse
+                  hacia abajo, la lista de ocho idiomas se salia de la pantalla
+                  y los ultimos no se veian, y ademas alargaba mucho el menu.
+                  El del pie de pagina hace lo mismo y ahi tiene sitio de
+                  sobra; y la landing ya detecta el idioma sola, asi que casi
+                  nadie necesita tocarlo. */}
               <a 
                 href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
                 data-zona="menu_movil"
