@@ -853,5 +853,9 @@
     "description": "Kein Konto, keine Server, keine Werbung. Alles, was du erfasst, bleibt auf deinem Gerät — und geht nur weg, wenn du es selbst exportierst.",
     "languages": "Die App in 10 Sprachen",
     "offline": "Funktioniert offline"
+  },
+  "appStore": {
+    "download": "Laden im",
+    "name": "App Store"
   }
 }

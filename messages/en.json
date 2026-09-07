@@ -853,5 +853,9 @@
     "description": "No account, no servers, no ads. Everything you track stays on your device, and only leaves it if you export it yourself.",
     "languages": "The app, in 10 languages",
     "offline": "Works offline"
+  },
+  "appStore": {
+    "download": "Download on the",
+    "name": "App Store"
   }
 }

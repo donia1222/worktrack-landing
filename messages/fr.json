@@ -853,5 +853,9 @@
     "description": "Sans compte, sans serveur, sans publicité. Tout ce que vous enregistrez reste sur votre appareil, et n'en sort que si vous l'exportez vous-même.",
     "languages": "L'application en 10 langues",
     "offline": "Fonctionne hors ligne"
+  },
+  "appStore": {
+    "download": "Télécharger dans l’",
+    "name": "App Store"
   }
 }

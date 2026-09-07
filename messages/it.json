@@ -853,5 +853,9 @@
     "description": "Senza account, senza server, senza pubblicità. Tutto quello che registri resta sul tuo dispositivo, ed esce solo se sei tu a esportarlo.",
     "languages": "L'app in 10 lingue",
     "offline": "Funziona offline"
+  },
+  "appStore": {
+    "download": "Scaricala su",
+    "name": "App Store"
   }
 }

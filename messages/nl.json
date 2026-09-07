@@ -853,5 +853,9 @@
     "description": "Geen account, geen servers, geen advertenties. Alles wat je bijhoudt blijft op je toestel, en gaat er alleen af als je het zelf exporteert.",
     "languages": "De app in 10 talen",
     "offline": "Werkt offline"
+  },
+  "appStore": {
+    "download": "Download in de",
+    "name": "App Store"
   }
 }
