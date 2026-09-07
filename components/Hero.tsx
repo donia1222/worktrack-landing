@@ -3,6 +3,7 @@
 import { Sparkles, Zap, BarChart3, CalendarCheck, Play, Watch } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import AppStoreBadge from "./AppStoreBadge"
+import DisponiblePara from "./DisponiblePara"
 import { WatchDrawing } from "./AppleWatchTeaser"
 import LiveTimerOverlay from "./LiveTimerOverlay"
 import Image from "next/image"
@@ -277,6 +278,14 @@ export default function Hero() {
               <p className="text-sm text-slate-500">{t("hero.gratis")}</p>
             </div>
           </div>
+        </div>
+
+        {/* En qué aparatos corre. Va debajo de las dos columnas para que caiga
+            bajo el botón de descarga en las dos maquetaciones: en el móvil el
+            botón está al final de la columna derecha, y en el escritorio al
+            final de la izquierda. */}
+        <div className="mt-14">
+          <DisponiblePara />
         </div>
       </div>
     </section>

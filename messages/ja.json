@@ -39,7 +39,8 @@
       "platforms": "iOSとAndroid"
     },
     "gratis": "無料。アカウント登録も不要です。",
-    "reloj": "Apple Watchにも対応しました"
+    "reloj": "Apple Watchにも対応しました",
+    "disponible": "対応デバイス"
   },
   "screenshots": {
     "badge": "プレビュー",

@@ -39,7 +39,8 @@
       "platforms": "iOS e Android"
     },
     "gratis": "Gratis. Senza account, senza registrazione.",
-    "reloj": "Ora anche su Apple Watch"
+    "reloj": "Ora anche su Apple Watch",
+    "disponible": "Disponibile per"
   },
   "screenshots": {
     "badge": "Anteprima",

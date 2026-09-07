@@ -39,7 +39,8 @@
       "platforms": "iOS en Android"
     },
     "gratis": "Gratis. Geen account, geen registratie.",
-    "reloj": "Nu ook op de Apple Watch"
+    "reloj": "Nu ook op de Apple Watch",
+    "disponible": "Beschikbaar voor"
   },
   "screenshots": {
     "badge": "Voorproefje",
