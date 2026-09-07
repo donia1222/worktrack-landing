@@ -58,7 +58,7 @@ export default function MacTeaser() {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <p className="mb-8 text-lg font-medium text-slate-600">{t("mac.caption")}</p>
+        <p className="mb-8 text-xl font-medium text-slate-600 sm:text-2xl">{t("mac.caption")}</p>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}

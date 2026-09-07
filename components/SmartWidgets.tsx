@@ -36,7 +36,7 @@ export default function SmartWidgets() {
               teléfono (no tiene el resto de la interfaz alrededor), así que
               meterla en un marco de móvil mentía sobre lo que es. Va sola,
               con esquinas redondeadas, sobre un halo del color de la app. */}
-          <div className="relative flex justify-center lg:order-2">
+          <div className="relative order-2 flex justify-center">
             <div className="absolute h-[300px] w-[300px] rounded-full bg-gradient-to-br from-violet-200/50 to-transparent blur-2xl" />
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -55,7 +55,7 @@ export default function SmartWidgets() {
             </motion.div>
           </div>
 
-          <div className="lg:order-1">
+          <div className="order-1">
             <span className="inline-flex items-center gap-2 rounded-full bg-violet-50 px-4 py-1.5 text-sm font-semibold text-violet-700">
               {t("smartWidgets.badge")}
             </span>
