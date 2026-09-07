@@ -28,19 +28,26 @@ export default function MobileDownloadBanner() {
     setPlatform(isIOS ? 'ios' : 'android')
   }, [])
 
+  // Antes aparecía a un 25% fijo de scroll de toda la página: cómodo hasta
+  // que el bloque de capturas se hizo alto de verdad (scroll horizontal
+  // fijado, varias pantallas de alto) y ese 25% caía justo encima de su
+  // texto, tapándolo. Ahora se ancla al final de la sección del reloj —
+  // aparece justo al dejarla atrás, se mueva lo que se mueva el resto de
+  // secciones por encima.
   const handleScroll = useCallback(() => {
     if (isDismissed) return
 
-    const scrollTop = window.scrollY
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight
-    const scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0
+    const reloj = document.getElementById('apple-watch')
+    if (!reloj) return
 
-    setIsVisible(scrollPercent >= 0.25)
+    const finReloj = window.scrollY + reloj.getBoundingClientRect().bottom
+    setIsVisible(window.scrollY >= finReloj)
   }, [isDismissed])
 
   useEffect(() => {
     if (!platform) return
 
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [platform, handleScroll])
