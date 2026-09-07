@@ -2,7 +2,6 @@
   "navigation": {
     "features": "Características",
     "smartWidgets": "Widgets iOS",
-    "screenshots": "Capturas",
     "pricing": "Precios",
     "faq": "FAQ",
     "contact": "Contacto",
@@ -41,50 +40,6 @@
     },
     "gratis": "Gratis. Sin cuenta y sin registro.",
     "reloj": "Ya disponible en Apple Watch"
-  },
-  "features": {
-    "title": "Más que un simple",
-    "titleAccent": "control horario",
-    "description": "Un ecosistema completo para freelancers y profesionales: desde detección GPS hasta facturación automática, todo en una app con almacenamiento 100% local y privacidad total.",
-    "items": {
-      "autoTimer": {
-        "title": "Auto-Timer GPS",
-        "description": "Detecta automáticamente cuando llegas o sales del trabajo. Configura radio de geofencing de 50m a 500m y retrasos de 2-10 minutos. Sin tocar la app."
-      },
-      "widgets": {
-        "title": "Widgets iOS Avanzados + Dynamic Island",
-        "description": "3 tamaños de widgets nativos iOS con datos en tiempo real. Live Activities en Dynamic Island para iPhone 14 Pro+. Control completo desde la pantalla de bloqueo."
-      },
-      "jobs": {
-        "title": "Trabajos Ilimitados (Premium)",
-        "description": "Gestiona múltiples trabajos con horarios flexibles, turnos divididos (mañana/tarde), tarifas personalizadas y colores identificativos."
-      },
-      "calendar": {
-        "title": "Calendario Visual Completo",
-        "description": "Marca días trabajados, libres, vacaciones y enfermedad. Sincroniza con calendario nativo iOS/Android. Exportación ICS."
-      },
-      "reports": {
-        "title": "Reportes y Exportación",
-        "description": "Estadísticas detalladas por trabajo y período. Exportación PDF solo en Premium. Sistema de facturación profesional incluido."
-      },
-      "salary": {
-        "title": "Estadísticas de Salario",
-        "description": "Consulta tus ingresos mensuales, horas totales y comparativas semanales calculadas automáticamente."
-      },
-      "notifications": {
-        "title": "Sistema de Notificaciones Pro",
-        "description": "Avisos antes de que el Auto-Timer empiece o pare, recordatorios de tu horario y aviso al terminar la jornada. Compatible con los modos de concentración de iOS."
-      },
-      "ai": {
-        "title": "IA multimodal (GPT-4 + Gemini)",
-        "description": "Dos IA: GPT-4 Vision y Google Gemini. Analiza documentos PDF, fotos de horarios y contratos de trabajo. Busca las normas automáticamente en diez idiomas."
-      }
-    },
-    "badges": {
-      "localStorage": "100% Almacenamiento Local",
-      "languages": "8 idiomas",
-      "tech": "Funciona sin conexión — no necesita internet"
-    }
   },
   "exportReports": {
     "badge": "Reportes Profesionales",
@@ -515,7 +470,6 @@
       },
       "location": {
         "title": "Ubicación",
-        "city": "St. Gallen, Suiza",
         "description": "Equipo distribuido en Europa"
       }
     },
@@ -893,5 +847,11 @@
   "liveTimer": {
     "working": "Estás trabajando",
     "startedAt": "Empezaste a las"
+  },
+  "privacyBanner": {
+    "title": "Tus datos no salen de tu teléfono",
+    "description": "Sin cuenta, sin servidores, sin anuncios. Todo lo que registras se queda en tu dispositivo, y solo sale si tú lo exportas.",
+    "languages": "La app, en 10 idiomas",
+    "offline": "Funciona sin conexión"
   }
 }

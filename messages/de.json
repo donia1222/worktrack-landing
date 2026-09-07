@@ -41,50 +41,6 @@
     "gratis": "Kostenlos. Ohne Konto, ohne Anmeldung.",
     "reloj": "Jetzt auch für die Apple Watch"
   },
-  "features": {
-    "title": "Mehr als eine einfache",
-    "titleAccent": "Zeiterfassung",
-    "description": "Ein komplettes Ökosystem für Freelancer und Profis: von GPS-Erkennung bis zur automatischen Abrechnung, alles in einer App mit 100% lokalem Speicher und totaler Privatsphäre.",
-    "items": {
-      "autoTimer": {
-        "title": "GPS Auto-Timer",
-        "description": "Erkennt automatisch, wann Sie zur Arbeit kommen oder gehen. Konfigurieren Sie Geofencing-Radius von 50m bis 500m und Verzögerungen von 2-10 Minuten. Keine Berührung der App erforderlich."
-      },
-      "widgets": {
-        "title": "Erweiterte iOS Widgets + Dynamic Island",
-        "description": "3 native iOS Widget-Größen mit Echtzeit-Datenaktualisierungen. Live Activities in Dynamic Island für iPhone 14 Pro+. Vollständige Kontrolle vom Sperrbildschirm."
-      },
-      "jobs": {
-        "title": "Unbegrenzte Jobs (Premium)",
-        "description": "Verwalten Sie mehrere Jobs mit flexiblen Arbeitszeiten, geteilten Schichten (Morgen/Nachmittag), benutzerdefinierten Tarifen und Identifikationsfarben."
-      },
-      "calendar": {
-        "title": "Vollständiger Visueller Kalender",
-        "description": "Markieren Sie Arbeitstage, freie Tage, Urlaub und Krankheitstage. Synchronisation mit nativem iOS/Android-Kalender. ICS-Export."
-      },
-      "reports": {
-        "title": "Berichte und Export",
-        "description": "Detaillierte Statistiken nach Job und Zeitraum. PDF-Export nur in Premium. Professionelles Abrechnungssystem enthalten."
-      },
-      "ai": {
-        "title": "Multimodale KI (GPT-4 + Gemini)",
-        "description": "Duale KI mit GPT-4 Vision + Google Gemini. Analysiert PDF-Dokumente, Zeitplan-Bilder, Arbeitsverträge. Automatische globale Rechtssuche in 10 Sprachen."
-      },
-      "salary": {
-        "title": "Gehaltsübersicht",
-        "description": "Sehen Sie Ihr monatliches Einkommen, die Gesamtstunden und wöchentliche Vergleiche, automatisch berechnet."
-      },
-      "notifications": {
-        "title": "Pro Benachrichtigungs-System",
-        "description": "Hinweise, bevor der Auto-Timer startet oder stoppt, Erinnerungen an Ihren Zeitplan und eine Meldung zum Feierabend. Kompatibel mit den Fokus-Modi von iOS."
-      }
-    },
-    "badges": {
-      "localStorage": "100% Lokaler Speicher",
-      "languages": "8 Sprachen",
-      "tech": "Funktioniert offline — ohne Internet"
-    }
-  },
   "screenshots": {
     "badge": "Vorschau",
     "title": "Entdecken Sie jeden",
@@ -891,5 +847,11 @@
   "liveTimer": {
     "working": "Du arbeitest",
     "startedAt": "Gestartet um"
+  },
+  "privacyBanner": {
+    "title": "Deine Daten bleiben auf deinem Handy",
+    "description": "Kein Konto, keine Server, keine Werbung. Alles, was du erfasst, bleibt auf deinem Gerät — und geht nur weg, wenn du es selbst exportierst.",
+    "languages": "Die App in 10 Sprachen",
+    "offline": "Funktioniert offline"
   }
 }

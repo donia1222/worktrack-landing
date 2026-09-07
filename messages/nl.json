@@ -41,50 +41,6 @@
     "gratis": "Gratis. Geen account, geen registratie.",
     "reloj": "Nu ook op de Apple Watch"
   },
-  "features": {
-    "title": "Gemaakt voor",
-    "titleAccent": "professionals",
-    "description": "Gebouwd met de nieuwste technologie voor de nauwkeurigste urenregistratie met de meeste aandacht voor privacy. Je gegevens verlaten je toestel nooit.",
-    "items": {
-      "autoTimer": {
-        "title": "Slimme gps-automatisering",
-        "description": "Eén keer instellen en nooit meer omkijken. Onze geofencing leert je werkpatroon en registreert je tijd met 99,9% nauwkeurigheid. Detectiezones instelbaar van 50 tot 500 meter."
-      },
-      "widgets": {
-        "title": "Geavanceerde iOS-widgets en Dynamic Island",
-        "description": "Drie native widgetformaten die zichzelf bijwerken. Live activiteiten in de Dynamic Island voor iPhone 14 Pro en nieuwer. Volledige bediening vanaf je toegangsscherm en beginscherm."
-      },
-      "jobs": {
-        "title": "Meerdere banen tegelijk",
-        "description": "Werk je voor meerdere opdrachtgevers? Houd onbeperkt banen tegelijk bij, met eigen kleuren, gebroken diensten en eigen tarieven. Ideaal voor zzp'ers en uitzendkrachten."
-      },
-      "calendar": {
-        "title": "Visueel overzicht van je werk",
-        "description": "Overzichtelijke kalenders laten je werkpatroon in één oogopslag zien. Synchronisatie met je agenda, vakantiedagen bijhouden en exporteren naar ICS met één tik."
-      },
-      "reports": {
-        "title": "Rapporten klaar om te factureren",
-        "description": "Maak in seconden een professioneel pdf-rapport. Je inkomsten worden automatisch berekend, klaar voor de belasting en met een eigen opmaak."
-      },
-      "ai": {
-        "title": "Multimodale AI (GPT-4 + Gemini)",
-        "description": "Twee AI-modellen: GPT-4 Vision en Google Gemini. Analyseert pdf's, foto's van roosters en arbeidscontracten. Zoekt automatisch de regels op in tien talen."
-      },
-      "salary": {
-        "title": "Inzicht in je verdiensten",
-        "description": "Bekijk je maandinkomen, je totale uren en de vergelijking per week, allemaal automatisch berekend."
-      },
-      "notifications": {
-        "title": "Meldingen die kloppen",
-        "description": "Een seintje voordat de AutoTimer start of stopt, herinneringen voor je rooster en een melding als je werkdag erop zit. Werkt samen met de Focus-standen van iOS."
-      }
-    },
-    "badges": {
-      "localStorage": "100% privé — je gegevens blijven op je toestel",
-      "languages": "8 talen",
-      "tech": "Werkt offline — geen internet nodig"
-    }
-  },
   "screenshots": {
     "badge": "Voorproefje",
     "title": "Bekijk elk",
@@ -891,5 +847,11 @@
   "liveTimer": {
     "working": "Je bent aan het werk",
     "startedAt": "Gestart om"
+  },
+  "privacyBanner": {
+    "title": "Je gegevens verlaten je telefoon niet",
+    "description": "Geen account, geen servers, geen advertenties. Alles wat je bijhoudt blijft op je toestel, en gaat er alleen af als je het zelf exporteert.",
+    "languages": "De app in 10 talen",
+    "offline": "Werkt offline"
   }
 }

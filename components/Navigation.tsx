@@ -25,7 +25,7 @@ const getNavItems = (t: (key: string) => string) => [
   { label: t('navigation.autoTimer'), href: '#autotimer', soloMovil: true },
   { label: t('navigation.watch'), href: '#apple-watch', soloGrande: true },
   { label: t('navigation.smartWidgets'), href: '#smart-widgets', soloGrande: true },
-  { label: t('navigation.features'), href: '#features' },
+  { label: t('navigation.features'), href: '#app-showcase' },
   { label: t('navigation.reports'), href: '#export-reports', soloMovil: true },
   { label: t('navigation.pricing'), href: '#pricing' },
   { label: t('navigation.faq'), href: '#faq' },

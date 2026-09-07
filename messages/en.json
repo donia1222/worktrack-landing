@@ -41,50 +41,6 @@
     "gratis": "Free. No account, no sign-up.",
     "reloj": "Now available on Apple Watch"
   },
-  "features": {
-    "title": "Built for",
-    "titleAccent": "Professionals",
-    "description": "Engineered with cutting-edge technology to deliver the most accurate, privacy-focused time tracking solution on the market. Your data never leaves your device.",
-    "items": {
-      "autoTimer": {
-        "title": "Intelligent GPS Automation",
-        "description": "Set it once, forget forever. Our patent-pending geofencing technology learns your work patterns and tracks time with 99.9% accuracy. Customizable detection zones from 50m to 500m."
-      },
-      "widgets": {
-        "title": "Advanced iOS Widgets + Dynamic Island",
-        "description": "3 native iOS widget sizes with real-time data updates. Live Activities in Dynamic Island for iPhone 14 Pro+. Full control from lock screen and home screen."
-      },
-      "jobs": {
-        "title": "Multi-Job Management",
-        "description": "Juggling multiple clients? Track unlimited jobs simultaneously with color-coded schedules, split shifts, and custom billing rates. Perfect for freelancers and contractors."
-      },
-      "calendar": {
-        "title": "Visual Work Analytics",
-        "description": "Beautiful heat maps show your work patterns at a glance. Native calendar sync, vacation tracking, and one-tap ICS export for seamless integration with any system."
-      },
-      "reports": {
-        "title": "Invoice-Ready Reports",
-        "description": "Generate professional PDF reports in seconds. Automatic income calculations, tax-ready summaries, and customizable templates that impress clients."
-      },
-      "ai": {
-        "title": "Multimodal AI (GPT-4 + Gemini)",
-        "description": "Dual AI with GPT-4 Vision + Google Gemini. Analyzes PDF documents, schedule images, work contracts. Automatic global legal search in 10 languages."
-      },
-      "salary": {
-        "title": "Salary Insights",
-        "description": "Check your monthly income, total hours, and weekly comparisons calculated automatically."
-      },
-      "notifications": {
-        "title": "Pro Notification System",
-        "description": "Alerts before the Auto-Timer starts or stops, schedule reminders, and a notice when your workday ends. Compatible with iOS Focus Modes."
-      }
-    },
-    "badges": {
-      "localStorage": "100% Privacy - Data Never Leaves Your Device",
-      "languages": "8 languages",
-      "tech": "Works Offline - No Internet Required"
-    }
-  },
   "screenshots": {
     "badge": "Preview",
     "title": "Discover every",
@@ -891,5 +847,11 @@
   "liveTimer": {
     "working": "You're working",
     "startedAt": "Started at"
+  },
+  "privacyBanner": {
+    "title": "Your data never leaves your phone",
+    "description": "No account, no servers, no ads. Everything you track stays on your device, and only leaves it if you export it yourself.",
+    "languages": "The app, in 10 languages",
+    "offline": "Works offline"
   }
 }

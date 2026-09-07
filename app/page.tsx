@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import AppShowcase from '@/components/AppShowcase'
 import Stats from '@/components/Stats'
-import Features from '@/components/Features'
+import PrivacyBanner from '@/components/PrivacyBanner'
 import AutoTimerGeofence from '@/components/AutoTimerGeofence'
 import ExportReports from '@/components/ExportReports'
 import SmartWidgets from '@/components/SmartWidgets'
@@ -43,8 +43,13 @@ export default function Home() {
             cualquiera. Estaba importado y sin usar, asi que no lo veia nadie. */}
         <SmartWidgets />
 
-        <Features />
         <ExportReports />
+
+        {/* La promesa de privacidad va aqui y no antes: primero la pagina
+            enseña lo que hace, y esto es lo ultimo que se lee antes del
+            precio. Sustituye a la seccion «Features», que repetia punto por
+            punto lo que ya cuentan las secciones de arriba. */}
+        <PrivacyBanner />
 
         <Pricing />
         <FAQ />

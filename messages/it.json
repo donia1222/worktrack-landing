@@ -41,50 +41,6 @@
     "gratis": "Gratis. Senza account, senza registrazione.",
     "reloj": "Ora anche su Apple Watch"
   },
-  "features": {
-    "title": "Pensata per i",
-    "titleAccent": "professionisti",
-    "description": "Costruita con le tecnologie più recenti per offrire il conteggio delle ore più preciso e più rispettoso della privacy. I tuoi dati non lasciano mai il tuo dispositivo.",
-    "items": {
-      "autoTimer": {
-        "title": "Automazione GPS intelligente",
-        "description": "Lo imposti una volta e te ne dimentichi. Il nostro geofencing impara le tue abitudini e conta le ore con una precisione del 99,9%. Zone di rilevamento regolabili da 50 a 500 metri."
-      },
-      "widgets": {
-        "title": "Widget iOS avanzati e Dynamic Island",
-        "description": "Tre formati di widget nativi che si aggiornano da soli. Attività in tempo reale nella Dynamic Island su iPhone 14 Pro e successivi. Controllo completo dalla schermata di blocco e dalla home."
-      },
-      "jobs": {
-        "title": "Più lavori insieme",
-        "description": "Lavori per più clienti? Segui un numero illimitato di lavori in parallelo, con colori, turni spezzati e tariffe diverse per ciascuno. Perfetto per autonomi e interinali."
-      },
-      "calendar": {
-        "title": "Il tuo lavoro, a colpo d'occhio",
-        "description": "Calendari chiari che mostrano le tue abitudini di lavoro in un attimo. Sincronizzazione con il calendario, ferie sotto controllo ed esportazione ICS con un tocco."
-      },
-      "reports": {
-        "title": "Report pronti da fatturare",
-        "description": "Genera un report PDF professionale in pochi secondi. Guadagni calcolati da soli, riepiloghi pronti per le tasse e impaginazione personalizzabile."
-      },
-      "ai": {
-        "title": "IA multimodale (GPT-4 + Gemini)",
-        "description": "Due IA: GPT-4 Vision e Google Gemini. Analizza PDF, foto di turni e contratti di lavoro. Ricerca automatica delle regole in dieci lingue."
-      },
-      "salary": {
-        "title": "Quanto hai guadagnato",
-        "description": "Guarda il tuo reddito mensile, le ore totali e il confronto tra le settimane, calcolati da soli."
-      },
-      "notifications": {
-        "title": "Notifiche che servono",
-        "description": "Un avviso prima che l'AutoTimer parta o si fermi, promemoria degli orari e un messaggio quando la giornata è finita. Compatibile con le modalità Full Immersion di iOS."
-      }
-    },
-    "badges": {
-      "localStorage": "100% privato — i tuoi dati restano sul telefono",
-      "languages": "8 lingue",
-      "tech": "Funziona offline — senza connessione"
-    }
-  },
   "screenshots": {
     "badge": "Anteprima",
     "title": "Scopri ogni",
@@ -891,5 +847,11 @@
   "liveTimer": {
     "working": "Stai lavorando",
     "startedAt": "Iniziato alle"
+  },
+  "privacyBanner": {
+    "title": "I tuoi dati non escono dal telefono",
+    "description": "Senza account, senza server, senza pubblicità. Tutto quello che registri resta sul tuo dispositivo, ed esce solo se sei tu a esportarlo.",
+    "languages": "L'app in 10 lingue",
+    "offline": "Funziona offline"
   }
 }
