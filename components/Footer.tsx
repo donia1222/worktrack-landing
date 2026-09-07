@@ -31,8 +31,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-blue-400">{t('footer.product')}</h4>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
-              <li><a href="#features" className="hover:text-blue-400 transition-colors">{t('footer.links.features')}</a></li>
-              <li><a href="#screenshots" className="hover:text-blue-400 transition-colors">{t('navigation.screenshots')}</a></li>
+              <li><a href="#app-showcase" className="hover:text-blue-400 transition-colors">{t('footer.links.features')}</a></li>
+              <li><a href="#apple-watch" className="hover:text-blue-400 transition-colors">{t('navigation.watch')}</a></li>
               <li><a href="#pricing" className="hover:text-blue-400 transition-colors">{t('footer.links.pricing')}</a></li>
               <li><a href="#faq" className="hover:text-blue-400 transition-colors">{t('navigation.faq')}</a></li>
             </ul>
