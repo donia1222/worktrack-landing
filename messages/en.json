@@ -853,5 +853,8 @@
   "appStore": {
     "download": "Download on the",
     "name": "App Store"
+  },
+  "mac": {
+    "caption": "Also available on Mac with Apple Silicon"
   }
 }

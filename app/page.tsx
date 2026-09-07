@@ -13,8 +13,8 @@ import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
-import AppleWatchTeaser from '@/components/AppleWatchTeaser'
 import AppleWatchScrollHero from '@/components/AppleWatchScrollHero'
+import MacTeaser from '@/components/MacTeaser'
 import ScrollTextReveal from '@/components/ScrollTextReveal'
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
             quien llega no tiene Apple Watch, así que primero la página
             demuestra lo que promete el titular, y el reloj es el empujón. */}
         <AppleWatchScrollHero />
-        <AppleWatchTeaser />
+        <MacTeaser />
 
         {/* El widget, justo detras del reloj: los dos cuentan lo mismo —donde
             mas vive la app fuera de la app—, y el widget lo puede poner

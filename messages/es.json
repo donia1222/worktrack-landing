@@ -853,5 +853,8 @@
   "appStore": {
     "download": "Descárgalo en el",
     "name": "App Store"
+  },
+  "mac": {
+    "caption": "También disponible en Mac con chip Apple Silicon"
   }
 }

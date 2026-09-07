@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/language"
 import AppStoreBadge from "./AppStoreBadge"
+import DisponiblePara from "./DisponiblePara"
 
 export default function CTA() {
   const { t } = useLanguage()
@@ -34,6 +35,7 @@ export default function CTA() {
             </p>
           </div>
 
+          <DisponiblePara />
 
         </motion.div>
       </div>

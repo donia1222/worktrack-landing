@@ -3,9 +3,7 @@
 // Las traducciones salen del proveedor propio del proyecto, no de
 // `next-intl` directamente: el resto de componentes usan este, y con
 // `useTranslations` no se encuentra el contexto.
-import { useLanguage } from "@/lib/language";
 import { useSegundosTrabajados } from "@/lib/liveTimer";
-import { Play, CalendarDays, BarChart3, RefreshCw } from "lucide-react";
 import { useEffect, useState } from "react";
 
 /**
@@ -121,55 +119,3 @@ export function WatchDrawing({ idioma }: { idioma: string }) {
   );
 }
 
-const VENTAJAS = [
-  { icono: Play, clave: "start", color: "text-emerald-600 bg-emerald-50" },
-  { icono: CalendarDays, clave: "week", color: "text-indigo-600 bg-indigo-50" },
-  { icono: BarChart3, clave: "stats", color: "text-purple-600 bg-purple-50" },
-  { icono: RefreshCw, clave: "sync", color: "text-amber-600 bg-amber-50" },
-];
-
-/**
- * Debajo del héroe animado (AppleWatchScrollHero, que ya enseña el reloj
- * grande y el título "Tus horas, en la muñeca" como overlay durante el
- * scroll fijado), solo queda la insignia pequeña, la descripción y la
- * lista de funciones — repetir el título aquí sería redundante justo
- * después de haberlo visto en grande encima del reloj.
- */
-export default function AppleWatchTeaser() {
-  const { t } = useLanguage();
-
-  return (
-    <section className="pb-16 lg:pb-24 bg-slate-50">
-      <div className="mx-auto max-w-2xl px-6 text-center">
-        <span className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-semibold text-indigo-700">
-          {t("watch.badge")}
-        </span>
-
-        <p className="mt-5 text-lg leading-relaxed text-slate-600">
-          {t("watch.description")}
-        </p>
-
-        <div className="mt-8 grid gap-3 text-left sm:grid-cols-2">
-          {VENTAJAS.map(({ icono: Icono, clave, color }) => (
-            <div
-              key={clave}
-              className="flex items-start gap-3 rounded-2xl border border-slate-200/70 bg-white/70 p-4 backdrop-blur-sm"
-            >
-              <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${color}`}>
-                <Icono className="h-[18px] w-[18px]" />
-              </span>
-              <span className="text-sm">
-                <span className="block font-semibold text-slate-900">
-                  {t(`watch.features.${clave}.title`)}
-                </span>
-                <span className="mt-0.5 block leading-snug text-slate-600">
-                  {t(`watch.features.${clave}.body`)}
-                </span>
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}

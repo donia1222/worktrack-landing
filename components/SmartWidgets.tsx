@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Timer, CalendarDays, LayoutGrid, RefreshCw, Radio, Hand } from "lucide-react"
+import { RefreshCw, Radio, Hand } from "lucide-react"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/language"
 
@@ -19,12 +19,6 @@ import { useLanguage } from "@/lib/language"
  * limpio sobre blanco, sin degradados de fondo ni discos de colores.
  */
 
-const TAMANOS = [
-  { clave: "small", icono: Timer, medida: "2×2", color: "bg-emerald-50 text-emerald-600" },
-  { clave: "medium", icono: CalendarDays, medida: "4×2", color: "bg-indigo-50 text-indigo-600" },
-  { clave: "large", icono: LayoutGrid, medida: "4×4", color: "bg-violet-50 text-violet-600" },
-] as const
-
 const VENTAJAS = [
   { clave: "realTime", icono: RefreshCw, color: "bg-emerald-50 text-emerald-600" },
   { clave: "dynamicIsland", icono: Radio, color: "bg-slate-100 text-slate-700" },
@@ -38,7 +32,10 @@ export default function SmartWidgets() {
     <section id="smart-widgets" className="py-20 pb-28 lg:pt-28 lg:pb-36 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-14 lg:grid-cols-2">
-          {/* El telefono, sobre un halo del color de la app */}
+          {/* La captura del widget, tal cual: no es una pantalla de
+              teléfono (no tiene el resto de la interfaz alrededor), así que
+              meterla en un marco de móvil mentía sobre lo que es. Va sola,
+              con esquinas redondeadas, sobre un halo del color de la app. */}
           <div className="relative flex justify-center lg:order-2">
             <div className="absolute h-[300px] w-[300px] rounded-full bg-gradient-to-br from-violet-200/50 to-transparent blur-2xl" />
             <motion.div
@@ -46,21 +43,15 @@ export default function SmartWidgets() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1] }}
-              // El mismo telefono, la misma medida y el mismo marco que la
-              // seccion del AutoTimer: sin el, la captura flotaba como un
-              // rectangulo suelto y no se entendia que era una pantalla.
-              className="relative mx-auto w-[200px] sm:w-[220px]"
+              className="relative w-full max-w-[280px] overflow-hidden rounded-[20px] shadow-2xl"
             >
-              <div className="relative rounded-[2rem] bg-slate-900 p-2 shadow-2xl">
-                <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.4rem]">
-                  <Image
-                    src="/new/showcase-widget.jpg"
-                    alt="Working Time Control"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-              </div>
+              <Image
+                src="/new/widget.png"
+                alt="Working Time Control"
+                width={1206}
+                height={1303}
+                className="h-auto w-full"
+              />
             </motion.div>
           </div>
 
@@ -100,41 +91,6 @@ export default function SmartWidgets() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* Los tres tamaños, debajo y a lo ancho: es lo que se elige al ponerlo
-            en iOS, y en la columna estrecha quedaban apretados. */}
-        <div className="mt-16 lg:mt-20">
-          <h3 className="text-2xl font-bold tracking-tight text-slate-900">
-            {t("smartWidgets.sizesTitle")}
-          </h3>
-          <p className="mt-3 max-w-2xl leading-relaxed text-slate-600">
-            {t("smartWidgets.sizesDescription")}
-          </p>
-
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {TAMANOS.map(({ clave, icono: Icono, medida, color }) => (
-              <div
-                key={clave}
-                className="rounded-2xl border border-slate-200/70 bg-white/70 p-5 backdrop-blur-sm"
-              >
-                <div className="flex items-center gap-3">
-                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${color}`}>
-                    <Icono className="h-5 w-5" />
-                  </span>
-                  <span className="font-semibold text-slate-900">
-                    {t(`smartWidgets.sizes.${clave}.title`)}
-                  </span>
-                  <span className="ml-auto rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold tabular-nums text-slate-500">
-                    {medida}
-                  </span>
-                </div>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                  {t(`smartWidgets.sizes.${clave}.description`)}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
