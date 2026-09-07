@@ -55,10 +55,22 @@ function PeanaIMac() {
 export default function MacTeaser() {
   const { t } = useLanguage()
 
+  // "Apple Silicon" no se traduce en ningún idioma (es nombre propio), así
+  // que partir la frase por ese texto literal funciona en los tres —
+  // aunque le caiga en un sitio distinto en cada uno— y permite pintarlo
+  // con un color más vivo que el resto de la frase.
+  const [antes, despues] = t("mac.caption").split("Apple Silicon")
+
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <p className="mb-8 text-xl font-medium text-slate-600 sm:text-2xl">{t("mac.caption")}</p>
+        <p className="mb-8 text-2xl font-semibold text-slate-800 sm:text-3xl">
+          {antes}
+          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            Apple Silicon
+          </span>
+          {despues}
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
