@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion"
 import { useLanguage } from "@/lib/language"
 import { useSegundosTrabajados } from "@/lib/liveTimer"
 import { tiempoFormateadoReloj, horaSistemaFormateada, useRelojDelSistema } from "./AppleWatchTeaser"
@@ -42,14 +42,35 @@ export default function AppleWatchScrollHero() {
     return () => window.removeEventListener("resize", comprobar)
   }, [])
 
-  const escala = useTransform(scrollYProgress, [0, 0.22], [0.55, escritorio ? 2.1 : 1.6])
+  const grande = escritorio ? 2.1 : 1.6
+
+  // El reloj: crece al llegar (0-22%), se queda grande mientras pasan las
+  // tres pantallas y se ve el título, y en el último tramo (86-100%) se
+  // encoge y se desvanece — el remate, cediendo el sitio al texto de fondo.
+  const escala = useTransform(scrollYProgress, [0, 0.22, 0.86, 1], [0.55, grande, grande, 0.3])
+  const opacidadReloj = useTransform(scrollYProgress, [0.86, 1], [1, 0])
+  const desenfoqueReloj = useTransform(scrollYProgress, [0.86, 1], [0, 10])
+  const filtroReloj = useMotionTemplate`blur(${desenfoqueReloj}px)`
+
+  // El "Apple Watch" gigante de fondo: al llegar está muy desenfocado y
+  // casi invisible; según el reloj crece se va aclarando y subiendo la
+  // opacidad (así el blanco de detrás no se ve vacío durante el
+  // crecimiento), y en el remate final vuelve a crecer, esta vez él,
+  // sobreponiéndose al reloj que se encoge y se difumina detrás.
+  const desenfoqueFondo = useTransform(scrollYProgress, [0, 0.22], [18, 1])
+  const filtroFondo = useMotionTemplate`blur(${desenfoqueFondo}px)`
+  const opacidadFondo = useTransform(scrollYProgress, [0, 0.1, 0.22], [0, 0.5, 1])
+  // En móvil el texto ya ocupa casi todo el ancho de la pantalla desde el
+  // principio (13vw × 11 caracteres): crecer 1.6x lo saca del viewport y se
+  // corta por los lados. En móvil crece bastante menos.
+  const escalaFondo = useTransform(scrollYProgress, [0.86, 1], [1, escritorio ? 1.6 : 1.08])
 
   // Timer (con el cronómetro en vivo) → calendario → estadísticas.
   const opacidadTimer = useTransform(scrollYProgress, [0, 0.2, 0.24], [1, 1, 0])
   const opacidadCalendario = useTransform(scrollYProgress, [0.2, 0.24, 0.43, 0.47], [0, 1, 1, 0])
   const opacidadEstadisticas = useTransform(scrollYProgress, [0.43, 0.47], [0, 1])
 
-  // El overlay con el título, al final del recorrido.
+  // El overlay con el título, antes del remate.
   const opacidadOverlay = useTransform(scrollYProgress, [0.64, 0.76], [0, 1])
   const yOverlay = useTransform(scrollYProgress, [0.64, 0.76], [12, 0])
 
@@ -58,15 +79,27 @@ export default function AppleWatchScrollHero() {
       id="apple-watch"
       ref={containerRef}
       className="relative bg-slate-50"
-      style={{ height: "340vh" }}
+      style={{ height: "380vh" }}
     >
       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
-        <motion.div style={{ scale: escala }} className="relative w-[220px] h-[268px]">
-          <svg
-            viewBox="0 0 220 268"
-            className="w-full h-full"
-            style={{ filter: "drop-shadow(0 18px 20px rgba(15, 23, 42, 0.28))" }}
+        {/* Detrás del reloj, un poco más abajo del centro exacto — así queda
+            justo a la altura de la esfera. En el remate final crece y se
+            queda sola en pantalla, cuando el reloj ya se ha encogido y
+            difuminado detrás. */}
+        <div className="pointer-events-none absolute inset-0 flex translate-y-[6%] items-center justify-center">
+          <motion.p
+            style={{ opacity: opacidadFondo, filter: filtroFondo, scale: escalaFondo }}
+            className="select-none whitespace-nowrap text-center text-[13vw] font-black leading-none tracking-tight text-slate-300 sm:text-[10vw]"
           >
+            Apple Watch
+          </motion.p>
+        </div>
+
+        <motion.div
+          style={{ scale: escala, opacity: opacidadReloj, filter: filtroReloj }}
+          className="relative w-[220px] h-[268px]"
+        >
+          <svg viewBox="0 0 220 268" className="w-full h-full">
             <defs>
               <linearGradient id="wtc-caja-hero" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stopColor="#4B4F58" />
