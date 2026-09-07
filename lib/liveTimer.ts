@@ -11,9 +11,10 @@ import { useEffect, useState } from "react"
  * vez de llevar cada uno su propio contador independiente.
  */
 
-// Arranca en 9h 03min antes de cargar la página: se ve una jornada ya en
-// marcha en vez de un cronómetro a cero que parece recién empezado.
-export const SEGUNDOS_INICIALES = 9 * 3600 + 3 * 60
+// Arranca en 4h 32min antes de cargar la página: se ve una jornada ya en
+// marcha en vez de un cronómetro a cero que parece recién empezado, pero sin
+// llegar a las 9h que resultaban demasiadas horas para una demo.
+export const SEGUNDOS_INICIALES = 4 * 3600 + 32 * 60
 
 // Momento fijo (una vez por carga de página) del que se descuentan los
 // segundos transcurridos. Todo lo que use este módulo parte del mismo punto.

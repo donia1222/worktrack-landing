@@ -40,28 +40,24 @@ function horaFormateada(idioma: string, fecha: Date) {
   }).format(fecha)
 }
 
-// La captura en inglés (3-timer-en.png) no es la misma imagen que la de
-// es/de: mide 1206x2491 en vez de 1206x2622, y las tres zonas borradas
-// (fecha, cronómetro, línea de estado) caen en otra posición vertical.
-const POSICION_POR_IDIOMA: Record<
-  string,
-  { fecha: { top: string; height: string }; numeros: { top: string; height: string }; banner: { top: string; height: string } }
-> = {
-  es: {
-    fecha: { top: "12.2%", height: "5.6%" },
-    numeros: { top: "32.6%", height: "4.5%" },
-    banner: { top: "38.7%", height: "6.4%" },
-  },
-  de: {
-    fecha: { top: "12.2%", height: "5.6%" },
-    numeros: { top: "32.6%", height: "4.5%" },
-    banner: { top: "38.7%", height: "6.4%" },
-  },
-  en: {
-    fecha: { top: "6.7%", height: "5.6%" },
-    numeros: { top: "27.3%", height: "5.6%" },
-    banner: { top: "34.5%", height: "7%" },
-  },
+// El reloj de la barra de estado (arriba a la izquierda, "15:30" en la
+// captura original): a diferencia de la hora de inicio, iOS nunca le pone
+// AM/PM ahí, ni en región de EE. UU. — solo cambia entre 12h y 24h.
+function horaStatusBar(idioma: string, fecha: Date) {
+  if (idioma === "en") {
+    const h = fecha.getHours() % 12 || 12
+    return `${h}:${String(fecha.getMinutes()).padStart(2, "0")}`
+  }
+  return `${String(fecha.getHours()).padStart(2, "0")}:${String(fecha.getMinutes()).padStart(2, "0")}`
+}
+
+// Las tres capturas (3-timer-es/en/de.png) comparten ya el mismo diseño y
+// medidas, así que las tres zonas borradas caen en el mismo sitio.
+const POSICION = {
+  reloj: { top: "2.6%", height: "2.4%" },
+  fecha: { top: "12.2%", height: "5.6%" },
+  numeros: { top: "32.6%", height: "4.5%" },
+  banner: { top: "38.7%", height: "6.4%" },
 }
 
 export default function LiveTimerOverlay({
@@ -79,17 +75,32 @@ export default function LiveTimerOverlay({
   const [hoy] = useState(() => new Date())
   const [horaInicio] = useState(horaInicioTrabajo)
 
-  const posicion = POSICION_POR_IDIOMA[idioma] ?? POSICION_POR_IDIOMA.es
-
   return (
     <>
       <div
         className="absolute flex items-center justify-start px-2"
         style={{
+          left: "3.5%",
+          right: "70%",
+          top: POSICION.reloj.top,
+          height: POSICION.reloj.height,
+        }}
+      >
+        <span
+          className="whitespace-nowrap text-[9px] font-semibold tabular-nums tracking-tight sm:text-[11px]"
+          style={{ color: "rgb(10, 10, 12)" }}
+        >
+          {horaStatusBar(idioma, hoy)}
+        </span>
+      </div>
+
+      <div
+        className="absolute flex items-center justify-start px-2"
+        style={{
           left: "5.5%",
           right: "8%",
-          top: posicion.fecha.top,
-          height: posicion.fecha.height,
+          top: POSICION.fecha.top,
+          height: POSICION.fecha.height,
         }}
       >
         <span
@@ -105,8 +116,8 @@ export default function LiveTimerOverlay({
         style={{
           left: "22.3%",
           right: "22.2%",
-          top: posicion.numeros.top,
-          height: posicion.numeros.height,
+          top: POSICION.numeros.top,
+          height: POSICION.numeros.height,
           backgroundColor: "#f5f5f9",
         }}
       >
@@ -123,8 +134,8 @@ export default function LiveTimerOverlay({
         style={{
           left: "8%",
           right: "8%",
-          top: posicion.banner.top,
-          height: posicion.banner.height,
+          top: POSICION.banner.top,
+          height: POSICION.banner.height,
           backgroundColor: "#f5f5f9",
         }}
       >

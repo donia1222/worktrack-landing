@@ -6,6 +6,7 @@
 import { useLanguage } from "@/lib/language";
 import { useSegundosTrabajados } from "@/lib/liveTimer";
 import { Play, CalendarDays, BarChart3, RefreshCw } from "lucide-react";
+import { useEffect, useState } from "react";
 
 /**
  * El Apple Watch: la caja dibujada, la pantalla de verdad.
@@ -35,6 +36,32 @@ function tiempoFormateadoReloj(segundos: number) {
   return `${h}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
+// El reloj del sistema, arriba a la derecha de la esfera ("14:24" en la
+// captura original): tampoco es de verdad, así que se tapa y se repinta con
+// la hora real de quien visita la página. En inglés con AM/PM, en
+// español/alemán en 24h — igual que la hora de inicio del teléfono.
+function horaSistemaFormateada(idioma: string, fecha: Date) {
+  if (idioma === "en") {
+    return new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit", hour12: true }).format(fecha);
+  }
+  return new Intl.DateTimeFormat(idioma === "de" ? "de-DE" : "es-ES", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).format(fecha);
+}
+
+function useRelojDelSistema() {
+  const [ahora, setAhora] = useState(() => new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => setAhora(new Date()), 15000);
+    return () => clearInterval(id);
+  }, []);
+
+  return ahora;
+}
+
 /**
  * Se exporta también para el Hero: ahí se planta en miniatura junto al
  * teléfono, con la misma animación, solo que a escala reducida con un
@@ -42,6 +69,7 @@ function tiempoFormateadoReloj(segundos: number) {
  */
 export function WatchDrawing({ idioma }: { idioma: string }) {
   const segundos = useSegundosTrabajados();
+  const ahora = useRelojDelSistema();
 
   return (
     <div className="relative w-[220px] h-[268px] mx-auto">
@@ -70,6 +98,15 @@ export function WatchDrawing({ idioma }: { idioma: string }) {
           el número tapado + repintado en vivo encima. */}
       <div className="absolute left-[24px] top-[31px] h-[206px] w-[172px] overflow-hidden rounded-[38px] bg-black">
         <img src={`/reloj/${idioma}/corriendo.png`} alt="" className="absolute inset-0 h-full w-full object-cover" />
+
+        <div
+          className="absolute flex items-center justify-center bg-black"
+          style={{ left: "68%", right: "3%", top: "5%", height: "6%" }}
+        >
+          <span className="whitespace-nowrap text-[10.5px] font-semibold tabular-nums tracking-tight text-white">
+            {horaSistemaFormateada(idioma, ahora)}
+          </span>
+        </div>
 
         <div
           className="absolute flex items-center justify-center bg-black"
