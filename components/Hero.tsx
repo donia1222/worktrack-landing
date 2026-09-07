@@ -1,7 +1,8 @@
 "use client"
 
-import { Sparkles, Zap, BarChart3, CalendarCheck, ArrowRight, Play, Watch } from "lucide-react"
+import { Sparkles, Zap, BarChart3, CalendarCheck, Play, Watch } from "lucide-react"
 import { useLanguage } from "@/lib/language"
+import AppStoreBadge from "./AppStoreBadge"
 import { WatchDrawing } from "./AppleWatchTeaser"
 import LiveTimerOverlay from "./LiveTimerOverlay"
 import Image from "next/image"
@@ -175,19 +176,7 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-                        <a
-                href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
-                data-zona="hero_escritorio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden lg:inline-flex group relative items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
-              >
-                <span className="relative z-10 flex items-center gap-3">
-                  {t("hero.downloadButton")}
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+            <AppStoreBadge zona="hero_escritorio" alto={60} className="hidden lg:inline-flex" />
 
               {/* La primera pregunta de quien llega desde un anuncio es cuanto
                   cuesta. Si no se responde aqui, una parte se va sin bajar. */}
@@ -283,20 +272,9 @@ export default function Hero() {
             </div>
 
             {/* Botón de descarga — solo móvil, aquí abajo del todo */}
-            <div className="mt-8 flex justify-center lg:hidden">
-              <a
-                href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
-                data-zona="hero_movil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
-              >
-                <span className="relative z-10 flex items-center gap-3">
-                  {t("hero.downloadButton")}
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+            <div className="mt-8 flex flex-col items-center gap-2 lg:hidden">
+              <AppStoreBadge zona="hero_movil" alto={56} />
+              <p className="text-sm text-slate-500">{t("hero.gratis")}</p>
             </div>
           </div>
         </div>
