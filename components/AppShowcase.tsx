@@ -48,7 +48,7 @@ export default function AppShowcase() {
     >
       <div className="sticky top-0 flex h-screen flex-col overflow-hidden bg-gradient-to-b from-white via-blue-50/30 to-white">
         <div className="mx-auto max-w-3xl px-4 pt-14 text-center sm:px-6 lg:pt-20">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200/60 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
+          <div className="mb-5 hidden items-center gap-2 rounded-full border border-blue-200/60 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 sm:inline-flex">
             <span className="h-2 w-2 animate-pulse rounded-full bg-blue-600" />
             {t("appShowcase.badge")}
           </div>
