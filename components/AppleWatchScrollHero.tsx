@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useLanguage } from "@/lib/language"
 import { useSegundosTrabajados } from "@/lib/liveTimer"
@@ -32,7 +32,17 @@ export default function AppleWatchScrollHero() {
     offset: ["start start", "end end"],
   })
 
-  const escala = useTransform(scrollYProgress, [0, 0.22], [0.55, 1.6])
+  // En pantallas grandes hay más sitio, así que el reloj puede acabar más
+  // grande sin comerse el overlay del final.
+  const [escritorio, setEscritorio] = useState(false)
+  useEffect(() => {
+    const comprobar = () => setEscritorio(window.innerWidth >= 1024)
+    comprobar()
+    window.addEventListener("resize", comprobar)
+    return () => window.removeEventListener("resize", comprobar)
+  }, [])
+
+  const escala = useTransform(scrollYProgress, [0, 0.22], [0.55, escritorio ? 2.1 : 1.6])
 
   // Timer (con el cronómetro en vivo) → calendario → estadísticas.
   const opacidadTimer = useTransform(scrollYProgress, [0, 0.2, 0.24], [1, 1, 0])
@@ -47,14 +57,16 @@ export default function AppleWatchScrollHero() {
     <section
       id="apple-watch"
       ref={containerRef}
-      className="relative bg-gradient-to-b from-white to-slate-50"
+      className="relative bg-slate-50"
       style={{ height: "340vh" }}
     >
       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
-        <div className="absolute h-[420px] w-[420px] rounded-full bg-gradient-to-br from-indigo-200/50 to-transparent blur-2xl" />
-
         <motion.div style={{ scale: escala }} className="relative w-[220px] h-[268px]">
-          <svg viewBox="0 0 220 268" className="w-full h-full drop-shadow-2xl">
+          <svg
+            viewBox="0 0 220 268"
+            className="w-full h-full"
+            style={{ filter: "drop-shadow(0 18px 20px rgba(15, 23, 42, 0.28))" }}
+          >
             <defs>
               <linearGradient id="wtc-caja-hero" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stopColor="#4B4F58" />

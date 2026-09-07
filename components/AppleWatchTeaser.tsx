@@ -139,7 +139,7 @@ export default function AppleWatchTeaser() {
   const { t } = useLanguage();
 
   return (
-    <section className="pb-16 lg:pb-24 bg-gradient-to-b from-white to-slate-50">
+    <section className="pb-16 lg:pb-24 bg-slate-50">
       <div className="mx-auto max-w-2xl px-6 text-center">
         <span className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-semibold text-indigo-700">
           {t("watch.badge")}

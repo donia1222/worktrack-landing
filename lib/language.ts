@@ -13,8 +13,14 @@ export const languages = {
 
 // Detect browser language with geographic detection
 export function detectBrowserLanguage(): Language {
-  if (typeof window === 'undefined') return 'es'
-  
+  // Ingles, no español. Esto es lo que se pinta en el servidor y lo que ve
+  // todo el mundo durante el primer instante, antes de que el navegador diga
+  // de donde viene. La publicidad va en ingles y a paises de habla inglesa,
+  // asi que un destello de español al aterrizar es tirar el clic que acabamos
+  // de pagar. Si algun dia el grueso del trafico vuelve a ser español, esto
+  // se cambia aqui y en el fallback de abajo.
+  if (typeof window === 'undefined') return 'en'
+
   // First try geographic detection
   const { language } = detectLanguageAndCountry()
   
@@ -30,8 +36,10 @@ export function detectBrowserLanguage(): Language {
   if (browserLang.startsWith('en')) return 'en'  
   if (browserLang.startsWith('de')) return 'de'
   
-  // Default fallback
-  return 'es'
+  // Quien no habla ninguno de los tres —un holandes, un frances, un italiano—
+  // entendia menos español que ingles. Hasta que la pagina este traducida a
+  // mas idiomas, el ingles es la peor traduccion que menos gente pierde.
+  return 'en'
 }
 
 // Language Context
