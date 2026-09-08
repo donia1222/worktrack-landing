@@ -20,6 +20,13 @@ const taglineContenedor = {
   visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 }
 
+const CARACTERISTICAS = [
+  { icon: Zap, color: "blue", key: "autoTimer" },
+  { icon: Sparkles, color: "cyan", key: "widgets" },
+  { icon: CalendarCheck, color: "green", key: "calendarSync" },
+  { icon: BarChart3, color: "purple", key: "pdfReports" },
+] as const
+
 const taglinePalabra = {
   oculto: { opacity: 0, y: 18, scale: 0.8 },
   visible: {
@@ -143,13 +150,11 @@ export default function Hero() {
             </div>
 
     
-            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200/50">
-              {[
-                { icon: Zap, color: "blue", key: "autoTimer" },
-                { icon: Sparkles, color: "cyan", key: "widgets" },
-                { icon: CalendarCheck, color: "green", key: "calendarSync" },
-                { icon: BarChart3, color: "purple", key: "pdfReports" },
-              ].map((feature, index) => (
+            {/* En escritorio se queda aquí, en rejilla 2x2. En móvil se
+                oculta: baja entera debajo de "Disponible para", en fila con
+                scroll lateral (ver más abajo, junto al DisponiblePara). */}
+            <div className="hidden lg:grid grid-cols-2 gap-4 pt-4 border-t border-slate-200/50">
+              {CARACTERISTICAS.map((feature, index) => (
                 <div
                   key={feature.key}
                   className={`group flex items-center gap-4 p-4 rounded-2xl bg-white/60 backdrop-blur-md border border-white/20 hover:bg-white/80 hover:border-white/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
@@ -288,6 +293,29 @@ export default function Hero() {
             final de la izquierda. */}
         <div className="mt-14">
           <DisponiblePara />
+        </div>
+
+        {/* Las 4 características, solo en móvil: aquí abajo, debajo de
+            "Disponible para", en rejilla (la fila con scroll lateral se
+            quitó: descuadraba la página en horizontal en algunos móviles).
+            La rejilla 2x2 de escritorio se queda donde estaba, junto al
+            título. */}
+        <div className="mt-6 grid grid-cols-2 gap-3 lg:hidden">
+          {CARACTERISTICAS.map((feature) => (
+            <div
+              key={feature.key}
+              className="flex items-center gap-3 rounded-2xl border border-white/20 bg-white/60 p-4 backdrop-blur-md"
+            >
+              <div
+                className={`w-12 h-12 bg-${feature.color}-100 rounded-xl flex items-center justify-center shrink-0`}
+              >
+                <feature.icon className={`w-6 h-6 text-${feature.color}-600`} />
+              </div>
+              <span className="text-sm font-semibold text-slate-700">
+                {t(`hero.features.${feature.key}`)}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
