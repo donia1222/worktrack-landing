@@ -86,7 +86,7 @@ export default function AppShowcase() {
                 initial={{ opacity: 0, y: 26 }}
                 animate={aLaVista ? { opacity: 1, y: 0 } : undefined}
                 transition={{ duration: 0.55, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
-                className={`w-[68vw] max-w-[260px] shrink-0 snap-center sm:w-[54vw] lg:w-full lg:max-w-[268px] ${escalon[i]}`}
+                className={`w-[58vw] max-w-[210px] shrink-0 snap-center sm:w-[44vw] lg:w-full lg:max-w-[220px] ${escalon[i]}`}
               >
                 {/* La captura, con su marco. El giro solo en pantallas
                     grandes: en móvil, con las tarjetas casi tocándose, las

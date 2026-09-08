@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { RefreshCw, Radio, Hand } from "lucide-react"
+import { RefreshCw, Radio } from "lucide-react"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/language"
 
@@ -22,7 +22,6 @@ import { useLanguage } from "@/lib/language"
 const VENTAJAS = [
   { clave: "realTime", icono: RefreshCw, color: "bg-emerald-50 text-emerald-600" },
   { clave: "dynamicIsland", icono: Radio, color: "bg-slate-100 text-slate-700" },
-  { clave: "oneTap", icono: Hand, color: "bg-amber-50 text-amber-600" },
 ] as const
 
 export default function SmartWidgets() {
