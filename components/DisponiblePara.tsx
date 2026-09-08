@@ -82,12 +82,23 @@ const aparatos = [
   { clave: "mac", nombre: "Mac", Dibujo: Mac },
 ]
 
-export default function DisponiblePara({ className = "" }: { className?: string }) {
+export default function DisponiblePara({
+  className = "",
+  sinMarco = false,
+}: {
+  className?: string
+  /** Sin la tarjeta propia (borde, fondo, sombra): para cuando el que
+   * llama ya pone su propia tarjeta alrededor, como el bloque unificado
+   * del hero en móvil. */
+  sinMarco?: boolean
+}) {
   const { t } = useLanguage()
 
   return (
     <div
-      className={`mx-auto flex w-full max-w-2xl flex-col items-center gap-4 rounded-2xl border border-white/60 bg-white/70 px-6 py-4 shadow-sm backdrop-blur-md sm:flex-row sm:justify-center sm:gap-8 ${className}`}
+      className={`mx-auto flex w-full max-w-2xl flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8 ${
+        sinMarco ? "" : "rounded-2xl border border-white/60 bg-white/70 px-6 py-4 shadow-sm backdrop-blur-md"
+      } ${className}`}
     >
       <span className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
         {t("hero.disponible")}

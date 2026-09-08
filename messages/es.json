@@ -33,7 +33,7 @@
     "features": {
       "autoTimer": "Auto-Timer GPS",
       "widgets": "Widgets iOS",
-      "calendarSync": "Sincronización Calendario",
+      "calendarSync": "Sincronización",
       "pdfReports": "Reportes PDF",
       "platforms": "iOS & Android",
       "aiChatbot": "Asistente de trabajo con IA"
