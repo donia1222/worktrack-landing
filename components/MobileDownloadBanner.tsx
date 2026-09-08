@@ -92,18 +92,20 @@ export default function MobileDownloadBanner() {
             </div>
 
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-slate-900 text-[15px] leading-tight truncate">
+              <p className="font-bold text-slate-900 text-[13px] leading-tight truncate">
                 {t('mobileBanner.name')}
               </p>
-              <p className="text-slate-500 text-xs truncate">{t('mobileBanner.subtitle')}</p>
+              <p className="text-slate-500 text-xs truncate">
+                {t('mobileBanner.free')} · {t('mobileBanner.subtitle')}
+              </p>
             </div>
 
             {platform === 'ios' ? (
-              <span className="flex-shrink-0 px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold rounded-full shadow-lg">
+              <span className="flex-shrink-0 px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[13px] font-semibold rounded-full shadow-lg">
                 {t('mobileBanner.download')}
               </span>
             ) : (
-              <span className="flex-shrink-0 px-4 py-2 bg-slate-100 text-slate-400 text-sm font-semibold rounded-full">
+              <span className="flex-shrink-0 px-4 py-2 bg-slate-100 text-slate-400 text-[13px] font-semibold rounded-full">
                 {t('mobileBanner.comingSoon')}
               </span>
             )}

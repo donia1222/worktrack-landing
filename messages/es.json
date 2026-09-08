@@ -399,9 +399,10 @@
     "typeMessage": "Escribe tu mensaje aquí..."
   },
   "mobileBanner": {
-    "name": "WorkTi",
-    "subtitle": "Gratis · Sin cuenta",
-    "download": "Abrir",
+    "name": "Work Time Control",
+    "free": "Gratis",
+    "subtitle": "Sin cuenta",
+    "download": "Descargar",
     "comingSoon": "Próximamente"
   },
   "footer": {
