@@ -1,6 +1,6 @@
 "use client"
 
-import { Sparkles, Zap, BarChart3, CalendarCheck, Play, Watch } from "lucide-react"
+import { Sparkles, Zap, BarChart3, CalendarCheck, Play } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import AppStoreBadge from "./AppStoreBadge"
 import DisponiblePara from "./DisponiblePara"
@@ -179,14 +179,6 @@ export default function Hero() {
                 {t("hero.gratis")}
               </p>
 
-              {/* El reloj, justo debajo de "Gratis": aquí lo ve todo el mundo
-                  en dos segundos, y a quien tenga Apple Watch le salta a la
-                  vista. Su sección viene después, cuando la página ya ha
-                  demostrado lo que promete el titular. */}
-              <p className="hidden lg:inline-flex mt-3 items-center gap-2 self-start rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
-                <Watch className="h-4 w-4" />
-                {t("hero.reloj")}
-              </p>
           </div>
 
           <div
@@ -279,10 +271,6 @@ export default function Hero() {
             <div className="mt-8 flex flex-col items-center gap-2 lg:hidden">
               <AppStoreBadge zona="hero_movil" alto={56} />
               <p className="text-sm text-slate-500">{t("hero.gratis")}</p>
-              <p className="mt-1 inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
-                <Watch className="h-4 w-4" />
-                {t("hero.reloj")}
-              </p>
             </div>
           </div>
         </div>
