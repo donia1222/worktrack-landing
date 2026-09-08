@@ -278,35 +278,9 @@ export default function Hero() {
         {/* En qué aparatos corre. Va debajo de las dos columnas para que caiga
             bajo el botón de descarga en las dos maquetaciones: en el móvil el
             botón está al final de la columna derecha, y en el escritorio al
-            final de la izquierda. Solo en escritorio: en móvil va dentro del
-            contenedor único de aquí abajo. */}
-        <div className="mt-14 hidden lg:block">
+            final de la izquierda. */}
+        <div className="mt-14">
           <DisponiblePara />
-        </div>
-
-        {/* En móvil, "Disponible para" y las 4 características comparten un
-            único contenedor (antes eran dos tarjetas separadas, una encima
-            de otra) — una línea los separa por dentro en vez de dejar un
-            hueco entre dos cajas. */}
-        <div className="mt-14 rounded-2xl border border-white/60 bg-white/70 px-6 py-5 shadow-sm backdrop-blur-md lg:hidden">
-          <DisponiblePara sinMarco />
-
-          <div className="my-5 h-px bg-slate-200/70" />
-
-          <div className="grid grid-cols-2 gap-3">
-            {CARACTERISTICAS.map((feature) => (
-              <div key={feature.key} className="flex items-center gap-3">
-                <div
-                  className={`w-12 h-12 bg-${feature.color}-100 rounded-xl flex items-center justify-center shrink-0`}
-                >
-                  <feature.icon className={`w-6 h-6 text-${feature.color}-600`} />
-                </div>
-                <span className="text-sm font-semibold text-slate-700">
-                  {t(`hero.features.${feature.key}`)}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
