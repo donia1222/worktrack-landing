@@ -150,9 +150,7 @@ export default function Hero() {
             </div>
 
     
-            {/* En escritorio se queda aquí, en rejilla 2x2. En móvil se
-                oculta: baja entera debajo de "Disponible para", en fila con
-                scroll lateral (ver más abajo, junto al DisponiblePara). */}
+            {/* Solo en escritorio, en rejilla 2x2. En móvil no se muestra. */}
             <div className="hidden lg:grid grid-cols-2 gap-4 pt-4 border-t border-slate-200/50">
               {CARACTERISTICAS.map((feature, index) => (
                 <div
@@ -171,6 +169,7 @@ export default function Hero() {
                 </div>
               ))}
             </div>
+
             <AppStoreBadge zona="hero_escritorio" alto={60} className="hidden lg:inline-flex" />
 
               {/* La primera pregunta de quien llega desde un anuncio es cuanto
