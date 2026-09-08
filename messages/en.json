@@ -18,9 +18,9 @@
     "text": "Loading experience..."
   },
   "hero": {
-    "title": "Never clock in",
-    "titleAccent": "again.",
-    "description": "The app knows when you arrive at work and when you leave. Your hours log themselves, and by the end of the month they are already added up.",
+    "title": "Do you work by the hour?",
+    "titleAccent": "No more paper notes.",
+    "description": "The best app to keep your work hours under control.",
     "subtitle": "For people paid by the hour, with more than one job.",
     "downloadButton": "Download on iOS",
     "iosAvailability": "Currently available for iOS devices only",

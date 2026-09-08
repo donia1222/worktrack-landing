@@ -126,31 +126,20 @@ export default function Hero() {
             <div className="space-y-8">
               {/* Enhanced title with gradient text and better typography */}
                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
-                {t("hero.title")}{" "}
+                {t("hero.title")}
+                <br />
                 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   {t("hero.titleAccent")}
                 </span>
               </h1>
 
-              {/* La frase que sostiene el titular. Estaba escrita en los
-                  ficheros de idioma pero no se pintaba en ninguna parte, así
-                  que el titular quedaba solo y sin explicar qué hace la app. */}
+              {/* La frase que sostiene el titular, y a quién va dirigida,
+                  juntas en el mismo párrafo — antes iban en dos tamaños
+                  distintos y quedaba como si fueran dos ideas sueltas. */}
               <p className="max-w-xl text-lg sm:text-xl text-slate-600 leading-relaxed">
-                {t("hero.description")}
+                {t("hero.description")} {t("hero.subtitle")}
               </p>
 
-              <p className="text-sm font-medium text-slate-500">
-                {t("hero.subtitle")}
-              </p>
-
-              {/* El reloj, en una línea y no en una sección: aquí lo ve todo el
-                  mundo en dos segundos, y a quien tenga Apple Watch le salta a
-                  la vista. Su sección viene después, cuando la página ya ha
-                  demostrado lo que promete el titular. */}
-              <p className="inline-flex items-center gap-2 self-start rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
-                <Watch className="h-4 w-4" />
-                {t("hero.reloj")}
-              </p>
             </div>
 
     
@@ -183,6 +172,15 @@ export default function Hero() {
                   cuesta. Si no se responde aqui, una parte se va sin bajar. */}
               <p className="hidden lg:block mt-3 text-sm text-slate-500">
                 {t("hero.gratis")}
+              </p>
+
+              {/* El reloj, justo debajo de "Gratis": aquí lo ve todo el mundo
+                  en dos segundos, y a quien tenga Apple Watch le salta a la
+                  vista. Su sección viene después, cuando la página ya ha
+                  demostrado lo que promete el titular. */}
+              <p className="hidden lg:inline-flex mt-3 items-center gap-2 self-start rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
+                <Watch className="h-4 w-4" />
+                {t("hero.reloj")}
               </p>
           </div>
 
@@ -276,6 +274,10 @@ export default function Hero() {
             <div className="mt-8 flex flex-col items-center gap-2 lg:hidden">
               <AppStoreBadge zona="hero_movil" alto={56} />
               <p className="text-sm text-slate-500">{t("hero.gratis")}</p>
+              <p className="mt-1 inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700">
+                <Watch className="h-4 w-4" />
+                {t("hero.reloj")}
+              </p>
             </div>
           </div>
         </div>

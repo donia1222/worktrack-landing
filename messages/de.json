@@ -18,9 +18,9 @@
     "text": "Lade Erlebnis..."
   },
   "hero": {
-    "title": "Vergiss das",
-    "titleAccent": "Einstempeln.",
-    "description": "Die App merkt, wann du bei der Arbeit ankommst und wann du gehst. Deine Stunden schreiben sich von selbst, und am Monatsende sind sie schon zusammengerechnet.",
+    "title": "Arbeitest du stundenweise?",
+    "titleAccent": "Schluss mit dem Zettel.",
+    "description": "Die beste App, um deine Arbeitszeiten im Griff zu haben.",
     "subtitle": "Für alle, die auf Stundenbasis arbeiten — auch in mehreren Jobs.",
     "downloadButton": "Für iOS herunterladen",
     "iosAvailability": "Derzeit nur für iOS-Geräte verfügbar",
