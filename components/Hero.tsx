@@ -135,7 +135,7 @@ export default function Hero() {
                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight tracking-tight">
                 {t("hero.title")}
                 <br />
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                <span className="block text-3xl sm:text-4xl lg:text-5xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   {t("hero.titleAccent")}
                 </span>
               </h1>
