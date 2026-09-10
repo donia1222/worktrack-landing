@@ -6,7 +6,8 @@ import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 
 export default function ExportReports() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
   const capabilities = [
     {
@@ -140,11 +141,13 @@ export default function ExportReports() {
               <div className="absolute -inset-6 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 blur-3xl opacity-60" />
               <div className="relative bg-slate-900 rounded-[2rem] p-2 shadow-2xl">
                 <div className="relative aspect-[9/19] rounded-[1.4rem] overflow-hidden">
-                  <Image
-                    src="/new/reports.png"
-                    alt="Reportes en la app"
-                    fill
-                    className="object-cover object-top"
+                  <video
+                    src={`/app-videos/${idioma}/pdf-export.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 h-full w-full object-cover object-top"
                   />
                 </div>
                 <div className="absolute -top-3 -right-3 bg-green-500 rounded-full w-8 h-8 flex items-center justify-center shadow-lg ring-4 ring-white">
