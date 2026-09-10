@@ -47,16 +47,13 @@ export default function ExportReports() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 lg:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 backdrop-blur-sm rounded-full text-blue-700 text-sm font-medium mb-6 border border-blue-200/50">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#5B5FEF]/10 backdrop-blur-sm rounded-full text-[#5B5FEF] text-sm font-medium mb-6">
             <FileText className="w-4 h-4" />
             {t("exportReports.badge")}
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 text-balance">
-            {t("exportReports.title")}{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              {t("exportReports.titleAccent")}
-            </span>
+            {t("exportReports.title")} <span className="text-[#5B5FEF]">{t("exportReports.titleAccent")}</span>
           </h2>
 
           <p className="text-xl text-slate-600 max-w-3xl mx-auto text-pretty leading-relaxed">
@@ -64,35 +61,70 @@ export default function ExportReports() {
           </p>
         </motion.div>
 
-        {/* Main Capabilities Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {capabilities.map((capability, index) => (
-            <div
-              key={index}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 shadow-lg"
-            >
-              <div className={`${capability.bgColor} rounded-xl p-3 w-fit mb-4`}>
-                <Image src={capability.image} alt="" width={28} height={28} className="w-7 h-7 object-contain" />
-              </div>
+        {/* Las tres tarjetas, escalonadas y unidas por una línea punteada
+            con puntos — la composición de "Mia Day has EVERYTHING!" de la
+            referencia, adaptada a tarjetas con texto en vez de fotos. */}
+        <div className="relative mb-16 pb-8">
+          <svg
+            className="pointer-events-none absolute left-0 top-[168px] hidden h-24 w-full md:block"
+            viewBox="0 0 1200 140"
+            preserveAspectRatio="none"
+            fill="none"
+          >
+            <path
+              d="M 100 20 Q 300 140 500 100 T 900 30 Q 1000 10 1100 100"
+              stroke="#5B5FEF"
+              strokeOpacity="0.35"
+              strokeWidth="2.5"
+              strokeDasharray="8 10"
+              strokeLinecap="round"
+            />
+          </svg>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
-                {capability.title}
-              </h3>
-
-              <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                {capability.description}
-              </p>
-
-              <div className="space-y-2">
-                {capability.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center gap-2 text-xs text-slate-500">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                    {t(`exportReports.capabilities.${feature}`)}
+          <div className="grid md:grid-cols-3 gap-8">
+            {capabilities.map((capability, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.12 }}
+                className={index % 2 === 1 ? "md:mt-12" : ""}
+              >
+                <div className="bg-white rounded-3xl p-6 border border-slate-200/60 shadow-lg">
+                  <div className="bg-[#5B5FEF]/10 rounded-xl p-3 w-fit mb-4">
+                    <Image src={capability.image} alt="" width={28} height={28} className="w-7 h-7 object-contain" />
                   </div>
-                ))}
-              </div>
-            </div>
-          ))}
+
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
+                    {capability.title}
+                  </h3>
+
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    {capability.description}
+                  </p>
+
+                  <div className="space-y-2">
+                    {capability.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-2 text-xs text-slate-500">
+                        <CheckCircle className="w-3 h-3 text-[#5B5FEF]" />
+                        {t(`exportReports.capabilities.${feature}`)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* El punto bajo la tarjeta, con su aro — mismo lenguaje
+                    que los puntos de la referencia bajo cada tarjeta. */}
+                <div className="mt-6 hidden justify-center md:flex">
+                  <span className="relative flex h-3 w-3">
+                    <span className="absolute inline-flex h-full w-full rounded-full bg-[#5B5FEF]/30" />
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-[#5B5FEF]" />
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Demo Visual Section */}

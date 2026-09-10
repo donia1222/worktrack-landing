@@ -2,21 +2,16 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import { LayoutDashboard, CalendarDays, BarChart3 } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/lib/language"
 
 /**
- * Las cuatro pantallas de la app, juntas.
- *
- * Antes esto era un carrusel fijado (sticky) de cuatro pantallas de alto: una
- * captura de 190 px y tres líneas de texto en medio de un `h-screen`, así que
- * lo que se veía era sobre todo blanco, y había que hacer scroll cuatro veces
- * para ver cuatro imágenes.
- *
- * Ahora se ven las cuatro a la vez, escalonadas —cada una un poco más arriba o
- * más abajo que su vecina—, dentro de un contenedor que las agrupa. Ocupa una
- * pantalla en vez de cuatro y se entiende de un vistazo. En móvil, donde no
- * caben en fila, se deslizan de lado con imán.
+ * Mismo espíritu que la referencia que le gustó: tres tarjetas iguales,
+ * cada una con su propio fondo lila suave, un icono arriba, título y
+ * descripción centrados, y la captura del teléfono abajo, recta (sin el
+ * escalonado ni el giro que tenía antes). Colores e imágenes son los
+ * nuestros — solo cambia la maqueta.
  */
 export default function AppShowcase() {
   const { t, language } = useLanguage()
@@ -25,38 +20,31 @@ export default function AppShowcase() {
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
   const items = [
-    { key: "dashboard", image: `/app/${idioma}/2-home.png` },
-    { key: "register", image: `/app/${idioma}/4-calendario.png` },
-    { key: "reports", image: `/app/${idioma}/5-informes.png` },
+    { key: "dashboard", image: `/app/${idioma}/2-home.png`, Icono: LayoutDashboard },
+    { key: "register", image: `/app/${idioma}/4-calendario.png`, Icono: CalendarDays },
+    { key: "reports", image: `/app/${idioma}/5-informes.png`, Icono: BarChart3 },
   ]
-
-  // El escalón de cada columna: las de fuera caen y la del medio sube, que es
-  // lo que da la curva sin que ninguna se despegue del grupo.
-  const escalon = ["lg:translate-y-6", "lg:-translate-y-6", "lg:translate-y-6"]
-  const giro = ["lg:-rotate-[2deg]", "lg:rotate-0", "lg:rotate-[2deg]"]
 
   const contenedor = useRef<HTMLDivElement>(null)
   const aLaVista = useInView(contenedor, { once: true, margin: "-80px" })
 
   return (
     <section id="app-showcase" className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
-      {/* Un halo muy suave detrás del grupo, para que el contenedor no flote
-          sobre blanco liso. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[1100px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-100/40 blur-3xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[1100px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-100/40 blur-3xl"
       />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200/60 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-blue-600" />
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-violet-200/60 bg-violet-50 px-4 py-2 text-sm font-medium text-violet-700">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-violet-600" />
             {t("appShowcase.badge")}
           </div>
 
           <h2 className="text-balance text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
             {t("appShowcase.title")}{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
               {t("appShowcase.titleAccent")}
             </span>
           </h2>
@@ -66,71 +54,48 @@ export default function AppShowcase() {
           </p>
         </div>
 
-        {/* El contenedor que agrupa las cuatro. En móvil no lleva marco: la
-            fila se desliza de lado a lado y un borde la cortaría. */}
-        <div
-          ref={contenedor}
-          className="mt-12 sm:mt-16 lg:rounded-[2.5rem] lg:border lg:border-slate-200/80 lg:bg-gradient-to-b lg:from-slate-50/80 lg:to-white lg:px-10 lg:py-16 lg:shadow-[0_24px_70px_-40px_rgba(15,23,42,0.35)]"
-        >
-          <div
-            className="
-              -mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-4 pb-6
-              [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
-              sm:gap-7
-              lg:mx-0 lg:grid lg:grid-cols-3 lg:justify-items-center lg:gap-10 lg:overflow-visible lg:px-0 lg:pb-0
-            "
-          >
-            {items.map((item, i) => (
-              <motion.article
-                key={item.key}
-                initial={{ opacity: 0, y: 26 }}
-                animate={aLaVista ? { opacity: 1, y: 0 } : undefined}
-                transition={{ duration: 0.55, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
-                className={`w-[58vw] max-w-[210px] shrink-0 snap-center sm:w-[44vw] lg:w-full lg:max-w-[220px] ${escalon[i]}`}
-              >
-                {/* La captura, con su marco. El giro solo en pantallas
-                    grandes: en móvil, con las tarjetas casi tocándose, las
-                    esquinas inclinadas se pisan entre ellas. */}
-                <div className={`group relative mx-auto w-full ${giro[i]} transition-transform duration-500 ease-out lg:hover:rotate-0 lg:hover:-translate-y-1.5`}>
-                  <div
-                    aria-hidden
-                    className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-blue-200/45 to-indigo-200/30 blur-2xl transition-opacity duration-500 lg:opacity-70 lg:group-hover:opacity-100"
-                  />
-                  <div className="relative rounded-[1.9rem] bg-slate-900 p-1.5 shadow-xl ring-1 ring-slate-900/5">
-                    <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.5rem] bg-slate-900">
-                      <Image
-                        src={item.image}
-                        alt={t(`appShowcase.items.${item.key}.title`)}
-                        fill
-                        sizes="(max-width: 1024px) 60vw, 268px"
-                        className="object-cover object-top"
-                      />
-                    </div>
+        <div ref={contenedor} className="mt-12 grid gap-6 sm:mt-16 lg:grid-cols-3 lg:gap-8">
+          {items.map(({ key, image, Icono }, i) => (
+            <motion.div
+              key={key}
+              initial={{ opacity: 0, y: 26 }}
+              animate={aLaVista ? { opacity: 1, y: 0 } : undefined}
+              transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="flex flex-col items-center rounded-[2rem] border border-violet-100/70 bg-gradient-to-b from-violet-50/70 to-white px-6 pb-0 pt-8 sm:px-8 sm:pt-10"
+            >
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100">
+                <Icono className="h-6 w-6 text-violet-600" />
+              </span>
+
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-violet-600">
+                {t(`appShowcase.items.${key}.badge`)}
+              </p>
+              <h3 className="mt-1.5 text-balance text-center text-lg font-bold leading-snug text-slate-900 sm:text-xl">
+                {t(`appShowcase.items.${key}.title`)}
+              </h3>
+              <p className="mt-2 max-w-xs text-pretty text-center text-sm leading-relaxed text-slate-600">
+                {t(`appShowcase.items.${key}.description`)}
+              </p>
+
+              {/* La captura, recta y completa — antes le faltaba el borde de
+                  abajo (quería que "sangrara" fuera de la tarjeta) y el
+                  teléfono se veía cortado a medias. Marco entero, como en
+                  el resto de la web. */}
+              <div className="relative mt-8 w-full max-w-[220px] pb-8">
+                <div className="relative rounded-[1.9rem] bg-slate-900 p-1.5 shadow-xl ring-1 ring-slate-900/5">
+                  <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.5rem] bg-slate-900">
+                    <Image
+                      src={image}
+                      alt={t(`appShowcase.items.${key}.title`)}
+                      fill
+                      sizes="(max-width: 1024px) 60vw, 220px"
+                      className="object-cover object-top"
+                    />
                   </div>
                 </div>
-
-                {/* El texto, debajo de su captura y no al lado: así cada
-                    pantalla se lee junto a lo que enseña. */}
-                <div className="mt-6 text-center lg:text-left">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-700">
-                    {t(`appShowcase.items.${item.key}.badge`)}
-                  </p>
-                  <h3 className="mt-2 text-pretty text-base font-bold leading-snug text-slate-900 sm:text-lg">
-                    {t(`appShowcase.items.${item.key}.title`)}
-                  </h3>
-                  <p className="mt-2 text-pretty text-sm leading-relaxed text-slate-600">
-                    {t(`appShowcase.items.${item.key}.description`)}
-                  </p>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-
-          {/* Solo en móvil: dice que la fila se desliza, que sin marco no se
-              ve que hay más a la derecha. */}
-          <p className="mt-1 text-center text-xs text-slate-400 lg:hidden">
-            {t("appShowcase.swipe")}
-          </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
