@@ -284,6 +284,21 @@ export default function PrivacyPolicy() {
                   support@vixtime.com
                 </a>
               </p>
+              {/* Quien responde de estos datos. En una politica de privacidad
+                  no basta un correo de soporte: hace falta saber que empresa
+                  hay detras, con su numero de registro. Sin traducir, como en
+                  el pie: un UID mal escrito en un idioma seria peor que no
+                  tenerlo. */}
+              <p className="mt-3 border-t border-blue-200 pt-3 text-sm text-blue-800">
+                Lweb Schweiz · UID CHE-449.145.794 ·{" "}
+                <a href="https://lweb.ch" target="_blank" rel="noopener noreferrer" className="underline">
+                  lweb.ch
+                </a>{" "}
+                ·{" "}
+                <a href="mailto:info@lweb.ch" className="underline">
+                  info@lweb.ch
+                </a>
+              </p>
             </div>
           </section>
 

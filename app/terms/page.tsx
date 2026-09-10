@@ -210,6 +210,20 @@ export default function TermsOfService() {
                   support@vixtime.com
                 </a>
               </p>
+              {/* Con quien se contrata. Unas condiciones sin decir que empresa
+                  las ofrece, y con que numero de registro, no atan a nadie. Sin
+                  traducir, como en el pie: un UID mal escrito en un idioma
+                  seria peor que no tenerlo. */}
+              <p className="mt-3 border-t border-blue-200 pt-3 text-sm text-blue-800">
+                Lweb Schweiz · UID CHE-449.145.794 ·{" "}
+                <a href="https://lweb.ch" target="_blank" rel="noopener noreferrer" className="underline">
+                  lweb.ch
+                </a>{" "}
+                ·{" "}
+                <a href="mailto:info@lweb.ch" className="underline">
+                  info@lweb.ch
+                </a>
+              </p>
             </div>
           </section>
 
