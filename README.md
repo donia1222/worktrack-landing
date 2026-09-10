@@ -75,6 +75,7 @@ npm run type-check # TypeScript verification
 └── public/            # Static assets
 ```
 
+
 ## 🤝 Contributing
 
 1. Fork the project
