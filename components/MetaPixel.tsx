@@ -15,6 +15,57 @@ declare global {
 }
 
 /**
+ * Un id unico por evento, para la deduplicacion.
+ *
+ * `crypto.randomUUID` no esta en Safari viejo ni en `http://`, de ahi el
+ * `?.` y el respaldo con timestamp + numero al azar.
+ */
+function idDeEvento() {
+  return crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`
+}
+
+/** Lee una cookie por nombre, o nada si no existe. */
+function leerCookie(nombre: string) {
+  const fila = document.cookie.split('; ').find((c) => c.startsWith(`${nombre}=`))
+  return fila?.split('=')[1]
+}
+
+/**
+ * Manda el evento por las dos vias a la vez, con el mismo `eventID`.
+ *
+ * Meta avisaba de cobertura de "event ID" baja (73%, pide 75%): el pixel del
+ * navegador mandaba cada evento sin `eventID` y sin nada del lado del
+ * servidor con quien emparejarlo. Ahora cada evento sale dos veces con el
+ * mismo id — una vez de aqui (fbq) y otra de `/api/meta-events` (la
+ * Conversions API, en el servidor) — y Meta los cuenta como uno solo.
+ *
+ * El envio al servidor va con `keepalive`: en el click del Lead, la pagina
+ * puede estar navegando ya hacia la App Store cuando el fetch todavia no ha
+ * salido, y sin eso el navegador lo corta a medias.
+ */
+export function disparar(eventName: string, params: Record<string, unknown> = {}) {
+  const eventID = idDeEvento()
+  window.fbq?.('track', eventName, params, { eventID })
+
+  fetch('/api/meta-events', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    keepalive: true,
+    body: JSON.stringify({
+      eventName,
+      eventID,
+      eventSourceUrl: window.location.href,
+      fbp: leerCookie('_fbp'),
+      fbc: leerCookie('_fbc'),
+      customData: params,
+    }),
+  }).catch(() => {
+    // Si falla el envio al servidor, el del navegador ya salio: no es un
+    // fallo que deba notarse en la pagina.
+  })
+}
+
+/**
  * El pixel de Meta.
  *
  * Ademas de la visita, manda las dos senales que de verdad dicen algo cuando se
@@ -34,6 +85,10 @@ declare global {
  */
 export default function MetaPixel() {
   useEffect(() => {
+    // El PageView vive aqui y no en el script de arranque: asi puede
+    // mandarse tambien al servidor con el mismo id, como los demas.
+    disparar('PageView')
+
     let contado = false
 
     const alBajar = () => {
@@ -42,7 +97,7 @@ export default function MetaPixel() {
       if (alto <= 0) return
       if (window.scrollY / alto < PROFUNDIDAD) return
       contado = true
-      window.fbq?.('track', 'ViewContent', { content_name: 'landing' })
+      disparar('ViewContent', { content_name: 'landing' })
       window.removeEventListener('scroll', alBajar)
     }
 
@@ -59,7 +114,7 @@ export default function MetaPixel() {
         enlace.closest<HTMLElement>('[data-zona]')?.dataset.zona ||
         enlace.closest('section')?.id ||
         'sin_marcar'
-      window.fbq?.('track', 'Lead', { content_name: `app_store_${zona}`, content_category: zona })
+      disparar('Lead', { content_name: `app_store_${zona}`, content_category: zona })
     }
 
     window.addEventListener('scroll', alBajar, { passive: true })
@@ -83,7 +138,6 @@ export default function MetaPixel() {
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '${PIXEL_ID}');
-          fbq('track', 'PageView');
         `}
       </Script>
       <noscript>
