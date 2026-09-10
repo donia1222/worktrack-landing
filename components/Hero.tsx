@@ -8,10 +8,10 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { useAppLoading } from "@/lib/loading"
 
-// El orden en el que se enlazan los tres vídeos: antes iba primero el timer
-// manual (home/dashboard), pero se sustituyó por el de exportar PDF; luego
-// calendario, luego estadísticas.
-const PANTALLAS_VIDEO = ["pdf-export", "register", "reports"] as const
+// El orden en el que se enlazan los tres vídeos: primero home (lo primero
+// que se ve al abrir la app), luego calendario, luego estadísticas — mismo
+// orden que las capturas de más abajo.
+const PANTALLAS_VIDEO = ["dashboard", "register", "reports"] as const
 
 /**
  * El teléfono del hero, ahora con vídeo en vez de una foto fija: los tres
