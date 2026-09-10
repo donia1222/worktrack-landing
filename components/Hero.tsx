@@ -152,8 +152,16 @@ export default function Hero() {
         >
           <div className="absolute -inset-10 rounded-[3rem] bg-[#5B5FEF]/15 blur-3xl" />
 
-          {/* El teléfono, con los tres vídeos enlazados dentro. */}
-          <div className="relative rounded-[2rem] bg-slate-900 p-2 shadow-2xl">
+          {/* El teléfono, con los tres vídeos enlazados dentro. La parte de
+              abajo se difumina hasta desaparecer en vez de cortar en seco,
+              como en la referencia. */}
+          <div
+            className="relative rounded-[2rem] bg-slate-900 p-2 shadow-2xl"
+            style={{
+              WebkitMaskImage: "linear-gradient(to bottom, black 75%, transparent 100%)",
+              maskImage: "linear-gradient(to bottom, black 75%, transparent 100%)",
+            }}
+          >
             <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.4rem]">
               <VideoDelHero idioma={idioma} />
             </div>
