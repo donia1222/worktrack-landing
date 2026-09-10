@@ -54,10 +54,10 @@ export default function Hero() {
   // La captura del teléfono en el Hero, en los tres idiomas.
   const heroImage =
     idioma === "es"
-      ? "/new/timer-circle-es.png"
+      ? "/new/IMG_1306-es.PNG"
       : idioma === "de"
-        ? "/new/timer-circle-de.png"
-        : "/new/timer-circle-en.png"
+        ? "/new/IMG_1308-de.PNG"
+        : "/new/IMG_1307-en-new.PNG"
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {

@@ -105,16 +105,16 @@ export const metadata: Metadata = {
  * El color de la barra de estado del teléfono.
  *
  * Encima de la cabecera se veía una franja blanca: ese hueco lo pinta el
- * navegador, no la página, y sin `themeColor` tira del fondo del `body`, que
- * es gris muy claro. Ahora lleva el lila con el que arranca la imagen de fondo
- * del hero —muestreado de ella, `#F0EFFE`—, así que la franja y la cabecera
- * son el mismo color y la separación desaparece.
+ * navegador, no la página, y sin `themeColor` tira del fondo del `body`. El
+ * hero cambió de un fondo CSS a una imagen (`hero-bg/hero-background.webp`),
+ * así que el lila de antes (`#F0EFFE`) ya no coincidía con el nuevo fondo —
+ * la franja blanca volvió. Remuestreado sobre la imagen actual: `#EFEFFF`.
  *
  * Va en su propio `export const viewport` y no dentro de `metadata`: desde
  * Next 14 ahí ya no se lee, y se queda sin efecto sin avisar.
  */
 export const viewport: Viewport = {
-  themeColor: '#F0EFFE',
+  themeColor: '#EFEFFF',
 }
 
 export default function RootLayout({
@@ -124,7 +124,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="bg-gray-50">
+      <body className="bg-[#EFEFFF]">
         <LanguageProvider>
           <StructuredData />
           <AppWrapper>
