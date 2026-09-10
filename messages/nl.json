@@ -835,6 +835,24 @@
         "title": "Altijd gelijk",
         "body": "Is je telefoon ver weg, dan stuurt hij het zodra jullie weer bij elkaar zijn."
       }
+    },
+    "shots": {
+      "timer": {
+        "label": "Inklokken",
+        "body": "Start en stop je dienst vanaf je pols, zonder je telefoon."
+      },
+      "registrar": {
+        "label": "Dag invoeren",
+        "body": "Voeg een dag met de hand toe: werk, vrij, vakantie of ziek."
+      },
+      "calendario": {
+        "label": "Agenda",
+        "body": "Je week met de uren van elke dag, in één oogopslag."
+      },
+      "semana": {
+        "label": "Jouw week",
+        "body": "Het totaal, het gemiddelde per dag en hoe elke dag ging."
+      }
     }
   },
   "scrollReveal": {

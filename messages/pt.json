@@ -835,6 +835,24 @@
         "title": "Sempre a par",
         "body": "Se o telemóvel estiver longe, envia tudo assim que voltarem a estar juntos."
       }
+    },
+    "shots": {
+      "timer": {
+        "label": "Picar o ponto",
+        "body": "Começa e termina a jornada no pulso, sem tirar o telemóvel."
+      },
+      "registrar": {
+        "label": "Registar",
+        "body": "Adiciona um dia à mão: trabalho, folga, férias ou baixa."
+      },
+      "calendario": {
+        "label": "Calendário",
+        "body": "A tua semana com as horas de cada dia, num relance."
+      },
+      "semana": {
+        "label": "A tua semana",
+        "body": "O total, a média por dia e como correu cada jornada."
+      }
     }
   },
   "scrollReveal": {

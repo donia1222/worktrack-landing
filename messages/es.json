@@ -836,6 +836,24 @@
         "title": "Siempre al día",
         "body": "Si el móvil no está cerca, se envía al reencontrarse."
       }
+    },
+    "shots": {
+      "timer": {
+        "label": "Fichar",
+        "body": "Empieza y para la jornada desde la muñeca, sin sacar el móvil."
+      },
+      "registrar": {
+        "label": "Registrar",
+        "body": "Añade un día a mano: trabajo, libre, vacaciones o baja."
+      },
+      "calendario": {
+        "label": "Calendario",
+        "body": "Tu semana con las horas de cada día, de un vistazo."
+      },
+      "semana": {
+        "label": "Tu semana",
+        "body": "El total, la media por día y cómo va cada jornada."
+      }
     }
   },
   "scrollReveal": {

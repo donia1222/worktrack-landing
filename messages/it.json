@@ -835,6 +835,24 @@
         "title": "Sempre allineati",
         "body": "Se il telefono è lontano, invia tutto appena vi ritrovate."
       }
+    },
+    "shots": {
+      "timer": {
+        "label": "Timbrare",
+        "body": "Avvia e ferma la giornata dal polso, senza tirare fuori il telefono."
+      },
+      "registrar": {
+        "label": "Registrare",
+        "body": "Aggiungi un giorno a mano: lavoro, libero, ferie o malattia."
+      },
+      "calendario": {
+        "label": "Calendario",
+        "body": "La tua settimana con le ore di ogni giorno, a colpo d’occhio."
+      },
+      "semana": {
+        "label": "La tua settimana",
+        "body": "Il totale, la media al giorno e com’è andata ogni giornata."
+      }
     }
   },
   "scrollReveal": {

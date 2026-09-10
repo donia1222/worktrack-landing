@@ -13,7 +13,7 @@ import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
-import AppleWatchScrollHero from '@/components/AppleWatchScrollHero'
+import AppleWatchRuta from '@/components/AppleWatchRuta'
 import ScrollTextReveal from '@/components/ScrollTextReveal'
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
             competidor tiene. Pero no va justo bajo el hero — la mayoría de
             quien llega no tiene Apple Watch, así que primero la página
             demuestra lo que promete el titular, y el reloj es el empujón. */}
-        <AppleWatchScrollHero />
+        <AppleWatchRuta />
 
         {/* El widget, justo detras del reloj: los dos cuentan lo mismo —donde
             mas vive la app fuera de la app—, y el widget lo puede poner

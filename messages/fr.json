@@ -835,6 +835,24 @@
         "title": "Toujours synchronisé",
         "body": "Si le téléphone est loin, l'envoi se fait dès que vous vous retrouvez."
       }
+    },
+    "shots": {
+      "timer": {
+        "label": "Pointer",
+        "body": "Démarrez et arrêtez la journée au poignet, sans sortir le téléphone."
+      },
+      "registrar": {
+        "label": "Enregistrer",
+        "body": "Ajoutez un jour à la main : travail, repos, congés ou maladie."
+      },
+      "calendario": {
+        "label": "Calendrier",
+        "body": "Votre semaine avec les heures de chaque jour, d’un coup d’œil."
+      },
+      "semana": {
+        "label": "Votre semaine",
+        "body": "Le total, la moyenne par jour et le détail de chaque journée."
+      }
     }
   },
   "scrollReveal": {

@@ -836,6 +836,24 @@
         "title": "Immer aktuell",
         "body": "Ist das Handy weg, wird später gesendet."
       }
+    },
+    "shots": {
+      "timer": {
+        "label": "Stempeln",
+        "body": "Schicht am Handgelenk starten und beenden, ohne Handy."
+      },
+      "registrar": {
+        "label": "Tag erfassen",
+        "body": "Einen Tag von Hand eintragen: Arbeit, frei, Urlaub oder krank."
+      },
+      "calendario": {
+        "label": "Kalender",
+        "body": "Deine Woche mit den Stunden jedes Tages auf einen Blick."
+      },
+      "semana": {
+        "label": "Deine Woche",
+        "body": "Die Summe, der Schnitt pro Tag und wie jeder Tag lief."
+      }
     }
   },
   "scrollReveal": {

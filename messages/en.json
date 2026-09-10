@@ -836,6 +836,24 @@
         "title": "Always in sync",
         "body": "If your phone is away, it sends when you meet again."
       }
+    },
+    "shots": {
+      "timer": {
+        "label": "Clock in",
+        "body": "Start and stop your shift from your wrist, phone in your pocket."
+      },
+      "registrar": {
+        "label": "Log a day",
+        "body": "Add a day by hand: work, day off, holiday or sick leave."
+      },
+      "calendario": {
+        "label": "Calendar",
+        "body": "Your week with each day's hours, at a glance."
+      },
+      "semana": {
+        "label": "Your week",
+        "body": "The total, the daily average and how each day went."
+      }
     }
   },
   "scrollReveal": {

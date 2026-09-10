@@ -19,10 +19,20 @@ export default function AppShowcase() {
   // resto ve las inglesas.
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
+  // La captura de "reports" es nueva (la del panel de estadísticas con los
+  // aros y la actividad de la semana), en las tres imágenes que hay.
+  const imagenReportes =
+    idioma === "es" ? "/new/IMG_1351-es.jpeg" : idioma === "de" ? "/new/IMG_1353-de.jpeg" : "/new/IMG_1352-en.jpeg"
+
+  // Igual con "register": la del calendario, con el menú de tipo de día
+  // abierto (Trabajo / Día libre / Vacaciones / Enfermedad).
+  const imagenCalendario =
+    idioma === "es" ? "/new/IMG_1358-es.PNG" : idioma === "de" ? "/new/IMG_1361-de.PNG" : "/new/IMG_1360-en.PNG"
+
   const items = [
     { key: "dashboard", image: `/app/${idioma}/2-home.png`, Icono: LayoutDashboard },
-    { key: "register", image: `/app/${idioma}/4-calendario.png`, Icono: CalendarDays },
-    { key: "reports", image: `/app/${idioma}/5-informes.png`, Icono: BarChart3 },
+    { key: "register", image: imagenCalendario, Icono: CalendarDays },
+    { key: "reports", image: imagenReportes, Icono: BarChart3 },
   ]
 
   const contenedor = useRef<HTMLDivElement>(null)
