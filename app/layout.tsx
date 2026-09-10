@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import LanguageProvider from '@/components/LanguageProvider'
 import CookieNotice from '@/components/CookieNotice'
@@ -99,6 +99,22 @@ export const metadata: Metadata = {
   verification: {
     google: 'google-site-verification-code',
   },
+}
+
+/**
+ * El color de la barra de estado del teléfono.
+ *
+ * Encima de la cabecera se veía una franja blanca: ese hueco lo pinta el
+ * navegador, no la página, y sin `themeColor` tira del fondo del `body`, que
+ * es gris muy claro. Ahora lleva el lila con el que arranca la imagen de fondo
+ * del hero —muestreado de ella, `#F0EFFE`—, así que la franja y la cabecera
+ * son el mismo color y la separación desaparece.
+ *
+ * Va en su propio `export const viewport` y no dentro de `metadata`: desde
+ * Next 14 ahí ya no se lee, y se queda sin efecto sin avisar.
+ */
+export const viewport: Viewport = {
+  themeColor: '#F0EFFE',
 }
 
 export default function RootLayout({
