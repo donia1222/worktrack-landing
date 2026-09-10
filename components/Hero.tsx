@@ -4,10 +4,61 @@ import { Sparkles, Zap, BarChart3, CalendarCheck } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import AppStoreBadge from "./AppStoreBadge"
 import DisponiblePara from "./DisponiblePara"
-import Image from "next/image"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { useAppLoading } from "@/lib/loading"
+
+// El orden en el que se enlazan los tres vídeos: primero home (lo primero
+// que se ve al abrir la app), luego calendario, luego estadísticas — mismo
+// orden que las capturas de más abajo.
+const PANTALLAS_VIDEO = ["dashboard", "register", "reports"] as const
+
+/**
+ * El teléfono del hero, ahora con vídeo en vez de una foto fija: los tres
+ * clips (home → calendario → estadísticas) se enlazan solos, en bucle, y
+ * entre uno y el siguiente hay un *crossfade* en vez de un corte seco.
+ *
+ * Los tres vídeos están siempre montados y solo se les cambia la opacidad
+ * (con `transition-opacity`) — así el que entra ya está listo, sin un
+ * parpadeo en negro mientras carga. Solo se reproduce el activo; los otros
+ * se pausan, para que no se desincronicen mientras están ocultos.
+ */
+function VideoDelHero({ idioma }: { idioma: string }) {
+  const [activo, setActivo] = useState(0)
+  const referencias = useRef<(HTMLVideoElement | null)[]>([])
+
+  useEffect(() => {
+    referencias.current.forEach((video, i) => {
+      if (!video) return
+      if (i === activo) {
+        video.currentTime = 0
+        video.play().catch(() => {})
+      } else {
+        video.pause()
+      }
+    })
+  }, [activo, idioma])
+
+  return (
+    <>
+      {PANTALLAS_VIDEO.map((clave, i) => (
+        <video
+          key={clave}
+          ref={(el) => {
+            referencias.current[i] = el
+          }}
+          src={`/app-videos/${idioma}/${clave}.mp4`}
+          muted
+          playsInline
+          onEnded={() => setActivo((a) => (a + 1) % PANTALLAS_VIDEO.length)}
+          className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-700 ease-in-out ${
+            i === activo ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+    </>
+  )
+}
 
 /**
  * El hero, con la composición de la landing de MIA que le gustó: todo
@@ -51,13 +102,6 @@ export default function Hero() {
   // inglés antes que una imagen rota.
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
-  // La captura del teléfono en el Hero, en los tres idiomas.
-  const heroImage =
-    idioma === "es"
-      ? "/new/IMG_1306-es.PNG"
-      : idioma === "de"
-        ? "/new/IMG_1308-de.PNG"
-        : "/new/IMG_1307-en-new.PNG"
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -108,16 +152,10 @@ export default function Hero() {
         >
           <div className="absolute -inset-10 rounded-[3rem] bg-[#5B5FEF]/15 blur-3xl" />
 
-          {/* El teléfono. */}
+          {/* El teléfono, con los tres vídeos enlazados dentro. */}
           <div className="relative rounded-[2rem] bg-slate-900 p-2 shadow-2xl">
             <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.4rem]">
-              <Image
-                src={heroImage}
-                alt="Working Time Control App"
-                fill
-                className="object-cover object-top"
-                priority
-              />
+              <VideoDelHero idioma={idioma} />
             </div>
           </div>
         </div>

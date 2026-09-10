@@ -3,7 +3,6 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { LayoutDashboard, CalendarDays, BarChart3 } from "lucide-react"
-import Image from "next/image"
 import { useLanguage } from "@/lib/language"
 
 /**
@@ -19,20 +18,12 @@ export default function AppShowcase() {
   // resto ve las inglesas.
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
-  // La captura de "reports" es nueva (la del panel de estadísticas con los
-  // aros y la actividad de la semana), en las tres imágenes que hay.
-  const imagenReportes =
-    idioma === "es" ? "/new/IMG_1351-es.jpeg" : idioma === "de" ? "/new/IMG_1353-de.jpeg" : "/new/IMG_1352-en.jpeg"
-
-  // Igual con "register": la del calendario, con el menú de tipo de día
-  // abierto (Trabajo / Día libre / Vacaciones / Enfermedad).
-  const imagenCalendario =
-    idioma === "es" ? "/new/IMG_1358-es.PNG" : idioma === "de" ? "/new/IMG_1361-de.PNG" : "/new/IMG_1360-en.PNG"
-
+  // Video en vez de foto fija: se ve la app funcionando de verdad, no solo
+  // una pantalla parada. Uno por idioma y por tarjeta, mudo y en bucle.
   const items = [
-    { key: "dashboard", image: `/app/${idioma}/2-home.png`, Icono: LayoutDashboard },
-    { key: "register", image: imagenCalendario, Icono: CalendarDays },
-    { key: "reports", image: imagenReportes, Icono: BarChart3 },
+    { key: "dashboard", video: `/app-videos/${idioma}/dashboard.mp4`, Icono: LayoutDashboard },
+    { key: "register", video: `/app-videos/${idioma}/register.mp4`, Icono: CalendarDays },
+    { key: "reports", video: `/app-videos/${idioma}/reports.mp4`, Icono: BarChart3 },
   ]
 
   const contenedor = useRef<HTMLDivElement>(null)
@@ -65,7 +56,7 @@ export default function AppShowcase() {
         </div>
 
         <div ref={contenedor} className="mt-12 grid gap-6 sm:mt-16 lg:grid-cols-3 lg:gap-8">
-          {items.map(({ key, image, Icono }, i) => (
+          {items.map(({ key, video, Icono }, i) => (
             <motion.div
               key={key}
               initial={{ opacity: 0, y: 26 }}
@@ -87,19 +78,20 @@ export default function AppShowcase() {
                 {t(`appShowcase.items.${key}.description`)}
               </p>
 
-              {/* La captura, recta y completa — antes le faltaba el borde de
+              {/* El vídeo, recto y completo — antes le faltaba el borde de
                   abajo (quería que "sangrara" fuera de la tarjeta) y el
                   teléfono se veía cortado a medias. Marco entero, como en
                   el resto de la web. */}
               <div className="relative mt-8 w-full max-w-[220px] pb-8">
                 <div className="relative rounded-[1.9rem] bg-slate-900 p-1.5 shadow-xl ring-1 ring-slate-900/5">
                   <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.5rem] bg-slate-900">
-                    <Image
-                      src={image}
-                      alt={t(`appShowcase.items.${key}.title`)}
-                      fill
-                      sizes="(max-width: 1024px) 60vw, 220px"
-                      className="object-cover object-top"
+                    <video
+                      src={video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover object-top"
                     />
                   </div>
                 </div>
