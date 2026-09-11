@@ -28,8 +28,8 @@ export default function Home() {
       <main className="overflow-x-clip">
         <Hero />
         <ScrollTextReveal />
-        <AutoTimerGeofence />
         <SalaryStats />
+        <AutoTimerGeofence />
         <AppShowcase />
 
         {/* El reloj sube al cuarto puesto: es la novedad y lo que casi ningún

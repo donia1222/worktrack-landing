@@ -23,6 +23,26 @@ export default function SalaryStats() {
 
   return (
     <section id="salary-stats" className="relative py-16 lg:py-20 bg-white overflow-hidden">
+      {/* La misma línea lila ondulada de fondo que en AutoTimer, para que no
+          se quede en blanco liso — solo en escritorio, donde el teléfono y
+          el texto van en fila y el centro de la sección coincide con el
+          centro del teléfono. */}
+      <svg
+        className="pointer-events-none absolute inset-x-0 top-1/2 hidden w-full -translate-y-1/2 lg:block"
+        style={{ height: "380px" }}
+        viewBox="0 0 1200 380"
+        preserveAspectRatio="none"
+        fill="none"
+      >
+        <path
+          d="M -20 260 C 160 120, 340 340, 540 200 S 900 60, 1100 180 T 1220 140"
+          stroke="#5B5FEF"
+          strokeOpacity="0.35"
+          strokeWidth="36"
+          strokeLinecap="round"
+        />
+      </svg>
+
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,8 +71,28 @@ export default function SalaryStats() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative order-2 lg:order-1"
+            className="relative order-2 lg:order-1 py-6"
           >
+            {/* La misma línea, solo para móvil: sangra a los dos lados hasta
+                el borde de la pantalla con el truco del 50vw, pegada al
+                propio bloque del teléfono. */}
+            <svg
+              aria-hidden
+              className="pointer-events-none absolute left-1/2 top-1/2 -ml-[50vw] w-screen -translate-y-1/2 lg:hidden"
+              style={{ height: "220px" }}
+              viewBox="0 0 800 220"
+              preserveAspectRatio="none"
+              fill="none"
+            >
+              <path
+                d="M -20 150 C 110 70, 240 190, 400 120 S 660 40, 820 110"
+                stroke="#5B5FEF"
+                strokeOpacity="0.35"
+                strokeWidth="28"
+                strokeLinecap="round"
+              />
+            </svg>
+
             <div className="absolute -inset-8 rounded-[3rem] bg-[#5B5FEF]/10 blur-3xl" />
 
             <div className="relative w-[230px] sm:w-[260px] mx-auto">
