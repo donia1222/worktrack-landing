@@ -149,7 +149,7 @@ export default function ExportReports() {
   return (
     <section
       id="export-reports"
-      className="py-20 lg:py-28 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden"
+      className="pt-20 pb-10 lg:pt-28 lg:pb-14 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_10%,transparent_70%)] opacity-20" />
 
@@ -323,7 +323,7 @@ export default function ExportReports() {
           </div>
         </motion.div>
 
-        <p className="mb-16 text-center text-sm text-slate-400">{t("exportReports.demoTitle")}</p>
+        <p className="text-center text-sm text-slate-400">{t("exportReports.demoTitle")}</p>
       </div>
     </section>
   )

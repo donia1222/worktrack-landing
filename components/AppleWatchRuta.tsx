@@ -86,7 +86,7 @@ export default function AppleWatchRuta() {
   const aLaVista = useInView(contenedor, { once: true, margin: "-100px" })
 
   return (
-    <section id="apple-watch" className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+    <section id="apple-watch" className="relative overflow-hidden bg-white pt-10 pb-20 sm:pt-14 sm:pb-24 lg:pt-16 lg:pb-28">
       {/* El mismo halo lila que el resto de secciones. */}
       <div
         aria-hidden
