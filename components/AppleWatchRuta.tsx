@@ -89,16 +89,23 @@ export default function AppleWatchRuta() {
 
   const containerRef = useRef<HTMLDivElement>(null)
   const viewportRef = useRef<HTMLDivElement>(null)
+  // El carril se mueve escribiendo directamente en su `style.transform`
+  // desde el listener de scroll, sin pasar por `setState` de React: antes
+  // cada píxel de scroll disparaba un render completo del componente (las
+  // cuatro capturas, el SVG del hilo...) y en un móvil de gama media eso se
+  // notaba a trompicones. El DOM se actualiza en el mismo frame del scroll,
+  // por fuera de React, que es lo único que da fluidez de verdad aquí.
+  const carrilRef = useRef<HTMLDivElement>(null)
   const [anchoViewport, setAnchoViewport] = useState(0)
   const [fase, setFase] = useState<Fase>("antes")
-  const [progreso, setProgreso] = useState(0)
 
   const distanciaHorizontal = Math.max(0, ANCHO_PISTA - anchoViewport)
   // Hace falta más scroll vertical que horizontal recorrido, para que el
-  // deslizamiento se sienta pausado y no un tirón. El +400 es un suelo:
-  // sin él, si el viewport llegara a medir casi lo mismo que la pista, el
-  // "enganche" duraría un instante y se notaría como un tropiezo.
-  const distanciaVertical = distanciaHorizontal * 1.3 + 400
+  // deslizamiento se sienta pausado y no un tirón — pero con un techo, para
+  // que en el teléfono (donde `distanciaHorizontal` es mayor, la pantalla
+  // es más estrecha) no haga falta arrastrarse un metro para ver las cuatro
+  // capturas.
+  const distanciaVertical = Math.min(1100, Math.max(450, distanciaHorizontal * 0.9))
 
   useEffect(() => {
     function medir() {
@@ -118,17 +125,27 @@ export default function AppleWatchRuta() {
       if (!el) return
 
       const rect = el.getBoundingClientRect()
+      // `window.innerHeight` y no `100vh` por CSS: en el móvil, la barra de
+      // Safari que aparece y desaparece hace que `100vh` (el alto "grande",
+      // sin la barra) no coincida con lo que de verdad se ve en cada
+      // instante, y ese desajuste es lo que hacía que el carril se quedara
+      // pisando el siguiente bloque un momento.
       const alturaVentana = window.innerHeight
 
+      let nuevoProgreso: number
       if (rect.top > 0) {
         setFase("antes")
-        setProgreso(0)
+        nuevoProgreso = 0
       } else if (rect.bottom <= alturaVentana) {
         setFase("despues")
-        setProgreso(1)
+        nuevoProgreso = 1
       } else {
         setFase("fijo")
-        setProgreso(Math.min(1, Math.max(0, -rect.top / distanciaVertical)))
+        nuevoProgreso = Math.min(1, Math.max(0, -rect.top / distanciaVertical))
+      }
+
+      if (carrilRef.current) {
+        carrilRef.current.style.transform = `translateX(${-nuevoProgreso * distanciaHorizontal}px)`
       }
     }
 
@@ -146,7 +163,7 @@ export default function AppleWatchRuta() {
       window.removeEventListener("scroll", onScroll)
       window.removeEventListener("resize", onScroll)
     }
-  }, [distanciaVertical])
+  }, [distanciaVertical, distanciaHorizontal])
 
   const posicionCarril =
     fase === "fijo"
@@ -188,17 +205,17 @@ export default function AppleWatchRuta() {
       <div
         ref={containerRef}
         className="relative mt-12 sm:mt-14"
-        style={{ height: `calc(100vh + ${distanciaVertical}px)` }}
+        style={{ height: `calc(100dvh + ${distanciaVertical}px)` }}
       >
-        <div className={`${posicionCarril} z-10 flex h-screen items-center overflow-hidden`}>
+        <div
+          className={`${posicionCarril} z-10 flex items-center overflow-hidden`}
+          style={{ height: "100dvh" }}
+        >
           <div ref={viewportRef} className="mx-auto w-full max-w-7xl overflow-hidden px-4 sm:px-6 lg:px-8">
             <div
+              ref={carrilRef}
               className="relative"
-              style={{
-                height: ALTO,
-                width: ANCHO_PISTA,
-                transform: `translateX(${-progreso * distanciaHorizontal}px)`,
-              }}
+              style={{ height: ALTO, width: ANCHO_PISTA }}
             >
               <svg
                 aria-hidden
