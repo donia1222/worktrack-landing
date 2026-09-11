@@ -15,7 +15,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 3000) // 3 seconds delay
+    }, 1400)
 
     return () => clearTimeout(timer)
   }, [])
