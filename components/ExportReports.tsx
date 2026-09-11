@@ -1,13 +1,121 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FileText, CheckCircle, ArrowRight, Calendar, CreditCard, Download } from "lucide-react"
+import { FileText, CheckCircle, Building2, Clock, CalendarDays, Euro } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 
+/**
+ * Datos de ejemplo para la vista previa del PDF — ficticios (nombre, empresa
+ * y dirección no son de ningún cliente real), uno por idioma porque el PDF
+ * de verdad sale así: fechas, cabeceras y textos traducidos al idioma de la
+ * app, no solo al de la web.
+ */
+const PDF_DEMO = {
+  es: {
+    title: "Informe de Trabajo",
+    dateRange: "Del 8 al 12 de septiembre",
+    reportId: "INF-2026-0912",
+    generatedOn: "12 de septiembre de 2026",
+    employeeName: "Alex Müller",
+    companyLabel: "EMPRESA",
+    company: "Café Central",
+    addressLine1: "Bahnhofstrasse 12",
+    addressLine2: "8001 Zúrich",
+    totalHoursLabel: "HORAS TOTALES",
+    totalHours: "40.0h",
+    workDaysLabel: "DÍAS TRABAJADOS",
+    workDays: "5",
+    avgDayLabel: "MEDIA / DÍA",
+    avgDay: "8.0h",
+    amountLabel: "IMPORTE A PAGAR",
+    amountRate: "25 €/h · según horas trabajadas",
+    amount: "1000.00 €",
+    dailyListLabel: "DETALLE DIARIO",
+    dayHeader: "DÍA",
+    workHeader: "TRABAJO",
+    hoursHeader: "HORAS",
+    days: [
+      { day: "Lun 08 sept.", hours: "8.0h" },
+      { day: "Mar 09 sept.", hours: "8.0h" },
+      { day: "Mié 10 sept.", hours: "8.0h" },
+      { day: "Jue 11 sept.", hours: "8.0h" },
+      { day: "Vie 12 sept.", hours: "8.0h" },
+    ],
+    footerNote: "Este cálculo se basa en las horas registradas y la configuración salarial del trabajo.",
+  },
+  en: {
+    title: "Work Report",
+    dateRange: "From September 8 to 12",
+    reportId: "INF-2026-0912",
+    generatedOn: "September 12, 2026",
+    employeeName: "Alex Müller",
+    companyLabel: "COMPANY",
+    company: "Café Central",
+    addressLine1: "Bahnhofstrasse 12",
+    addressLine2: "8001 Zurich",
+    totalHoursLabel: "TOTAL HOURS",
+    totalHours: "40.0h",
+    workDaysLabel: "WORK DAYS",
+    workDays: "5",
+    avgDayLabel: "AVG / DAY",
+    avgDay: "8.0h",
+    amountLabel: "AMOUNT TO PAY",
+    amountRate: "€25/h · based on hours worked",
+    amount: "€1000.00",
+    dailyListLabel: "DAILY BREAKDOWN",
+    dayHeader: "DAY",
+    workHeader: "WORK",
+    hoursHeader: "HOURS",
+    days: [
+      { day: "Mon Sep 08", hours: "8.0h" },
+      { day: "Tue Sep 09", hours: "8.0h" },
+      { day: "Wed Sep 10", hours: "8.0h" },
+      { day: "Thu Sep 11", hours: "8.0h" },
+      { day: "Fri Sep 12", hours: "8.0h" },
+    ],
+    footerNote: "This calculation is based on the logged hours and the job's salary settings.",
+  },
+  de: {
+    title: "Arbeitsbericht",
+    dateRange: "Vom 8. bis 12. Sept.",
+    reportId: "INF-2026-0912",
+    generatedOn: "12. September 2026",
+    employeeName: "Alex Müller",
+    companyLabel: "UNTERNEHMEN",
+    company: "Café Central",
+    addressLine1: "Bahnhofstrasse 12",
+    addressLine2: "8001 Zürich",
+    totalHoursLabel: "GESAMTSTUNDEN",
+    totalHours: "40.0h",
+    workDaysLabel: "ARBEITSTAGE",
+    workDays: "5",
+    avgDayLabel: "DURCHSCHNITT/TAG",
+    avgDay: "8.0h",
+    amountLabel: "ZU ZAHLENDER BETRAG",
+    amountRate: "25 EUR/h · pro gearbeitete Stunden",
+    amount: "1000.00 EUR",
+    dailyListLabel: "TAGESLISTE",
+    dayHeader: "TAG",
+    workHeader: "ARBEIT",
+    hoursHeader: "STUNDEN",
+    days: [
+      { day: "Mo. 08. Sept.", hours: "8.0h" },
+      { day: "Di. 09. Sept.", hours: "8.0h" },
+      { day: "Mi. 10. Sept.", hours: "8.0h" },
+      { day: "Do. 11. Sept.", hours: "8.0h" },
+      { day: "Fr. 12. Sept.", hours: "8.0h" },
+    ],
+    footerNote: "Diese Berechnung beruht auf den erfassten Stunden und den Lohneinstellungen des Jobs.",
+  },
+} as const
+
 export default function ExportReports() {
   const { t, language } = useLanguage()
-  const idioma = ["es", "en", "de"].includes(language) ? language : "en"
+  const idioma = (["es", "en", "de"] as const).includes(language as "es" | "en" | "de")
+    ? (language as "es" | "en" | "de")
+    : "en"
+  const pdf = PDF_DEMO[idioma]
 
   const capabilities = [
     {
@@ -128,89 +236,110 @@ export default function ExportReports() {
           </div>
         </div>
 
-        {/* Demo Visual Section */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative max-w-[240px] mx-auto">
-              <div className="absolute -inset-6 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 blur-3xl opacity-60" />
-              <div className="relative bg-slate-900 rounded-[2rem] p-2 shadow-2xl">
-                <div className="relative aspect-[9/19] rounded-[1.4rem] overflow-hidden">
-                  <video
-                    src={`/app-videos/${idioma}/pdf-export.mp4`}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 h-full w-full object-cover object-top"
-                  />
-                </div>
-                <div className="absolute -top-3 -right-3 bg-green-500 rounded-full w-8 h-8 flex items-center justify-center shadow-lg ring-4 ring-white">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                </div>
-              </div>
-            </div>
+        {/* La vista previa del PDF de verdad — a todo el ancho de las tres
+            tarjetas de arriba, en vez del teléfono con vídeo que había
+            antes. Es una "hoja" con el mismo maquetado que el informe real
+            (cabecera, empresa, resumen, importe, detalle diario), con datos
+            de ejemplo ficticios y traducida al idioma de la página. */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative mx-auto mb-4 max-w-4xl"
+        >
+          <div className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-r from-blue-300/20 to-indigo-300/20 blur-3xl" />
 
-            {/* Enhanced floating indicators */}
-            <div className="absolute top-4 -left-2 bg-blue-500 rounded-full p-2 shadow-lg animate-pulse">
-              <FileText className="w-4 h-4 text-white" />
-            </div>
+          {/* La cinta "PDF", para que quede claro de un vistazo que esto es
+              la exportación y no otra pantalla más de la app. */}
+          <div className="absolute -top-3 left-8 z-10 flex items-center gap-1.5 rounded-full bg-rose-500 px-3 py-1 text-xs font-bold text-white shadow-lg">
+            <FileText className="h-3.5 w-3.5" />
+            PDF
+          </div>
 
-            <div className="absolute bottom-4 -right-2 bg-indigo-500 rounded-full p-2 shadow-lg animate-pulse" style={{ animationDelay: "1s" }}>
-              <Download className="w-4 h-4 text-white" />
-            </div>
-
-            <div className="absolute top-1/2 -right-4 bg-orange-500 rounded-full p-2 shadow-lg animate-pulse" style={{ animationDelay: "2s" }}>
-              <Calendar className="w-4 h-4 text-white" />
-            </div>
-
-            <div className="absolute bottom-1/2 -left-4 bg-emerald-500 rounded-full p-2 shadow-lg animate-pulse" style={{ animationDelay: "0.5s" }}>
-              <CreditCard className="w-4 h-4 text-white" />
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-6"
-          >
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200/30">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                {t("exportReports.demoTitle")}
-              </h3>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-blue-600" />
-                  <span className="text-slate-700">{t("exportReports.supportedFormats.pdf")}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-green-600" />
-                  <span className="text-slate-700">{t("exportReports.supportedFormats.photo")}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <ArrowRight className="w-4 h-4 text-purple-600" />
-                  <span className="text-slate-700">{t("exportReports.supportedFormats.location")}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CreditCard className="w-4 h-4 text-indigo-600" />
-                  <span className="text-slate-700">{t("exportReports.supportedFormats.multilang")}</span>
+          <div className="overflow-hidden rounded-[1.75rem] border border-slate-200/70 bg-white shadow-2xl">
+            <div className="p-6 sm:p-10">
+              {/* Cabecera: nombre a la izquierda, título del informe y
+                  metadatos a la derecha — igual que el PDF real. */}
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <p className="text-lg font-bold text-slate-900">{pdf.employeeName}</p>
+                <div className="sm:text-right">
+                  <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">{pdf.title}</h3>
+                  <p className="mt-1 text-sm text-slate-500">{pdf.dateRange}</p>
+                  <p className="text-sm font-bold text-[#5B5FEF]">{pdf.reportId}</p>
+                  <p className="text-sm text-slate-500">{pdf.generatedOn}</p>
                 </div>
               </div>
-            </div>
 
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50">
-              <h4 className="font-semibold text-slate-900 mb-3">{t("exportReports.accuracy.title")}</h4>
-              <p className="text-sm text-slate-600">{t("exportReports.accuracy.text")}</p>
+              <div className="my-6 h-0.5 rounded-full bg-[#5B5FEF]/20 sm:my-8" />
+
+              {/* La empresa. */}
+              <div className="mb-6 flex items-start gap-3 sm:mb-8">
+                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#5B5FEF]/10">
+                  <Building2 className="h-4 w-4 text-[#5B5FEF]" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold tracking-wide text-slate-400">{pdf.companyLabel}</p>
+                  <p className="font-bold text-slate-900">{pdf.company}</p>
+                  <p className="text-sm text-slate-500">{pdf.addressLine1}</p>
+                  <p className="text-sm text-slate-500">{pdf.addressLine2}</p>
+                </div>
+              </div>
+
+              {/* Resumen: horas totales, días, media/día. */}
+              <div className="mb-4 grid grid-cols-3 gap-3 sm:gap-4">
+                {[
+                  { icon: Clock, label: pdf.totalHoursLabel, value: pdf.totalHours },
+                  { icon: CalendarDays, label: pdf.workDaysLabel, value: pdf.workDays },
+                  { icon: Clock, label: pdf.avgDayLabel, value: pdf.avgDay },
+                ].map((stat, index) => (
+                  <div key={index} className="rounded-xl bg-slate-50 p-4">
+                    <p className="text-lg font-bold text-slate-900 sm:text-2xl">{stat.value}</p>
+                    <p className="mt-1 text-[10px] font-bold tracking-wide text-slate-400 sm:text-xs">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* El importe a pagar, destacado en su propia caja. */}
+              <div className="mb-8 flex items-center justify-between gap-4 rounded-xl border-2 border-[#5B5FEF]/25 p-4 sm:p-5">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#5B5FEF]/10">
+                    <Euro className="h-4 w-4 text-[#5B5FEF]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold tracking-wide text-slate-500 sm:text-sm">{pdf.amountLabel}</p>
+                    <p className="text-xs text-slate-400">{pdf.amountRate}</p>
+                  </div>
+                </div>
+                <p className="text-xl font-bold text-[#5B5FEF] sm:text-2xl">{pdf.amount}</p>
+              </div>
+
+              {/* El detalle diario. */}
+              <p className="mb-3 text-lg font-bold text-slate-900">{pdf.dailyListLabel}</p>
+              <div className="mb-6 overflow-hidden rounded-xl border border-slate-200/70">
+                <div className="flex bg-slate-50 px-4 py-2 text-[10px] font-bold tracking-wide text-slate-400 sm:text-xs">
+                  <span className="flex-1">{pdf.dayHeader}</span>
+                  <span className="flex-1">{pdf.workHeader}</span>
+                  <span className="text-right">{pdf.hoursHeader}</span>
+                </div>
+                {pdf.days.map((row, index) => (
+                  <div
+                    key={index}
+                    className={`flex items-center px-4 py-2.5 text-sm ${index % 2 === 1 ? "bg-slate-50/60" : ""}`}
+                  >
+                    <span className="flex-1 text-slate-700">{row.day}</span>
+                    <span className="flex-1 text-slate-500">{pdf.company}</span>
+                    <span className="text-right font-bold text-slate-900">{row.hours}</span>
+                  </div>
+                ))}
+              </div>
+
+              <p className="text-xs leading-relaxed text-slate-400">{pdf.footerNote}</p>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
+
+        <p className="mb-16 text-center text-sm text-slate-400">{t("exportReports.demoTitle")}</p>
       </div>
     </section>
   )

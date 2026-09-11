@@ -25,10 +25,20 @@ const PANTALLAS_VIDEO = ["salary", "register", "reports"] as const
 function VideoDelHero({ idioma }: { idioma: string }) {
   const [activo, setActivo] = useState(0)
   const referencias = useRef<(HTMLVideoElement | null)[]>([])
+  // Mientras dure el loading de arranque el teléfono está montado pero
+  // tapado (opacidad 0): sin este freno el vídeo arrancaba igual ahí
+  // detrás, y para cuando se veía ya llevaba varios segundos corridos —el
+  // primero incluso podía haber terminado y pasado al siguiente sin que se
+  // llegara a ver el primer fotograma.
+  const cargando = useAppLoading()
 
   useEffect(() => {
     referencias.current.forEach((video, i) => {
       if (!video) return
+      if (cargando) {
+        video.pause()
+        return
+      }
       if (i === activo) {
         video.currentTime = 0
         video.play().catch(() => {})
@@ -36,7 +46,7 @@ function VideoDelHero({ idioma }: { idioma: string }) {
         video.pause()
       }
     })
-  }, [activo, idioma])
+  }, [activo, idioma, cargando])
 
   return (
     <>
