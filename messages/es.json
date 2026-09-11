@@ -791,6 +791,22 @@
     },
     "swipe": "Desliza para ver más"
   },
+  "salaryStats": {
+    "badge": "Salario Automático",
+    "title": "Tu salario,",
+    "titleAccent": "siempre bajo control",
+    "description": "Cada hora que registras se convierte al instante en ingresos reales. Ve cuánto has ganado este mes, cuántas horas llevas y en qué semanas has trabajado más, sin sacar la calculadora.",
+    "points": {
+      "earnings": {
+        "title": "Ingresos al día",
+        "description": "El total del mes se recalcula solo con cada fichaje, según tu salario por hora."
+      },
+      "weekly": {
+        "title": "Horas por semana",
+        "description": "Un vistazo rápido a qué semanas has trabajado más y cuáles menos, mes a mes."
+      }
+    }
+  },
   "autoTimerGeofence": {
     "badge": "Ubicación Inteligente",
     "title": "Empieza a contar cuando llegas,",

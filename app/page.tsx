@@ -7,6 +7,7 @@ import Stats from '@/components/Stats'
 import PrivacyBanner from '@/components/PrivacyBanner'
 import AutoTimerGeofence from '@/components/AutoTimerGeofence'
 import ExportReports from '@/components/ExportReports'
+import SalaryStats from '@/components/SalaryStats'
 import SmartWidgets from '@/components/SmartWidgets'
 import WorkingPhone from '@/components/WorkingPhone'
 import Pricing from '@/components/Pricing'
@@ -28,6 +29,7 @@ export default function Home() {
         <Hero />
         <ScrollTextReveal />
         <AutoTimerGeofence />
+        <SalaryStats />
         <AppShowcase />
 
         {/* El reloj sube al cuarto puesto: es la novedad y lo que casi ningún

@@ -791,6 +791,22 @@
     },
     "swipe": "Wische für mehr"
   },
+  "salaryStats": {
+    "badge": "Automatisches Gehalt",
+    "title": "Dein Gehalt,",
+    "titleAccent": "immer im Blick",
+    "description": "Jede erfasste Stunde wird sofort in echtes Einkommen umgerechnet. Sieh, wie viel du diesen Monat verdient hast, wie viele Stunden du gearbeitet hast und in welchen Wochen am meisten — ganz ohne Taschenrechner.",
+    "points": {
+      "earnings": {
+        "title": "Einnahmen aktuell",
+        "description": "Die Monatssumme berechnet sich bei jeder Zeiterfassung neu, basierend auf deinem Stundenlohn."
+      },
+      "weekly": {
+        "title": "Stunden pro Woche",
+        "description": "Ein schneller Blick darauf, in welchen Wochen du mehr oder weniger gearbeitet hast."
+      }
+    }
+  },
   "autoTimerGeofence": {
     "badge": "Intelligenter Standort",
     "title": "Zählt automatisch, sobald du ankommst,",

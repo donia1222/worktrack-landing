@@ -791,6 +791,22 @@
     },
     "swipe": "Swipe to see more"
   },
+  "salaryStats": {
+    "badge": "Automatic Salary",
+    "title": "Your salary,",
+    "titleAccent": "always under control",
+    "description": "Every hour you log turns instantly into real earnings. See how much you've made this month, how many hours you've clocked, and which weeks you worked the most — no calculator needed.",
+    "points": {
+      "earnings": {
+        "title": "Earnings, up to date",
+        "description": "The monthly total recalculates itself with every clock-in, based on your hourly rate."
+      },
+      "weekly": {
+        "title": "Hours by week",
+        "description": "A quick glance at which weeks you worked more and which less, month by month."
+      }
+    }
+  },
   "autoTimerGeofence": {
     "badge": "Smart Location",
     "title": "Starts counting when you arrive,",
