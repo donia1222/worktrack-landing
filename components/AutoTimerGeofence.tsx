@@ -58,7 +58,7 @@ export default function AutoTimerGeofence() {
       >
         <path
           d="M -20 260 C 160 120, 340 340, 540 200 S 900 60, 1100 180 T 1220 140"
-          stroke="#5B5FEF"
+          stroke="#007AFF"
           strokeOpacity="0.35"
           strokeWidth="36"
           strokeLinecap="round"
@@ -78,7 +78,7 @@ export default function AutoTimerGeofence() {
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
             {t("autoTimerGeofence.title")}{" "}
-            <span className="text-[#5B5FEF]">{t("autoTimerGeofence.titleAccent")}</span>
+            <span className="text-[#007AFF]">{t("autoTimerGeofence.titleAccent")}</span>
           </h2>
 
           <p className="text-lg text-slate-600 leading-relaxed">
@@ -113,7 +113,7 @@ export default function AutoTimerGeofence() {
             >
               <path
                 d="M -20 150 C 110 70, 240 190, 400 120 S 660 40, 820 110"
-                stroke="#5B5FEF"
+                stroke="#007AFF"
                 strokeOpacity="0.35"
                 strokeWidth="28"
                 strokeLinecap="round"
@@ -156,9 +156,9 @@ export default function AutoTimerGeofence() {
             className="space-y-5 order-1 lg:order-2"
           >
             {points.map((point, index) => (
-              <div key={index} className="flex items-center gap-5 rounded-2xl bg-[#F7F6FE] p-5">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#5B5FEF]/15">
-                  <point.icon className="w-7 h-7 text-[#5B5FEF]" />
+              <div key={index} className="flex items-center gap-5 rounded-2xl bg-[#EFF6FF] p-5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#007AFF]/15">
+                  <point.icon className="w-7 h-7 text-[#007AFF]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-1">{point.title}</h3>
