@@ -2,9 +2,7 @@
 
 import Image from "next/image"
 import { useLanguage } from "@/lib/language"
-
-const APP_STORE_URL =
-  "https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+import { useEnlaceAppStore } from "@/lib/appStore"
 
 /** Proporción de public/appstore.png, para reservarle el hueco exacto. */
 const PROPORCION = 576 / 198
@@ -40,11 +38,12 @@ interface AppStoreBadgeProps {
  */
 export default function AppStoreBadge({ zona, alto = 56, className = "" }: AppStoreBadgeProps) {
   const { t } = useLanguage()
+  const enlace = useEnlaceAppStore()
   const ancho = Math.round(alto * PROPORCION)
 
   return (
     <a
-      href={APP_STORE_URL}
+      href={enlace}
       data-zona={zona}
       target="_blank"
       rel="noopener noreferrer"

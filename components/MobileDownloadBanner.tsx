@@ -6,14 +6,13 @@ import { X } from 'lucide-react'
 import Image from 'next/image'
 import { useLanguage } from '@/lib/language'
 import { disparar } from './MetaPixel'
-
-const APP_STORE_URL =
-  'https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431'
+import { useEnlaceAppStore } from '@/lib/appStore'
 
 type Platform = 'ios' | 'android' | null
 
 export default function MobileDownloadBanner() {
   const { t } = useLanguage()
+  const enlaceAppStore = useEnlaceAppStore()
   const [platform, setPlatform] = useState<Platform>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [isDismissed, setIsDismissed] = useState(false)
@@ -65,7 +64,7 @@ export default function MobileDownloadBanner() {
     // el boton de descarga que ve la mayoria del trafico de anuncios, que llega
     // por movil.
     disparar('Lead', { content_name: 'app_store_banner_movil', content_category: 'banner_movil' })
-    window.location.href = APP_STORE_URL
+    window.location.href = enlaceAppStore
   }
 
   if (!platform) return null

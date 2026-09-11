@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import { useLanguage } from '@/lib/language'
 import LanguageSelector from './LanguageSelector'
+import { useEnlaceAppStore } from '@/lib/appStore'
 
 // El orden es el de la pagina, no el de importancia: quien abre el menu esta
 // buscando algo que ya ha visto pasar, o algo que sabe que viene mas abajo.
@@ -34,6 +35,7 @@ const getNavItems = (t: (key: string) => string) => [
 
 export default function Navigation() {
   const { t } = useLanguage()
+  const enlaceAppStore = useEnlaceAppStore()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -121,7 +123,7 @@ export default function Navigation() {
             <LanguageSelector variant="header" />
             
             <a
-              href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+              href={enlaceAppStore}
               data-zona="cabecera"
               target="_blank"
               rel="noopener noreferrer"
@@ -168,7 +170,7 @@ export default function Navigation() {
                   sobra; y la landing ya detecta el idioma sola, asi que casi
                   nadie necesita tocarlo. */}
               <a 
-                href="https://apps.apple.com/app/id6745336262?ppid=34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
+                href={enlaceAppStore}
                 data-zona="menu_movil"
                 target="_blank"
                 rel="noopener noreferrer"
