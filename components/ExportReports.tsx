@@ -181,7 +181,7 @@ export default function ExportReports() {
           <div className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-r from-blue-300/20 to-indigo-300/20 blur-3xl" />
 
           <div className="overflow-hidden rounded-[1.75rem] border border-slate-200/70 bg-white shadow-2xl">
-            <div className="grid grid-cols-3 divide-x divide-slate-200/70 border-b border-slate-200/70 bg-[#5B5FEF]/5">
+            <div className="grid grid-cols-1 divide-y divide-slate-200/70 border-b border-slate-200/70 bg-[#5B5FEF]/5 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               {capabilities.map((capability, index) => (
                 <div key={index} className="flex items-center gap-3 p-4 sm:gap-4 sm:p-6">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#5B5FEF]/10 sm:h-12 sm:w-12">
