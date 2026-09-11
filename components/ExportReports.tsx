@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FileText, Building2, Clock, CalendarDays, Euro } from "lucide-react"
+import { FileText, Building2, Clock, CalendarDays, Euro, Download } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 
@@ -43,6 +43,7 @@ const PDF_DEMO = {
       { day: "Vie 12 sept.", hours: "8.0h" },
     ],
     footerNote: "Este cálculo se basa en las horas registradas y la configuración salarial del trabajo.",
+    downloadLabel: "Descargar PDF",
   },
   en: {
     title: "Work Report",
@@ -75,6 +76,7 @@ const PDF_DEMO = {
       { day: "Fri Sep 12", hours: "8.0h" },
     ],
     footerNote: "This calculation is based on the logged hours and the job's salary settings.",
+    downloadLabel: "Download PDF",
   },
   de: {
     title: "Arbeitsbericht",
@@ -107,6 +109,7 @@ const PDF_DEMO = {
       { day: "Fr. 12. Sept.", hours: "8.0h" },
     ],
     footerNote: "Diese Berechnung beruht auf den erfassten Stunden und den Lohneinstellungen des Jobs.",
+    downloadLabel: "PDF herunterladen",
   },
 } as const
 
@@ -183,7 +186,7 @@ export default function ExportReports() {
           <div className="overflow-hidden rounded-[1.75rem] border border-slate-200/70 bg-white shadow-2xl">
             <div className="grid grid-cols-1 divide-y divide-slate-200/70 border-b border-slate-200/70 bg-[#5B5FEF]/5 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               {capabilities.map((capability, index) => (
-                <div key={index} className="flex items-center gap-3 p-4 sm:gap-4 sm:p-6">
+                <div key={index} className="flex items-center gap-3 p-3 sm:gap-4 sm:p-6">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#5B5FEF]/10 sm:h-12 sm:w-12">
                     <Image src={capability.image} alt="" width={24} height={24} className="h-5 w-5 object-contain sm:h-6 sm:w-6" />
                   </div>
@@ -199,66 +202,69 @@ export default function ExportReports() {
               ))}
             </div>
 
-            <div className="p-6 sm:p-10">
+            <div className="p-4 sm:p-10">
               {/* Cabecera: nombre a la izquierda, título del informe y
                   metadatos a la derecha — igual que el PDF real. */}
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <p className="text-lg font-bold text-slate-900">{pdf.employeeName}</p>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                <p className="text-base font-bold text-slate-900 sm:text-lg">{pdf.employeeName}</p>
                 <div className="sm:text-right">
-                  <h3 className="text-2xl font-bold text-slate-900 sm:text-3xl">{pdf.title}</h3>
-                  <p className="mt-1 text-sm text-slate-500">{pdf.dateRange}</p>
-                  <p className="text-sm font-bold text-[#5B5FEF]">{pdf.reportId}</p>
-                  <p className="text-sm text-slate-500">{pdf.generatedOn}</p>
+                  <h3 className="text-lg font-bold text-slate-900 sm:text-3xl">{pdf.title}</h3>
+                  <p className="mt-1 text-xs text-slate-500 sm:text-sm">{pdf.dateRange}</p>
+                  <p className="text-xs font-bold text-[#5B5FEF] sm:text-sm">{pdf.reportId}</p>
+                  <p className="text-xs text-slate-500 sm:text-sm">{pdf.generatedOn}</p>
                 </div>
               </div>
 
-              <div className="my-6 h-0.5 rounded-full bg-[#5B5FEF]/20 sm:my-8" />
+              <div className="my-4 h-0.5 rounded-full bg-[#5B5FEF]/20 sm:my-8" />
 
               {/* La empresa. */}
-              <div className="mb-6 flex items-start gap-3 sm:mb-8">
-                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#5B5FEF]/10">
-                  <Building2 className="h-4 w-4 text-[#5B5FEF]" />
+              <div className="mb-4 flex items-start gap-2 sm:mb-8 sm:gap-3">
+                <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#5B5FEF]/10 sm:h-9 sm:w-9">
+                  <Building2 className="h-3.5 w-3.5 text-[#5B5FEF] sm:h-4 sm:w-4" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold tracking-wide text-slate-400">{pdf.companyLabel}</p>
-                  <p className="font-bold text-slate-900">{pdf.company}</p>
-                  <p className="text-sm text-slate-500">{pdf.addressLine1}</p>
-                  <p className="text-sm text-slate-500">{pdf.addressLine2}</p>
+                  <p className="text-[10px] font-bold tracking-wide text-slate-400 sm:text-xs">{pdf.companyLabel}</p>
+                  <p className="text-sm font-bold text-slate-900 sm:text-base">{pdf.company}</p>
+                  <p className="text-xs text-slate-500 sm:text-sm">{pdf.addressLine1}</p>
+                  <p className="text-xs text-slate-500 sm:text-sm">{pdf.addressLine2}</p>
                 </div>
               </div>
 
               {/* Resumen: horas totales, días, media/día. */}
-              <div className="mb-4 grid grid-cols-3 gap-3 sm:gap-4">
+              <div className="mb-3 grid grid-cols-3 gap-2 sm:mb-4 sm:gap-4">
                 {[
                   { icon: Clock, label: pdf.totalHoursLabel, value: pdf.totalHours },
                   { icon: CalendarDays, label: pdf.workDaysLabel, value: pdf.workDays },
                   { icon: Clock, label: pdf.avgDayLabel, value: pdf.avgDay },
                 ].map((stat, index) => (
-                  <div key={index} className="rounded-xl bg-slate-50 p-4">
-                    <p className="text-lg font-bold text-slate-900 sm:text-2xl">{stat.value}</p>
-                    <p className="mt-1 text-[10px] font-bold tracking-wide text-slate-400 sm:text-xs">{stat.label}</p>
+                  <div key={index} className="rounded-xl bg-slate-50 p-2.5 sm:p-4">
+                    <p className="text-base font-bold text-slate-900 sm:text-2xl">{stat.value}</p>
+                    <p className="mt-1 text-[9px] font-bold tracking-wide text-slate-400 sm:text-xs">{stat.label}</p>
                   </div>
                 ))}
               </div>
 
-              {/* El importe a pagar, destacado en su propia caja. */}
-              <div className="mb-8 flex items-center justify-between gap-4 rounded-xl border-2 border-[#5B5FEF]/25 p-4 sm:p-5">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#5B5FEF]/10">
-                    <Euro className="h-4 w-4 text-[#5B5FEF]" />
+              {/* El importe a pagar, destacado en su propia caja — en móvil
+                  el importe va debajo, a todo lo ancho, para que un número
+                  grande no tenga que competir por sitio con la etiqueta y se
+                  rompa a dos líneas. */}
+              <div className="mb-5 flex flex-col gap-2 rounded-xl border-2 border-[#5B5FEF]/25 p-3 sm:mb-8 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#5B5FEF]/10 sm:h-9 sm:w-9">
+                    <Euro className="h-3.5 w-3.5 text-[#5B5FEF] sm:h-4 sm:w-4" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold tracking-wide text-slate-500 sm:text-sm">{pdf.amountLabel}</p>
-                    <p className="text-xs text-slate-400">{pdf.amountRate}</p>
+                    <p className="text-[10px] font-bold tracking-wide text-slate-500 sm:text-sm">{pdf.amountLabel}</p>
+                    <p className="text-[10px] text-slate-400 sm:text-xs">{pdf.amountRate}</p>
                   </div>
                 </div>
-                <p className="text-xl font-bold text-[#5B5FEF] sm:text-2xl">{pdf.amount}</p>
+                <p className="whitespace-nowrap text-lg font-bold text-[#5B5FEF] sm:text-2xl">{pdf.amount}</p>
               </div>
 
               {/* El detalle diario. */}
-              <p className="mb-3 text-lg font-bold text-slate-900">{pdf.dailyListLabel}</p>
-              <div className="mb-6 overflow-hidden rounded-xl border border-slate-200/70">
-                <div className="flex bg-slate-50 px-4 py-2 text-[10px] font-bold tracking-wide text-slate-400 sm:text-xs">
+              <p className="mb-2 text-base font-bold text-slate-900 sm:mb-3 sm:text-lg">{pdf.dailyListLabel}</p>
+              <div className="mb-4 overflow-hidden rounded-xl border border-slate-200/70 sm:mb-6">
+                <div className="flex bg-slate-50 px-3 py-1.5 text-[9px] font-bold tracking-wide text-slate-400 sm:px-4 sm:py-2 sm:text-xs">
                   <span className="flex-1">{pdf.dayHeader}</span>
                   <span className="flex-1">{pdf.workHeader}</span>
                   <span className="text-right">{pdf.hoursHeader}</span>
@@ -266,7 +272,7 @@ export default function ExportReports() {
                 {pdf.days.map((row, index) => (
                   <div
                     key={index}
-                    className={`flex items-center px-4 py-2.5 text-sm ${index % 2 === 1 ? "bg-slate-50/60" : ""}`}
+                    className={`flex items-center px-3 py-1.5 text-xs sm:px-4 sm:py-2.5 sm:text-sm ${index % 2 === 1 ? "bg-slate-50/60" : ""}`}
                   >
                     <span className="flex-1 text-slate-700">{row.day}</span>
                     <span className="flex-1 text-slate-500">{pdf.company}</span>
@@ -276,6 +282,17 @@ export default function ExportReports() {
               </div>
 
               <p className="text-xs leading-relaxed text-slate-400">{pdf.footerNote}</p>
+
+              {/* El botón de descarga — de adorno, para que se lea de un
+                  vistazo que esto se exporta con un toque; la descarga real
+                  pasa dentro de la app, no aquí. */}
+              <button
+                type="button"
+                className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#5B5FEF] py-3 text-sm font-bold text-white shadow-lg shadow-[#5B5FEF]/25 transition-transform active:scale-[0.98] sm:mt-6"
+              >
+                <Download className="h-4 w-4" />
+                {pdf.downloadLabel}
+              </button>
             </div>
           </div>
         </motion.div>
