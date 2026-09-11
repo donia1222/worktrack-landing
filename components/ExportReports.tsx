@@ -1,7 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { FileText, Building2, Clock, CalendarDays, Euro, Download } from "lucide-react"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { FileText, Building2, Clock, CalendarDays, Euro, Download, Smartphone } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 
@@ -44,6 +45,7 @@ const PDF_DEMO = {
     ],
     footerNote: "Este cálculo se basa en las horas registradas y la configuración salarial del trabajo.",
     downloadLabel: "Descargar PDF",
+    downloadHint: "Descarga la app para generar informes en PDF como este.",
   },
   en: {
     title: "Work Report",
@@ -77,6 +79,7 @@ const PDF_DEMO = {
     ],
     footerNote: "This calculation is based on the logged hours and the job's salary settings.",
     downloadLabel: "Download PDF",
+    downloadHint: "Download the app to generate PDF reports like this one.",
   },
   de: {
     title: "Arbeitsbericht",
@@ -110,6 +113,7 @@ const PDF_DEMO = {
     ],
     footerNote: "Diese Berechnung beruht auf den erfassten Stunden und den Lohneinstellungen des Jobs.",
     downloadLabel: "PDF herunterladen",
+    downloadHint: "Lade die App herunter, um solche PDF-Berichte zu erstellen.",
   },
 } as const
 
@@ -119,6 +123,7 @@ export default function ExportReports() {
     ? (language as "es" | "en" | "de")
     : "en"
   const pdf = PDF_DEMO[idioma]
+  const [mostrarAviso, setMostrarAviso] = useState(false)
 
   const capabilities = [
     {
@@ -285,14 +290,35 @@ export default function ExportReports() {
 
               {/* El botón de descarga — de adorno, para que se lea de un
                   vistazo que esto se exporta con un toque; la descarga real
-                  pasa dentro de la app, no aquí. */}
+                  pasa dentro de la app, no aquí. Al pulsarlo no pasa nada
+                  "de golpe": se despliega un aviso pequeño debajo en vez de
+                  un modal encima de todo, que para un botón que no hace nada
+                  sería demasiado. */}
               <button
                 type="button"
+                onClick={() => setMostrarAviso((v) => !v)}
                 className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#5B5FEF] py-3 text-sm font-bold text-white shadow-lg shadow-[#5B5FEF]/25 transition-transform active:scale-[0.98] sm:mt-6"
               >
                 <Download className="h-4 w-4" />
                 {pdf.downloadLabel}
               </button>
+
+              <AnimatePresence initial={false}>
+                {mostrarAviso && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                    animate={{ opacity: 1, height: "auto", marginTop: 12 }}
+                    exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex items-center gap-2.5 rounded-xl bg-[#5B5FEF]/10 px-4 py-3 text-xs font-medium text-[#5B5FEF] sm:text-sm">
+                      <Smartphone className="h-4 w-4 shrink-0" />
+                      {pdf.downloadHint}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         </motion.div>

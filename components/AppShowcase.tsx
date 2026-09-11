@@ -4,6 +4,14 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { LayoutDashboard, CalendarDays, BarChart3 } from "lucide-react"
 import { useLanguage } from "@/lib/language"
+import Image from "next/image"
+
+/** La captura del panel principal, una por idioma — sustituye al vídeo. */
+const IMAGEN_DASHBOARD = {
+  es: "/new/IMG_1454-es.jpeg",
+  en: "/new/IMG_1455-en.jpeg",
+  de: "/new/IMG_1453-de.jpeg",
+} as const
 
 /**
  * Mismo espíritu que la referencia que le gustó: tres tarjetas iguales,
@@ -16,14 +24,17 @@ export default function AppShowcase() {
   const { t, language } = useLanguage()
   // Solo hay capturas de los tres idiomas que las tienen fotografiadas; el
   // resto ve las inglesas.
-  const idioma = ["es", "en", "de"].includes(language) ? language : "en"
+  const idioma = (["es", "en", "de"] as const).includes(language as "es" | "en" | "de")
+    ? (language as "es" | "en" | "de")
+    : "en"
 
-  // Video en vez de foto fija: se ve la app funcionando de verdad, no solo
-  // una pantalla parada. Uno por idioma y por tarjeta, mudo y en bucle.
+  // Vídeo en vez de foto fija en las otras dos: se ve la app funcionando de
+  // verdad, no solo una pantalla parada. El panel principal es la excepción
+  // — va con una captura fija, una por idioma.
   const items = [
-    { key: "dashboard", video: `/app-videos/${idioma}/dashboard.mp4`, Icono: LayoutDashboard },
-    { key: "register", video: `/app-videos/${idioma}/register.mp4`, Icono: CalendarDays },
-    { key: "reports", video: `/app-videos/${idioma}/reports.mp4`, Icono: BarChart3 },
+    { key: "dashboard", video: null, image: IMAGEN_DASHBOARD[idioma], Icono: LayoutDashboard },
+    { key: "register", video: `/app-videos/${idioma}/register.mp4`, image: null, Icono: CalendarDays },
+    { key: "reports", video: `/app-videos/${idioma}/reports.mp4`, image: null, Icono: BarChart3 },
   ]
 
   const contenedor = useRef<HTMLDivElement>(null)
@@ -56,7 +67,7 @@ export default function AppShowcase() {
         </div>
 
         <div ref={contenedor} className="mt-12 grid gap-6 sm:mt-16 lg:grid-cols-3 lg:gap-8">
-          {items.map(({ key, video, Icono }, i) => (
+          {items.map(({ key, video, image, Icono }, i) => (
             <motion.div
               key={key}
               initial={{ opacity: 0, y: 26 }}
@@ -85,14 +96,23 @@ export default function AppShowcase() {
               <div className="relative mt-8 w-full max-w-[220px] pb-8">
                 <div className="relative rounded-[1.9rem] bg-slate-900 p-1.5 shadow-xl ring-1 ring-slate-900/5">
                   <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.5rem] bg-slate-900">
-                    <video
-                      src={video}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="absolute inset-0 h-full w-full object-cover object-top"
-                    />
+                    {image ? (
+                      <Image
+                        src={image}
+                        alt=""
+                        fill
+                        className="object-cover object-top"
+                      />
+                    ) : (
+                      <video
+                        src={video ?? undefined}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 h-full w-full object-cover object-top"
+                      />
+                    )}
                   </div>
                 </div>
               </div>
