@@ -26,7 +26,7 @@ const PPID = "34eaaf1a-b1e3-40ab-bc3a-af4ec7c78431"
  * «Crear enlace de campaña» lo enseña). Sin él Apple ignora `ct`; el enlace
  * sigue abriendo la app igual.
  */
-const PROVIDER_ID = ""
+const PROVIDER_ID = "127781478"
 
 const CLAVE_DE_SESION = "worktrack_ct"
 const CAMPANA_POR_DEFECTO = "web"
@@ -41,7 +41,10 @@ export function enlaceAppStore(campana: string = CAMPANA_POR_DEFECTO): string {
   const partes = [`ppid=${PPID}`]
   if (PROVIDER_ID) partes.push(`pt=${PROVIDER_ID}`)
   partes.push(`ct=${limpiarCampana(campana)}`, "mt=8")
-  return `https://apps.apple.com/app/id${APP_ID}?${partes.join("&")}`
+  // Con `apple-store` en la ruta, que es como lo escribe el generador de
+  // enlaces de campaña de App Store Connect: el mismo formato exacto, para
+  // no dejar la atribucion a que Apple sea flexible con el nuestro.
+  return `https://apps.apple.com/app/apple-store/id${APP_ID}?${partes.join("&")}`
 }
 
 /** La campaña de esta visita: la de la URL si la trae, si no la guardada, si no ninguna. */
