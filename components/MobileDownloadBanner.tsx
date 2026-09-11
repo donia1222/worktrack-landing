@@ -41,7 +41,12 @@ export default function MobileDownloadBanner() {
     if (!reloj) return
 
     const finReloj = window.scrollY + reloj.getBoundingClientRect().bottom
-    setIsVisible(window.scrollY >= finReloj)
+    // Y se esconde otra vez al llegar al final del todo: fijo como está,
+    // si no se quita tapa el footer (los enlaces legales, el selector de
+    // idioma...) en vez de dejarlo leer.
+    const faltaParaElFinal = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight)
+    const cercaDelFinal = faltaParaElFinal < 350
+    setIsVisible(window.scrollY >= finReloj && !cercaDelFinal)
   }, [isDismissed])
 
   useEffect(() => {

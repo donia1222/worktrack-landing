@@ -77,8 +77,8 @@ export default function Footer() {
                 de registro y un correo dicen lo mismo en los ocho idiomas, y
                 traducirlos solo abriria la puerta a que en alguno acabe mal
                 escrito el UID. */}
-            <p className="mt-2 text-xs text-gray-500">
-              Lweb Schweiz · UID CHE-449.145.794 ·{" "}
+            <p className="mt-2 text-sm text-gray-500">
+              Lweb Schweiz 🇨🇭 · UID CHE-449.145.794 ·{" "}
               <a
                 href="https://lweb.ch"
                 target="_blank"
@@ -86,10 +86,6 @@ export default function Footer() {
                 className="transition-colors hover:text-blue-400"
               >
                 lweb.ch
-              </a>{" "}
-              ·{" "}
-              <a href="mailto:info@lweb.ch" className="transition-colors hover:text-blue-400">
-                info@lweb.ch
               </a>
             </p>
           </div>
