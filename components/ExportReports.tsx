@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FileText, CheckCircle, Building2, Clock, CalendarDays, Euro } from "lucide-react"
+import { FileText, Building2, Clock, CalendarDays, Euro } from "lucide-react"
 import { useLanguage } from "@/lib/language"
 import Image from "next/image"
 
@@ -123,21 +123,18 @@ export default function ExportReports() {
       title: t("exportReports.capabilities.schedules.title"),
       description: t("exportReports.capabilities.schedules.description"),
       bgColor: "bg-blue-100",
-      features: ["schedules.feature1", "schedules.feature2", "schedules.feature3"]
     },
     {
       image: "/new/icons/calendar.png",
       title: t("exportReports.capabilities.calendar.title"),
       description: t("exportReports.capabilities.calendar.description"),
       bgColor: "bg-orange-100",
-      features: ["calendar.feature1", "calendar.feature2", "calendar.feature3"]
     },
     {
       image: "/new/icons/job_settings.png",
       title: t("exportReports.capabilities.legal.title"),
       description: t("exportReports.capabilities.legal.description"),
       bgColor: "bg-indigo-100",
-      features: ["legal.feature1", "legal.feature2", "legal.feature3"]
     }
   ]
 
@@ -170,77 +167,10 @@ export default function ExportReports() {
           </p>
         </motion.div>
 
-        {/* Las tres tarjetas, escalonadas y unidas por una línea punteada
-            con puntos — la composición de "Mia Day has EVERYTHING!" de la
-            referencia, adaptada a tarjetas con texto en vez de fotos. */}
-        <div className="relative mb-16 pb-8">
-          <svg
-            className="pointer-events-none absolute left-0 top-[168px] hidden h-24 w-full md:block"
-            viewBox="0 0 1200 140"
-            preserveAspectRatio="none"
-            fill="none"
-          >
-            <path
-              d="M 100 20 Q 300 140 500 100 T 900 30 Q 1000 10 1100 100"
-              stroke="#5B5FEF"
-              strokeOpacity="0.35"
-              strokeWidth="2.5"
-              strokeDasharray="8 10"
-              strokeLinecap="round"
-            />
-          </svg>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.12 }}
-                className={index % 2 === 1 ? "md:mt-12" : ""}
-              >
-                <div className="bg-white rounded-3xl p-6 border border-slate-200/60 shadow-lg">
-                  <div className="bg-[#5B5FEF]/10 rounded-xl p-3 w-fit mb-4">
-                    <Image src={capability.image} alt="" width={28} height={28} className="w-7 h-7 object-contain" />
-                  </div>
-
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">
-                    {capability.title}
-                  </h3>
-
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                    {capability.description}
-                  </p>
-
-                  <div className="space-y-2">
-                    {capability.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-2 text-xs text-slate-500">
-                        <CheckCircle className="w-3 h-3 text-[#5B5FEF]" />
-                        {t(`exportReports.capabilities.${feature}`)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* El punto bajo la tarjeta, con su aro — mismo lenguaje
-                    que los puntos de la referencia bajo cada tarjeta. */}
-                <div className="mt-6 hidden justify-center md:flex">
-                  <span className="relative flex h-3 w-3">
-                    <span className="absolute inline-flex h-full w-full rounded-full bg-[#5B5FEF]/30" />
-                    <span className="relative inline-flex h-3 w-3 rounded-full bg-[#5B5FEF]" />
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* La vista previa del PDF de verdad — a todo el ancho de las tres
-            tarjetas de arriba, en vez del teléfono con vídeo que había
-            antes. Es una "hoja" con el mismo maquetado que el informe real
-            (cabecera, empresa, resumen, importe, detalle diario), con datos
-            de ejemplo ficticios y traducida al idioma de la página. */}
+        {/* Un solo bloque: arriba un banner alargado con los tres puntos
+            reducidos a lo esencial (icono + título), pegado directamente al
+            PDF de abajo — como si fuera la cabecera de ese mismo documento,
+            en vez de tres tarjetas sueltas escalonadas. */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -250,14 +180,25 @@ export default function ExportReports() {
         >
           <div className="absolute -inset-10 -z-10 rounded-[3rem] bg-gradient-to-r from-blue-300/20 to-indigo-300/20 blur-3xl" />
 
-          {/* La cinta "PDF", para que quede claro de un vistazo que esto es
-              la exportación y no otra pantalla más de la app. */}
-          <div className="absolute -top-3 left-8 z-10 flex items-center gap-1.5 rounded-full bg-rose-500 px-3 py-1 text-xs font-bold text-white shadow-lg">
-            <FileText className="h-3.5 w-3.5" />
-            PDF
-          </div>
-
           <div className="overflow-hidden rounded-[1.75rem] border border-slate-200/70 bg-white shadow-2xl">
+            <div className="grid grid-cols-3 divide-x divide-slate-200/70 border-b border-slate-200/70 bg-[#5B5FEF]/5">
+              {capabilities.map((capability, index) => (
+                <div key={index} className="flex items-center gap-3 p-4 sm:gap-4 sm:p-6">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#5B5FEF]/10 sm:h-12 sm:w-12">
+                    <Image src={capability.image} alt="" width={24} height={24} className="h-5 w-5 object-contain sm:h-6 sm:w-6" />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="break-words text-sm font-bold leading-snug text-slate-900 sm:text-base">
+                      {capability.title}
+                    </h3>
+                    <p className="hidden text-xs leading-snug text-slate-500 sm:block">
+                      {capability.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
             <div className="p-6 sm:p-10">
               {/* Cabecera: nombre a la izquierda, título del informe y
                   metadatos a la derecha — igual que el PDF real. */}

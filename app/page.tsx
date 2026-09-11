@@ -32,18 +32,19 @@ export default function Home() {
         <AutoTimerGeofence />
         <AppShowcase />
 
-        {/* El reloj sube al cuarto puesto: es la novedad y lo que casi ningún
-            competidor tiene. Pero no va justo bajo el hero — la mayoría de
-            quien llega no tiene Apple Watch, así que primero la página
-            demuestra lo que promete el titular, y el reloj es el empujón. */}
+        <ExportReports />
+
+        {/* El reloj va justo detrás del PDF: es la novedad y lo que casi
+            ningún competidor tiene. Pero no va justo bajo el hero — la
+            mayoría de quien llega no tiene Apple Watch, así que primero la
+            página demuestra lo que promete el titular, y el reloj es el
+            empujón. */}
         <AppleWatchRuta />
 
         {/* El widget, justo detras del reloj: los dos cuentan lo mismo —donde
             mas vive la app fuera de la app—, y el widget lo puede poner
             cualquiera. Estaba importado y sin usar, asi que no lo veia nadie. */}
         <SmartWidgets />
-
-        <ExportReports />
 
         {/* La promesa de privacidad va aqui y no antes: primero la pagina
             enseña lo que hace, y esto es lo ultimo que se lee antes del
