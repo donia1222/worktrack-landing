@@ -1,42 +1,45 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import Image from "next/image"
+import { motion, useInView } from "framer-motion"
 import { useLanguage } from "@/lib/language"
 import CajaDeReloj, { CAJA_ALTO, CAJA_ANCHO } from "./CajaDeReloj"
 
 /**
  * Las cuatro pantallas del Apple Watch, colgadas de un hilo que serpentea.
  *
- * El bloque se "engancha" a la pantalla al llegar hasta él: el scroll deja
- * de mover la página y en su lugar desliza el hilo hacia la izquierda,
- * enseñando las cuatro capturas una detrás de otra. Solo cuando ya se ve la
- * última, seguir bajando vuelve a mover la página — igual en el teléfono
- * que en el escritorio, porque el hilo mide más que cualquiera de los dos.
+ * Sustituye a la animación de scroll que había antes (`AppleWatchScrollHero`),
+ * donde el reloj crecía y las pantallas se cruzaban por dentro: se veía bonita,
+ * pero solo dejaba mirar una cosa cada vez y para comparar las cuatro había que
+ * subir y bajar. Aquí están las cuatro a la vez, cada una con su nombre encima
+ * y lo que hace debajo.
  *
- * Mismo truco que `ScrollTextReveal`: nada de `position: sticky` (rompía
- * contra el `overflow-x-hidden` que tenía `<main>` en su momento) sino
- * `position: fixed` calculado a mano según en qué tramo del scroll estamos.
- * Ahora `<main>` ya usa `overflow-x-clip`, pero se mantiene el mismo patrón
- * por consistencia con el resto de la web y porque ya está probado que
- * funciona.
+ * En escritorio se reparten a lo ancho. En el teléfono no se apilan una debajo
+ * de otra —serían cuatro pantallazos en vertical, medio metro de scroll— sino
+ * que van en fila y se arrastran de lado, con el hilo pasando por detrás igual.
+ *
+ * (Se probó también "enganchar" el bloque a la pantalla y deslizarlo con el
+ * scroll de la página, como en ScrollTextReveal: en el móvil se notaba a
+ * trompicones y llegaba a pisar el bloque siguiente por el lío de `100vh` con
+ * la barra de Safari apareciendo y desapareciendo. Se volvió a este arrastre
+ * manual, que es más simple y no depende de medir el viewport a ojo.)
  */
 
 /**
  * La geometría, toda en píxeles y toda aquí.
  *
- * El hilo es un SVG con `preserveAspectRatio="none"`: se estira a lo ancho
- * —da igual, es una curva— pero a lo alto no, porque la caja mide
- * exactamente lo que dice el `viewBox`. Así una `y` de aquí es la misma `y`
- * en pantalla, y los puntos del hilo caen donde tienen que caer sin
- * depender del ancho.
+ * El hilo es un SVG con `preserveAspectRatio="none"`: se estira a lo ancho —da
+ * igual, es una curva— pero a lo alto no, porque la caja mide exactamente lo
+ * que dice el `viewBox`. Así una `y` de aquí es la misma `y` en pantalla, y los
+ * puntos del hilo caen donde tienen que caer sin depender del ancho.
+ *
+ * Por eso las capturas miden lo mismo en el móvil que en el escritorio: con dos
+ * tamaños harían falta dos curvas, y la segunda se descuadraría a la primera
+ * que alguien tocara un margen.
  */
 const ALTO = 620
 const ANCHO_VIRTUAL = 1000
-/** El ancho real del carril: más que cualquier viewport (incluso con
- *  `max-w-7xl` a pantalla completa), para que siempre haya tramo que
- *  recorrer deslizando, tanto en el teléfono como en escritorio. */
-const ANCHO_PISTA = 1600
 /** Lo que ocupa el nombre de la pantalla, con su aire. */
 const ALTO_DEL_NOMBRE = 28 + 12
 /** Del borde de arriba de la tarjeta al de abajo del reloj. */
@@ -79,98 +82,14 @@ const HILO = (() => {
 const PANTALLAS = ["timer", "registrar", "calendario", "semana"] as const
 const FICHEROS = ["1-timer", "2-registrar", "3-calendario", "4-semana"] as const
 
-type Fase = "antes" | "fijo" | "despues"
-
 export default function AppleWatchRuta() {
   const { t, language } = useLanguage()
   // Las capturas solo están en los tres idiomas fotografiados; el resto las ve
   // en inglés, que es mejor que una imagen rota.
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
-  const containerRef = useRef<HTMLDivElement>(null)
-  const viewportRef = useRef<HTMLDivElement>(null)
-  // El carril se mueve escribiendo directamente en su `style.transform`
-  // desde el listener de scroll, sin pasar por `setState` de React: antes
-  // cada píxel de scroll disparaba un render completo del componente (las
-  // cuatro capturas, el SVG del hilo...) y en un móvil de gama media eso se
-  // notaba a trompicones. El DOM se actualiza en el mismo frame del scroll,
-  // por fuera de React, que es lo único que da fluidez de verdad aquí.
-  const carrilRef = useRef<HTMLDivElement>(null)
-  const [anchoViewport, setAnchoViewport] = useState(0)
-  const [fase, setFase] = useState<Fase>("antes")
-
-  const distanciaHorizontal = Math.max(0, ANCHO_PISTA - anchoViewport)
-  // Hace falta más scroll vertical que horizontal recorrido, para que el
-  // deslizamiento se sienta pausado y no un tirón — pero con un techo, para
-  // que en el teléfono (donde `distanciaHorizontal` es mayor, la pantalla
-  // es más estrecha) no haga falta arrastrarse un metro para ver las cuatro
-  // capturas.
-  const distanciaVertical = Math.min(1100, Math.max(450, distanciaHorizontal * 0.9))
-
-  useEffect(() => {
-    function medir() {
-      if (viewportRef.current) setAnchoViewport(viewportRef.current.clientWidth)
-    }
-    medir()
-    window.addEventListener("resize", medir)
-    return () => window.removeEventListener("resize", medir)
-  }, [])
-
-  useEffect(() => {
-    let ticking = false
-
-    const actualizar = () => {
-      ticking = false
-      const el = containerRef.current
-      if (!el) return
-
-      const rect = el.getBoundingClientRect()
-      // `window.innerHeight` y no `100vh` por CSS: en el móvil, la barra de
-      // Safari que aparece y desaparece hace que `100vh` (el alto "grande",
-      // sin la barra) no coincida con lo que de verdad se ve en cada
-      // instante, y ese desajuste es lo que hacía que el carril se quedara
-      // pisando el siguiente bloque un momento.
-      const alturaVentana = window.innerHeight
-
-      let nuevoProgreso: number
-      if (rect.top > 0) {
-        setFase("antes")
-        nuevoProgreso = 0
-      } else if (rect.bottom <= alturaVentana) {
-        setFase("despues")
-        nuevoProgreso = 1
-      } else {
-        setFase("fijo")
-        nuevoProgreso = Math.min(1, Math.max(0, -rect.top / distanciaVertical))
-      }
-
-      if (carrilRef.current) {
-        carrilRef.current.style.transform = `translateX(${-nuevoProgreso * distanciaHorizontal}px)`
-      }
-    }
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true
-        requestAnimationFrame(actualizar)
-      }
-    }
-
-    actualizar()
-    window.addEventListener("scroll", onScroll, { passive: true })
-    window.addEventListener("resize", onScroll)
-    return () => {
-      window.removeEventListener("scroll", onScroll)
-      window.removeEventListener("resize", onScroll)
-    }
-  }, [distanciaVertical, distanciaHorizontal])
-
-  const posicionCarril =
-    fase === "fijo"
-      ? "fixed inset-x-0 top-0"
-      : fase === "despues"
-        ? "absolute inset-x-0 bottom-0"
-        : "absolute inset-x-0 top-0"
+  const contenedor = useRef<HTMLDivElement>(null)
+  const aLaVista = useInView(contenedor, { once: true, margin: "-100px" })
 
   return (
     <section id="apple-watch" className="relative overflow-hidden bg-white pt-10 pb-20 sm:pt-14 sm:pb-24 lg:pt-16 lg:pb-28">
@@ -198,87 +117,91 @@ export default function AppleWatchRuta() {
             {t("watch.description")}
           </p>
         </div>
-      </div>
 
-      {/* El carril: se "engancha" a pantalla completa mientras dura el
-          deslizamiento, y solo entonces libera el scroll de la página. */}
-      <div
-        ref={containerRef}
-        className="relative mt-12 sm:mt-14"
-        style={{ height: `calc(100dvh + ${distanciaVertical}px)` }}
-      >
+        {/* En el teléfono se arrastra de lado: `overflow-x-auto` fuera y un ancho
+            fijo dentro, para que las cuatro quepan en fila sin encogerse hasta
+            no verse. En escritorio cabe entera y no hay nada que arrastrar. */}
         <div
-          className={`${posicionCarril} z-10 flex items-center overflow-hidden`}
-          style={{ height: "100dvh" }}
+          ref={contenedor}
+          className="mt-12 -mx-4 overflow-x-auto px-4 sm:mt-14 lg:mx-0 lg:overflow-visible lg:px-0
+                     [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          <div ref={viewportRef} className="mx-auto w-full max-w-7xl overflow-hidden px-4 sm:px-6 lg:px-8">
-            <div
-              ref={carrilRef}
-              className="relative"
-              style={{ height: ALTO, width: ANCHO_PISTA }}
+          {/* Ancho del contenido, con un minimo.
+
+              Antes era ancho fijo con `mx-auto`, y ahi estaba el desvio: esa
+              caja se centraba en el hueco que le tocara, que no es el mismo en
+              el que se centra el titulo, asi que el bloque quedaba corrido a la
+              derecha. Con `w-full` ocupa exactamente el ancho del contenido y
+              los dos comparten centro; el minimo es lo que hace que en el
+              telefono las cuatro sigan en fila y se arrastren de lado. */}
+          <div
+            className="relative w-full min-w-[980px]"
+            style={{ height: ALTO }}
+          >
+            <svg
+              aria-hidden
+              viewBox={`0 0 ${ANCHO_VIRTUAL} ${ALTO}`}
+              preserveAspectRatio="none"
+              className="absolute inset-0 h-full w-full"
             >
-              <svg
+              <path
+                d={HILO}
+                fill="none"
+                stroke="rgb(196 181 253)"
+                strokeWidth="3"
+                strokeDasharray="12 12"
+                strokeLinecap="round"
+                // Sin esto, el trazo se estiraría a lo ancho con el resto del
+                // dibujo y saldría un guion gordo y otro fino.
+                vectorEffect="non-scaling-stroke"
+              />
+            </svg>
+
+            {/* Los puntos van en HTML y no dentro del SVG: ahí, con el dibujo
+                estirado a lo ancho, un círculo saldría ovalado. */}
+            {PARADAS.map((parada, i) => (
+              <span
+                key={`punto-${i}`}
                 aria-hidden
-                viewBox={`0 0 ${ANCHO_VIRTUAL} ${ALTO}`}
-                preserveAspectRatio="none"
-                className="absolute inset-0 h-full w-full"
-              >
-                <path
-                  d={HILO}
-                  fill="none"
-                  stroke="rgb(196 181 253)"
-                  strokeWidth="3"
-                  strokeDasharray="12 12"
-                  strokeLinecap="round"
-                  // Sin esto, el trazo se estiraría a lo ancho con el resto
-                  // del dibujo y saldría un guion gordo y otro fino.
-                  vectorEffect="non-scaling-stroke"
-                />
-              </svg>
+                className="absolute h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500 ring-8 ring-violet-500/15"
+                style={{ left: `${parada.x}%`, top: nudoDe(parada.arriba) }}
+              />
+            ))}
 
-              {/* Los puntos van en HTML y no dentro del SVG: ahí, con el
-                  dibujo estirado a lo ancho, un círculo saldría ovalado. */}
-              {PARADAS.map((parada, i) => (
-                <span
-                  key={`punto-${i}`}
-                  aria-hidden
-                  className="absolute h-3.5 w-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500 ring-8 ring-violet-500/15"
-                  style={{ left: `${parada.x}%`, top: nudoDe(parada.arriba) }}
-                />
-              ))}
+            {PANTALLAS.map((clave, i) => {
+              const parada = PARADAS[i]
+              return (
+                <motion.div
+                  key={clave}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={aLaVista ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: i * 0.12, ease: "easeOut" }}
+                  className="absolute flex -translate-x-1/2 flex-col items-center"
+                  style={{ left: `${parada.x}%`, top: topeDe(parada.arriba), width: CAJA_ANCHO }}
+                >
+                  <p className="mb-3 h-7 text-center text-lg font-bold leading-7 text-violet-600">
+                    {t(`watch.shots.${clave}.label`)}
+                  </p>
 
-              {PANTALLAS.map((clave, i) => {
-                const parada = PARADAS[i]
-                return (
-                  <div
-                    key={clave}
-                    className="absolute flex -translate-x-1/2 flex-col items-center"
-                    style={{ left: `${parada.x}%`, top: topeDe(parada.arriba), width: CAJA_ANCHO }}
-                  >
-                    <p className="mb-3 h-7 text-center text-lg font-bold leading-7 text-violet-600">
-                      {t(`watch.shots.${clave}.label`)}
-                    </p>
+                  {/* Dentro de un Apple Watch de verdad, no en un rectangulo
+                      negro: son pantallas de reloj, y en una caja cualquiera se
+                      leen como recortes sueltos. */}
+                  <CajaDeReloj>
+                    <Image
+                      src={`/reloj-capturas/reloj-${idioma}/${FICHEROS[i]}.png`}
+                      alt={t(`watch.shots.${clave}.label`)}
+                      fill
+                      sizes="172px"
+                      className="object-cover"
+                    />
+                  </CajaDeReloj>
 
-                    {/* Dentro de un Apple Watch de verdad, no en un
-                        rectángulo negro: son pantallas de reloj, y en una
-                        caja cualquiera se leen como recortes sueltos. */}
-                    <CajaDeReloj>
-                      <Image
-                        src={`/reloj-capturas/reloj-${idioma}/${FICHEROS[i]}.png`}
-                        alt={t(`watch.shots.${clave}.label`)}
-                        fill
-                        sizes="172px"
-                        className="object-cover"
-                      />
-                    </CajaDeReloj>
-
-                    <p className="mt-6 text-balance text-center text-[13.5px] leading-snug text-slate-600">
-                      {t(`watch.shots.${clave}.body`)}
-                    </p>
-                  </div>
-                )
-              })}
-            </div>
+                  <p className="mt-6 text-balance text-center text-[13.5px] leading-snug text-slate-600">
+                    {t(`watch.shots.${clave}.body`)}
+                  </p>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </div>
