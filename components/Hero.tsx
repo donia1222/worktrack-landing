@@ -147,11 +147,6 @@ export default function Hero() {
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">
             {t("hero.description")} {t("hero.subtitle")}
           </p>
-
-          <div className="mt-8 flex flex-col items-center gap-2">
-            <AppStoreBadge zona="hero" alto={58} />
-            <p className="text-sm text-slate-500">{t("hero.gratis")}</p>
-          </div>
         </div>
 
         {/* El teléfono, grande y centrado — sin el reloj al lado, ya no
@@ -167,8 +162,8 @@ export default function Hero() {
           <div
             className="relative rounded-[2rem] bg-slate-900 p-2 shadow-2xl"
             style={{
-              WebkitMaskImage: "linear-gradient(to bottom, black 75%, transparent 100%)",
-              maskImage: "linear-gradient(to bottom, black 75%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to bottom, black 55%, transparent 92%)",
+              maskImage: "linear-gradient(to bottom, black 55%, transparent 92%)",
             }}
           >
             <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.4rem]">
@@ -228,6 +223,14 @@ export default function Hero() {
 
         <div className="mt-14">
           <DisponiblePara />
+        </div>
+
+        {/* El botón de descarga y el "gratis, sin registro", ahora aquí
+            abajo — cierran la página en vez de competir con el titular por
+            la atención nada más entrar. */}
+        <div className="mt-10 flex flex-col items-center gap-2">
+          <AppStoreBadge zona="hero" alto={58} />
+          <p className="text-sm text-slate-500">{t("hero.gratis")}</p>
         </div>
       </div>
     </section>
