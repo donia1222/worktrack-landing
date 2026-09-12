@@ -8,9 +8,9 @@ import Image from "next/image"
 
 /** La captura del panel principal, una por idioma — sustituye al vídeo. */
 const IMAGEN_DASHBOARD = {
-  es: "/new/IMG_1454-es.jpeg",
-  en: "/new/IMG_1455-en.jpeg",
-  de: "/new/IMG_1453-de.jpeg",
+  es: "/new/dashboard-es.jpg",
+  en: "/new/dashboard-en.jpg",
+  de: "/new/dashboard-de.jpg",
 } as const
 
 /**
