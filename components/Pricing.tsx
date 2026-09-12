@@ -43,7 +43,6 @@ const getPlans = (t: (key: string) => string) => [
     ],
     cta: t("pricing.premium.cta"),
     popular: true,
-    badge: t("pricing.premium.popular"),
     alternativePlans: [
       {
         price: "9.49 CHF", // FIXED SWITZERLAND PRICE
@@ -148,7 +147,6 @@ export default function Pricing() {
                         {plan.price}
                       </span>
                       <span className="text-slate-500 text-lg">/{plan.duration}</span>
-                      <span className="bg-blue-100 text-blue-600 text-xs font-semibold px-2 py-1 rounded-full ml-2">{plan.badge}</span>
                     </div>
                     
                     <div className="grid grid-cols-2 gap-2 text-sm text-slate-600">
