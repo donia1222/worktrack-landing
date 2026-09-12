@@ -1,9 +1,11 @@
 "use client"
 
 import { Sparkles, Zap, BarChart3, CalendarCheck } from "lucide-react"
+import Image from "next/image"
 import { useLanguage } from "@/lib/language"
 import AppStoreBadge from "./AppStoreBadge"
 import DisponiblePara from "./DisponiblePara"
+import CajaDeReloj from "./CajaDeReloj"
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { useAppLoading } from "@/lib/loading"
@@ -11,6 +13,17 @@ import { useAppLoading } from "@/lib/loading"
 // El orden en el que se enlazan los vídeos: salario primero, luego
 // calendario, luego reportes.
 const PANTALLAS_VIDEO = ["salary", "register", "reports"] as const
+
+// Qué pantalla enseña el reloj de al lado según cuál de los tres vídeos del
+// teléfono esté activa — para que no vaya a su aire mostrando siempre el
+// timer, sino la que tiene más sentido junto a lo que se ve en el teléfono
+// en ese momento. El reloj no tiene una captura de "salario", así que ahí
+// se queda con el timer, que es su pantalla por defecto.
+const RELOJ_POR_VIDEO: Record<(typeof PANTALLAS_VIDEO)[number], string> = {
+  salary: "1-timer",
+  register: "3-calendario",
+  reports: "4-semana",
+}
 
 /**
  * El teléfono del hero, ahora con vídeo en vez de una foto fija: los tres
@@ -21,9 +34,19 @@ const PANTALLAS_VIDEO = ["salary", "register", "reports"] as const
  * (con `transition-opacity`) — así el que entra ya está listo, sin un
  * parpadeo en negro mientras carga. Solo se reproduce el activo; los otros
  * se pausan, para que no se desincronicen mientras están ocultos.
+ *
+ * El índice del activo vive en el padre (`Hero`) y no aquí dentro: el reloj
+ * de al lado necesita saber cuál es para enseñar la captura a juego.
  */
-function VideoDelHero({ idioma }: { idioma: string }) {
-  const [activo, setActivo] = useState(0)
+function VideoDelHero({
+  idioma,
+  activo,
+  onTerminarVideo,
+}: {
+  idioma: string
+  activo: number
+  onTerminarVideo: () => void
+}) {
   const referencias = useRef<(HTMLVideoElement | null)[]>([])
   // Mientras dure el loading de arranque el teléfono está montado pero
   // tapado (opacidad 0): sin este freno el vídeo arrancaba igual ahí
@@ -59,7 +82,7 @@ function VideoDelHero({ idioma }: { idioma: string }) {
           src={`/app-videos/${idioma}/${clave}.mp4`}
           muted
           playsInline
-          onEnded={() => setActivo((a) => (a + 1) % PANTALLAS_VIDEO.length)}
+          onEnded={onTerminarVideo}
           className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-700 ease-in-out ${
             i === activo ? "opacity-100" : "opacity-0"
           }`}
@@ -112,6 +135,7 @@ export default function Hero() {
   const idioma = ["es", "en", "de"].includes(language) ? language : "en"
 
   const [isVisible, setIsVisible] = useState(false)
+  const [videoActivo, setVideoActivo] = useState(0)
 
   useEffect(() => {
     setIsVisible(true)
@@ -149,8 +173,9 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* El teléfono, grande y centrado — sin el reloj al lado, ya no
-            hace falta aquí. */}
+        {/* El teléfono, grande y centrado, con el reloj apoyado en su
+            esquina inferior derecha — como en el anuncio real: el reloj
+            monta encima del borde del teléfono, no al lado suelto. */}
         <div
           className={`relative mx-auto mt-16 max-w-[240px] transition-all duration-1000 delay-300 sm:max-w-[260px] ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
         >
@@ -167,8 +192,26 @@ export default function Hero() {
             }}
           >
             <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[1.4rem]">
-              <VideoDelHero idioma={idioma} />
+              <VideoDelHero
+                idioma={idioma}
+                activo={videoActivo}
+                onTerminarVideo={() => setVideoActivo((a) => (a + 1) % PANTALLAS_VIDEO.length)}
+              />
             </div>
+          </div>
+
+          {/* El reloj, montado en la esquina — grande, como en el anuncio,
+              no un icono pequeño escondido en el borde. */}
+          <div className="absolute -right-7 bottom-2 origin-bottom-right rotate-[-8deg] scale-[0.58] sm:-right-9 sm:bottom-3">
+            <CajaDeReloj>
+              <Image
+                src={`/reloj-capturas/reloj-${idioma}/${RELOJ_POR_VIDEO[PANTALLAS_VIDEO[videoActivo]]}.png`}
+                alt=""
+                fill
+                sizes="172px"
+                className="object-cover"
+              />
+            </CajaDeReloj>
           </div>
         </div>
 
