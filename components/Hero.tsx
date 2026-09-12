@@ -167,10 +167,6 @@ export default function Hero() {
               {t("hero.titleAccent")}
             </span>
           </h1>
-
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">
-            {t("hero.description")} {t("hero.subtitle")}
-          </p>
         </div>
 
         {/* El teléfono, grande y centrado, con el reloj apoyado en su
