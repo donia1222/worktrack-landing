@@ -136,7 +136,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-xl bg-[#5B5FEF] text-white shadow-md hover:bg-[#4B4FDB] transition-colors`}
+            className={`md:hidden p-2 rounded-xl bg-[#5B5FEF]/15 text-[#5B5FEF] hover:bg-[#5B5FEF]/25 transition-colors`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
