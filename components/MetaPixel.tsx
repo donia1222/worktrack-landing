@@ -30,6 +30,33 @@ function leerCookie(nombre: string) {
   return fila?.split('=')[1]
 }
 
+const CLAVE_FBCLID = 'worktrack_fbclid'
+
+/**
+ * El identificador de clic (`fbc`) que va al servidor.
+ *
+ * Meta avisaba de que solo llegaba en el 13% de los eventos. La cookie
+ * `_fbc` la escribe el pixel cuando ve `fbclid` en la URL, pero Safari la
+ * caduca en 24 horas y a veces el Lead sale antes de que el pixel haya
+ * cargado. Asi que si la cookie no esta, se arma a mano con el formato que
+ * documenta Meta (`fb.1.<milisegundos>.<fbclid>`) a partir del `fbclid`, que
+ * se guarda al llegar para que sobreviva a la navegacion dentro de la
+ * landing. Sin `fbclid` (visita organica) no hay nada que mandar, y eso es
+ * correcto: no viene de un anuncio.
+ */
+function identificadorDeClic() {
+  const cookie = leerCookie('_fbc')
+  if (cookie) return cookie
+  try {
+    const delaUrl = new URLSearchParams(window.location.search).get('fbclid')
+    if (delaUrl) sessionStorage.setItem(CLAVE_FBCLID, delaUrl)
+    const fbclid = delaUrl || sessionStorage.getItem(CLAVE_FBCLID)
+    return fbclid ? `fb.1.${Date.now()}.${fbclid}` : undefined
+  } catch {
+    return undefined
+  }
+}
+
 /**
  * Manda el evento por las dos vias a la vez, con el mismo `eventID`.
  *
@@ -56,7 +83,7 @@ export function disparar(eventName: string, params: Record<string, unknown> = {}
       eventID,
       eventSourceUrl: window.location.href,
       fbp: leerCookie('_fbp'),
-      fbc: leerCookie('_fbc'),
+      fbc: identificadorDeClic(),
       customData: params,
     }),
   }).catch(() => {
