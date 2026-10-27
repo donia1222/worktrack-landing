@@ -16,10 +16,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/new/app-icon.png" alt="Working Time Control" width={40} height={40} className="w-10 h-10 rounded-xl" />
+              <Image src="/new/app-icon.png" alt={t('appName.full')} width={40} height={40} className="w-10 h-10 rounded-xl" />
+              {/* El nombre va traducido: es el que se lee bajo el icono en el
+                  telefono, y por el que luego se busca en la tienda. Viene partido en dos
+                  porque se pinta en dos colores; `second` trae el espacio de delante
+                  cuando son dos palabras, y de ahi el whitespace-pre. */}
               <h3 className="text-xl font-bold flex">
-                <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Work</span>
-                <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time Control</span>
+                <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>{t('appName.first')}</span>
+                <span className="text-[#5856D6] whitespace-pre" style={{ fontWeight: '700' }}>{t('appName.second')}</span>
               </h3>
             </div>
             <p className="text-gray-400 text-xs sm:text-sm mb-4">

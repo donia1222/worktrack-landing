@@ -399,7 +399,7 @@
     "typeMessage": "メッセージを入力してください..."
   },
   "mobileBanner": {
-    "name": "WorkTi",
+    "name": "Work Hours",
     "subtitle": "無料 · 登録不要",
     "download": "開く",
     "comingSoon": "近日公開"
@@ -871,5 +871,10 @@
   "appStore": {
     "download": "ダウンロード",
     "name": "App Store"
+  },
+  "appName": {
+    "first": "Work",
+    "second": " Hours",
+    "full": "Work Hours"
   }
 }

@@ -399,7 +399,7 @@
     "typeMessage": "Escribe tu mensaje aquí..."
   },
   "mobileBanner": {
-    "name": "Work Time Control",
+    "name": "Horas trabajo",
     "free": "Gratis",
     "subtitle": "Sin cuenta",
     "download": "Descargar",
@@ -891,5 +891,10 @@
   },
   "mac": {
     "caption": "También disponible en Mac con chip Apple Silicon"
+  },
+  "appName": {
+    "first": "Horas",
+    "second": " trabajo",
+    "full": "Horas trabajo"
   }
 }

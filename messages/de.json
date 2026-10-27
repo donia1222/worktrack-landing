@@ -399,7 +399,7 @@
     "typeMessage": "Geben Sie Ihre Nachricht hier ein..."
   },
   "mobileBanner": {
-    "name": "Work Time Control",
+    "name": "Arbeitszeit",
     "free": "Kostenlos",
     "subtitle": "Kein Konto",
     "download": "Laden",
@@ -891,5 +891,10 @@
   },
   "mac": {
     "caption": "Auch auf dem Mac mit Apple Silicon verfügbar"
+  },
+  "appName": {
+    "first": "Arbeits",
+    "second": "zeit",
+    "full": "Arbeitszeit"
   }
 }

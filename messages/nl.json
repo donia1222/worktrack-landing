@@ -399,7 +399,7 @@
     "typeMessage": "Typ hier je bericht..."
   },
   "mobileBanner": {
-    "name": "WorkTi",
+    "name": "Work Hours",
     "subtitle": "Gratis · Geen account",
     "download": "Openen",
     "comingSoon": "Binnenkort"
@@ -871,5 +871,10 @@
   "appStore": {
     "download": "Download in de",
     "name": "App Store"
+  },
+  "appName": {
+    "first": "Work",
+    "second": " Hours",
+    "full": "Work Hours"
   }
 }

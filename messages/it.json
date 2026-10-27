@@ -399,7 +399,7 @@
     "typeMessage": "Scrivi qui il tuo messaggio..."
   },
   "mobileBanner": {
-    "name": "WorkTi",
+    "name": "Ore lavoro",
     "subtitle": "Gratis · Senza account",
     "download": "Apri",
     "comingSoon": "Presto disponibile"
@@ -871,5 +871,10 @@
   "appStore": {
     "download": "Scaricala su",
     "name": "App Store"
+  },
+  "appName": {
+    "first": "Ore",
+    "second": " lavoro",
+    "full": "Ore lavoro"
   }
 }

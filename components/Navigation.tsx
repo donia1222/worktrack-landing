@@ -98,11 +98,14 @@ export default function Navigation() {
             className="cursor-pointer flex items-center gap-2"
             onClick={() => scrollToSection('#hero')}
           >
-            <Image src="/new/app-icono.png" alt="Working Time Control" width={40} height={40} className="w-10 h-10 rounded-xl" priority />
+            <Image src="/new/app-icono.png" alt={t('appName.full')} width={40} height={40} className="w-10 h-10 rounded-xl" priority />
+            {/* El nombre va traducido: es el que se lee bajo el icono en el
+                telefono, y por el que luego se busca en la tienda. Viene partido en dos
+                porque se pinta en dos colores; `second` trae el espacio de delante
+                cuando son dos palabras, y de ahi el whitespace-pre. */}
             <h3 className="text-xl font-bold flex">
-              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>Work</span>
-              <span className="text-[#5856D6]" style={{ fontWeight: '700' }}>Time Control</span>
-
+              <span className="text-[#007AFF]" style={{ fontWeight: '800' }}>{t('appName.first')}</span>
+              <span className="text-[#5856D6] whitespace-pre" style={{ fontWeight: '700' }}>{t('appName.second')}</span>
             </h3>
           </div>
 
