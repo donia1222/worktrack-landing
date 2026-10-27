@@ -50,13 +50,13 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.vixtime.com'),
+  metadataBase: new URL('https://www.arbeitszeitkontrolle.app'),
   alternates: {
-    canonical: 'https://www.vixtime.com',
+    canonical: 'https://www.arbeitszeitkontrolle.app',
     languages: {
-      'es': 'https://www.vixtime.com',
-      'en': 'https://www.vixtime.com/en',
-      'de': 'https://www.vixtime.com/de',
+      'es': 'https://www.arbeitszeitkontrolle.app',
+      'en': 'https://www.arbeitszeitkontrolle.app/en',
+      'de': 'https://www.arbeitszeitkontrolle.app/de',
     },
   },
   openGraph: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: 'Working Time Control',
     title: 'Working Time Control — Olvídate de fichar',
     description: 'La app detecta cuándo llegas al trabajo y cuándo te vas. Tus horas se apuntan solas, y al final del mes ya están sumadas.',
-    url: 'https://www.vixtime.com',
+    url: 'https://www.arbeitszeitkontrolle.app',
     images: [
       {
         url: '/og-image.png',

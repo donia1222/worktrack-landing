@@ -206,8 +206,8 @@ export default function TermsOfService() {
             <div className="bg-blue-50 rounded-lg p-4">
               <p className="text-blue-800">
                 {t('terms.contact.description')}{' '}
-                <a href="mailto:support@vixtime.com" className="font-semibold underline">
-                  support@vixtime.com
+                <a href="mailto:info@lweb.ch" className="font-semibold underline">
+                  info@lweb.ch
                 </a>
               </p>
               {/* Con quien se contrata. Unas condiciones sin decir que empresa

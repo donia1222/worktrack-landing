@@ -9,7 +9,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap
-Sitemap: https://www.vixtime.com/sitemap.xml
+Sitemap: https://www.arbeitszeitkontrolle.app/sitemap.xml
 
 # Specific crawlers
 User-agent: Googlebot

@@ -21,8 +21,8 @@ export default function StructuredData() {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Working Time Control",
-          "url": "https://www.vixtime.com",
-          "logo": "https://www.vixtime.com/logo.png",
+          "url": "https://www.arbeitszeitkontrolle.app",
+          "logo": "https://www.arbeitszeitkontrolle.app/logo.png",
           "description": "App para controlar y calcular el tiempo de trabajo automáticamente con geolocalización GPS"
         }) }}
       />
@@ -32,8 +32,8 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Working Time Control",
-    "url": "https://www.vixtime.com",
-    "logo": "https://www.vixtime.com/logo.png",
+    "url": "https://www.arbeitszeitkontrolle.app",
+    "logo": "https://www.arbeitszeitkontrolle.app/logo.png",
     "description": "App para controlar el tiempo de trabajo y calcular tus horas automáticamente con geolocalización GPS",
     "foundingDate": "2024",
     "applicationCategory": "BusinessApplication",
@@ -48,7 +48,7 @@ export default function StructuredData() {
     "@type": "SoftwareApplication",
     "name": "Working Time Control",
     "description": "Controla y calcula tu tiempo de trabajo automáticamente con geolocalización GPS. Calendario visual, reportes PDF y facturación profesional.",
-    "url": "https://www.vixtime.com",
+    "url": "https://www.arbeitszeitkontrolle.app",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": ["iOS"],
     "offers": [
@@ -98,7 +98,7 @@ export default function StructuredData() {
       "Sincronización con calendario",
       "Notificaciones avanzadas"
     ],
-    "screenshot": "https://www.vixtime.com/screenshot.png",
+    "screenshot": "https://www.arbeitszeitkontrolle.app/screenshot.png",
     "downloadUrl": [
       "https://apps.apple.com/app/id6745336262"
     ],
@@ -119,12 +119,12 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Working Time Control",
-    "url": "https://www.vixtime.com",
+    "url": "https://www.arbeitszeitkontrolle.app",
     "description": "Página oficial de Working Time Control - Controla y calcula tu tiempo de trabajo con GPS",
     "inLanguage": ["es", "en", "de"],
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.vixtime.com/?q={search_term_string}",
+      "target": "https://www.arbeitszeitkontrolle.app/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };

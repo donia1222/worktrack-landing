@@ -280,8 +280,8 @@ export default function PrivacyPolicy() {
             <div className="bg-blue-50 rounded-lg p-4">
               <p className="text-blue-800">
                 {t('privacy.contact.description')}{' '}
-                <a href="mailto:support@vixtime.com" className="font-semibold underline">
-                  support@vixtime.com
+                <a href="mailto:info@lweb.ch" className="font-semibold underline">
+                  info@lweb.ch
                 </a>
               </p>
               {/* Quien responde de estos datos. En una politica de privacidad

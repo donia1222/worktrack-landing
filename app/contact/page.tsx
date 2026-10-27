@@ -117,7 +117,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">{t('contact.info.email.title')}</h3>
-                    <p className="text-gray-600 text-sm">support@vixtime.com</p>
+                    <p className="text-gray-600 text-sm">info@lweb.ch</p>
                     <p className="text-gray-500 text-xs mt-1">{t('contact.info.email.description')}</p>
                   </div>
                 </div>
