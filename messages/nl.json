@@ -876,5 +876,9 @@
     "first": "Work",
     "second": " Hours",
     "full": "Work Hours"
+  },
+  "mac": {
+    "section_title": "Ook op je Mac",
+    "section_text": "Geen uitgerekte telefoon-app: eigen schermen die het venster benutten. De hele maand in de kalender, rapporten in twee delen en de dagenlijst ernaast."
   }
 }

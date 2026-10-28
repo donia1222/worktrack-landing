@@ -890,7 +890,9 @@
     "name": "App Store"
   },
   "mac": {
-    "caption": "Auch auf dem Mac mit Apple Silicon verfügbar"
+    "caption": "Auch auf dem Mac mit Apple Silicon verfügbar",
+    "section_title": "Auch auf deinem Mac",
+    "section_text": "Keine aufgeblasene Handy-App: eigene Ansichten, die das Fenster nutzen. Der ganze Monat im Kalender, Berichte in zwei Teilen und die Tagesliste daneben."
   },
   "appName": {
     "first": "Arbeits",

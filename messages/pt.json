@@ -876,5 +876,9 @@
     "first": "Work",
     "second": " Hours",
     "full": "Work Hours"
+  },
+  "mac": {
+    "section_title": "No seu Mac também",
+    "section_text": "Não é o app do celular esticado: tem telas próprias que aproveitam a janela. O mês inteiro no calendário, os relatórios em duas partes e a lista de dias ao lado."
   }
 }

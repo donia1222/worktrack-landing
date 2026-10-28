@@ -876,5 +876,9 @@
     "first": "Ore",
     "second": " lavoro",
     "full": "Ore lavoro"
+  },
+  "mac": {
+    "section_title": "Anche sul tuo Mac",
+    "section_text": "Non è l'app del telefono allargata: ha schermate sue che sfruttano la finestra. Il mese intero nel calendario, i rapporti in due parti e l'elenco dei giorni accanto."
   }
 }

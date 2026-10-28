@@ -876,5 +876,9 @@
     "first": "Work",
     "second": " Hours",
     "full": "Work Hours"
+  },
+  "mac": {
+    "section_title": "Macでも",
+    "section_text": "スマホ版を引き伸ばしたものではありません。ウィンドウを活かした専用画面で、カレンダーには1か月分、レポートは2分割、日ごとの一覧はその隣に表示されます。"
   }
 }

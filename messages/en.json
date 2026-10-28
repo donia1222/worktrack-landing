@@ -890,7 +890,9 @@
     "name": "App Store"
   },
   "mac": {
-    "caption": "Also available on Mac with Apple Silicon"
+    "caption": "Also available on Mac with Apple Silicon",
+    "section_title": "On your Mac as well",
+    "section_text": "Not the phone app stretched out: it has its own screens that use the window. The whole month in the calendar, reports split in two and the list of days beside them."
   },
   "appName": {
     "first": "Work",

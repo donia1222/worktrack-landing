@@ -876,5 +876,9 @@
     "first": "Heures",
     "second": " travail",
     "full": "Heures travail"
+  },
+  "mac": {
+    "section_title": "Sur votre Mac aussi",
+    "section_text": "Pas l'app mobile étirée : des écrans pensés pour la fenêtre. Le mois entier dans le calendrier, les rapports en deux parties et la liste des jours à côté."
   }
 }

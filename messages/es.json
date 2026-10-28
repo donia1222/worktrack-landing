@@ -890,7 +890,9 @@
     "name": "App Store"
   },
   "mac": {
-    "caption": "También disponible en Mac con chip Apple Silicon"
+    "caption": "También disponible en Mac con chip Apple Silicon",
+    "section_title": "También en tu Mac",
+    "section_text": "No es la app del móvil estirada: tiene pantallas propias que aprovechan la ventana. El mes entero en el calendario, los informes en dos partes y la lista de días al lado."
   },
   "appName": {
     "first": "Horas",

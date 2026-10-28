@@ -2,6 +2,8 @@
 
 import { Sparkles, Zap, BarChart3, CalendarCheck } from "lucide-react"
 import Image from "next/image"
+import VentanaMac from "./VentanaMac"
+import { useEsMac } from "@/lib/aparato"
 import { useLanguage } from "@/lib/language"
 import AppStoreBadge from "./AppStoreBadge"
 import DisponiblePara from "./DisponiblePara"
@@ -137,6 +139,15 @@ export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
   const [videoActivo, setVideoActivo] = useState(0)
 
+  // En un Mac la app NO se ve como en el telefono: tiene pantallas propias
+  // que aprovechan la ventana. Enseñar ahi el movil con sus videos vende
+  // otra cosa distinta de la que se descarga.
+  //
+  // Hasta que el navegador responde esto es `false`, asi que el primer
+  // pintado es el del telefono y en un Mac cambia al hidratar. Se prefiere
+  // ese cambio a dejar el hero en blanco mientras se decide.
+  const esMac = useEsMac()
+
   useEffect(() => {
     setIsVisible(true)
   }, [])
@@ -169,9 +180,18 @@ export default function Hero() {
           </h1>
         </div>
 
-        {/* El teléfono, grande y centrado, con el reloj apoyado en su
+        {esMac ? (
+          /* En el Mac, la ventana del escritorio en vez del telefono. Es lo
+             que esa persona va a ver al abrirla. */
+          <div
+            className={`mt-14 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
+          >
+            <VentanaMac prioridad />
+          </div>
+        ) : (
+        /* El teléfono, grande y centrado, con el reloj apoyado en su
             esquina inferior derecha — como en el anuncio real: el reloj
-            monta encima del borde del teléfono, no al lado suelto. */}
+            monta encima del borde del teléfono, no al lado suelto. */
         <div
           className={`relative mx-auto mt-16 max-w-[240px] transition-all duration-1000 delay-300 sm:max-w-[260px] ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
         >
@@ -210,6 +230,7 @@ export default function Hero() {
             </CajaDeReloj>
           </div>
         </div>
+        )}
 
         {/* El lema, debajo del teléfono. */}
         <div className="mt-10 flex justify-center">

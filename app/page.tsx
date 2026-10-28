@@ -9,6 +9,7 @@ import AutoTimerGeofence from '@/components/AutoTimerGeofence'
 import ExportReports from '@/components/ExportReports'
 import SalaryStats from '@/components/SalaryStats'
 import SmartWidgets from '@/components/SmartWidgets'
+import EnElMac from '@/components/EnElMac'
 import WorkingPhone from '@/components/WorkingPhone'
 import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
@@ -45,6 +46,13 @@ export default function Home() {
             mas vive la app fuera de la app—, y el widget lo puede poner
             cualquiera. Estaba importado y sin usar, asi que no lo veia nadie. */}
         <SmartWidgets />
+
+        {/* «Tambien en tu Mac». Solo aparece si se abre desde un Mac: a quien
+            entra desde el movil no le aporta nada ver capturas de escritorio
+            y alarga una pagina que ya es larga. Va detras del reloj y el
+            widget porque los tres cuentan lo mismo —donde mas vive la app— y
+            este es el que menos gente necesita. */}
+        <EnElMac />
 
         {/* La promesa de privacidad va aqui y no antes: primero la pagina
             enseña lo que hace, y esto es lo ultimo que se lee antes del
